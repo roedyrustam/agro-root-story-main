@@ -49,6 +49,7 @@ export function Hero() {
             </div>
 
             <div className="mt-16 grid grid-cols-3 gap-6 border-t border-border pt-8 animate-fade-up" style={{ animationDelay: "0.55s" }}>
+              {[
                 { n: "3", l: "Wilayah dampingan" },
                 { n: "3", l: "Produk digital" },
                 { n: "BNSP", l: "Tersertifikasi" },

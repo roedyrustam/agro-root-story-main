@@ -110,6 +110,8 @@ function KafeyaPage() {
             Kafeya <span className="italic text-terracotta">POS</span>
           </h1>
 
+          <p className="mt-8 max-w-2xl text-xl leading-relaxed text-coffee/75">
+            Sistem kasir & akuntansi untuk café dan UMKM kopi yang ingin{" "}
             <em className="text-coffee">tutup buku tanpa drama</em> setiap akhir bulan.
           </p>
 
@@ -244,7 +246,6 @@ function KafeyaPage() {
             Mari bangun perangkat yang benar-benar dipakai, bukan cuma diinstall.
           </p>
 
-          <div className="mt-10 flex flex-wrap gap-5">
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <a
               href="https://kafeya.online"
