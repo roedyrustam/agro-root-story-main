@@ -1,8 +1,8 @@
 import { Link } from "@tanstack/react-router";
 import { SectionLabel } from "./SectionLabel";
-import beanhubImg from "@/assets/project-beanhub.png";
-import kafeyaImg from "@/assets/project-kafeya.png";
-import cuppingnotesImg from "@/assets/project-cuppingnotes.png";
+import beanhubImg from "../assets/project-beanhub.png";
+import kafeyaImg from "../assets/project-kafeya.png";
+import cuppingnotesImg from "../assets/project-cuppingnotes.png";
 
 const projects = [
   {

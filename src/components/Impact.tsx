@@ -1,5 +1,5 @@
 import { SectionLabel } from "./SectionLabel";
-import landscape from "@/assets/impact-landscape.jpg";
+import landscape from "../assets/impact-landscape.jpg";
 
 export function Impact() {
   return (

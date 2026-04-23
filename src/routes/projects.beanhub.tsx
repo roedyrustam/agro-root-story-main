@@ -2,9 +2,9 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { Gallery, type GalleryItem } from "@/components/Gallery";
-import dashboardImg from "@/assets/beanhub-dashboard.jpg";
-import flowImg from "@/assets/beanhub-flow.jpg";
-import mobileImg from "@/assets/beanhub-mobile.jpg";
+import dashboardImg from "../assets/beanhub-dashboard.jpg";
+import flowImg from "../assets/beanhub-flow.jpg";
+import mobileImg from "../assets/beanhub-mobile.jpg";
 
 const galleryItems: GalleryItem[] = [
   {

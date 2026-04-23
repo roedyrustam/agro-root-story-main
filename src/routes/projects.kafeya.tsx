@@ -2,9 +2,9 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { Gallery, type GalleryItem } from "@/components/Gallery";
-import posImg from "@/assets/kafeya-pos.jpg";
-import flowImg from "@/assets/kafeya-flow.jpg";
-import reportImg from "@/assets/kafeya-report.jpg";
+import posImg from "../assets/kafeya-pos.jpg";
+import flowImg from "../assets/kafeya-flow.jpg";
+import reportImg from "../assets/kafeya-report.jpg";
 
 const galleryItems: GalleryItem[] = [
   {

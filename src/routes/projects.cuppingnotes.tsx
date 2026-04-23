@@ -2,8 +2,8 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { Gallery, type GalleryItem } from "@/components/Gallery";
-import scaImg from "@/assets/cuppingnotes-sca.png";
-import radarImg from "@/assets/cuppingnotes-radar.png";
+import scaImg from "../assets/cuppingnotes-sca.png";
+import radarImg from "../assets/cuppingnotes-radar.png";
 
 const galleryItems: GalleryItem[] = [
   {
