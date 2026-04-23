@@ -56,27 +56,44 @@ export function Nav() {
           >
             About
           </Link>
-          <a href="/#journey" className="text-coffee/70 transition-colors hover:text-terracotta">
+          <Link
+            to="/"
+            hash="journey"
+            className="text-coffee/70 transition-colors hover:text-terracotta"
+          >
             Journey
-          </a>
-          <a href="/#projects" className="text-coffee/70 transition-colors hover:text-terracotta">
+          </Link>
+          <Link
+            to="/"
+            hash="projects"
+            className="text-coffee/70 transition-colors hover:text-terracotta"
+          >
             Projects
-          </a>
-          <a href="/#impact" className="text-coffee/70 transition-colors hover:text-terracotta">
+          </Link>
+          <Link
+            to="/"
+            hash="impact"
+            className="text-coffee/70 transition-colors hover:text-terracotta"
+          >
             Impact
-          </a>
-          <a href="/#contact" className="text-coffee/70 transition-colors hover:text-terracotta">
+          </Link>
+          <Link
+            to="/"
+            hash="contact"
+            className="text-coffee/70 transition-colors hover:text-terracotta"
+          >
             Contact
-          </a>
+          </Link>
         </nav>
 
         {/* Desktop CTA */}
-        <a
-          href="/#contact"
+        <Link
+          to="/"
+          hash="contact"
           className="hidden rounded-full border border-coffee bg-coffee px-5 py-2 font-mono text-xs uppercase tracking-[0.18em] text-cream transition-all hover:bg-terracotta hover:border-terracotta md:inline-block"
         >
           Get in touch
-        </a>
+        </Link>
 
         {/* Mobile hamburger button */}
         <button
@@ -147,8 +164,9 @@ export function Nav() {
                   <span>{link.label}</span>
                 </Link>
               ) : (
-                <a
-                  href={link.href}
+                <Link
+                  to="/"
+                  hash={link.href.replace("/#", "")}
                   className="flex items-center gap-4 rounded-xl px-4 py-4 font-mono text-xs uppercase tracking-[0.2em] text-coffee/80 transition-colors hover:bg-coffee/5 hover:text-terracotta"
                   onClick={() => setOpen(false)}
                 >
@@ -156,7 +174,7 @@ export function Nav() {
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <span>{link.label}</span>
-                </a>
+                </Link>
               )}
             </div>
           ))}
@@ -169,14 +187,15 @@ export function Nav() {
           }`}
           style={{ transitionDelay: open ? "400ms" : "0ms" }}
         >
-          <a
-            href="/#contact"
+          <Link
+            to="/"
+            hash="contact"
             onClick={() => setOpen(false)}
             className="flex w-full items-center justify-center gap-3 rounded-full bg-coffee px-6 py-4 font-mono text-xs uppercase tracking-[0.2em] text-cream transition-all hover:bg-terracotta"
           >
             Get in touch
             <span>→</span>
-          </a>
+          </Link>
 
           <div className="mt-4 text-center font-mono text-[10px] uppercase tracking-[0.2em] text-coffee/60">
             Sulawesi Selatan, ID
