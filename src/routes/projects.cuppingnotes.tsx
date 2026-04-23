@@ -7,7 +7,7 @@ import radarImg from "../assets/cuppingnotes-radar.png";
 
 const galleryItems: GalleryItem[] = [
   {
-    src: mobileImg,
+    src: scaImg,
     alt: "Tampilan Mobile CuppingNotes",
     label: "Mobile First",
     caption: "Antarmuka yang dioptimalkan untuk penggunaan di lapangan saat sesi cupping, dengan stabilitas mobile dan glassmorphism UI.",
@@ -15,7 +15,7 @@ const galleryItems: GalleryItem[] = [
     orientation: "portrait",
   },
   {
-    src: dashboardImg,
+    src: radarImg,
     alt: "Dashboard CuppingNotes",
     label: "Hasil & Evaluasi",
     caption: "Sistem mengumpulkan dan mengkalkulasi skor (SCA standar), serta menghasilkan visualisasi radar chart untuk profil rasa.",
@@ -23,7 +23,7 @@ const galleryItems: GalleryItem[] = [
     orientation: "wide",
   },
   {
-    src: dashboardImg,
+    src: radarImg,
     alt: "Fitur Berbagi Sosial",
     label: "Social Sharing",
     caption: "Open Graph metadata dinamis (SSR) memungkinkan pengguna membagikan hasil cupping langsung ke media sosial dengan preview gambar otomatis.",
