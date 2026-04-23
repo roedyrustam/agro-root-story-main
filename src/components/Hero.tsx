@@ -28,7 +28,7 @@ export function Hero() {
             </h1>
 
             <p className="mt-8 max-w-xl text-lg leading-relaxed text-coffee/75 text-pretty animate-fade-up" style={{ animationDelay: "0.25s" }}>
-              Saya <strong className="text-coffee">Roedy Rustam</strong> — praktisi Teknik Industri yang menemani petani kopi Sulawesi
+              Saya <strong className="text-coffee">Roedy Rustam</strong> — Praktisi Pertanian dan Pegiat Adat yang menemani petani kopi Sulawesi
               dari bukit Toraja sampai ke meja barista, sambil menulis kode untuk membuat rantai pasok mereka lebih jujur.
             </p>
 
