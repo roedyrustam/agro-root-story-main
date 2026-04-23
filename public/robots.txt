@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://roedyrustam.com/sitemap.xml
+Sitemap: https://roedyrustam.pages.dev/sitemap.xml

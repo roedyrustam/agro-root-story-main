@@ -125,7 +125,7 @@ export const Route = createRootRoute({
           jobTitle: "Industrial Engineering Practitioner & Agro Digital Developer",
           description:
             "Praktisi Teknik Industri yang membangun ekosistem kopi Sulawesi & perangkat digital untuk UMKM agro.",
-          url: "https://roedyrustam.com",
+          url: "https://roedyrustam.pages.dev",
           knowsAbout: [
             "Coffee Supply Chain",
             "Industrial Engineering",
