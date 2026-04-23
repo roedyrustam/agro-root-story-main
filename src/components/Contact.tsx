@@ -17,12 +17,12 @@ export function Contact() {
 
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           <a
-            href="mailto:hello@example.com"
+            href="mailto:support@bijidata.online"
             className="group rounded-2xl border border-border bg-card p-8 transition-all hover:border-terracotta hover:bg-cream-soft"
           >
             <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-terracotta">Email</div>
             <div className="mt-3 flex items-center justify-between gap-4">
-              <span className="font-display text-2xl text-coffee md:text-3xl">hello@example.com</span>
+              <span className="font-display text-2xl text-coffee md:text-3xl">support@bijidata.online</span>
               <span className="text-2xl text-coffee/40 transition-all group-hover:translate-x-1 group-hover:text-terracotta">→</span>
             </div>
             <div className="mt-2 text-sm text-coffee/60">Cara paling mudah, biasanya dibalas dalam 24 jam.</div>

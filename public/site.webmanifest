@@ -1,0 +1,16 @@
+{
+  "name": "Roedy Rustam — Agro × Digital",
+  "short_name": "Roedy Rustam",
+  "description": "Portfolio Roedy Rustam — praktisi Teknik Industri, agro & digital.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f5f0e8",
+  "theme_color": "#3d2b1f",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
