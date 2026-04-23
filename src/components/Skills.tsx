@@ -3,19 +3,39 @@ import { SectionLabel } from "./SectionLabel";
 const groups = [
   {
     title: "Operasional Agro",
-    items: ["Perencanaan produksi", "Manajemen rantai pasok", "Quality control kopi", "Standar pasar ekspor"],
+    items: [
+      "Perencanaan produksi",
+      "Manajemen rantai pasok",
+      "Quality control kopi",
+      "Standar pasar ekspor",
+    ],
   },
   {
     title: "Pemberdayaan",
-    items: ["Fasilitasi BUMMA", "Pendampingan kelompok tani", "Pemetaan pasar lokal", "Komunikasi lintas pemangku"],
+    items: [
+      "Fasilitasi BUMMA",
+      "Pendampingan kelompok tani",
+      "Pemetaan pasar lokal",
+      "Komunikasi lintas pemangku",
+    ],
   },
   {
     title: "Teknis & Digital",
-    items: ["React & TypeScript", "SQL & data modeling", "Sistem informasi akuntansi", "Manajemen data (Excel)"],
+    items: [
+      "React & TypeScript",
+      "SQL & data modeling",
+      "Sistem informasi akuntansi",
+      "Manajemen data (Excel)",
+    ],
   },
   {
     title: "Bahasa & Konteks",
-    items: ["Bahasa Indonesia", "Bahasa Bugis", "Komunikasi lintas budaya", "Pemahaman komunitas adat"],
+    items: [
+      "Bahasa Indonesia",
+      "Bahasa Bugis",
+      "Komunikasi lintas budaya",
+      "Pemahaman komunitas adat",
+    ],
   },
 ];
 

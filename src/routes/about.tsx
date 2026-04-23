@@ -47,9 +47,24 @@ const principles = [
 ];
 
 const toolbox = {
-  Lapangan: ["Perencanaan produksi agro", "Manajemen rantai pasok kopi", "Quality control & cupping basics", "Fasilitasi BUMMA & kelompok tani"],
-  Studio: ["React & TypeScript", "SQL & data modeling", "Sistem informasi akuntansi", "Excel power-user"],
-  Manusia: ["Bahasa Indonesia", "Bahasa Bugis", "Komunikasi lintas budaya", "Mediasi pemangku kepentingan"],
+  Lapangan: [
+    "Perencanaan produksi agro",
+    "Manajemen rantai pasok kopi",
+    "Quality control & cupping basics",
+    "Fasilitasi BUMMA & kelompok tani",
+  ],
+  Studio: [
+    "React & TypeScript",
+    "SQL & data modeling",
+    "Sistem informasi akuntansi",
+    "Excel power-user",
+  ],
+  Manusia: [
+    "Bahasa Indonesia",
+    "Bahasa Bugis",
+    "Komunikasi lintas budaya",
+    "Mediasi pemangku kepentingan",
+  ],
 };
 
 function AboutPage() {
@@ -74,15 +89,14 @@ function AboutPage() {
               </div>
 
               <h1 className="mt-6 font-display text-[clamp(2.8rem,7vw,6rem)] leading-[0.95] text-coffee text-balance">
-                Pribadi yang memilih{" "}
-                <span className="italic text-terracotta">jalan tanah,</span>{" "}
+                Pribadi yang memilih <span className="italic text-terracotta">jalan tanah,</span>{" "}
                 lalu kembali ke <span className="italic">layar.</span>
               </h1>
 
               <p className="mt-8 max-w-xl text-lg leading-relaxed text-coffee/75">
-                Saya Roedy. Latar saya Teknik Industri. Pekerjaan saya hari ini berada di antara dua dunia
-                yang jarang bertemu: ladang kopi di Sulawesi Selatan dan baris-baris kode untuk
-                UMKM agro.
+                Saya Roedy. Latar saya Teknik Industri. Pekerjaan saya hari ini berada di antara dua
+                dunia yang jarang bertemu: ladang kopi di Sulawesi Selatan dan baris-baris kode
+                untuk UMKM agro.
               </p>
             </div>
 
@@ -99,9 +113,7 @@ function AboutPage() {
                 <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-terracotta">
                   Berbasis
                 </div>
-                <div className="mt-1 font-display text-sm text-coffee">
-                  Sulawesi Selatan, ID
-                </div>
+                <div className="mt-1 font-display text-sm text-coffee">Sulawesi Selatan, ID</div>
               </div>
             </div>
           </div>
@@ -220,7 +232,9 @@ function AboutPage() {
       {/* Toolbox */}
       <section className="border-t border-border py-24 md:py-32">
         <div className="mx-auto max-w-7xl px-6 md:px-10">
-          <div className="font-mono text-xs uppercase tracking-[0.2em] text-terracotta">Toolkit</div>
+          <div className="font-mono text-xs uppercase tracking-[0.2em] text-terracotta">
+            Toolkit
+          </div>
           <h2 className="mt-4 max-w-2xl font-display text-[clamp(2rem,5vw,4rem)] leading-[1.05] text-coffee">
             Apa yang saya bawa ke meja.
           </h2>

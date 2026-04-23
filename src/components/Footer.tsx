@@ -20,7 +20,7 @@ export function Footer() {
             </div>
           </div>
         </div>
-        
+
         <div className="flex w-full items-center justify-between md:w-auto md:gap-12">
           <div className="font-mono text-[11px] uppercase tracking-[0.2em] text-coffee/60">
             © {new Date().getFullYear()} · Crafted in Sulawesi

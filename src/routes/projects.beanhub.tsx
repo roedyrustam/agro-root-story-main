@@ -11,7 +11,8 @@ const galleryItems: GalleryItem[] = [
     src: flowImg,
     alt: "Diagram alur rantai pasok kopi dari petani ke kafe",
     label: "Alur rantai pasok",
-    caption: "Sebelum sistem ini, jejak biji kopi terputus di setiap perpindahan tangan. Diagram ini memetakan ulang lima titik kritis yang harus terdokumentasi.",
+    caption:
+      "Sebelum sistem ini, jejak biji kopi terputus di setiap perpindahan tangan. Diagram ini memetakan ulang lima titik kritis yang harus terdokumentasi.",
     stage: "Problem",
     orientation: "wide",
   },
@@ -19,7 +20,8 @@ const galleryItems: GalleryItem[] = [
     src: mobileImg,
     alt: "Mockup aplikasi mobile untuk pencatatan panen petani",
     label: "Catat Panen — Mobile",
-    caption: "Petani mencatat hasil panen langsung dari kebun: kebun, varietas, tanggal, berat, foto. Antarmuka satu layar, ringan untuk koneksi 3G.",
+    caption:
+      "Petani mencatat hasil panen langsung dari kebun: kebun, varietas, tanggal, berat, foto. Antarmuka satu layar, ringan untuk koneksi 3G.",
     stage: "Solution",
     orientation: "portrait",
   },
@@ -27,7 +29,8 @@ const galleryItems: GalleryItem[] = [
     src: dashboardImg,
     alt: "Dashboard Beanhub menampilkan data lot kopi dan statistik",
     label: "Dashboard Operator",
-    caption: "Operator melihat semua lot, asal, grade, dan status dalam satu tabel. Stats bar memberi gambaran cepat tanpa perlu menggali laporan.",
+    caption:
+      "Operator melihat semua lot, asal, grade, dan status dalam satu tabel. Stats bar memberi gambaran cepat tanpa perlu menggali laporan.",
     stage: "Solution",
     orientation: "wide",
   },
@@ -35,7 +38,8 @@ const galleryItems: GalleryItem[] = [
     src: mobileImg,
     alt: "Tampilan riwayat panen dan jejak setiap lot kopi",
     label: "Jejak Lot Terverifikasi",
-    caption: "Setiap lot punya halaman cerita sendiri — bisa di-share ke roaster atau pembeli akhir sebagai bukti origin yang jujur.",
+    caption:
+      "Setiap lot punya halaman cerita sendiri — bisa di-share ke roaster atau pembeli akhir sebagai bukti origin yang jujur.",
     stage: "Result",
     orientation: "portrait",
   },
@@ -51,7 +55,10 @@ export const Route = createFileRoute("/projects/beanhub")({
           "Beanhub.online: platform pencatatan rantai pasok kopi dari kebun ke roastery. Transparan untuk petani, pengepul, dan roaster.",
       },
       { property: "og:title", content: "Beanhub.online — Rantai Pasok Kopi yang Transparan" },
-      { property: "og:description", content: "Studi kasus pengembangan platform supply chain kopi Sulawesi." },
+      {
+        property: "og:description",
+        content: "Studi kasus pengembangan platform supply chain kopi Sulawesi.",
+      },
       { property: "og:image", content: "/og-image.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:image", content: "/og-image.jpg" },
@@ -112,8 +119,8 @@ function BeanhubPage() {
           </h1>
 
           <p className="mt-8 max-w-2xl text-xl leading-relaxed text-coffee/75">
-            Platform rantai pasok kopi yang membuat perjalanan biji — dari pohon di Toraja
-            sampai cangkir di Jakarta — bisa <em className="text-coffee">dilihat semua orang.</em>
+            Platform rantai pasok kopi yang membuat perjalanan biji — dari pohon di Toraja sampai
+            cangkir di Jakarta — bisa <em className="text-coffee">dilihat semua orang.</em>
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-4">
@@ -165,15 +172,17 @@ function BeanhubPage() {
       <section className="py-24 md:py-32">
         <div className="mx-auto grid max-w-6xl gap-16 px-6 md:grid-cols-2 md:gap-20 md:px-10">
           <div>
-            <div className="font-mono text-xs uppercase tracking-[0.2em] text-terracotta">Masalah</div>
+            <div className="font-mono text-xs uppercase tracking-[0.2em] text-terracotta">
+              Masalah
+            </div>
             <h2 className="mt-4 font-display text-3xl text-coffee md:text-4xl">
               Rantai pasok kopi sering jadi <span className="italic">kotak hitam.</span>
             </h2>
             <p className="mt-6 leading-relaxed text-coffee/75">
-              Petani tidak tahu berapa harga biji mereka dijual di kota. Pengepul kewalahan
-              mencatat di buku tulis. Roaster ingin bercerita "single origin" tapi tidak punya
-              data yang bisa diverifikasi. Akibatnya: harga tidak adil, kualitas naik turun,
-              cerita kopi berhenti di rak toko.
+              Petani tidak tahu berapa harga biji mereka dijual di kota. Pengepul kewalahan mencatat
+              di buku tulis. Roaster ingin bercerita "single origin" tapi tidak punya data yang bisa
+              diverifikasi. Akibatnya: harga tidak adil, kualitas naik turun, cerita kopi berhenti
+              di rak toko.
             </p>
           </div>
         </div>
@@ -184,11 +193,7 @@ function BeanhubPage() {
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
           <div className="order-2 lg:order-1">
             <div className="aspect-[4/3] overflow-hidden rounded-3xl bg-sage/10">
-              <img 
-                src={flowImg} 
-                alt="Alur Beanhub" 
-                className="h-full w-full object-cover"
-              />
+              <img src={flowImg} alt="Alur Beanhub" className="h-full w-full object-cover" />
             </div>
           </div>
           <div className="order-1 lg:order-2">
@@ -198,8 +203,8 @@ function BeanhubPage() {
             </h2>
             <p className="mt-6 leading-relaxed text-coffee/75">
               Beanhub.online adalah pencatatan terpusat yang ringan — bisa diakses petani via
-              ponsel, pengepul via laptop, roaster via dashboard. Setiap lot biji punya jejak
-              yang sama, dipakai siapa saja, tanpa friksi.
+              ponsel, pengepul via laptop, roaster via dashboard. Setiap lot biji punya jejak yang
+              sama, dipakai siapa saja, tanpa friksi.
             </p>
           </div>
         </div>
@@ -208,14 +213,19 @@ function BeanhubPage() {
       {/* Features */}
       <section className="reveal border-t border-border bg-cream-soft py-24 md:py-32">
         <div className="mx-auto max-w-6xl px-6 md:px-10">
-          <div className="font-mono text-xs uppercase tracking-[0.2em] text-terracotta">Fitur Inti</div>
+          <div className="font-mono text-xs uppercase tracking-[0.2em] text-terracotta">
+            Fitur Inti
+          </div>
           <h2 className="mt-4 max-w-2xl font-display text-3xl text-coffee md:text-5xl">
             Empat hal yang dikerjakan dengan serius.
           </h2>
 
           <div className="mt-16 grid gap-px overflow-hidden rounded-2xl border border-border bg-border md:grid-cols-2">
             {features.map((f, i) => (
-              <div key={f.title} className="bg-card p-8 transition-colors hover:bg-cream-soft md:p-10">
+              <div
+                key={f.title}
+                className="bg-card p-8 transition-colors hover:bg-cream-soft md:p-10"
+              >
                 <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-terracotta">
                   0{i + 1}
                 </div>

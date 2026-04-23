@@ -1,4 +1,11 @@
-import { Outlet, Link, createRootRoute, HeadContent, Scripts, useRouterState } from "@tanstack/react-router";
+import {
+  Outlet,
+  Link,
+  createRootRoute,
+  HeadContent,
+  Scripts,
+  useRouterState,
+} from "@tanstack/react-router";
 import { useEffect } from "react";
 
 import appCss from "../styles.css?url";
@@ -14,7 +21,8 @@ function NotFoundComponent() {
           Tersesat.
         </h1>
         <p className="mt-6 text-lg leading-relaxed text-coffee/75">
-          Halaman yang Anda cari mungkin sudah dipindahkan atau tidak pernah ada di peta ekosistem ini.
+          Halaman yang Anda cari mungkin sudah dipindahkan atau tidak pernah ada di peta ekosistem
+          ini.
         </p>
         <div className="mt-10">
           <Link
@@ -36,23 +44,38 @@ export const Route = createRootRoute({
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Roedy Rustam — Agro × Digital" },
-      { name: "description", content: "Portfolio Roedy Rustam — praktisi Teknik Industri yang membangun ekosistem kopi Sulawesi & perangkat digital untuk UMKM agro." },
+      {
+        name: "description",
+        content:
+          "Portfolio Roedy Rustam — praktisi Teknik Industri yang membangun ekosistem kopi Sulawesi & perangkat digital untuk UMKM agro.",
+      },
       { name: "author", content: "Roedy Rustam" },
       { name: "theme-color", content: "#3d2b1f" },
       // Open Graph
       { property: "og:title", content: "Roedy Rustam — Agro × Digital" },
-      { property: "og:description", content: "Praktisi Teknik Industri yang membangun ekosistem kopi Sulawesi & perangkat digital untuk UMKM agro." },
+      {
+        property: "og:description",
+        content:
+          "Praktisi Teknik Industri yang membangun ekosistem kopi Sulawesi & perangkat digital untuk UMKM agro.",
+      },
       { property: "og:type", content: "website" },
       { property: "og:locale", content: "id_ID" },
       { property: "og:site_name", content: "Roedy Rustam Portfolio" },
       { property: "og:image", content: "/og-image.jpg" },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
-      { property: "og:image:alt", content: "Roedy Rustam — Industrial Engineering × Agro × Digital" },
+      {
+        property: "og:image:alt",
+        content: "Roedy Rustam — Industrial Engineering × Agro × Digital",
+      },
       // Twitter Card
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Roedy Rustam — Agro × Digital" },
-      { name: "twitter:description", content: "Praktisi Teknik Industri yang membangun ekosistem kopi Sulawesi & perangkat digital untuk UMKM agro." },
+      {
+        name: "twitter:description",
+        content:
+          "Praktisi Teknik Industri yang membangun ekosistem kopi Sulawesi & perangkat digital untuk UMKM agro.",
+      },
       { name: "twitter:image", content: "/og-image.jpg" },
       // Additional SEO
       { name: "robots", content: "index, follow" },
@@ -96,7 +119,8 @@ export const Route = createRootRoute({
           "@type": "Person",
           name: "Roedy Rustam",
           jobTitle: "Industrial Engineering Practitioner & Agro Digital Developer",
-          description: "Praktisi Teknik Industri yang membangun ekosistem kopi Sulawesi & perangkat digital untuk UMKM agro.",
+          description:
+            "Praktisi Teknik Industri yang membangun ekosistem kopi Sulawesi & perangkat digital untuk UMKM agro.",
           url: "https://roedyrustam.com",
           knowsAbout: [
             "Coffee Supply Chain",
@@ -132,30 +156,31 @@ function RootShell({ children }: { children: React.ReactNode }) {
       </head>
       <body className="antialiased">
         {/* Skip Link for A11y */}
-        <a 
-          href="#main-content" 
+        <a
+          href="#main-content"
           className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-terracotta focus:px-6 focus:py-3 focus:text-cream focus:outline-none"
         >
           Skip to content
         </a>
 
         {/* Global Grain Overlay */}
-        <div className="pointer-events-none fixed inset-0 z-[999] opacity-[0.03] mix-blend-multiply grain" aria-hidden="true" />
+        <div
+          className="pointer-events-none fixed inset-0 z-[999] opacity-[0.03] mix-blend-multiply grain"
+          aria-hidden="true"
+        />
 
         {/* Scroll Progress Indicator */}
-        <div 
+        <div
           className="fixed left-0 top-0 z-[100] h-[2px] bg-terracotta transition-all duration-150"
           id="scroll-indicator"
           style={{ width: "0%" }}
         />
 
-        <div id="main-content">
-          {children}
-        </div>
+        <div id="main-content">{children}</div>
         <Scripts />
         <script
           dangerouslySetInnerHTML={{
-            __html: `document.documentElement.classList.add('js-enabled');`
+            __html: `document.documentElement.classList.add('js-enabled');`,
           }}
         />
       </body>
@@ -173,11 +198,11 @@ function RootComponent() {
       const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
       const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
       const scrolled = (winScroll / height) * 100;
-      const indicator = document.getElementById('scroll-indicator');
-      if (indicator) indicator.style.width = scrolled + '%';
-      
+      const indicator = document.getElementById("scroll-indicator");
+      if (indicator) indicator.style.width = scrolled + "%";
+
       // Parallax for Hero Image
-      const heroImg = document.querySelector('.hero-parallax') as HTMLElement;
+      const heroImg = document.querySelector(".hero-parallax") as HTMLElement;
       if (heroImg) {
         const speed = 0.05;
         const rect = heroImg.getBoundingClientRect();
@@ -188,29 +213,29 @@ function RootComponent() {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     handleScroll(); // Initialize on mount/navigation
 
     // Reveal on Scroll
     const observerOptions = {
       threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
+      rootMargin: "0px 0px -50px 0px",
     };
 
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
+          entry.target.classList.add("is-visible");
         }
       });
     }, observerOptions);
 
     // Re-scan for reveal elements on every location change
-    const revealElements = document.querySelectorAll('.reveal');
+    const revealElements = document.querySelectorAll(".reveal");
     revealElements.forEach((el) => observer.observe(el));
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
       observer.disconnect();
     };
   }, [location.pathname]); // Re-run on navigation

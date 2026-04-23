@@ -41,13 +41,27 @@ function Index() {
       <Nav />
       <Hero />
       <Marquee />
-      <div className="reveal"><About /></div>
-      <div className="reveal"><Timeline /></div>
-      <div className="reveal"><Experience /></div>
-      <div className="reveal"><Projects /></div>
-      <div className="reveal"><Impact /></div>
-      <div className="reveal"><Skills /></div>
-      <div className="reveal"><Contact /></div>
+      <div className="reveal">
+        <About />
+      </div>
+      <div className="reveal">
+        <Timeline />
+      </div>
+      <div className="reveal">
+        <Experience />
+      </div>
+      <div className="reveal">
+        <Projects />
+      </div>
+      <div className="reveal">
+        <Impact />
+      </div>
+      <div className="reveal">
+        <Skills />
+      </div>
+      <div className="reveal">
+        <Contact />
+      </div>
       <Footer />
     </main>
   );

@@ -21,8 +21,8 @@ export function Impact() {
               <div className="absolute inset-0 bg-gradient-to-t from-coffee/40 via-transparent to-transparent" />
               <blockquote className="absolute bottom-0 left-0 right-0 p-8 md:p-12">
                 <p className="max-w-md font-display text-xl italic leading-snug text-cream md:text-2xl">
-                  "Kopi yang baik dimulai dari hubungan yang adil — dengan tanah, dengan petani, dengan
-                  cerita yang ditulis bersama."
+                  "Kopi yang baik dimulai dari hubungan yang adil — dengan tanah, dengan petani,
+                  dengan cerita yang ditulis bersama."
                 </p>
               </blockquote>
             </div>
@@ -34,14 +34,17 @@ export function Impact() {
               <span className="italic text-terracotta">satu janji.</span>
             </h2>
             <p className="mt-6 text-base leading-relaxed text-coffee/75">
-              Pekerjaan saya tersebar di lima geografi kopi Sulawesi Selatan. Setiap tempat punya karakter
-              biji, tantangan logistik, dan komunitas yang berbeda — tapi prinsipnya sama: transparansi
-              di hulu, kualitas di hilir.
+              Pekerjaan saya tersebar di lima geografi kopi Sulawesi Selatan. Setiap tempat punya
+              karakter biji, tantangan logistik, dan komunitas yang berbeda — tapi prinsipnya sama:
+              transparansi di hulu, kualitas di hilir.
             </p>
 
             <div className="mt-10 space-y-4">
               {[
-                { name: "Makassar", note: "Ibu Kota Provinsi · Roastery, Coffee Shop & Supply Chain" },
+                {
+                  name: "Makassar",
+                  note: "Ibu Kota Provinsi · Roastery, Coffee Shop & Supply Chain",
+                },
                 { name: "Barru", note: "Pesisir & dataran rendah · pengembangan komoditas baru" },
                 { name: "Toraja", note: "Highland klasik · arabika premium turun-temurun" },
                 { name: "Enrekang", note: "Dataran tinggi · Arabika Specialty · Natural & Honey" },
@@ -55,7 +58,9 @@ export function Impact() {
                     0{i + 1}
                   </div>
                   <div>
-                    <div className="font-display text-2xl text-coffee transition-colors group-hover:text-terracotta">{r.name}</div>
+                    <div className="font-display text-2xl text-coffee transition-colors group-hover:text-terracotta">
+                      {r.name}
+                    </div>
                     <div className="mt-1 text-sm text-coffee/70">{r.note}</div>
                   </div>
                 </div>

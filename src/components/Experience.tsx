@@ -39,7 +39,8 @@ export function Experience() {
       <div className="mx-auto max-w-7xl px-6 md:px-10">
         <SectionLabel number="03" label="Pengalaman" />
         <h2 className="mt-6 max-w-3xl font-display text-[clamp(2rem,5vw,4rem)] leading-[1.05] text-coffee">
-          Tiga peran, satu <span className="italic text-terracotta">benang merah</span>: efisiensi yang berpihak.
+          Tiga peran, satu <span className="italic text-terracotta">benang merah</span>: efisiensi
+          yang berpihak.
         </h2>
 
         <div className="mt-16 space-y-px overflow-hidden rounded-2xl border border-border">

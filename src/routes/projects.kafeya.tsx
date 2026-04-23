@@ -11,7 +11,8 @@ const galleryItems: GalleryItem[] = [
     src: flowImg,
     alt: "Diagram alur dari transaksi kasir menjadi laporan keuangan otomatis",
     label: "Transaksi → Laporan",
-    caption: "Dulu pemilik warung mencatat di buku, lalu memindahkan ke Excel akhir bulan. Diagram ini memetakan ulang alurnya jadi satu tarikan napas.",
+    caption:
+      "Dulu pemilik warung mencatat di buku, lalu memindahkan ke Excel akhir bulan. Diagram ini memetakan ulang alurnya jadi satu tarikan napas.",
     stage: "Problem",
     orientation: "wide",
   },
@@ -19,7 +20,8 @@ const galleryItems: GalleryItem[] = [
     src: posImg,
     alt: "Antarmuka kasir Kafeya POS untuk café",
     label: "Kasir Kafeya",
-    caption: "Layout split: menu di kiri, order di kanan. Tombol besar, harga jelas, alur tap-tap-bayar dalam hitungan detik bahkan saat antrian sibuk.",
+    caption:
+      "Layout split: menu di kiri, order di kanan. Tombol besar, harga jelas, alur tap-tap-bayar dalam hitungan detik bahkan saat antrian sibuk.",
     stage: "Solution",
     orientation: "wide",
   },
@@ -27,7 +29,8 @@ const galleryItems: GalleryItem[] = [
     src: reportImg,
     alt: "Mockup laporan bulanan keuangan UMKM kopi",
     label: "Laporan Bulanan",
-    caption: "Akhir bulan tinggal buka — omzet, kategori, margin, pajak sudah tergenerate. Tinggal kirim ke akuntan atau lihat sendiri di ponsel.",
+    caption:
+      "Akhir bulan tinggal buka — omzet, kategori, margin, pajak sudah tergenerate. Tinggal kirim ke akuntan atau lihat sendiri di ponsel.",
     stage: "Result",
     orientation: "portrait",
   },
@@ -35,7 +38,8 @@ const galleryItems: GalleryItem[] = [
     src: posImg,
     alt: "Tampilan ringkas struk transaksi yang siap cetak atau dikirim digital",
     label: "Struk Digital",
-    caption: "Struk bisa dicetak atau dikirim via WhatsApp — sekaligus jadi bukti transaksi yang masuk ke pembukuan tanpa input manual.",
+    caption:
+      "Struk bisa dicetak atau dikirim via WhatsApp — sekaligus jadi bukti transaksi yang masuk ke pembukuan tanpa input manual.",
     stage: "Result",
     orientation: "wide",
   },
@@ -51,7 +55,10 @@ export const Route = createFileRoute("/projects/kafeya")({
           "Kafeya POS: alat bantu kasir & pelaporan keuangan untuk café dan UMKM kopi. Sesuai standar, ramah pemilik warung kecil.",
       },
       { property: "og:title", content: "Kafeya POS — Akuntansi UMKM yang Tidak Bikin Pusing" },
-      { property: "og:description", content: "Studi kasus pengembangan POS & sistem akuntansi UMKM kopi." },
+      {
+        property: "og:description",
+        content: "Studi kasus pengembangan POS & sistem akuntansi UMKM kopi.",
+      },
       { property: "og:image", content: "/og-image.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:image", content: "/og-image.jpg" },
@@ -163,15 +170,17 @@ function KafeyaPage() {
       <section className="py-24 md:py-32">
         <div className="mx-auto grid max-w-6xl gap-16 px-6 md:grid-cols-2 md:gap-20 md:px-10">
           <div>
-            <div className="font-mono text-xs uppercase tracking-[0.2em] text-terracotta">Masalah</div>
+            <div className="font-mono text-xs uppercase tracking-[0.2em] text-terracotta">
+              Masalah
+            </div>
             <h2 className="mt-4 font-display text-3xl text-coffee md:text-4xl">
               UMKM kopi takut <span className="italic">"laporan keuangan".</span>
             </h2>
             <p className="mt-6 leading-relaxed text-coffee/75">
-              Pemilik warung sibuk meracik kopi, bukan mengoperasikan software akuntansi.
-              POS yang ada terlalu mahal, terlalu rumit, atau cuma jualan fitur yang tidak dipakai.
-              Akhirnya: nota berserakan, omzet tidak tercatat, pajak ditebak-tebak, modal tidak
-              jelas perginya ke mana.
+              Pemilik warung sibuk meracik kopi, bukan mengoperasikan software akuntansi. POS yang
+              ada terlalu mahal, terlalu rumit, atau cuma jualan fitur yang tidak dipakai. Akhirnya:
+              nota berserakan, omzet tidak tercatat, pajak ditebak-tebak, modal tidak jelas perginya
+              ke mana.
             </p>
           </div>
 
@@ -191,14 +200,19 @@ function KafeyaPage() {
 
       <section className="border-t border-border bg-cream-soft py-24 md:py-32">
         <div className="mx-auto max-w-6xl px-6 md:px-10">
-          <div className="font-mono text-xs uppercase tracking-[0.2em] text-terracotta">Fitur Inti</div>
+          <div className="font-mono text-xs uppercase tracking-[0.2em] text-terracotta">
+            Fitur Inti
+          </div>
           <h2 className="mt-4 max-w-2xl font-display text-3xl text-coffee md:text-5xl">
             Hanya yang benar-benar dipakai.
           </h2>
 
           <div className="mt-16 grid gap-px overflow-hidden rounded-2xl border border-border bg-border md:grid-cols-2">
             {features.map((f, i) => (
-              <div key={f.title} className="bg-card p-8 transition-colors hover:bg-cream-soft md:p-10">
+              <div
+                key={f.title}
+                className="bg-card p-8 transition-colors hover:bg-cream-soft md:p-10"
+              >
                 <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-terracotta">
                   0{i + 1}
                 </div>
@@ -237,13 +251,15 @@ function KafeyaPage() {
 
       <section className="border-t border-border bg-coffee py-24 text-cream md:py-32">
         <div className="mx-auto max-w-5xl px-6 md:px-10">
-          <div className="font-mono text-xs uppercase tracking-[0.2em] text-mustard">Kolaborasi</div>
+          <div className="font-mono text-xs uppercase tracking-[0.2em] text-mustard">
+            Kolaborasi
+          </div>
           <h2 className="mt-6 font-display text-[clamp(2rem,5vw,4rem)] leading-[1.05] text-cream text-balance">
             Punya warung, café, atau jaringan UMKM kopi yang butuh sistem yang waras?
           </h2>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-cream/75">
-            Saya terbuka untuk pilot, kustomisasi, atau kemitraan dengan inkubator/koperasi.
-            Mari bangun perangkat yang benar-benar dipakai, bukan cuma diinstall.
+            Saya terbuka untuk pilot, kustomisasi, atau kemitraan dengan inkubator/koperasi. Mari
+            bangun perangkat yang benar-benar dipakai, bukan cuma diinstall.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-4">

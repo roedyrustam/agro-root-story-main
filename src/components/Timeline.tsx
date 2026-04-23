@@ -56,7 +56,10 @@ export function Timeline() {
           {milestones.map((m, i) => {
             const left = i % 2 === 0;
             return (
-              <li key={m.year} className="relative grid gap-4 pl-8 md:grid-cols-2 md:pl-0 md:gap-12">
+              <li
+                key={m.year}
+                className="relative grid gap-4 pl-8 md:grid-cols-2 md:pl-0 md:gap-12"
+              >
                 <span className="absolute left-0 top-2 h-4 w-4 rounded-full border-2 border-terracotta bg-cream md:left-1/2 md:-translate-x-1/2" />
 
                 <div className={left ? "md:text-right md:pr-12" : "md:order-2 md:pl-12"}>

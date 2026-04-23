@@ -44,9 +44,7 @@ export function Gallery({ items, eyebrow = "Galeri", title, subtitle }: Props) {
               {title}
             </h2>
             {subtitle && (
-              <p className="mt-4 max-w-xl text-base leading-relaxed text-coffee/70">
-                {subtitle}
-              </p>
+              <p className="mt-4 max-w-xl text-base leading-relaxed text-coffee/70">{subtitle}</p>
             )}
           </div>
 
@@ -73,10 +71,7 @@ export function Gallery({ items, eyebrow = "Galeri", title, subtitle }: Props) {
         <div className="mt-6 flex flex-wrap items-center gap-2 font-mono text-[10px] uppercase tracking-[0.2em] text-coffee/60">
           <span>Tahapan:</span>
           {(["Problem", "Solution", "Result"] as const).map((s) => (
-            <span
-              key={s}
-              className={`rounded-full border px-3 py-1 ${stageColors[s]}`}
-            >
+            <span key={s} className={`rounded-full border px-3 py-1 ${stageColors[s]}`}>
               {s}
             </span>
           ))}

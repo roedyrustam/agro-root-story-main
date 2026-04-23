@@ -80,7 +80,9 @@ export function Projects() {
                 <div className="absolute left-6 top-6 z-10 font-mono text-[10px] uppercase tracking-[0.2em] text-cream drop-shadow-md">
                   {p.year}
                 </div>
-                <div className={`absolute right-6 top-6 z-10 h-3 w-3 rounded-full ${p.accent} ring-2 ring-cream`} />
+                <div
+                  className={`absolute right-6 top-6 z-10 h-3 w-3 rounded-full ${p.accent} ring-2 ring-cream`}
+                />
               </div>
 
               <div className="p-8">
