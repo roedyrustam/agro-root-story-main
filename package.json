@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite dev",
-    "build": "cross-env NITRO_PRESET=cloudflare-pages vite build && cp dist/server/server.js dist/client/_worker.js && cp -r dist/server/assets/* dist/client/assets/",
+    "build": "cross-env NITRO_PRESET=cloudflare-pages vite build && cp dist/server/server.js dist/client/server.js && cp -r dist/server/assets/* dist/client/assets/ && echo 'export { default } from \"./server.js\";' > dist/client/_worker.js",
     "build:dev": "vite build --mode development",
     "preview": "vite preview",
     "lint": "eslint .",

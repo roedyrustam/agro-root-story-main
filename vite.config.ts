@@ -17,7 +17,13 @@ export default defineConfig(() => ({
     noExternal: true,
   },
   resolve: {
-    alias: { "@": `${process.cwd()}/src` },
+    alias: {
+      "@": `${process.cwd()}/src`,
+      util: "node:util",
+      crypto: "node:crypto",
+      stream: "node:stream",
+      async_hooks: "node:async_hooks",
+    },
     dedupe: [
       "react",
       "react-dom",
