@@ -28,6 +28,7 @@ const experiences = [
     points: [
       "Merancang dan memelihara platform beanhub.online untuk pencatatan rantai pasok kopi.",
       "Mengembangkan Kafeya POS — alat bantu akuntansi UMKM sesuai standar pelaporan.",
+      "Merancang dan memelihara sistem cuppingnotes.online untuk pencatatan kualitas kopi.",
     ],
   },
 ];
