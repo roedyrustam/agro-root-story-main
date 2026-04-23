@@ -34,9 +34,9 @@ export function Nav() {
     <header className="fixed left-0 right-0 top-0 z-50 border-b border-border/60 bg-cream/80 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-10">
         <Link to="/" className="group flex items-center gap-3">
-          <img 
-            src="/logo.jpg" 
-            alt="Roedy Rustam" 
+          <img
+            src="/roedy.jpeg"
+            alt="Roedy Rustam"
             className="h-10 w-10 rounded-full object-cover border border-coffee/20 transition-transform duration-300 group-hover:scale-105"
           />
           <div className="leading-none">
@@ -80,19 +80,16 @@ export function Nav() {
         >
           <div className="flex w-5 flex-col items-center gap-[5px]">
             <span
-              className={`block h-[1.5px] w-full bg-coffee transition-all duration-300 ${
-                open ? "translate-y-[6.5px] rotate-45" : ""
-              }`}
+              className={`block h-[1.5px] w-full bg-coffee transition-all duration-300 ${open ? "translate-y-[6.5px] rotate-45" : ""
+                }`}
             />
             <span
-              className={`block h-[1.5px] w-full bg-coffee transition-all duration-300 ${
-                open ? "opacity-0 scale-x-0" : ""
-              }`}
+              className={`block h-[1.5px] w-full bg-coffee transition-all duration-300 ${open ? "opacity-0 scale-x-0" : ""
+                }`}
             />
             <span
-              className={`block h-[1.5px] w-full bg-coffee transition-all duration-300 ${
-                open ? "-translate-y-[6.5px] -rotate-45" : ""
-              }`}
+              className={`block h-[1.5px] w-full bg-coffee transition-all duration-300 ${open ? "-translate-y-[6.5px] -rotate-45" : ""
+                }`}
             />
           </div>
         </button>
@@ -100,18 +97,16 @@ export function Nav() {
 
       {/* Mobile menu overlay */}
       <div
-        className={`fixed inset-0 z-[55] bg-coffee/20 backdrop-blur-sm transition-opacity duration-300 md:hidden ${
-          open ? "opacity-100" : "pointer-events-none opacity-0"
-        }`}
+        className={`fixed inset-0 z-[55] bg-coffee/20 backdrop-blur-sm transition-opacity duration-300 md:hidden ${open ? "opacity-100" : "pointer-events-none opacity-0"
+          }`}
         onClick={() => setOpen(false)}
         aria-hidden="true"
       />
 
       {/* Mobile menu panel */}
       <div
-        className={`fixed right-0 top-0 z-[58] flex h-dvh w-[min(85vw,360px)] flex-col bg-cream/95 backdrop-blur-xl shadow-2xl transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] md:hidden ${
-          open ? "translate-x-0" : "translate-x-full"
-        }`}
+        className={`fixed right-0 top-0 z-[58] flex h-dvh w-[min(85vw,360px)] flex-col bg-cream/95 backdrop-blur-xl shadow-2xl transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] md:hidden ${open ? "translate-x-0" : "translate-x-full"
+          }`}
       >
         {/* Menu header spacer */}
         <div className="h-20 shrink-0" />
@@ -121,9 +116,8 @@ export function Nav() {
           {navLinks.map((link, i) => (
             <div
               key={link.label}
-              className={`transition-all duration-500 ${
-                open ? "translate-x-0 opacity-100" : "translate-x-8 opacity-0"
-              }`}
+              className={`transition-all duration-500 ${open ? "translate-x-0 opacity-100" : "translate-x-8 opacity-0"
+                }`}
               style={{ transitionDelay: open ? `${100 + i * 60}ms` : "0ms" }}
             >
               {link.type === "route" ? (
@@ -152,9 +146,8 @@ export function Nav() {
 
         {/* Mobile CTA */}
         <div
-          className={`shrink-0 border-t border-border/40 px-6 py-6 transition-all duration-500 ${
-            open ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
-          }`}
+          className={`shrink-0 border-t border-border/40 px-6 py-6 transition-all duration-500 ${open ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
+            }`}
           style={{ transitionDelay: open ? "400ms" : "0ms" }}
         >
           <a

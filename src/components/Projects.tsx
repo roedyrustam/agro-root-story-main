@@ -22,7 +22,16 @@ const projects = [
     accent: "bg-coffee",
     pattern: "from-coffee/15 via-clay/20 to-mustard/20",
     href: "/projects/kafeya" as const,
-    initial: "k",
+  {
+    name: "CuppingNotes.online",
+    type: "Platform · Coffee Quality",
+    year: "2026",
+    desc: "Platform digital untuk mencatat, mengevaluasi, dan membagikan hasil cupping kopi (SCA standar). Membantu Q-Graders dan roasters mendokumentasikan profil rasa.",
+    stack: ["Angular", "Firebase", "SSR"],
+    accent: "bg-terracotta",
+    pattern: "from-mustard/20 via-terracotta/20 to-coffee/20",
+    href: "/projects/cuppingnotes" as const,
+    initial: "c",
   },
 ];
 
