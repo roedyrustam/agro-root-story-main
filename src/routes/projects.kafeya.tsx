@@ -143,7 +143,7 @@ function KafeyaPage() {
       </section>
 
       {/* Visual block */}
-      <section className="px-6 md:px-10">
+      <section className="reveal px-6 md:px-10">
         <div className="mx-auto max-w-6xl">
           <div className="grain relative aspect-[16/8] overflow-hidden rounded-3xl bg-gradient-to-br from-coffee via-coffee to-terracotta/40">
             <div className="absolute inset-0 grid place-items-center">

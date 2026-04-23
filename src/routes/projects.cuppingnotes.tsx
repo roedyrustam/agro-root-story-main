@@ -108,7 +108,7 @@ function CuppingNotesPage() {
         </section>
 
         {/* Story Section */}
-        <section className="mx-auto max-w-7xl px-6 py-24 md:px-10">
+        <section className="reveal mx-auto max-w-7xl px-6 py-24 md:px-10">
           <div className="grid gap-16 md:grid-cols-12 md:gap-8">
             <div className="md:col-span-4 lg:col-span-3">
               <div className="sticky top-32 space-y-8">
@@ -192,7 +192,7 @@ function CuppingNotesPage() {
         </section>
 
         {/* Gallery Section */}
-        <section className="border-t border-border/40 py-24 md:py-32">
+        <section className="reveal border-t border-border/40 py-24 md:py-32">
           <div className="mx-auto max-w-7xl px-6 md:px-10">
             <h2 className="font-display text-3xl text-coffee">Artefak Produk</h2>
             <p className="mt-2 text-sm text-coffee/60">Beberapa tangkapan layar dari antarmuka platform.</p>

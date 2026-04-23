@@ -1,4 +1,5 @@
-import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
+import { Outlet, Link, createRootRoute, HeadContent, Scripts, useRouterState } from "@tanstack/react-router";
+import { useEffect } from "react";
 
 import appCss from "../styles.css?url";
 
@@ -154,43 +155,7 @@ function RootShell({ children }: { children: React.ReactNode }) {
         <Scripts />
         <script
           dangerouslySetInnerHTML={{
-            __html: `
-              // Scroll Progress
-              window.addEventListener('scroll', () => {
-                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-                const scrolled = (winScroll / height) * 100;
-                const indicator = document.getElementById('scroll-indicator');
-                if (indicator) indicator.style.width = scrolled + '%';
-                
-                // Parallax for Hero Image
-                const heroImg = document.querySelector('.hero-parallax');
-                if (heroImg) {
-                  const speed = 0.05;
-                  const rect = heroImg.getBoundingClientRect();
-                  if (rect.top < window.innerHeight && rect.bottom > 0) {
-                    const yPos = -(window.scrollY * speed);
-                    heroImg.style.transform = \`translateY(\${yPos}px)\`;
-                  }
-                }
-              });
-
-              // Reveal on Scroll
-              const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-              };
-
-              const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                  if (entry.isIntersecting) {
-                    entry.target.classList.add('is-visible');
-                  }
-                });
-              }, observerOptions);
-
-              document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
-            `
+            __html: `document.documentElement.classList.add('js-enabled');`
           }}
         />
       </body>
@@ -199,5 +164,56 @@ function RootShell({ children }: { children: React.ReactNode }) {
 }
 
 function RootComponent() {
+  const routerState = useRouterState();
+  const location = routerState.location;
+
+  useEffect(() => {
+    // Scroll Progress
+    const handleScroll = () => {
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      const indicator = document.getElementById('scroll-indicator');
+      if (indicator) indicator.style.width = scrolled + '%';
+      
+      // Parallax for Hero Image
+      const heroImg = document.querySelector('.hero-parallax') as HTMLElement;
+      if (heroImg) {
+        const speed = 0.05;
+        const rect = heroImg.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          const yPos = -(window.scrollY * speed);
+          heroImg.style.transform = `translateY(${yPos}px)`;
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Initialize on mount/navigation
+
+    // Reveal on Scroll
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+        }
+      });
+    }, observerOptions);
+
+    // Re-scan for reveal elements on every location change
+    const revealElements = document.querySelectorAll('.reveal');
+    revealElements.forEach((el) => observer.observe(el));
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      observer.disconnect();
+    };
+  }, [location.pathname]); // Re-run on navigation
+
   return <Outlet />;
 }

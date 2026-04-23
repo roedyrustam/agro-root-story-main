@@ -176,8 +176,22 @@ function BeanhubPage() {
               cerita kopi berhenti di rak toko.
             </p>
           </div>
+        </div>
+      </section>
 
-          <div>
+      {/* Story Content */}
+      <section className="reveal mx-auto max-w-6xl px-6 py-24 md:px-10">
+        <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+          <div className="order-2 lg:order-1">
+            <div className="aspect-[4/3] overflow-hidden rounded-3xl bg-sage/10">
+              <img 
+                src={flowImg} 
+                alt="Alur Beanhub" 
+                className="h-full w-full object-cover"
+              />
+            </div>
+          </div>
+          <div className="order-1 lg:order-2">
             <div className="font-mono text-xs uppercase tracking-[0.2em] text-sage">Solusi</div>
             <h2 className="mt-4 font-display text-3xl text-coffee md:text-4xl">
               Satu sistem ringan untuk <span className="italic">semua simpul.</span>
@@ -192,7 +206,7 @@ function BeanhubPage() {
       </section>
 
       {/* Features */}
-      <section className="border-t border-border bg-cream-soft py-24 md:py-32">
+      <section className="reveal border-t border-border bg-cream-soft py-24 md:py-32">
         <div className="mx-auto max-w-6xl px-6 md:px-10">
           <div className="font-mono text-xs uppercase tracking-[0.2em] text-terracotta">Fitur Inti</div>
           <h2 className="mt-4 max-w-2xl font-display text-3xl text-coffee md:text-5xl">
@@ -214,7 +228,7 @@ function BeanhubPage() {
       </section>
 
       {/* Results */}
-      <section className="py-24 md:py-32">
+      <section className="reveal py-24 md:py-32">
         <div className="mx-auto max-w-6xl px-6 md:px-10">
           <div className="font-mono text-xs uppercase tracking-[0.2em] text-terracotta">Hasil</div>
           <h2 className="mt-4 max-w-2xl font-display text-3xl text-coffee md:text-5xl">
