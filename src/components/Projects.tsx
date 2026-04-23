@@ -1,5 +1,8 @@
 import { Link } from "@tanstack/react-router";
 import { SectionLabel } from "./SectionLabel";
+import beanhubImg from "@/assets/project-beanhub.png";
+import kafeyaImg from "@/assets/project-kafeya.png";
+import cuppingnotesImg from "@/assets/project-cuppingnotes.png";
 
 const projects = [
   {
@@ -12,6 +15,7 @@ const projects = [
     pattern: "from-terracotta/20 via-mustard/20 to-sage/20",
     href: "/projects/beanhub" as const,
     initial: "b",
+    image: beanhubImg,
   },
 
   {
@@ -24,6 +28,7 @@ const projects = [
     pattern: "from-coffee/15 via-clay/20 to-mustard/20",
     href: "/projects/kafeya" as const,
     initial: "k",
+    image: kafeyaImg,
   },
   {
     name: "CuppingNotes.online",
@@ -35,6 +40,7 @@ const projects = [
     pattern: "from-mustard/20 via-terracotta/20 to-coffee/20",
     href: "/projects/cuppingnotes" as const,
     initial: "c",
+    image: cuppingnotesImg,
   },
 ];
 
@@ -59,16 +65,22 @@ export function Projects() {
               to={p.href}
               className="group relative overflow-hidden rounded-3xl border border-border bg-card transition-all hover:-translate-y-1 hover:shadow-2xl"
             >
-              <div className={`relative h-48 bg-gradient-to-br ${p.pattern} grain overflow-hidden`}>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="font-display text-7xl italic text-coffee/20 md:text-8xl">
+              <div className={`relative h-56 bg-gradient-to-br ${p.pattern} grain overflow-hidden`}>
+                <img
+                  src={p.image}
+                  alt={p.name}
+                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-coffee/10 transition-colors group-hover:bg-transparent" />
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                  <div className="font-display text-7xl italic text-cream/40 md:text-8xl">
                     {p.initial}
                   </div>
                 </div>
-                <div className="absolute left-6 top-6 font-mono text-[10px] uppercase tracking-[0.2em] text-coffee/60">
+                <div className="absolute left-6 top-6 z-10 font-mono text-[10px] uppercase tracking-[0.2em] text-cream drop-shadow-md">
                   {p.year}
                 </div>
-                <div className={`absolute right-6 top-6 h-3 w-3 rounded-full ${p.accent}`} />
+                <div className={`absolute right-6 top-6 z-10 h-3 w-3 rounded-full ${p.accent} ring-2 ring-cream`} />
               </div>
 
               <div className="p-8">
