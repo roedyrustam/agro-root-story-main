@@ -74,7 +74,7 @@ export function Hero() {
                 loading="eager"
                 fetchPriority="high"
                 decoding="async"
-                className="relative w-full rounded-2xl"
+                className="hero-parallax relative w-full rounded-2xl transition-transform duration-75 will-change-transform"
               />
               <div className="absolute -bottom-6 -left-6 max-w-[180px] rotate-[-3deg] rounded-lg bg-cream px-4 py-3 shadow-xl ring-1 ring-border">
                 <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-terracotta">Origin</div>

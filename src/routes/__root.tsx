@@ -155,12 +155,41 @@ function RootShell({ children }: { children: React.ReactNode }) {
         <script
           dangerouslySetInnerHTML={{
             __html: `
+              // Scroll Progress
               window.addEventListener('scroll', () => {
                 const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
                 const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
                 const scrolled = (winScroll / height) * 100;
-                document.getElementById('scroll-indicator').style.width = scrolled + '%';
+                const indicator = document.getElementById('scroll-indicator');
+                if (indicator) indicator.style.width = scrolled + '%';
+                
+                // Parallax for Hero Image
+                const heroImg = document.querySelector('.hero-parallax');
+                if (heroImg) {
+                  const speed = 0.05;
+                  const rect = heroImg.getBoundingClientRect();
+                  if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    const yPos = -(window.scrollY * speed);
+                    heroImg.style.transform = \`translateY(\${yPos}px)\`;
+                  }
+                }
               });
+
+              // Reveal on Scroll
+              const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+              };
+
+              const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                  if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                  }
+                });
+              }, observerOptions);
+
+              document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
             `
           }}
         />
