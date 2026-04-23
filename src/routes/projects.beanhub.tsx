@@ -247,7 +247,7 @@ function CtaBlock({ eyebrow, title, body }: { eyebrow: string; title: string; bo
 
         <div className="mt-10 flex flex-wrap gap-5">
           <a
-            href="mailto:hello@example.com"
+            href="mailto:support@bijidata.online"
             className="inline-flex items-center gap-3 rounded-full bg-mustard px-7 py-4 font-mono text-xs uppercase tracking-[0.2em] text-coffee transition-all hover:bg-cream"
           >
             Email saya →

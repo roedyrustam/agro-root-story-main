@@ -30,19 +30,21 @@ export function Impact() {
 
           <div className="lg:col-span-5">
             <h2 className="font-display text-[clamp(2rem,4.5vw,3.5rem)] leading-[1.05] text-coffee">
-              Tiga wilayah, <br />
+              Lima wilayah, <br />
               <span className="italic text-terracotta">satu janji.</span>
             </h2>
             <p className="mt-6 text-base leading-relaxed text-coffee/75">
-              Pekerjaan saya tersebar di tiga geografi kopi Sulawesi Selatan. Setiap tempat punya karakter
+              Pekerjaan saya tersebar di lima geografi kopi Sulawesi Selatan. Setiap tempat punya karakter
               biji, tantangan logistik, dan komunitas yang berbeda — tapi prinsipnya sama: transparansi
               di hulu, kualitas di hilir.
             </p>
 
             <div className="mt-10 space-y-4">
               {[
+                { name: "Makassar", note: "Ibu Kota Provinsi · Roastery, Coffee Shop & Supply Chain" },
                 { name: "Barru", note: "Pesisir & dataran rendah · pengembangan komoditas baru" },
                 { name: "Toraja", note: "Highland klasik · arabika premium turun-temurun" },
+                { name: "Enrekang", note: "Dataran tinggi · Arabika Specialty · Natural & Honey" },
                 { name: "Sinjai", note: "Komunitas adat · tata kelola BUMMA & akses pasar" },
               ].map((r, i) => (
                 <div
