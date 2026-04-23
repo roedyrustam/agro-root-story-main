@@ -13,6 +13,10 @@ export default defineConfig(() => ({
     react(),
     cloudflare({
       pages: true,
+      // Kita tambahkan konfigurasi environment eksplisit
+      viteEnvironment: {
+        name: "ssr",
+      },
     }),
   ],
   resolve: {
