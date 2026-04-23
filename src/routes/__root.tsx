@@ -51,6 +51,11 @@ export const Route = createRootRoute({
       // Additional SEO
       { name: "robots", content: "index, follow" },
       { name: "googlebot", content: "index, follow" },
+      // GEO Meta Tags (Local SEO)
+      { name: "geo.region", content: "ID-SN" },
+      { name: "geo.placename", content: "Makassar" },
+      { name: "geo.position", content: "-5.147665;119.432732" },
+      { name: "ICBM", content: "-5.147665, 119.432732" },
     ],
     links: [
       {
@@ -98,7 +103,7 @@ export const Route = createRootRoute({
             addressRegion: "Sulawesi Selatan",
             addressCountry: "ID",
           },
-          sameAs: ["https://beanhub.online"],
+          sameAs: ["https://beanhub.online", "https://cuppingnotes.online"],
         }),
       },
     ],
