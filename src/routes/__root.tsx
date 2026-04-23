@@ -43,6 +43,10 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
+      {
+        name: "google-site-verification",
+        content: "pBTvdE97aC22PQnmJv_ZDD3c2B9O2IXJlLeQNYp4c_E",
+      },
       { title: "Roedy Rustam — Agro × Digital" },
       {
         name: "description",
