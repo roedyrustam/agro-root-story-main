@@ -51,10 +51,10 @@ export const Route = createFileRoute("/projects/kafeya")({
           "Kafeya POS: alat bantu kasir & pelaporan keuangan untuk café dan UMKM kopi. Sesuai standar, ramah pemilik warung kecil.",
       },
       { property: "og:title", content: "Kafeya POS — Akuntansi UMKM yang Tidak Bikin Pusing" },
-      {
-        property: "og:description",
-        content: "Studi kasus pengembangan POS & sistem akuntansi UMKM kopi.",
-      },
+      { property: "og:description", content: "Studi kasus pengembangan POS & sistem akuntansi UMKM kopi." },
+      { property: "og:image", content: "/og-image.jpg" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "/og-image.jpg" },
     ],
   }),
   component: KafeyaPage,
@@ -102,7 +102,7 @@ function KafeyaPage() {
           <div className="mt-10 flex flex-wrap items-center gap-3 font-mono text-xs uppercase tracking-[0.2em] text-terracotta">
             <span className="rounded-full bg-coffee/10 px-3 py-1 text-coffee">Tool</span>
             <span>2025</span>
-            <span className="text-coffee/40">·</span>
+            <span className="text-coffee/60">·</span>
             <span className="text-coffee/60">Pandu Talenta Digital</span>
           </div>
 

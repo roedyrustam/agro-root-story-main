@@ -51,10 +51,10 @@ export const Route = createFileRoute("/projects/beanhub")({
           "Beanhub.online: platform pencatatan rantai pasok kopi dari kebun ke roastery. Transparan untuk petani, pengepul, dan roaster.",
       },
       { property: "og:title", content: "Beanhub.online — Rantai Pasok Kopi yang Transparan" },
-      {
-        property: "og:description",
-        content: "Studi kasus pengembangan platform supply chain kopi Sulawesi.",
-      },
+      { property: "og:description", content: "Studi kasus pengembangan platform supply chain kopi Sulawesi." },
+      { property: "og:image", content: "/og-image.jpg" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "/og-image.jpg" },
     ],
   }),
   component: BeanhubPage,
@@ -103,7 +103,7 @@ function BeanhubPage() {
           <div className="mt-10 flex flex-wrap items-center gap-3 font-mono text-xs uppercase tracking-[0.2em] text-terracotta">
             <span className="rounded-full bg-terracotta/10 px-3 py-1">Platform</span>
             <span>2025</span>
-            <span className="text-coffee/40">·</span>
+            <span className="text-coffee/60">·</span>
             <span className="text-coffee/60">Pandu Talenta Digital</span>
           </div>
 

@@ -26,7 +26,10 @@ export const Route = createFileRoute("/")({
         content:
           "Mengelola operasional kopi hulu-hilir & membangun beanhub.online dan Kafeya POS untuk UMKM agro Sulawesi Selatan.",
       },
+      { property: "og:image", content: "/og-image.jpg" },
       { property: "og:type", content: "profile" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "/og-image.jpg" },
     ],
   }),
   component: Index,

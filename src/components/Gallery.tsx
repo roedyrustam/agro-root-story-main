@@ -113,6 +113,7 @@ export function Gallery({ items, eyebrow = "Galeri", title, subtitle }: Props) {
                 src={item.src}
                 alt={item.alt}
                 loading="lazy"
+                decoding="async"
                 className={`w-full object-cover transition-transform duration-700 group-hover:scale-[1.02] ${
                   item.orientation === "portrait" ? "aspect-[3/4]" : "aspect-[16/10]"
                 }`}

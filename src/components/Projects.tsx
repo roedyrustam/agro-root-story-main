@@ -76,7 +76,7 @@ export function Projects() {
                   <div className="font-mono text-[11px] uppercase tracking-[0.2em] text-terracotta">
                     {p.type}
                   </div>
-                  <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-coffee/40 transition-all group-hover:translate-x-1 group-hover:text-terracotta">
+                  <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-coffee/60 transition-all group-hover:translate-x-1 group-hover:text-terracotta">
                     Studi kasus →
                   </span>
                 </div>

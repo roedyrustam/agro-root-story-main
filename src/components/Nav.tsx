@@ -159,7 +159,7 @@ export function Nav() {
             <span>→</span>
           </a>
 
-          <div className="mt-4 text-center font-mono text-[10px] uppercase tracking-[0.2em] text-coffee/40">
+          <div className="mt-4 text-center font-mono text-[10px] uppercase tracking-[0.2em] text-coffee/60">
             Sulawesi Selatan, ID
           </div>
         </div>

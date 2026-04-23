@@ -42,10 +42,10 @@ export const Route = createFileRoute("/projects/cuppingnotes")({
           "Platform digital untuk mencatat, mengevaluasi, dan membagikan hasil cupping kopi. Dibangun dengan Angular SSR dan Firebase.",
       },
       { property: "og:title", content: "CuppingNotes.online — Digitalisasi Profil Rasa Kopi" },
-      {
-        property: "og:description",
-        content: "Studi kasus platform evaluasi dan social sharing cupping kopi.",
-      },
+      { property: "og:description", content: "Studi kasus platform evaluasi dan social sharing cupping kopi." },
+      { property: "og:image", content: "/og-image.jpg" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "/og-image.jpg" },
     ],
   }),
   component: CuppingNotesPage,
@@ -100,11 +100,11 @@ function CuppingNotesPage() {
             <div className="md:col-span-4 lg:col-span-3">
               <div className="sticky top-32 space-y-8">
                 <div>
-                  <h3 className="font-mono text-[10px] uppercase tracking-[0.2em] text-coffee/50">Role</h3>
+                  <h3 className="font-mono text-[10px] uppercase tracking-[0.2em] text-coffee/70">Role</h3>
                   <p className="mt-2 text-sm text-coffee/80">Fullstack Developer & System Architect</p>
                 </div>
                 <div>
-                  <h3 className="font-mono text-[10px] uppercase tracking-[0.2em] text-coffee/50">Stack</h3>
+                  <h3 className="font-mono text-[10px] uppercase tracking-[0.2em] text-coffee/70">Stack</h3>
                   <ul className="mt-2 space-y-1 text-sm text-coffee/80">
                     <li>Angular 21 (Signals, SSR)</li>
                     <li>Firebase (Auth, Firestore, Storage)</li>
@@ -112,7 +112,7 @@ function CuppingNotesPage() {
                   </ul>
                 </div>
                 <div>
-                  <h3 className="font-mono text-[10px] uppercase tracking-[0.2em] text-coffee/50">Context</h3>
+                  <h3 className="font-mono text-[10px] uppercase tracking-[0.2em] text-coffee/70">Context</h3>
                   <p className="mt-2 text-sm text-coffee/80">Production-grade coffee platform.</p>
                 </div>
               </div>
@@ -195,7 +195,7 @@ function CuppingNotesPage() {
             to="/projects/beanhub" 
             className="group flex flex-col items-center justify-center gap-4 py-24 transition-colors hover:bg-terracotta/5"
           >
-            <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-coffee/40 transition-colors group-hover:text-terracotta/80">
+            <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-coffee/60 transition-colors group-hover:text-terracotta/80">
               Proyek Selanjutnya
             </span>
             <h2 className="font-display text-4xl text-coffee transition-colors group-hover:text-terracotta md:text-5xl">

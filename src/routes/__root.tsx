@@ -4,19 +4,24 @@ import appCss from "../styles.css?url";
 
 function NotFoundComponent() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background px-4">
+    <div className="flex min-h-screen items-center justify-center bg-cream px-6 selection:bg-terracotta/20 selection:text-terracotta">
       <div className="max-w-md text-center">
-        <h1 className="text-7xl font-bold text-foreground">404</h1>
-        <h2 className="mt-4 text-xl font-semibold text-foreground">Page not found</h2>
-        <p className="mt-2 text-sm text-muted-foreground">
-          The page you're looking for doesn't exist or has been moved.
+        <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-terracotta mb-4">
+          Error 404
+        </div>
+        <h1 className="font-display text-[clamp(4rem,10vw,8rem)] leading-none text-coffee">
+          Tersesat.
+        </h1>
+        <p className="mt-6 text-lg leading-relaxed text-coffee/75">
+          Halaman yang Anda cari mungkin sudah dipindahkan atau tidak pernah ada di peta ekosistem ini.
         </p>
-        <div className="mt-6">
+        <div className="mt-10">
           <Link
             to="/"
-            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+            className="group inline-flex items-center gap-3 rounded-full border border-coffee bg-transparent px-8 py-4 font-mono text-[11px] uppercase tracking-[0.2em] text-coffee transition-all hover:bg-coffee hover:text-cream"
           >
-            Go home
+            <span className="transition-transform duration-300 group-hover:-translate-x-1">←</span>
+            Kembali ke Beranda
           </Link>
         </div>
       </div>
@@ -61,6 +66,11 @@ export const Route = createRootRoute({
       {
         rel: "stylesheet",
         href: appCss,
+      },
+      {
+        rel: "icon",
+        type: "image/svg+xml",
+        href: "/favicon.svg",
       },
       {
         rel: "icon",

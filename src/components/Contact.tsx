@@ -23,7 +23,7 @@ export function Contact() {
             <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-terracotta">Email</div>
             <div className="mt-3 flex items-center justify-between gap-4">
               <span className="font-display text-2xl text-coffee md:text-3xl">support@bijidata.online</span>
-              <span className="text-2xl text-coffee/40 transition-all group-hover:translate-x-1 group-hover:text-terracotta">→</span>
+              <span className="text-2xl text-coffee/60 transition-all group-hover:translate-x-1 group-hover:text-terracotta">→</span>
             </div>
             <div className="mt-2 text-sm text-coffee/60">Cara paling mudah, biasanya dibalas dalam 24 jam.</div>
           </a>
@@ -37,7 +37,7 @@ export function Contact() {
             <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-terracotta">Karya</div>
             <div className="mt-3 flex items-center justify-between gap-4">
               <span className="font-display text-2xl text-coffee md:text-3xl">beanhub.online</span>
-              <span className="text-2xl text-coffee/40 transition-all group-hover:translate-x-1 group-hover:text-terracotta">↗</span>
+              <span className="text-2xl text-coffee/60 transition-all group-hover:translate-x-1 group-hover:text-terracotta">↗</span>
             </div>
             <div className="mt-2 text-sm text-coffee/60">Lihat platform rantai pasok kopi yang sedang dibangun.</div>
           </a>
