@@ -116,14 +116,30 @@ function BeanhubPage() {
             sampai cangkir di Jakarta — bisa <em className="text-coffee">dilihat semua orang.</em>
           </p>
 
-          <a
-            href="https://beanhub.online"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-10 inline-flex items-center gap-3 rounded-full border border-coffee bg-coffee px-7 py-4 font-mono text-xs uppercase tracking-[0.2em] text-cream transition-all hover:bg-terracotta hover:border-terracotta"
-          >
-            Kunjungi platform ↗
-          </a>
+          <div className="mt-10 flex flex-wrap items-center gap-4">
+            <a
+              href="https://beanhub.online"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 rounded-full border border-coffee bg-coffee px-7 py-4 font-mono text-xs uppercase tracking-[0.2em] text-cream transition-all hover:bg-terracotta hover:border-terracotta"
+            >
+              Kunjungi platform ↗
+            </a>
+            <button
+              onClick={() => {
+                if (navigator.share) {
+                  navigator.share({
+                    title: "Beanhub.online — Rantai Pasok Kopi Sulawesi",
+                    text: "Studi kasus pengembangan platform supply chain kopi yang transparan.",
+                    url: window.location.href,
+                  });
+                }
+              }}
+              className="inline-flex items-center gap-3 rounded-full border border-coffee/20 px-7 py-4 font-mono text-xs uppercase tracking-[0.2em] text-coffee transition-all hover:border-coffee hover:bg-cream-soft"
+            >
+              Bagikan
+            </button>
+          </div>
         </div>
       </section>
 

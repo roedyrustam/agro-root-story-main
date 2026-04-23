@@ -2,8 +2,8 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { Gallery, type GalleryItem } from "@/components/Gallery";
-import dashboardImg from "@/assets/beanhub-dashboard.jpg"; // Placeholder
-import mobileImg from "@/assets/beanhub-mobile.jpg"; // Placeholder
+import scaImg from "@/assets/cuppingnotes-sca.png";
+import radarImg from "@/assets/cuppingnotes-radar.png";
 
 const galleryItems: GalleryItem[] = [
   {
@@ -80,16 +80,29 @@ function CuppingNotesPage() {
               </h1>
             </div>
             
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-wrap items-center gap-4">
               <a 
                 href="https://cuppingnotes.online" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="group inline-flex items-center gap-3 rounded-full border border-coffee bg-transparent px-6 py-3 font-mono text-[11px] uppercase tracking-[0.2em] text-coffee transition-all hover:bg-coffee hover:text-cream"
+                className="group inline-flex items-center gap-3 rounded-full border border-coffee bg-coffee px-7 py-4 font-mono text-[11px] uppercase tracking-[0.2em] text-cream transition-all hover:bg-terracotta"
               >
-                Kunjungi Platform
-                <span className="transition-transform duration-300 group-hover:translate-x-1">↗</span>
+                Kunjungi Platform ↗
               </a>
+              <button
+                onClick={() => {
+                  if (navigator.share) {
+                    navigator.share({
+                      title: "CuppingNotes.online — Digitalisasi Profil Rasa",
+                      text: "Studi kasus platform evaluasi kualitas kopi.",
+                      url: window.location.href,
+                    });
+                  }
+                }}
+                className="inline-flex items-center gap-3 rounded-full border border-coffee/20 px-7 py-4 font-mono text-[11px] uppercase tracking-[0.2em] text-coffee transition-all hover:border-coffee hover:bg-cream-soft"
+              >
+                Bagikan
+              </button>
             </div>
           </div>
         </section>

@@ -49,13 +49,13 @@ export function Impact() {
               ].map((r, i) => (
                 <div
                   key={r.name}
-                  className="flex items-start gap-5 border-t border-border pt-4"
+                  className="group flex items-start gap-5 border-t border-border pt-4 transition-all hover:bg-cream/40 hover:pl-2"
                 >
-                  <div className="font-mono text-xs text-terracotta">
+                  <div className="font-mono text-xs text-terracotta transition-transform group-hover:scale-110">
                     0{i + 1}
                   </div>
                   <div>
-                    <div className="font-display text-2xl text-coffee">{r.name}</div>
+                    <div className="font-display text-2xl text-coffee transition-colors group-hover:text-terracotta">{r.name}</div>
                     <div className="mt-1 text-sm text-coffee/70">{r.note}</div>
                   </div>
                 </div>

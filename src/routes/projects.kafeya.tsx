@@ -110,10 +110,33 @@ function KafeyaPage() {
             Kafeya <span className="italic text-terracotta">POS</span>
           </h1>
 
-          <p className="mt-8 max-w-2xl text-xl leading-relaxed text-coffee/75">
-            Sistem kasir & akuntansi untuk café dan UMKM kopi yang ingin{" "}
             <em className="text-coffee">tutup buku tanpa drama</em> setiap akhir bulan.
           </p>
+
+          <div className="mt-10 flex flex-wrap items-center gap-4">
+            <a
+              href="https://kafeya.online"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 rounded-full border border-coffee bg-coffee px-7 py-4 font-mono text-xs uppercase tracking-[0.2em] text-cream transition-all hover:bg-terracotta hover:border-terracotta"
+            >
+              Coba sekarang ↗
+            </a>
+            <button
+              onClick={() => {
+                if (navigator.share) {
+                  navigator.share({
+                    title: "Kafeya POS — Akuntansi UMKM Kopi",
+                    text: "Studi kasus pengembangan sistem POS untuk UMKM agro.",
+                    url: window.location.href,
+                  });
+                }
+              }}
+              className="inline-flex items-center gap-3 rounded-full border border-coffee/20 px-7 py-4 font-mono text-xs uppercase tracking-[0.2em] text-coffee transition-all hover:border-coffee hover:bg-cream-soft"
+            >
+              Bagikan
+            </button>
+          </div>
         </div>
       </section>
 
@@ -222,19 +245,29 @@ function KafeyaPage() {
           </p>
 
           <div className="mt-10 flex flex-wrap gap-5">
+          <div className="mt-10 flex flex-wrap items-center gap-4">
             <a
-              href="mailto:support@bijidata.online"
-              className="inline-flex items-center gap-3 rounded-full bg-mustard px-7 py-4 font-mono text-xs uppercase tracking-[0.2em] text-coffee transition-all hover:bg-cream"
+              href="https://kafeya.online"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 rounded-full border border-cream bg-cream px-7 py-4 font-mono text-xs uppercase tracking-[0.2em] text-coffee transition-all hover:bg-mustard hover:border-mustard"
             >
-              Email saya →
+              Coba sekarang ↗
             </a>
-            <Link
-              to="/"
-              hash="contact"
+            <button
+              onClick={() => {
+                if (navigator.share) {
+                  navigator.share({
+                    title: "Kafeya POS — Akuntansi UMKM Kopi",
+                    text: "Studi kasus pengembangan sistem POS untuk UMKM agro.",
+                    url: window.location.href,
+                  });
+                }
+              }}
               className="inline-flex items-center gap-3 rounded-full border border-cream/30 px-7 py-4 font-mono text-xs uppercase tracking-[0.2em] text-cream transition-all hover:border-mustard hover:text-mustard"
             >
-              Lihat kontak lain
-            </Link>
+              Bagikan
+            </button>
           </div>
         </div>
       </section>

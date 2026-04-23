@@ -129,9 +129,41 @@ function RootShell({ children }: { children: React.ReactNode }) {
       <head>
         <HeadContent />
       </head>
-      <body>
-        {children}
+      <body className="antialiased">
+        {/* Skip Link for A11y */}
+        <a 
+          href="#main-content" 
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-terracotta focus:px-6 focus:py-3 focus:text-cream focus:outline-none"
+        >
+          Skip to content
+        </a>
+
+        {/* Global Grain Overlay */}
+        <div className="pointer-events-none fixed inset-0 z-[999] opacity-[0.03] mix-blend-multiply grain" aria-hidden="true" />
+
+        {/* Scroll Progress Indicator */}
+        <div 
+          className="fixed left-0 top-0 z-[100] h-[2px] bg-terracotta transition-all duration-150"
+          id="scroll-indicator"
+          style={{ width: "0%" }}
+        />
+
+        <div id="main-content">
+          {children}
+        </div>
         <Scripts />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.addEventListener('scroll', () => {
+                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrolled = (winScroll / height) * 100;
+                document.getElementById('scroll-indicator').style.width = scrolled + '%';
+              });
+            `
+          }}
+        />
       </body>
     </html>
   );

@@ -49,9 +49,8 @@ export function Hero() {
             </div>
 
             <div className="mt-16 grid grid-cols-3 gap-6 border-t border-border pt-8 animate-fade-up" style={{ animationDelay: "0.55s" }}>
-              {[
                 { n: "3", l: "Wilayah dampingan" },
-                { n: "2", l: "Produk digital" },
+                { n: "3", l: "Produk digital" },
                 { n: "BNSP", l: "Tersertifikasi" },
               ].map((s) => (
                 <div key={s.l}>
@@ -72,6 +71,9 @@ export function Hero() {
                 alt="Ilustrasi biji kopi dan lanskap pegunungan Sulawesi"
                 width={1024}
                 height={1024}
+                loading="eager"
+                fetchPriority="high"
+                decoding="async"
                 className="relative w-full rounded-2xl"
               />
               <div className="absolute -bottom-6 -left-6 max-w-[180px] rotate-[-3deg] rounded-lg bg-cream px-4 py-3 shadow-xl ring-1 ring-border">
