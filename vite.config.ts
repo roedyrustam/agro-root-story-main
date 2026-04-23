@@ -13,6 +13,9 @@ export default defineConfig(() => ({
     }),
     react(),
   ],
+  ssr: {
+    noExternal: true,
+  },
   resolve: {
     alias: { "@": `${process.cwd()}/src` },
     dedupe: [
