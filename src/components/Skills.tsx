@@ -1,0 +1,64 @@
+import { SectionLabel } from "./SectionLabel";
+
+const groups = [
+  {
+    title: "Operasional Agro",
+    items: ["Perencanaan produksi", "Manajemen rantai pasok", "Quality control kopi", "Standar pasar ekspor"],
+  },
+  {
+    title: "Pemberdayaan",
+    items: ["Fasilitasi BUMMA", "Pendampingan kelompok tani", "Pemetaan pasar lokal", "Komunikasi lintas pemangku"],
+  },
+  {
+    title: "Teknis & Digital",
+    items: ["React & TypeScript", "SQL & data modeling", "Sistem informasi akuntansi", "Manajemen data (Excel)"],
+  },
+  {
+    title: "Bahasa & Konteks",
+    items: ["Bahasa Indonesia", "Bahasa Bugis", "Komunikasi lintas budaya", "Pemahaman komunitas adat"],
+  },
+];
+
+export function Skills() {
+  return (
+    <section className="border-t border-border bg-coffee py-24 text-cream md:py-32">
+      <div className="mx-auto max-w-7xl px-6 md:px-10">
+        <div className="flex items-center gap-3 font-mono text-xs uppercase tracking-[0.25em] text-mustard">
+          <span>06</span>
+          <span className="h-px w-8 bg-mustard/60" />
+          <span className="text-cream/70">Keahlian</span>
+        </div>
+
+        <h2 className="mt-6 max-w-3xl font-display text-[clamp(2rem,5vw,4rem)] leading-[1.05] text-cream">
+          Toolkit yang dibentuk lapangan, <br />
+          bukan ruang kelas.
+        </h2>
+
+        <div className="mt-16 grid gap-px overflow-hidden rounded-2xl bg-cream/10 md:grid-cols-2 lg:grid-cols-4">
+          {groups.map((g, i) => (
+            <div key={g.title} className="bg-coffee p-8 transition-colors hover:bg-coffee/70">
+              <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-mustard">
+                0{i + 1}
+              </div>
+              <h3 className="mt-4 font-display text-2xl text-cream">{g.title}</h3>
+              <ul className="mt-6 space-y-3">
+                {g.items.map((it) => (
+                  <li key={it} className="flex items-start gap-3 text-sm text-cream/80">
+                    <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-mustard" />
+                    <span>{it}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-12 flex flex-wrap items-center gap-4 border-t border-cream/15 pt-8 font-mono text-xs uppercase tracking-[0.2em] text-cream/60">
+          <span>Kredensial:</span>
+          <span className="text-mustard">★ BNSP Perencanaan Produksi Industri Agro (2019)</span>
+          <span className="text-mustard">★ Rewako Export · Bank Indonesia</span>
+        </div>
+      </div>
+    </section>
+  );
+}

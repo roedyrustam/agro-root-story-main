@@ -1,0 +1,67 @@
+import { SectionLabel } from "./SectionLabel";
+import landscape from "@/assets/impact-landscape.jpg";
+
+export function Impact() {
+  return (
+    <section id="impact" className="relative border-t border-border py-24 md:py-32">
+      <div className="mx-auto max-w-7xl px-6 md:px-10">
+        <SectionLabel number="05" label="Dampak & Komunitas" />
+
+        <div className="mt-12 grid gap-12 lg:grid-cols-12 lg:gap-16">
+          <div className="lg:col-span-7">
+            <div className="relative overflow-hidden rounded-3xl">
+              <img
+                src={landscape}
+                alt="Lanskap perkebunan kopi terasering Sulawesi saat matahari terbit"
+                width={1600}
+                height={900}
+                loading="lazy"
+                className="w-full"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-coffee/40 via-transparent to-transparent" />
+              <blockquote className="absolute bottom-0 left-0 right-0 p-8 md:p-12">
+                <p className="max-w-md font-display text-xl italic leading-snug text-cream md:text-2xl">
+                  "Kopi yang baik dimulai dari hubungan yang adil — dengan tanah, dengan petani, dengan
+                  cerita yang ditulis bersama."
+                </p>
+              </blockquote>
+            </div>
+          </div>
+
+          <div className="lg:col-span-5">
+            <h2 className="font-display text-[clamp(2rem,4.5vw,3.5rem)] leading-[1.05] text-coffee">
+              Tiga wilayah, <br />
+              <span className="italic text-terracotta">satu janji.</span>
+            </h2>
+            <p className="mt-6 text-base leading-relaxed text-coffee/75">
+              Pekerjaan saya tersebar di tiga geografi kopi Sulawesi Selatan. Setiap tempat punya karakter
+              biji, tantangan logistik, dan komunitas yang berbeda — tapi prinsipnya sama: transparansi
+              di hulu, kualitas di hilir.
+            </p>
+
+            <div className="mt-10 space-y-4">
+              {[
+                { name: "Barru", note: "Pesisir & dataran rendah · pengembangan komoditas baru" },
+                { name: "Toraja", note: "Highland klasik · arabika premium turun-temurun" },
+                { name: "Sinjai", note: "Komunitas adat · tata kelola BUMMA & akses pasar" },
+              ].map((r, i) => (
+                <div
+                  key={r.name}
+                  className="flex items-start gap-5 border-t border-border pt-4"
+                >
+                  <div className="font-mono text-xs text-terracotta">
+                    0{i + 1}
+                  </div>
+                  <div>
+                    <div className="font-display text-2xl text-coffee">{r.name}</div>
+                    <div className="mt-1 text-sm text-coffee/70">{r.note}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
