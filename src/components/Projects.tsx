@@ -13,6 +13,7 @@ const projects = [
     href: "/projects/beanhub" as const,
     initial: "b",
   },
+
   {
     name: "Kafeya POS",
     type: "Tool · Akuntansi UMKM",
@@ -22,6 +23,8 @@ const projects = [
     accent: "bg-coffee",
     pattern: "from-coffee/15 via-clay/20 to-mustard/20",
     href: "/projects/kafeya" as const,
+    initial: "k",
+  },
   {
     name: "CuppingNotes.online",
     type: "Platform · Coffee Quality",
@@ -43,7 +46,7 @@ export function Projects() {
           <div>
             <SectionLabel number="04" label="Karya Digital" />
             <h2 className="mt-6 font-display text-[clamp(2rem,5vw,4rem)] leading-[1.05] text-coffee">
-              Dua produk kecil <br />
+              Tiga produk kecil <br />
               dengan <span className="italic text-terracotta">dampak jujur.</span>
             </h2>
           </div>

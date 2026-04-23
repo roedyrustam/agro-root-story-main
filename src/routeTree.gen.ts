@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ProjectsKafeyaRouteImport } from './routes/projects.kafeya'
+import { Route as ProjectsCuppingnotesRouteImport } from './routes/projects.cuppingnotes'
 import { Route as ProjectsBeanhubRouteImport } from './routes/projects.beanhub'
 
 const AboutRoute = AboutRouteImport.update({
@@ -29,6 +30,11 @@ const ProjectsKafeyaRoute = ProjectsKafeyaRouteImport.update({
   path: '/projects/kafeya',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProjectsCuppingnotesRoute = ProjectsCuppingnotesRouteImport.update({
+  id: '/projects/cuppingnotes',
+  path: '/projects/cuppingnotes',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ProjectsBeanhubRoute = ProjectsBeanhubRouteImport.update({
   id: '/projects/beanhub',
   path: '/projects/beanhub',
@@ -39,12 +45,14 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/projects/beanhub': typeof ProjectsBeanhubRoute
+  '/projects/cuppingnotes': typeof ProjectsCuppingnotesRoute
   '/projects/kafeya': typeof ProjectsKafeyaRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/projects/beanhub': typeof ProjectsBeanhubRoute
+  '/projects/cuppingnotes': typeof ProjectsCuppingnotesRoute
   '/projects/kafeya': typeof ProjectsKafeyaRoute
 }
 export interface FileRoutesById {
@@ -52,20 +60,38 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/projects/beanhub': typeof ProjectsBeanhubRoute
+  '/projects/cuppingnotes': typeof ProjectsCuppingnotesRoute
   '/projects/kafeya': typeof ProjectsKafeyaRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/projects/beanhub' | '/projects/kafeya'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/projects/beanhub'
+    | '/projects/cuppingnotes'
+    | '/projects/kafeya'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/projects/beanhub' | '/projects/kafeya'
-  id: '__root__' | '/' | '/about' | '/projects/beanhub' | '/projects/kafeya'
+  to:
+    | '/'
+    | '/about'
+    | '/projects/beanhub'
+    | '/projects/cuppingnotes'
+    | '/projects/kafeya'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/projects/beanhub'
+    | '/projects/cuppingnotes'
+    | '/projects/kafeya'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   ProjectsBeanhubRoute: typeof ProjectsBeanhubRoute
+  ProjectsCuppingnotesRoute: typeof ProjectsCuppingnotesRoute
   ProjectsKafeyaRoute: typeof ProjectsKafeyaRoute
 }
 
@@ -92,6 +118,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProjectsKafeyaRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/projects/cuppingnotes': {
+      id: '/projects/cuppingnotes'
+      path: '/projects/cuppingnotes'
+      fullPath: '/projects/cuppingnotes'
+      preLoaderRoute: typeof ProjectsCuppingnotesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/projects/beanhub': {
       id: '/projects/beanhub'
       path: '/projects/beanhub'
@@ -106,6 +139,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   ProjectsBeanhubRoute: ProjectsBeanhubRoute,
+  ProjectsCuppingnotesRoute: ProjectsCuppingnotesRoute,
   ProjectsKafeyaRoute: ProjectsKafeyaRoute,
 }
 export const routeTree = rootRouteImport
