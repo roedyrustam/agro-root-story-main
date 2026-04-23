@@ -74,7 +74,7 @@ function AboutPage() {
               </div>
 
               <h1 className="mt-6 font-display text-[clamp(2.8rem,7vw,6rem)] leading-[0.95] text-coffee text-balance">
-                Insinyur yang memilih{" "}
+                Pribadi yang memilih{" "}
                 <span className="italic text-terracotta">jalan tanah,</span>{" "}
                 lalu kembali ke <span className="italic">layar.</span>
               </h1>
@@ -129,7 +129,7 @@ function AboutPage() {
               num="II"
               title="Agro & komunitas — mendengar lebih lama dari bicara"
               body={[
-                "Di Aliansi Masyarakat Adat Sulawesi Selatan, saya belajar bahwa tata kelola sebuah Badan Usaha Milik Masyarakat Adat tidak bisa di-copy paste dari template MBA. Ada adat, ada cara musyawarah, ada hubungan dengan tanah yang tidak masuk di laporan keuangan.",
+                "Di JURnal Celebes dan Aliansi Masyarakat Adat Sulawesi Selatan, saya belajar bahwa tata kelola sebuah Badan Usaha Milik Masyarakat Adat tidak bisa di-copy paste dari template MBA. Ada adat, ada cara musyawarah, ada hubungan dengan tanah yang tidak masuk di laporan keuangan.",
                 "Di Sehati Kopi Indonesia, saya mengelola alur produksi, stok, dan koordinasi tim — sambil mendampingi potensi komoditas di Barru, Toraja, dan Sinjai. Tiga geografi, tiga karakter biji, tiga komunitas yang berbeda. Pelajaran terbesar: standar kualitas hanya bertahan jika hubungan dengan petani juga terjaga.",
                 "Inkubasi Rewako Export Bank Indonesia mempertemukan semua ini dengan satu standar baru: pasar internasional. Kopi yang baik harus bisa diceritakan, dan ceritanya harus bisa diverifikasi.",
               ]}
