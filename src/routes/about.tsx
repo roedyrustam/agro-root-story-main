@@ -130,6 +130,7 @@ function AboutPage() {
 
           <div className="mt-16 space-y-16">
             <Chapter
+              id="babak-i"
               num="I"
               title="Teknik Industri sebagai cara membaca dunia"
               body={[
@@ -138,6 +139,7 @@ function AboutPage() {
               ]}
             />
             <Chapter
+              id="babak-ii"
               num="II"
               title="Agro & komunitas — mendengar lebih lama dari bicara"
               body={[
@@ -147,6 +149,7 @@ function AboutPage() {
               ]}
             />
             <Chapter
+              id="babak-iii"
               num="III"
               title="Digital — alat bantu, bukan menara gading"
               body={[
@@ -300,9 +303,9 @@ function AboutPage() {
   );
 }
 
-function Chapter({ num, title, body }: { num: string; title: string; body: string[] }) {
+function Chapter({ num, title, body, id }: { num: string; title: string; body: string[]; id?: string }) {
   return (
-    <article className="grid gap-6 md:grid-cols-12 md:gap-10">
+    <article id={id} className="grid gap-6 md:grid-cols-12 md:gap-10 scroll-mt-32">
       <div className="md:col-span-3">
         <div className="font-display text-7xl italic text-terracotta md:text-8xl">{num}</div>
       </div>

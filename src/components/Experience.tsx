@@ -1,10 +1,13 @@
 import { SectionLabel } from "./SectionLabel";
+import { Link2, Check } from "lucide-react";
+import { useState } from "react";
 
 const experiences = [
   {
     role: "Pengelola Operasional",
     org: "Sehati Kopi Indonesia",
     period: "2025 — Sekarang",
+    chapter: "II",
     points: [
       "Bertanggung jawab atas alur produksi, manajemen stok, dan koordinasi tim operasional.",
       "Mendampingi pengembangan potensi komoditas kopi di Barru, Toraja, dan Sinjai.",
@@ -15,6 +18,7 @@ const experiences = [
     role: "Fasilitator Komunitas",
     org: "Aliansi Masyarakat Adat Sulawesi Selatan",
     period: "Berjalan",
+    chapter: "II",
     points: [
       "Penguatan tata kelola Badan Usaha Milik Masyarakat Adat (BUMMA).",
       "Memetakan peluang pasar dan akses distribusi produk lokal komunitas.",
@@ -25,6 +29,7 @@ const experiences = [
     role: "Pengembang Sistem",
     org: "Pandu Talenta Digital",
     period: "2025 — Sekarang",
+    chapter: "III",
     points: [
       "Merancang dan memelihara platform beanhub.online untuk pencatatan rantai pasok kopi.",
       "Mengembangkan Kafeya POS — alat bantu akuntansi UMKM sesuai standar pelaporan.",
@@ -32,6 +37,27 @@ const experiences = [
     ],
   },
 ];
+
+function CopyLinkBtn({ chapter, label }: { chapter: string; label: string }) {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = () => {
+    const url = `${window.location.origin}${window.location.pathname}#babak-${chapter.toLowerCase()}`;
+    navigator.clipboard.writeText(url);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
+  return (
+    <button
+      onClick={handleCopy}
+      className="mt-6 inline-flex items-center gap-2 rounded-full border border-coffee/15 bg-cream px-3 py-1.5 font-mono text-[9px] uppercase tracking-wider text-coffee/70 transition-colors hover:border-terracotta hover:bg-terracotta hover:text-cream"
+    >
+      {copied ? <Check className="h-3 w-3" /> : <Link2 className="h-3 w-3" />}
+      {copied ? "Tautan Tersalin" : `Salin: ${label}`}
+    </button>
+  );
+}
 
 export function Experience() {
   return (
@@ -49,12 +75,17 @@ export function Experience() {
               key={exp.role}
               className="group relative grid gap-6 bg-card p-8 transition-colors hover:bg-cream-soft md:grid-cols-12 md:gap-10 md:p-12"
             >
-              <div className="md:col-span-4">
-                <div className="font-mono text-xs uppercase tracking-[0.2em] text-terracotta">
-                  {String(i + 1).padStart(2, "0")} · {exp.period}
+              <div className="md:col-span-4 flex flex-col items-start">
+                <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-terracotta">
+                  <span>{String(i + 1).padStart(2, "0")} · {exp.period}</span>
+                  <span className="text-coffee/20">|</span>
+                  <span className="font-bold">BAB {exp.chapter}</span>
                 </div>
                 <h3 className="mt-4 font-display text-3xl text-coffee md:text-4xl">{exp.role}</h3>
                 <div className="mt-2 text-base text-coffee/70">{exp.org}</div>
+                <div className="mt-auto pt-4">
+                  <CopyLinkBtn chapter={exp.chapter} label={exp.role} />
+                </div>
               </div>
               <ul className="space-y-4 md:col-span-8">
                 {exp.points.map((p) => (
