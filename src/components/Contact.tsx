@@ -1,6 +1,18 @@
+import { useState } from "react";
 import { SectionLabel } from "./SectionLabel";
+import { toast } from "sonner";
 
 export function Contact() {
+  const [isCopying, setIsCopying] = useState(false);
+  const email = "support@bijidata.online";
+
+  const copyEmail = () => {
+    navigator.clipboard.writeText(email);
+    setIsCopying(true);
+    toast.success("Email berhasil disalin!");
+    setTimeout(() => setIsCopying(false), 2000);
+  };
+
   return (
     <section id="contact" className="border-t border-border py-24 md:py-32">
       <div className="mx-auto max-w-5xl px-6 md:px-10">
@@ -17,30 +29,38 @@ export function Contact() {
         </p>
 
         <div className="mt-12 grid gap-6 md:grid-cols-2">
-          <a
-            href="mailto:support@bijidata.online"
-            className="group relative overflow-hidden rounded-3xl border border-coffee/10 bg-cream-soft p-8 transition-all duration-500 hover:-translate-y-2 hover:border-terracotta/30 hover:shadow-[0_20px_40px_-15px_rgba(211,93,71,0.15)]"
+          <button
+            onClick={copyEmail}
+            className="group relative flex flex-col items-start overflow-hidden rounded-3xl border border-coffee/10 bg-cream-soft p-8 text-left transition-all duration-500 hover:-translate-y-2 hover:border-terracotta/30 hover:shadow-[0_20px_40px_-15px_rgba(211,93,71,0.15)]"
           >
             {/* Decorative background element */}
             <div className="absolute -right-12 -top-12 h-32 w-32 rounded-full bg-terracotta/5 blur-2xl transition-all duration-500 group-hover:bg-terracotta/10"></div>
             
-            <div className="relative z-10">
-              <div className="inline-block rounded-full bg-coffee/5 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-terracotta transition-colors group-hover:bg-terracotta/10">
-                Email
+            <div className="relative z-10 w-100">
+              <div className="inline-flex items-center gap-2 rounded-full bg-coffee/5 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-terracotta transition-colors group-hover:bg-terracotta/10">
+                <span className="relative flex h-2 w-2">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-terracotta opacity-75"></span>
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-terracotta"></span>
+                </span>
+                Tersedia
               </div>
               <div className="mt-6 flex items-center justify-between gap-4">
                 <span className="font-display text-2xl text-coffee md:text-3xl">
-                  support@bijidata.online
+                  {email}
                 </span>
-                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-terracotta text-cream opacity-0 transition-all duration-300 group-hover:-translate-x-2 group-hover:opacity-100">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-terracotta text-cream opacity-0 transition-all duration-300 group-hover:-translate-x-2 group-hover:opacity-100">
+                  {isCopying ? (
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  ) : (
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+                  )}
                 </span>
               </div>
               <div className="mt-4 text-sm leading-relaxed text-coffee/60">
-                Cara paling mudah, biasanya dibalas dalam waktu kurang dari 24 jam.
+                {isCopying ? "Email telah disalin ke clipboard." : "Klik untuk menyalin alamat email dan kirimkan pesan."}
               </div>
             </div>
-          </a>
+          </button>
 
           <a
             href="https://beanhub.online"
@@ -53,41 +73,44 @@ export function Contact() {
             
             <div className="relative z-10">
               <div className="inline-block rounded-full bg-coffee/5 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-coffee/70 transition-colors group-hover:bg-coffee/10">
-                Karya
+                Pekerjaan
               </div>
               <div className="mt-6 flex items-center justify-between gap-4">
                 <span className="font-display text-2xl text-coffee md:text-3xl">beanhub.online</span>
-                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-coffee text-cream opacity-0 transition-all duration-300 group-hover:-translate-x-2 group-hover:opacity-100">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-coffee text-cream opacity-0 transition-all duration-300 group-hover:-translate-x-2 group-hover:opacity-100">
                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
                 </span>
               </div>
               <div className="mt-4 text-sm leading-relaxed text-coffee/60">
-                Lihat platform rantai pasok kopi yang sedang kami kembangkan.
+                Lihat platform rantai pasok kopi yang sedang kami kembangkan untuk transparansi petani Sulawesi.
               </div>
             </div>
           </a>
         </div>
 
-        <div className="mt-16 grid gap-8 border-t border-border pt-8 text-sm text-coffee/60 md:grid-cols-3">
+        <div className="mt-16 grid gap-8 border-t border-border pt-8 text-sm text-coffee/60 sm:grid-cols-3">
           <div>
-            <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-terracotta">
-              Berbasis
+            <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-terracotta/80">
+              Lokasi
             </div>
-            <div className="mt-2 font-display text-lg text-coffee">Sulawesi Selatan, ID</div>
+            <div className="mt-2 font-display text-lg text-coffee">Makassar, Sulawesi Selatan</div>
           </div>
           <div>
-            <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-terracotta">
-              Bahasa
+            <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-terracotta/80">
+              Komunikasi
             </div>
-            <div className="mt-2 font-display text-lg text-coffee">Indonesia · Bugis</div>
+            <div className="mt-2 font-display text-lg text-coffee">Indonesia · Bugis · English</div>
           </div>
           <div>
-            <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-terracotta">
-              Status
+            <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-terracotta/80">
+              Ketersediaan
             </div>
             <div className="mt-2 flex items-center gap-2 font-display text-lg text-coffee">
-              <span className="h-2 w-2 animate-pulse rounded-full bg-sage" />
-              Terbuka untuk kolaborasi
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-sage opacity-75"></span>
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-sage"></span>
+              </span>
+              Terbuka untuk diskusi
             </div>
           </div>
         </div>
