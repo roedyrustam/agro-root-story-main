@@ -281,8 +281,7 @@ function AboutPage() {
 
           <div className="mt-10 flex flex-wrap justify-center gap-5">
             <Link
-              to="/"
-              hash="contact"
+              to="/contact"
               className="inline-flex items-center gap-3 rounded-full bg-coffee px-7 py-4 font-mono text-xs uppercase tracking-[0.2em] text-cream transition-all hover:bg-terracotta"
             >
               Lihat kontak →

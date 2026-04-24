@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import heroImg from "../assets/hero-coffee.jpg";
 
 export function Hero() {
@@ -51,19 +52,20 @@ export function Hero() {
               className="mt-10 flex flex-wrap items-center gap-5 animate-fade-up"
               style={{ animationDelay: "0.4s" }}
             >
-              <a
-                href="#projects"
+              <Link
+                to="/"
+                hash="projects"
                 className="group inline-flex items-center gap-3 rounded-full bg-coffee px-7 py-4 font-mono text-xs uppercase tracking-[0.2em] text-cream transition-all hover:bg-terracotta"
               >
                 Lihat karya
                 <span className="transition-transform group-hover:translate-x-1">→</span>
-              </a>
-              <a
-                href="#contact"
+              </Link>
+              <Link
+                to="/contact"
                 className="font-mono text-xs uppercase tracking-[0.2em] text-coffee/80 underline-offset-4 hover:text-terracotta hover:underline"
               >
                 Ngobrol kopi & data
-              </a>
+              </Link>
             </div>
 
             <div

@@ -1,5 +1,5 @@
 const items = [
-  "Industrial Engineering",
+  "Socialpreneurship",
   "Agro Operations",
   "Community Empowerment",
   "Digital Solutions",

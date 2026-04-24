@@ -8,7 +8,7 @@ export function About() {
 
         <div className="mt-10 grid gap-12 lg:grid-cols-12">
           <h2 className="font-display text-[clamp(2rem,5vw,4rem)] leading-[1.05] text-coffee text-balance lg:col-span-7">
-            Pegiat dan praktisi yang memilih{" "}
+            Pegiat Socialpreneurship yang memilih{" "}
             <span className="italic text-terracotta">jalan tanah</span> — bekerja dengan komunitas
             adat, kelompok tani, dan baris-baris kode.
           </h2>

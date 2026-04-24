@@ -2,23 +2,18 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Nav } from "@/components/Nav";
 import { Hero } from "@/components/Hero";
 import { Marquee } from "@/components/Marquee";
-import { About } from "@/components/About";
-import { Timeline } from "@/components/Timeline";
-import { Experience } from "@/components/Experience";
 import { Projects } from "@/components/Projects";
-import { Impact } from "@/components/Impact";
 import { Skills } from "@/components/Skills";
-import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Roedy Rustam — Industrial Engineering × Agro × Digital" },
+      { title: "Roedy Rustam — Socialpreneurship × Agro × Digital" },
       {
         name: "description",
         content:
-          "Portfolio Roedy Rustam — praktisi Teknik Industri yang membangun ekosistem kopi Sulawesi (Barru, Toraja, Sinjai) dan perangkat digital untuk UMKM agro.",
+          "Portfolio Roedy Rustam — praktisi Socialpreneurship yang membangun ekosistem kopi Sulawesi (Barru, Toraja, Sinjai) dan perangkat digital untuk UMKM agro.",
       },
       { property: "og:title", content: "Roedy Rustam — Agro × Digital Practitioner" },
       {
@@ -42,25 +37,10 @@ function Index() {
       <Hero />
       <Marquee />
       <div className="reveal">
-        <About />
-      </div>
-      <div className="reveal">
-        <Timeline />
-      </div>
-      <div className="reveal">
-        <Experience />
-      </div>
-      <div className="reveal">
         <Projects />
       </div>
       <div className="reveal">
-        <Impact />
-      </div>
-      <div className="reveal">
         <Skills />
-      </div>
-      <div className="reveal">
-        <Contact />
       </div>
       <Footer />
     </main>

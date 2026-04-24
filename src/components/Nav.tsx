@@ -3,10 +3,10 @@ import { Link, useLocation } from "@tanstack/react-router";
 
 const navLinks = [
   { label: "Tentang", href: "/about", type: "route" as const },
-  { label: "Perjalanan", href: "/#journey", type: "hash" as const },
+  { label: "Perjalanan", href: "/journey", type: "route" as const },
+  { label: "Pengalaman", href: "/experience", type: "route" as const },
   { label: "Karya", href: "/#projects", type: "hash" as const },
-  { label: "Dampak", href: "/#impact", type: "hash" as const },
-  { label: "Kontak", href: "/#contact", type: "hash" as const },
+  { label: "Dampak", href: "/impact", type: "route" as const },
 ];
 
 export function Nav() {
@@ -57,11 +57,18 @@ export function Nav() {
             Tentang
           </Link>
           <Link
-            to="/"
-            hash="journey"
+            to="/journey"
             className="text-coffee/70 transition-colors hover:text-terracotta"
+            activeProps={{ className: "text-terracotta" }}
           >
             Perjalanan
+          </Link>
+          <Link
+            to="/experience"
+            className="text-coffee/70 transition-colors hover:text-terracotta"
+            activeProps={{ className: "text-terracotta" }}
+          >
+            Pengalaman
           </Link>
           <Link
             to="/"
@@ -71,25 +78,17 @@ export function Nav() {
             Karya
           </Link>
           <Link
-            to="/"
-            hash="impact"
+            to="/impact"
             className="text-coffee/70 transition-colors hover:text-terracotta"
+            activeProps={{ className: "text-terracotta" }}
           >
             Dampak
-          </Link>
-          <Link
-            to="/"
-            hash="contact"
-            className="text-coffee/70 transition-colors hover:text-terracotta"
-          >
-            Kontak
           </Link>
         </nav>
 
         {/* Desktop CTA */}
         <Link
-          to="/"
-          hash="contact"
+          to="/contact"
           className="hidden rounded-full border border-coffee bg-coffee px-5 py-2 font-mono text-xs uppercase tracking-[0.18em] text-cream transition-all hover:bg-terracotta hover:border-terracotta md:inline-block"
         >
           Hubungi saya
@@ -188,8 +187,7 @@ export function Nav() {
           style={{ transitionDelay: open ? "400ms" : "0ms" }}
         >
           <Link
-            to="/"
-            hash="contact"
+            to="/contact"
             onClick={() => setOpen(false)}
             className="flex w-full items-center justify-center gap-3 rounded-full bg-coffee px-6 py-4 font-mono text-xs uppercase tracking-[0.2em] text-cream transition-all hover:bg-terracotta"
           >
