@@ -14,7 +14,7 @@ export default defineConfig(({ mode }) => ({
     react(),
   ],
   ssr: {
-    noExternal: mode === "production" ? true : [/^(?!react|react-dom)/],
+    noExternal: mode === "production" ? true : [/^(?!react|react-dom|use-sync-external-store)/],
   },
   optimizeDeps: {
     include: ["react", "react-dom"],
