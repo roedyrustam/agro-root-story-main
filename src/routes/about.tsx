@@ -6,7 +6,7 @@ import portrait from "@/assets/about-portrait.jpg";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "Tentang — Roedy Rustam · Industrial Engineering × Agro × Digital" },
+      { title: "Tentang — Roedy Rustam · Sociopreneur  × Agro × Digital" },
       {
         name: "description",
         content:

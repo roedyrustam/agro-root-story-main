@@ -71,7 +71,7 @@ export const Route = createRootRoute({
       { property: "og:image:height", content: "630" },
       {
         property: "og:image:alt",
-        content: "Roedy Rustam — Industrial Engineering × Agro × Digital",
+        content: "Roedy Rustam — Sociopreneur  × Agro × Digital",
       },
       // Twitter Card
       { name: "twitter:card", content: "summary_large_image" },
@@ -123,13 +123,13 @@ export const Route = createRootRoute({
           "@context": "https://schema.org",
           "@type": "Person",
           name: "Roedy Rustam",
-          jobTitle: "Industrial Engineering Practitioner & Agro Digital Developer",
+          jobTitle: "Sociopreneur  Practitioner & Agro Digital Developer",
           description:
             "Praktisi Teknik Industri yang membangun ekosistem kopi Sulawesi & perangkat digital untuk UMKM agro.",
           url: "https://roedyrustam.pages.dev",
           knowsAbout: [
             "Coffee Supply Chain",
-            "Industrial Engineering",
+            "Sociopreneur ",
             "Agro Operations",
             "React Development",
             "UMKM Digital Solutions",

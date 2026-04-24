@@ -16,7 +16,7 @@ export function Footer() {
           <div>
             <div className="font-display text-coffee">Roedy Rustam</div>
             <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-coffee/60">
-              Industrial Engineering · Agro · Digital
+              Sociopreneur  · Agro · Digital
             </div>
           </div>
         </div>
