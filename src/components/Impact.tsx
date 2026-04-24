@@ -39,7 +39,7 @@ export function Impact() {
               transparansi di hulu, kualitas di hilir.
             </p>
 
-            <div className="mt-10 space-y-4">
+            <div className="mt-10 space-y-3">
               {[
                 {
                   name: "Makassar",
@@ -52,16 +52,21 @@ export function Impact() {
               ].map((r, i) => (
                 <div
                   key={r.name}
-                  className="group flex items-start gap-5 border-t border-border pt-4 transition-all hover:bg-cream/40 hover:pl-2"
+                  className="group flex items-center justify-between gap-5 rounded-2xl border border-transparent bg-transparent p-4 transition-all duration-300 hover:border-coffee/10 hover:bg-cream-soft hover:shadow-sm"
                 >
-                  <div className="font-mono text-xs text-terracotta transition-transform group-hover:scale-110">
-                    0{i + 1}
-                  </div>
-                  <div>
-                    <div className="font-display text-2xl text-coffee transition-colors group-hover:text-terracotta">
-                      {r.name}
+                  <div className="flex items-start gap-5">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-coffee/5 font-mono text-xs text-terracotta transition-transform duration-500 group-hover:scale-110 group-hover:bg-terracotta/10">
+                      0{i + 1}
                     </div>
-                    <div className="mt-1 text-sm text-coffee/70">{r.note}</div>
+                    <div>
+                      <div className="font-display text-2xl text-coffee transition-colors group-hover:text-terracotta">
+                        {r.name}
+                      </div>
+                      <div className="mt-1 text-sm text-coffee/70">{r.note}</div>
+                    </div>
+                  </div>
+                  <div className="opacity-0 transition-all duration-300 group-hover:-translate-x-2 group-hover:opacity-100">
+                    <span className="text-terracotta">→</span>
                   </div>
                 </div>
               ))}

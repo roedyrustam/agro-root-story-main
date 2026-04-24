@@ -31,7 +31,7 @@ export function Nav() {
   }, [open]);
 
   return (
-    <header className="fixed left-0 right-0 top-0 z-50 border-b border-border/60 bg-cream/80 backdrop-blur-md">
+    <header className="fixed left-0 right-0 top-0 z-50 bg-cream/70 backdrop-blur-xl after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-gradient-to-r after:from-transparent after:via-coffee/15 after:to-transparent">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-10">
         <Link to="/" className="group flex items-center gap-3">
           <img
@@ -48,39 +48,39 @@ export function Nav() {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden items-center gap-8 font-mono text-xs uppercase tracking-[0.18em] md:flex">
+        <nav className="hidden items-center gap-1 rounded-full border border-coffee/8 bg-cream-soft/50 p-1.5 backdrop-blur-sm md:flex">
           <Link
             to="/about"
-            className="text-coffee/70 transition-colors hover:text-terracotta"
-            activeProps={{ className: "text-terracotta" }}
+            className="rounded-full px-4 py-2 font-mono text-[11px] uppercase tracking-[0.18em] text-coffee/60 transition-all duration-300 hover:bg-coffee/5 hover:text-coffee"
+            activeProps={{ className: "bg-coffee text-cream hover:bg-coffee hover:text-cream shadow-sm" }}
           >
             Tentang
           </Link>
           <Link
             to="/journey"
-            className="text-coffee/70 transition-colors hover:text-terracotta"
-            activeProps={{ className: "text-terracotta" }}
+            className="rounded-full px-4 py-2 font-mono text-[11px] uppercase tracking-[0.18em] text-coffee/60 transition-all duration-300 hover:bg-coffee/5 hover:text-coffee"
+            activeProps={{ className: "bg-coffee text-cream hover:bg-coffee hover:text-cream shadow-sm" }}
           >
             Perjalanan
           </Link>
           <Link
             to="/experience"
-            className="text-coffee/70 transition-colors hover:text-terracotta"
-            activeProps={{ className: "text-terracotta" }}
+            className="rounded-full px-4 py-2 font-mono text-[11px] uppercase tracking-[0.18em] text-coffee/60 transition-all duration-300 hover:bg-coffee/5 hover:text-coffee"
+            activeProps={{ className: "bg-coffee text-cream hover:bg-coffee hover:text-cream shadow-sm" }}
           >
             Pengalaman
           </Link>
           <Link
             to="/"
             hash="projects"
-            className="text-coffee/70 transition-colors hover:text-terracotta"
+            className="rounded-full px-4 py-2 font-mono text-[11px] uppercase tracking-[0.18em] text-coffee/60 transition-all duration-300 hover:bg-coffee/5 hover:text-coffee"
           >
             Karya
           </Link>
           <Link
             to="/impact"
-            className="text-coffee/70 transition-colors hover:text-terracotta"
-            activeProps={{ className: "text-terracotta" }}
+            className="rounded-full px-4 py-2 font-mono text-[11px] uppercase tracking-[0.18em] text-coffee/60 transition-all duration-300 hover:bg-coffee/5 hover:text-coffee"
+            activeProps={{ className: "bg-coffee text-cream hover:bg-coffee hover:text-cream shadow-sm" }}
           >
             Dampak
           </Link>
@@ -89,7 +89,7 @@ export function Nav() {
         {/* Desktop CTA */}
         <Link
           to="/contact"
-          className="hidden rounded-full border border-coffee bg-coffee px-5 py-2 font-mono text-xs uppercase tracking-[0.18em] text-cream transition-all hover:bg-terracotta hover:border-terracotta md:inline-block"
+          className="hidden rounded-full bg-terracotta px-6 py-2.5 font-mono text-[11px] uppercase tracking-[0.18em] text-cream transition-all duration-300 hover:bg-coffee hover:shadow-[0_4px_20px_-6px_rgba(211,93,71,0.4)] md:inline-block"
         >
           Hubungi saya
         </Link>
@@ -133,7 +133,7 @@ export function Nav() {
 
       {/* Mobile menu panel */}
       <div
-        className={`fixed right-0 top-0 z-[58] flex h-dvh w-[min(85vw,360px)] flex-col bg-cream/95 backdrop-blur-xl shadow-2xl transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] md:hidden ${
+        className={`fixed right-0 top-0 z-[58] flex h-dvh w-[min(85vw,360px)] flex-col bg-cream/95 backdrop-blur-2xl shadow-[_-20px_0_60px_-15px_rgba(44,36,27,0.1)] transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] md:hidden ${
           open ? "translate-x-0" : "translate-x-full"
         }`}
       >

@@ -19,21 +19,26 @@ export function Contact() {
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           <a
             href="mailto:support@bijidata.online"
-            className="group rounded-2xl border border-border bg-card p-8 transition-all hover:border-terracotta hover:bg-cream-soft"
+            className="group relative overflow-hidden rounded-3xl border border-coffee/10 bg-cream-soft p-8 transition-all duration-500 hover:-translate-y-2 hover:border-terracotta/30 hover:shadow-[0_20px_40px_-15px_rgba(211,93,71,0.15)]"
           >
-            <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-terracotta">
-              Email
-            </div>
-            <div className="mt-3 flex items-center justify-between gap-4">
-              <span className="font-display text-2xl text-coffee md:text-3xl">
-                support@bijidata.online
-              </span>
-              <span className="text-2xl text-coffee/60 transition-all group-hover:translate-x-1 group-hover:text-terracotta">
-                →
-              </span>
-            </div>
-            <div className="mt-2 text-sm text-coffee/60">
-              Cara paling mudah, biasanya dibalas dalam 24 jam.
+            {/* Decorative background element */}
+            <div className="absolute -right-12 -top-12 h-32 w-32 rounded-full bg-terracotta/5 blur-2xl transition-all duration-500 group-hover:bg-terracotta/10"></div>
+            
+            <div className="relative z-10">
+              <div className="inline-block rounded-full bg-coffee/5 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-terracotta transition-colors group-hover:bg-terracotta/10">
+                Email
+              </div>
+              <div className="mt-6 flex items-center justify-between gap-4">
+                <span className="font-display text-2xl text-coffee md:text-3xl">
+                  support@bijidata.online
+                </span>
+                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-terracotta text-cream opacity-0 transition-all duration-300 group-hover:-translate-x-2 group-hover:opacity-100">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </span>
+              </div>
+              <div className="mt-4 text-sm leading-relaxed text-coffee/60">
+                Cara paling mudah, biasanya dibalas dalam waktu kurang dari 24 jam.
+              </div>
             </div>
           </a>
 
@@ -41,19 +46,24 @@ export function Contact() {
             href="https://beanhub.online"
             target="_blank"
             rel="noopener noreferrer"
-            className="group rounded-2xl border border-border bg-card p-8 transition-all hover:border-terracotta hover:bg-cream-soft"
+            className="group relative overflow-hidden rounded-3xl border border-coffee/10 bg-cream-soft p-8 transition-all duration-500 hover:-translate-y-2 hover:border-coffee/30 hover:shadow-[0_20px_40px_-15px_rgba(44,36,27,0.15)]"
           >
-            <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-terracotta">
-              Karya
-            </div>
-            <div className="mt-3 flex items-center justify-between gap-4">
-              <span className="font-display text-2xl text-coffee md:text-3xl">beanhub.online</span>
-              <span className="text-2xl text-coffee/60 transition-all group-hover:translate-x-1 group-hover:text-terracotta">
-                ↗
-              </span>
-            </div>
-            <div className="mt-2 text-sm text-coffee/60">
-              Lihat platform rantai pasok kopi yang sedang dibangun.
+             {/* Decorative background element */}
+            <div className="absolute -right-12 -bottom-12 h-40 w-40 rounded-full bg-coffee/5 blur-3xl transition-all duration-500 group-hover:bg-coffee/10"></div>
+            
+            <div className="relative z-10">
+              <div className="inline-block rounded-full bg-coffee/5 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-coffee/70 transition-colors group-hover:bg-coffee/10">
+                Karya
+              </div>
+              <div className="mt-6 flex items-center justify-between gap-4">
+                <span className="font-display text-2xl text-coffee md:text-3xl">beanhub.online</span>
+                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-coffee text-cream opacity-0 transition-all duration-300 group-hover:-translate-x-2 group-hover:opacity-100">
+                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                </span>
+              </div>
+              <div className="mt-4 text-sm leading-relaxed text-coffee/60">
+                Lihat platform rantai pasok kopi yang sedang kami kembangkan.
+              </div>
             </div>
           </a>
         </div>

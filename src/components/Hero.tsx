@@ -7,12 +7,21 @@ export function Hero() {
       {/* decorative grain */}
       <div className="grain absolute inset-0" />
 
+      {/* Ambient background blobs */}
+      <div className="absolute -left-40 top-20 h-80 w-80 rounded-full bg-terracotta/5 blur-[100px]" />
+      <div className="absolute -right-40 bottom-20 h-96 w-96 rounded-full bg-mustard/5 blur-[120px]" />
+
       <div className="relative mx-auto max-w-7xl px-6 md:px-10">
         <div className="grid items-center gap-12 lg:grid-cols-12">
           <div className="lg:col-span-7">
-            <div className="mb-8 flex items-center gap-3 font-mono text-xs uppercase tracking-[0.25em] text-terracotta animate-fade-up">
-              <span className="h-2 w-2 rounded-full bg-terracotta" />
-              <span>Portfolio · 2025</span>
+            <div className="mb-8 flex items-center gap-3 animate-fade-up">
+              <span className="flex items-center gap-2.5 rounded-full border border-terracotta/20 bg-terracotta/5 px-4 py-1.5 font-mono text-xs uppercase tracking-[0.2em] text-terracotta backdrop-blur-sm">
+                <span className="relative flex h-2 w-2">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-terracotta/60" />
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-terracotta" />
+                </span>
+                Portfolio · 2025
+              </span>
             </div>
 
             <h1
@@ -55,31 +64,35 @@ export function Hero() {
               <Link
                 to="/"
                 hash="projects"
-                className="group inline-flex items-center gap-3 rounded-full bg-coffee px-7 py-4 font-mono text-xs uppercase tracking-[0.2em] text-cream transition-all hover:bg-terracotta"
+                className="group inline-flex items-center gap-3 rounded-full bg-coffee px-7 py-4 font-mono text-xs uppercase tracking-[0.2em] text-cream transition-all duration-300 hover:bg-terracotta hover:shadow-[0_8px_30px_-8px_rgba(211,93,71,0.4)]"
               >
                 Lihat karya
-                <span className="transition-transform group-hover:translate-x-1">→</span>
+                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-cream/20 transition-transform duration-300 group-hover:translate-x-1">→</span>
               </Link>
               <Link
                 to="/contact"
-                className="font-mono text-xs uppercase tracking-[0.2em] text-coffee/80 underline-offset-4 hover:text-terracotta hover:underline"
+                className="group inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-coffee/80 transition-colors hover:text-terracotta"
               >
                 Ngobrol kopi & data
+                <span className="h-px w-0 bg-terracotta transition-all duration-300 group-hover:w-6" />
               </Link>
             </div>
 
             <div
-              className="mt-16 grid grid-cols-3 gap-6 border-t border-border pt-8 animate-fade-up"
+              className="mt-16 grid grid-cols-3 gap-6 animate-fade-up"
               style={{ animationDelay: "0.55s" }}
             >
               {[
-                { n: "3", l: "Wilayah dampingan" },
-                { n: "3", l: "Produk digital" },
-                { n: "BNSP", l: "Tersertifikasi" },
+                { n: "3", l: "Wilayah dampingan", icon: "🌿" },
+                { n: "3", l: "Produk digital", icon: "💻" },
+                { n: "BNSP", l: "Tersertifikasi", icon: "🏅" },
               ].map((s) => (
-                <div key={s.l}>
+                <div key={s.l} className="group relative rounded-2xl border border-coffee/8 bg-cream-soft/60 p-5 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-terracotta/20 hover:shadow-sm">
+                  <div className="absolute right-3 top-3 text-lg opacity-60 transition-transform duration-500 group-hover:scale-125 group-hover:opacity-100">
+                    {s.icon}
+                  </div>
                   <div className="font-display text-3xl text-terracotta md:text-4xl">{s.n}</div>
-                  <div className="mt-1 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+                  <div className="mt-2 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
                     {s.l}
                   </div>
                 </div>
@@ -92,7 +105,9 @@ export function Hero() {
             style={{ animationDelay: "0.3s" }}
           >
             <div className="relative">
-              <div className="absolute -inset-4 -rotate-2 rounded-3xl bg-mustard/30" />
+              {/* Frame decoration */}
+              <div className="absolute -inset-4 -rotate-2 rounded-3xl bg-gradient-to-br from-mustard/30 via-terracotta/10 to-sage/20 transition-transform duration-700 hover:rotate-0" />
+              
               <img
                 src={heroImg}
                 alt="Ilustrasi biji kopi dan lanskap pegunungan Sulawesi"
@@ -103,13 +118,20 @@ export function Hero() {
                 decoding="async"
                 className="hero-parallax relative w-full rounded-2xl transition-transform duration-75 will-change-transform"
               />
-              <div className="absolute -bottom-6 -left-6 max-w-[180px] rotate-[-3deg] rounded-lg bg-cream px-4 py-3 shadow-xl ring-1 ring-border">
-                <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-terracotta">
-                  Origin
+
+              {/* Origin badge - glassmorphism */}
+              <div className="absolute -bottom-6 -left-6 max-w-[200px] rotate-[-3deg] rounded-2xl border border-cream/30 bg-cream/80 px-5 py-4 shadow-xl backdrop-blur-md">
+                <div className="flex items-center gap-2">
+                  <span className="flex h-6 w-6 items-center justify-center rounded-full bg-terracotta/10 text-xs">☕</span>
+                  <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-terracotta">
+                    Origin
+                  </span>
                 </div>
-                <div className="mt-1 font-display text-sm text-coffee">Barru · Toraja · Sinjai</div>
+                <div className="mt-2 font-display text-sm text-coffee">Barru · Toraja · Sinjai</div>
               </div>
-              <div className="absolute -top-4 -right-4 rotate-[6deg] rounded-full bg-coffee px-4 py-2 font-mono text-[10px] uppercase tracking-[0.2em] text-cream">
+
+              {/* Single origin badge */}
+              <div className="absolute -top-4 -right-4 rotate-[6deg] rounded-full border border-coffee/10 bg-coffee px-5 py-2.5 font-mono text-[10px] uppercase tracking-[0.2em] text-cream shadow-lg backdrop-blur-sm">
                 Single origin
               </div>
             </div>

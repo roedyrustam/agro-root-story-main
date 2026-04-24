@@ -54,17 +54,22 @@ export function Skills() {
           bukan ruang kelas.
         </h2>
 
-        <div className="mt-16 grid gap-px overflow-hidden rounded-2xl bg-cream/10 md:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {groups.map((g, i) => (
-            <div key={g.title} className="bg-coffee p-8 transition-colors hover:bg-coffee/70">
-              <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-mustard">
+            <div key={g.title} className="group relative overflow-hidden rounded-3xl border border-cream/10 bg-cream/5 p-8 transition-all duration-500 hover:-translate-y-2 hover:border-mustard/30 hover:bg-cream/10 hover:shadow-[0_20px_40px_-15px_rgba(224,181,101,0.1)]">
+              {/* Decorative top gradient glow */}
+              <div className="absolute inset-x-0 -top-px h-px w-full bg-gradient-to-r from-transparent via-mustard/50 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+              
+              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-cream/10 font-mono text-[10px] uppercase tracking-[0.2em] text-mustard transition-colors group-hover:bg-mustard/20">
                 0{i + 1}
               </div>
-              <h3 className="mt-4 font-display text-2xl text-cream">{g.title}</h3>
-              <ul className="mt-6 space-y-3">
+              <h3 className="mt-8 font-display text-2xl text-cream">{g.title}</h3>
+              <ul className="mt-6 space-y-4">
                 {g.items.map((it) => (
-                  <li key={it} className="flex items-start gap-3 text-sm text-cream/80">
-                    <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-mustard" />
+                  <li key={it} className="flex items-start gap-4 text-sm text-cream/70 transition-colors group-hover:text-cream/90">
+                    <span className="mt-1.5 flex h-4 w-4 items-center justify-center rounded-full border border-mustard/30 bg-mustard/10">
+                      <span className="h-1.5 w-1.5 rounded-full bg-mustard" />
+                    </span>
                     <span>{it}</span>
                   </li>
                 ))}
