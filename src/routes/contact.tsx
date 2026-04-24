@@ -7,7 +7,14 @@ export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
       { title: "Kontak — Roedy Rustam" },
-      { name: "description", content: "Hubungi Roedy Rustam untuk diskusi kolaborasi." },
+      { name: "description", content: "Hubungi Roedy Rustam untuk diskusi kolaborasi di bidang agro, komunitas, atau pengembangan digital." },
+      { property: "og:title", content: "Kontak — Roedy Rustam" },
+      { property: "og:description", content: "Terbuka untuk kolaborasi di bidang agro, pemberdayaan komunitas, atau pengembangan digital." },
+      { property: "og:image", content: "/og-contact.jpg" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "/og-contact.jpg" },
     ],
   }),
   component: ContactPage,

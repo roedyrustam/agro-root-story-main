@@ -18,6 +18,13 @@ export const Route = createFileRoute("/about")({
         content:
           "Latar Teknik Industri, fokus agro-komunitas Sulawesi, dan pendekatan membangun perangkat digital yang tetap sederhana.",
       },
+      { property: "og:image", content: "/og-about.jpg" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:type", content: "profile" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Tentang Roedy Rustam — Praktisi Agro × Digital" },
+      { name: "twitter:image", content: "/og-about.jpg" },
     ],
   }),
   component: AboutPage,

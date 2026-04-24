@@ -7,7 +7,14 @@ export const Route = createFileRoute("/journey")({
   head: () => ({
     meta: [
       { title: "Perjalanan — Roedy Rustam" },
-      { name: "description", content: "Timeline perjalanan naratif Roedy Rustam." },
+      { name: "description", content: "Timeline naratif perjalanan Roedy Rustam dari kampus ke kebun ke kode, 2017 — sekarang." },
+      { property: "og:title", content: "Timeline Perjalanan — Roedy Rustam" },
+      { property: "og:description", content: "2017 — Sekarang · Dari kampus ke kebun ke kode." },
+      { property: "og:image", content: "/og-journey.jpg" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "/og-journey.jpg" },
     ],
   }),
   component: JourneyPage,
