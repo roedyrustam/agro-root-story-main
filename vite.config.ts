@@ -4,7 +4,7 @@ import tailwindcss from "@tailwindcss/vite";
 import tsConfigPaths from "vite-tsconfig-paths";
 import { tanstackStart } from "@tanstack/react-start/plugin/vite";
 
-export default defineConfig(() => ({
+export default defineConfig(({ mode }) => ({
   plugins: [
     tailwindcss(),
     tsConfigPaths({ projects: ["./tsconfig.json"] }),
@@ -14,7 +14,10 @@ export default defineConfig(() => ({
     react(),
   ],
   ssr: {
-    noExternal: true,
+    noExternal: mode === "production" ? true : [/^(?!react|react-dom)/],
+  },
+  optimizeDeps: {
+    include: ["react", "react-dom"],
   },
   resolve: {
     alias: {

@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite dev",
     "build": "cross-env NITRO_PRESET=cloudflare-pages vite build && cp dist/server/server.js dist/client/server.js && cp -r dist/server/assets/* dist/client/assets/ && echo \"export default { async fetch(request, env) { const url = new URL(request.url); if (url.pathname.startsWith('/assets/') || url.pathname.includes('.')) { return env.ASSETS.fetch(request); } const { default: handler } = await import('./server.js'); return handler.fetch(request, env); } };\" > dist/client/_worker.js",
+    "deploy": "npm run build && npx wrangler pages deploy dist/client",
     "build:dev": "vite build --mode development",
     "preview": "vite preview",
     "lint": "eslint .",
