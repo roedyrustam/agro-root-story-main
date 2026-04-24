@@ -69,34 +69,55 @@ export function Experience() {
           yang berpihak.
         </h2>
 
-        <div className="mt-16 space-y-px overflow-hidden rounded-2xl border border-border">
-          {experiences.map((exp, i) => (
-            <article
-              key={exp.role}
-              className="group relative grid gap-6 bg-card p-8 transition-colors hover:bg-cream-soft md:grid-cols-12 md:gap-10 md:p-12"
-            >
-              <div className="md:col-span-4 flex flex-col items-start">
-                <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-terracotta">
-                  <span>{String(i + 1).padStart(2, "0")} · {exp.period}</span>
-                  <span className="text-coffee/20">|</span>
-                  <span className="font-bold">BAB {exp.chapter}</span>
+        <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-12">
+          {experiences.map((exp, i) => {
+            // Memberikan ukuran grid yang berbeda untuk efek Bento
+            // Card pertama lebih besar (col-span-7), sisanya di sisi kanan (col-span-5)
+            const isFeatured = i === 0;
+            const gridClasses = isFeatured
+              ? "lg:col-span-7 lg:row-span-2"
+              : "lg:col-span-5";
+
+            return (
+              <article
+                key={exp.role}
+                className={`group relative overflow-hidden flex flex-col justify-between rounded-3xl border border-coffee/10 bg-cream-soft p-8 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(44,36,27,0.15)] ${gridClasses}`}
+              >
+                <div className="reveal">
+                  <div className="mb-4 flex flex-wrap items-center justify-between gap-4">
+                    <div className="font-mono text-xs uppercase tracking-widest text-terracotta">
+                      {exp.period}
+                    </div>
+                    <div className="flex gap-2">
+                      <span className="rounded-full bg-coffee/5 px-2.5 py-1 font-mono text-[10px] font-bold text-coffee/60">
+                        BAB {exp.chapter}
+                      </span>
+                    </div>
+                  </div>
+
+                  <h3 className={`font-display text-coffee ${isFeatured ? 'text-4xl md:text-5xl' : 'text-3xl'} mb-2`}>
+                    {exp.role}
+                  </h3>
+                  <div className="mb-8 text-base font-medium text-coffee/80">
+                    {exp.org}
+                  </div>
+
+                  <ul className="space-y-4">
+                    {exp.points.map((p) => (
+                      <li key={p} className="flex gap-4 text-base leading-relaxed text-coffee/70">
+                        <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-terracotta/80" />
+                        <span>{p}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <h3 className="mt-4 font-display text-3xl text-coffee md:text-4xl">{exp.role}</h3>
-                <div className="mt-2 text-base text-coffee/70">{exp.org}</div>
-                <div className="mt-auto pt-4">
+                
+                <div className="mt-8 pt-6 border-t border-coffee/5 reveal delay-100">
                   <CopyLinkBtn chapter={exp.chapter} label={exp.role} />
                 </div>
-              </div>
-              <ul className="space-y-4 md:col-span-8">
-                {exp.points.map((p) => (
-                  <li key={p} className="flex gap-4 text-base leading-relaxed text-coffee/80">
-                    <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-terracotta" />
-                    <span>{p}</span>
-                  </li>
-                ))}
-              </ul>
-            </article>
-          ))}
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>

@@ -64,7 +64,7 @@ export function Timeline() {
       if (hash === "#babak-i" || hash === "#bab-i") newChapter = "I";
       else if (hash === "#babak-ii" || hash === "#bab-ii") newChapter = "II";
       else if (hash === "#babak-iii" || hash === "#bab-iii") newChapter = "III";
-      
+
       setActiveChapter(newChapter);
 
       if (newChapter) {
@@ -129,7 +129,7 @@ export function Timeline() {
           <div className="max-w-2xl">
             <SectionLabel number="02" label="Perjalanan" />
             <h2 className="mt-6 font-display text-[clamp(2rem,5vw,4rem)] leading-[1.05] text-coffee">
-              Dari ruang kuliah <br />
+              Dari ruang sosial<br />
               ke ladang kopi <span className="italic text-terracotta">— & kembali ke layar.</span>
             </h2>
             <p className="mt-6 text-base leading-relaxed text-coffee/70">
@@ -143,17 +143,15 @@ export function Timeline() {
               <button
                 key={ch.id}
                 onClick={() => handleChapterClick(ch.id)}
-                className={`group relative flex flex-col items-start rounded-xl border p-4 text-left transition-all ${
-                  activeChapter === ch.id
+                className={`group relative flex flex-col items-start rounded-xl border p-4 text-left transition-all ${activeChapter === ch.id
                     ? "border-terracotta bg-terracotta/5 shadow-sm"
                     : "border-coffee/10 bg-card hover:border-coffee/30"
-                }`}
+                  }`}
               >
                 <div className="flex items-center gap-2">
                   <span
-                    className={`font-mono text-[10px] tracking-widest ${
-                      activeChapter === ch.id ? "text-terracotta" : "text-coffee/40"
-                    }`}
+                    className={`font-mono text-[10px] tracking-widest ${activeChapter === ch.id ? "text-terracotta" : "text-coffee/40"
+                      }`}
                   >
                     BAB {ch.id}
                   </span>
@@ -183,34 +181,33 @@ export function Timeline() {
                 id={`milestone-${m.chapter}-${i}`}
                 tabIndex={-1}
                 onKeyDown={(e) => handleKeyDown(e, i)}
-                className={`relative grid gap-4 pl-8 outline-none rounded-3xl focus-visible:ring-2 focus-visible:ring-terracotta focus-visible:ring-offset-8 focus-visible:ring-offset-cream-soft transition-all duration-500 md:grid-cols-2 md:pl-0 md:gap-12 ${
-                  isDimmed ? "opacity-20 grayscale-[0.5] scale-[0.98]" : "opacity-100"
-                }`}
+                className={`relative grid gap-4 pl-8 outline-none rounded-3xl focus-visible:ring-2 focus-visible:ring-terracotta focus-visible:ring-offset-8 focus-visible:ring-offset-cream-soft transition-all duration-500 md:grid-cols-2 md:pl-0 md:gap-12 ${isDimmed ? "opacity-20 grayscale-[0.5] scale-[0.98]" : "opacity-100"
+                  }`}
               >
                 <span
-                  className={`absolute left-0 top-2 h-4 w-4 rounded-full border-2 transition-colors duration-500 md:left-1/2 md:-translate-x-1/2 ${
-                    m.chapter === activeChapter
+                  className={`absolute left-0 top-2 h-4 w-4 rounded-full border-2 transition-colors duration-500 md:left-1/2 md:-translate-x-1/2 ${m.chapter === activeChapter
                       ? "border-terracotta bg-terracotta"
                       : "border-terracotta bg-cream"
-                  }`}
+                    }`}
                 />
 
-                <div className={left ? "md:text-right md:pr-12 flex flex-col items-start md:items-end" : "md:order-2 md:pl-12 flex flex-col items-start"}>
-                  <div className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.2em] text-terracotta md:justify-end md:group-[.order-2]:justify-start">
+                <div className={`${left ? "md:mr-12" : "md:order-2 md:ml-12"} flex flex-col items-start p-6 md:p-8 rounded-3xl border border-coffee/5 bg-card shadow-sm transition-all duration-500 hover:shadow-[0_15px_30px_-10px_rgba(44,36,27,0.1)] hover:-translate-y-2 hover:border-coffee/15 w-full relative overflow-hidden group`}>
+                  {/* Decorative subtle element inside card */}
+                  <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-terracotta/5 blur-2xl transition-all duration-500 group-hover:bg-terracotta/10"></div>
+                  
+                  <div className="flex w-full items-center justify-between gap-2 font-mono text-[10px] uppercase tracking-[0.2em] text-terracotta mb-4">
                     <span
-                      className={`rounded-sm px-1.5 py-0.5 text-[9px] ${
-                        m.chapter === activeChapter
-                          ? "bg-terracotta text-cream"
-                          : "bg-terracotta/10 text-terracotta"
-                      }`}
+                      className={`rounded-full px-2.5 py-1 text-[9px] font-bold ${m.chapter === activeChapter
+                          ? "bg-terracotta text-cream shadow-sm"
+                          : "bg-terracotta/10 text-terracotta group-hover:bg-terracotta/20"
+                        }`}
                     >
                       BAB {m.chapter}
                     </span>
-                    <span className="text-coffee/40">/</span>
-                    <span>{m.year}</span>
+                    <span className="text-coffee/40 font-bold bg-coffee/5 px-2 py-1 rounded-md">{m.year}</span>
                   </div>
-                  <h3 className="mt-3 font-display text-2xl text-coffee md:text-3xl">{m.title}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-coffee/70 md:text-base">
+                  <h3 className="font-display text-2xl text-coffee md:text-3xl relative z-10">{m.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-coffee/70 md:text-base relative z-10">
                     {m.desc}
                   </p>
                   <button
@@ -220,17 +217,18 @@ export function Timeline() {
                       // Visual feedback via minimal DOM trick or we just rely on standard click
                       const btn = document.getElementById(`copy-btn-${i}`);
                       if (btn) {
-                        const originalText = btn.innerText;
                         btn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check"><path d="M20 6 9 17l-5-5"/></svg> Tautan Tersalin`;
+                        btn.classList.add("bg-terracotta", "text-cream", "border-terracotta");
                         setTimeout(() => {
                           btn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link-2"><path d="M9 17H7A5 5 0 0 1 7 7h2"/><path d="M15 7h2a5 5 0 1 1 0 10h-2"/><line x1="8" x2="16" y1="12" y2="12"/></svg> Salin: ${m.title}`;
+                          btn.classList.remove("bg-terracotta", "text-cream", "border-terracotta");
                         }, 2000);
                       }
                     }}
                     id={`copy-btn-${i}`}
-                    className="mt-6 inline-flex items-center gap-2 rounded-full border border-coffee/15 bg-cream px-3 py-1.5 font-mono text-[9px] uppercase tracking-wider text-coffee/70 transition-colors hover:border-terracotta hover:bg-terracotta hover:text-cream"
+                    className="mt-6 inline-flex items-center gap-2 rounded-full border border-coffee/15 bg-cream-soft px-3 py-1.5 font-mono text-[9px] uppercase tracking-wider text-coffee/70 transition-colors hover:border-terracotta hover:bg-terracotta hover:text-cream relative z-10"
                   >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-link-2"><path d="M9 17H7A5 5 0 0 1 7 7h2"/><path d="M15 7h2a5 5 0 1 1 0 10h-2"/><line x1="8" x2="16" y1="12" y2="12"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-link-2"><path d="M9 17H7A5 5 0 0 1 7 7h2" /><path d="M15 7h2a5 5 0 1 1 0 10h-2" /><line x1="8" x2="16" y1="12" y2="12" /></svg>
                     Salin: {m.title}
                   </button>
                 </div>
