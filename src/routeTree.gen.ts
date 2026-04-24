@@ -9,12 +9,36 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as JourneyRouteImport } from './routes/journey'
+import { Route as ImpactRouteImport } from './routes/impact'
+import { Route as ExperienceRouteImport } from './routes/experience'
+import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ProjectsKafeyaRouteImport } from './routes/projects.kafeya'
 import { Route as ProjectsCuppingnotesRouteImport } from './routes/projects.cuppingnotes'
 import { Route as ProjectsBeanhubRouteImport } from './routes/projects.beanhub'
 
+const JourneyRoute = JourneyRouteImport.update({
+  id: '/journey',
+  path: '/journey',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ImpactRoute = ImpactRouteImport.update({
+  id: '/impact',
+  path: '/impact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ExperienceRoute = ExperienceRouteImport.update({
+  id: '/experience',
+  path: '/experience',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
   path: '/about',
@@ -44,6 +68,10 @@ const ProjectsBeanhubRoute = ProjectsBeanhubRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/experience': typeof ExperienceRoute
+  '/impact': typeof ImpactRoute
+  '/journey': typeof JourneyRoute
   '/projects/beanhub': typeof ProjectsBeanhubRoute
   '/projects/cuppingnotes': typeof ProjectsCuppingnotesRoute
   '/projects/kafeya': typeof ProjectsKafeyaRoute
@@ -51,6 +79,10 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/experience': typeof ExperienceRoute
+  '/impact': typeof ImpactRoute
+  '/journey': typeof JourneyRoute
   '/projects/beanhub': typeof ProjectsBeanhubRoute
   '/projects/cuppingnotes': typeof ProjectsCuppingnotesRoute
   '/projects/kafeya': typeof ProjectsKafeyaRoute
@@ -59,6 +91,10 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/experience': typeof ExperienceRoute
+  '/impact': typeof ImpactRoute
+  '/journey': typeof JourneyRoute
   '/projects/beanhub': typeof ProjectsBeanhubRoute
   '/projects/cuppingnotes': typeof ProjectsCuppingnotesRoute
   '/projects/kafeya': typeof ProjectsKafeyaRoute
@@ -68,6 +104,10 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/about'
+    | '/contact'
+    | '/experience'
+    | '/impact'
+    | '/journey'
     | '/projects/beanhub'
     | '/projects/cuppingnotes'
     | '/projects/kafeya'
@@ -75,6 +115,10 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/about'
+    | '/contact'
+    | '/experience'
+    | '/impact'
+    | '/journey'
     | '/projects/beanhub'
     | '/projects/cuppingnotes'
     | '/projects/kafeya'
@@ -82,6 +126,10 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/about'
+    | '/contact'
+    | '/experience'
+    | '/impact'
+    | '/journey'
     | '/projects/beanhub'
     | '/projects/cuppingnotes'
     | '/projects/kafeya'
@@ -90,6 +138,10 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  ContactRoute: typeof ContactRoute
+  ExperienceRoute: typeof ExperienceRoute
+  ImpactRoute: typeof ImpactRoute
+  JourneyRoute: typeof JourneyRoute
   ProjectsBeanhubRoute: typeof ProjectsBeanhubRoute
   ProjectsCuppingnotesRoute: typeof ProjectsCuppingnotesRoute
   ProjectsKafeyaRoute: typeof ProjectsKafeyaRoute
@@ -97,6 +149,34 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/journey': {
+      id: '/journey'
+      path: '/journey'
+      fullPath: '/journey'
+      preLoaderRoute: typeof JourneyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/impact': {
+      id: '/impact'
+      path: '/impact'
+      fullPath: '/impact'
+      preLoaderRoute: typeof ImpactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/experience': {
+      id: '/experience'
+      path: '/experience'
+      fullPath: '/experience'
+      preLoaderRoute: typeof ExperienceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/about': {
       id: '/about'
       path: '/about'
@@ -138,6 +218,10 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  ContactRoute: ContactRoute,
+  ExperienceRoute: ExperienceRoute,
+  ImpactRoute: ImpactRoute,
+  JourneyRoute: JourneyRoute,
   ProjectsBeanhubRoute: ProjectsBeanhubRoute,
   ProjectsCuppingnotesRoute: ProjectsCuppingnotesRoute,
   ProjectsKafeyaRoute: ProjectsKafeyaRoute,
