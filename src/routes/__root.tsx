@@ -5,6 +5,7 @@ import {
   HeadContent,
   Scripts,
   useRouterState,
+  ScrollRestoration,
 } from "@tanstack/react-router";
 import { useEffect } from "react";
 
@@ -230,19 +231,42 @@ function RootComponent() {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
         }
       });
     }, observerOptions);
 
-    // Re-scan for reveal elements on every location change
-    const revealElements = document.querySelectorAll(".reveal");
-    revealElements.forEach((el) => observer.observe(el));
+    const observeElements = () => {
+      const revealElements = document.querySelectorAll(".reveal:not(.is-observed)");
+      revealElements.forEach((el) => {
+        el.classList.add("is-observed");
+        observer.observe(el);
+      });
+    };
+
+    observeElements();
+
+    // Observe DOM changes to catch newly added .reveal elements after route changes
+    const mutationObserver = new MutationObserver(() => {
+      observeElements();
+    });
+
+    const mainContent = document.getElementById("main-content");
+    if (mainContent) {
+      mutationObserver.observe(mainContent, { childList: true, subtree: true });
+    }
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
       observer.disconnect();
+      mutationObserver.disconnect();
     };
   }, [location.pathname]); // Re-run on navigation
 
-  return <Outlet />;
+  return (
+    <>
+      <ScrollRestoration />
+      <Outlet />
+    </>
+  );
 }
