@@ -90,6 +90,38 @@ export function Timeline() {
     return () => window.removeEventListener("hashchange", handleHashChange);
   }, []);
 
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLLIElement>, currentIndex: number) => {
+    if (activeChapter === null) return;
+
+    if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+      e.preventDefault();
+
+      const activeIndices = milestones
+        .map((m, idx) => (m.chapter === activeChapter ? idx : -1))
+        .filter((idx) => idx !== -1);
+
+      const pos = activeIndices.indexOf(currentIndex);
+      if (pos !== -1) {
+        let nextPos = pos;
+        if (e.key === "ArrowDown" && pos < activeIndices.length - 1) {
+          nextPos = pos + 1;
+        } else if (e.key === "ArrowUp" && pos > 0) {
+          nextPos = pos - 1;
+        }
+
+        if (nextPos !== pos) {
+          const targetIndex = activeIndices[nextPos];
+          const el = document.getElementById(`milestone-${activeChapter}-${targetIndex}`);
+          if (el) {
+            el.focus({ preventScroll: true });
+            const y = el.getBoundingClientRect().top + window.scrollY - 120;
+            window.scrollTo({ top: y, behavior: "smooth" });
+          }
+        }
+      }
+    }
+  };
+
   return (
     <section id="journey" className="border-t border-border bg-cream-soft py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-6 md:px-10">
@@ -150,6 +182,7 @@ export function Timeline() {
                 key={m.title}
                 id={`milestone-${m.chapter}-${i}`}
                 tabIndex={-1}
+                onKeyDown={(e) => handleKeyDown(e, i)}
                 className={`relative grid gap-4 pl-8 outline-none rounded-3xl focus-visible:ring-2 focus-visible:ring-terracotta focus-visible:ring-offset-8 focus-visible:ring-offset-cream-soft transition-all duration-500 md:grid-cols-2 md:pl-0 md:gap-12 ${
                   isDimmed ? "opacity-20 grayscale-[0.5] scale-[0.98]" : "opacity-100"
                 }`}
