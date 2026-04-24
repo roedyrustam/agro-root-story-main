@@ -101,8 +101,8 @@ function AboutPage() {
               </h1>
 
               <p className="mt-8 max-w-xl text-lg leading-relaxed text-coffee/75">
-                Saya Roedy. Latar saya Teknik Industri. Pekerjaan saya hari ini berada di antara dua
-                dunia yang jarang bertemu: ladang kopi di Sulawesi Selatan dan baris-baris kode
+                Saya Roedy. Pekerjaan saya hari ini berada di antara dua
+                dunia yang jarang bertemu: <span className="italic text-terracotta">ladang kopi di Sulawesi Selatan</span> dan baris-baris kode
                 untuk UMKM agro.
               </p>
             </div>
