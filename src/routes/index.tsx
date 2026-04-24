@@ -13,13 +13,13 @@ import { Footer } from "@/components/Footer";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Roedy Rustam — Socialpreneurship × Agro × Digital" },
+      { title: "Roedy Rustam — Sociopreneur × Agro × Digital" },
       {
         name: "description",
         content:
-          "Portfolio Roedy Rustam — praktisi Socialpreneurship yang membangun ekosistem kopi Sulawesi (Barru, Toraja, Sinjai) dan perangkat digital untuk UMKM agro.",
+          "Portfolio Roedy Rustam — Sociopreneur yang membangun ekosistem kopi Sulawesi (Barru, Toraja, Sinjai) dan perangkat digital untuk UMKM agro.",
       },
-      { property: "og:title", content: "Roedy Rustam — Agro × Digital Practitioner" },
+      { property: "og:title", content: "Roedy Rustam — Sociopreneur × Agro × Digital" },
       {
         property: "og:description",
         content:

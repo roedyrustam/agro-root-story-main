@@ -48,22 +48,24 @@ export const Route = createRootRoute({
         name: "google-site-verification",
         content: "pBTvdE97aC22PQnmJv_ZDD3c2B9O2IXJlLeQNYp4c_E",
       },
-      { title: "Roedy Rustam — Agro × Digital" },
+      { title: "Roedy Rustam — Sociopreneur × Agro × Digital" },
       {
         name: "description",
         content:
-          "Portfolio Roedy Rustam — praktisi Teknik Industri yang membangun ekosistem kopi Sulawesi & perangkat digital untuk UMKM agro.",
+          "Portfolio Roedy Rustam — Sociopreneur yang membangun ekosistem kopi Sulawesi (Barru, Toraja, Sinjai) & perangkat digital untuk UMKM agro.",
       },
+      { name: "keywords", content: "Roedy Rustam, Sociopreneur, Kopi Sulawesi, Agro Digital, UMKM, beanhub, Kafeya POS, Teknik Industri, Makassar" },
       { name: "author", content: "Roedy Rustam" },
       { name: "theme-color", content: "#3d2b1f" },
       // Open Graph
-      { property: "og:title", content: "Roedy Rustam — Agro × Digital" },
+      { property: "og:title", content: "Roedy Rustam — Sociopreneur × Agro × Digital" },
       {
         property: "og:description",
         content:
-          "Praktisi Teknik Industri yang membangun ekosistem kopi Sulawesi & perangkat digital untuk UMKM agro.",
+          "Sociopreneur yang membangun ekosistem kopi Sulawesi & perangkat digital (beanhub.online, Kafeya POS) untuk UMKM agro.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://roedyrustam.pages.dev" },
       { property: "og:locale", content: "id_ID" },
       { property: "og:site_name", content: "Roedy Rustam Portfolio" },
       { property: "og:image", content: "/og-image.jpg" },
@@ -71,23 +73,23 @@ export const Route = createRootRoute({
       { property: "og:image:height", content: "630" },
       {
         property: "og:image:alt",
-        content: "Roedy Rustam — Sociopreneur  × Agro × Digital",
+        content: "Roedy Rustam — Sociopreneur × Agro × Digital",
       },
       // Twitter Card
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Roedy Rustam — Agro × Digital" },
+      { name: "twitter:title", content: "Roedy Rustam — Sociopreneur × Agro × Digital" },
       {
         name: "twitter:description",
         content:
-          "Praktisi Teknik Industri yang membangun ekosistem kopi Sulawesi & perangkat digital untuk UMKM agro.",
+          "Sociopreneur yang membangun ekosistem kopi Sulawesi & perangkat digital untuk UMKM agro.",
       },
       { name: "twitter:image", content: "/og-image.jpg" },
       // Additional SEO
-      { name: "robots", content: "index, follow" },
+      { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" },
       { name: "googlebot", content: "index, follow" },
       // GEO Meta Tags (Local SEO)
       { name: "geo.region", content: "ID-SN" },
-      { name: "geo.placename", content: "Makassar" },
+      { name: "geo.placename", content: "Makassar, Sulawesi Selatan" },
       { name: "geo.position", content: "-5.147665;119.432732" },
       { name: "ICBM", content: "-5.147665, 119.432732" },
     ],
@@ -123,13 +125,13 @@ export const Route = createRootRoute({
           "@context": "https://schema.org",
           "@type": "Person",
           name: "Roedy Rustam",
-          jobTitle: "Sociopreneur  Practitioner & Agro Digital Developer",
+          jobTitle: "Sociopreneur & Agro Digital Developer",
           description:
-            "Praktisi Teknik Industri yang membangun ekosistem kopi Sulawesi & perangkat digital untuk UMKM agro.",
+            "Sociopreneur yang membangun ekosistem kopi Sulawesi & perangkat digital untuk UMKM agro.",
           url: "https://roedyrustam.pages.dev",
           knowsAbout: [
             "Coffee Supply Chain",
-            "Sociopreneur ",
+            "Sociopreneur",
             "Agro Operations",
             "React Development",
             "UMKM Digital Solutions",
