@@ -1,6 +1,7 @@
 import { useRouterState, ScrollRestoration, Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 import { useEffect } from "react";
 import { Toaster } from "sonner";
+import { generatePersonSchema, generateWebSiteSchema } from "@/lib/schema";
 
 import appCss from "../styles.css?url";
 
@@ -114,32 +115,11 @@ export const Route = createRootRoute({
     scripts: [
       {
         type: "application/ld+json",
-        children: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Person",
-          name: "Roedy Rustam",
-          jobTitle: "Sociopreneur & Agro Digital Developer",
-          description:
-            "Sociopreneur yang membangun ekosistem kopi Sulawesi & perangkat digital untuk UMKM agro.",
-          url: "https://roedyrustam.pages.dev",
-          knowsAbout: [
-            "Coffee Supply Chain",
-            "Sociopreneur",
-            "Agro Operations",
-            "React Development",
-            "UMKM Digital Solutions",
-          ],
-          worksFor: {
-            "@type": "Organization",
-            name: "Sehati Kopi Indonesia",
-          },
-          address: {
-            "@type": "PostalAddress",
-            addressRegion: "Sulawesi Selatan",
-            addressCountry: "ID",
-          },
-          sameAs: ["https://beanhub.online", "https://cuppingnotes.online"],
-        }),
+        children: JSON.stringify(generatePersonSchema()),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(generateWebSiteSchema()),
       },
     ],
   }),

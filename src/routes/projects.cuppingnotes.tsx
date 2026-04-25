@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { Gallery, type GalleryItem } from "@/components/Gallery";
+import { generateSoftwareAppSchema, generateBreadcrumbSchema } from "@/lib/schema";
 import { FlavorWheel } from "@/components/FlavorWheel";
 import scaImg from "../assets/cuppingnotes-sca.png";
 import radarImg from "../assets/cuppingnotes-radar.png";
@@ -53,6 +54,29 @@ export const Route = createFileRoute("/projects/cuppingnotes")({
       { property: "og:image", content: "/og-cuppingnotes.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:image", content: "/og-cuppingnotes.jpg" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(
+          generateSoftwareAppSchema({
+            name: "CuppingNotes.online",
+            description: "Platform digital untuk mencatat, mengevaluasi, dan membagikan hasil cupping kopi.",
+            url: "https://cuppingnotes.online",
+            image: "https://roedyrustam.pages.dev/og-cuppingnotes.jpg",
+          })
+        ),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(
+          generateBreadcrumbSchema([
+            { name: "Beranda", item: "/" },
+            { name: "Proyek", item: "/" },
+            { name: "CuppingNotes", item: "/projects/cuppingnotes" },
+          ])
+        ),
+      },
     ],
   }),
   component: CuppingNotesPage,

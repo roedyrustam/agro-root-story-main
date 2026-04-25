@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { Gallery, type GalleryItem } from "@/components/Gallery";
+import { generateSoftwareAppSchema, generateBreadcrumbSchema } from "@/lib/schema";
 import posImg from "../assets/kafeya-pos.jpg";
 import flowImg from "../assets/kafeya-flow.jpg";
 import reportImg from "../assets/kafeya-report.jpg";
@@ -62,6 +63,29 @@ export const Route = createFileRoute("/projects/kafeya")({
       { property: "og:image", content: "/og-kafeya.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:image", content: "/og-kafeya.jpg" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(
+          generateSoftwareAppSchema({
+            name: "Kafeya POS",
+            description: "Alat bantu kasir & pelaporan keuangan sederhana untuk café dan UMKM kopi.",
+            url: "https://kafeya.online",
+            image: "https://roedyrustam.pages.dev/og-kafeya.jpg",
+          })
+        ),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(
+          generateBreadcrumbSchema([
+            { name: "Beranda", item: "/" },
+            { name: "Proyek", item: "/" },
+            { name: "Kafeya", item: "/projects/kafeya" },
+          ])
+        ),
+      },
     ],
   }),
   component: KafeyaPage,

@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Nav } from "@/components/Nav";
+import { generateProfessionalServiceSchema } from "@/lib/schema";
 import { Hero } from "@/components/Hero";
 import { Marquee } from "@/components/Marquee";
 import { Partners } from "@/components/Partners";
@@ -27,6 +28,12 @@ export const Route = createFileRoute("/")({
       { property: "og:type", content: "profile" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:image", content: "/og-image.jpg" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(generateProfessionalServiceSchema()),
+      },
     ],
   }),
   component: Index,

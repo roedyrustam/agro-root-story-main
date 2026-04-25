@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
+import { generateSoftwareAppSchema, generateBreadcrumbSchema } from "@/lib/schema";
 import { Gallery, type GalleryItem } from "@/components/Gallery";
 import dashboardImg from "../assets/beanhub-dashboard.jpg";
 import flowImg from "../assets/beanhub-flow.jpg";
@@ -62,6 +63,29 @@ export const Route = createFileRoute("/projects/beanhub")({
       { property: "og:image", content: "/og-beanhub.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:image", content: "/og-beanhub.jpg" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(
+          generateSoftwareAppSchema({
+            name: "Beanhub.online",
+            description: "Platform rantai pasok kopi dari kebun ke roastery yang transparan.",
+            url: "https://beanhub.online",
+            image: "https://roedyrustam.pages.dev/og-beanhub.jpg",
+          })
+        ),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(
+          generateBreadcrumbSchema([
+            { name: "Beranda", item: "/" },
+            { name: "Proyek", item: "/" },
+            { name: "Beanhub", item: "/projects/beanhub" },
+          ])
+        ),
+      },
     ],
   }),
   component: BeanhubPage,

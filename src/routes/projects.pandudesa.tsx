@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
+import { generateBreadcrumbSchema } from "@/lib/schema";
 import projectImg from "../assets/project-pandudesa.png";
 
 export const Route = createFileRoute("/projects/pandudesa")({
@@ -20,6 +21,18 @@ export const Route = createFileRoute("/projects/pandudesa")({
       { property: "og:image", content: "/og-pandudesa.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:image", content: "/og-pandudesa.jpg" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(
+          generateBreadcrumbSchema([
+            { name: "Beranda", item: "/" },
+            { name: "Proyek", item: "/" },
+            { name: "Pandu Desa 4.0", item: "/projects/pandudesa" },
+          ])
+        ),
+      },
     ],
   }),
   component: PanduDesaPage,
