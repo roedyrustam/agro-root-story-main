@@ -53,8 +53,7 @@ export function Hero() {
               className="mt-8 max-w-xl text-lg leading-relaxed text-coffee/75 text-pretty animate-fade-up"
               style={{ animationDelay: "0.25s" }}
             >
-              Saya <strong className="text-coffee">Roedy Rustam</strong> — Praktisi dan pegiat yang menemani petani kopi Sulawesi dari bukit Toraja sampai ke meja
-              barista, sambil menulis kode untuk membuat rantai pasok mereka lebih jujur.
+              Saya <strong className="text-coffee">Roedy Rustam</strong> — Trainer UMKM dan konsultan pengembangan desa yang menemani petani kopi Sulawesi dari bukit Toraja sampai ke meja barista, sambil menulis kode untuk membuat rantai pasok mereka lebih jujur.
             </p>
 
             <div
@@ -83,7 +82,7 @@ export function Hero() {
               style={{ animationDelay: "0.55s" }}
             >
               {[
-                { n: "3", l: "Wilayah dampingan", icon: "🌿" },
+                { n: "5+", l: "Wilayah dampingan", icon: "🌿" },
                 { n: "3", l: "Produk digital", icon: "💻" },
                 { n: "BNSP", l: "Tersertifikasi", icon: "🏅" },
               ].map((s) => (

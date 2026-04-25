@@ -30,6 +30,13 @@ const milestones = [
     chapter: "II",
   },
   {
+    year: "2024+",
+    title: "Trainer UMKM & Konsultan Desa",
+    desc: "Mendampingi pengembangan ekonomi desa di berbagai wilayah Indonesia melalui pelatihan literasi digital dan strategi kewirausahaan UMKM.",
+    tag: "Consulting",
+    chapter: "II",
+  },
+  {
     year: "2025",
     title: "Sehati Kopi Indonesia",
     desc: "Mengelola operasional hulu-hilir kopi di Barru, Toraja, dan Sinjai. Produksi, stok, kualitas, mitra.",

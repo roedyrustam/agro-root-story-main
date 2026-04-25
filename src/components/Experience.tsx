@@ -36,6 +36,17 @@ const experiences = [
       "Merancang dan memelihara sistem cuppingnotes.online untuk pencatatan kualitas kopi.",
     ],
   },
+  {
+    role: "Trainer & Konsultan",
+    org: "Pemberdayaan Desa & UMKM",
+    period: "2024 — Sekarang",
+    chapter: "II",
+    points: [
+      "Melatih literasi digital dan strategi kewirausahaan untuk UMKM di berbagai wilayah.",
+      "Konsultan pengembangan potensi ekonomi desa melalui pemetaan komoditas lokal.",
+      "Menyusun strategi transformasi digital untuk meningkatkan daya saing produk desa.",
+    ],
+  },
 ];
 
 function CopyLinkBtn({ chapter, label }: { chapter: string; label: string }) {
@@ -65,7 +76,7 @@ export function Experience() {
       <div className="mx-auto max-w-7xl px-6 md:px-10">
         <SectionLabel number="03" label="Pengalaman" />
         <h2 className="mt-6 max-w-3xl font-display text-[clamp(2rem,5vw,4rem)] leading-[1.05] text-coffee">
-          Tiga peran, satu <span className="italic text-terracotta">benang merah</span>: efisiensi
+          Empat peran, satu <span className="italic text-terracotta">benang merah</span>: efisiensi
           yang berpihak.
         </h2>
 
@@ -74,8 +85,11 @@ export function Experience() {
             // Memberikan ukuran grid yang berbeda untuk efek Bento
             // Card pertama lebih besar (col-span-7), sisanya di sisi kanan (col-span-5)
             const isFeatured = i === 0;
+            const isFullWidth = i === 3;
             const gridClasses = isFeatured
               ? "lg:col-span-7 lg:row-span-2"
+              : isFullWidth
+              ? "lg:col-span-12"
               : "lg:col-span-5";
 
             return (

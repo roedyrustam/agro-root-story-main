@@ -63,7 +63,7 @@ export function About() {
             <div className="pt-6">
               <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-coffee/50 mb-4">Wilayah & Kolaborasi</div>
               <div className="flex flex-wrap gap-2">
-                {["Toraja", "Enrekang", "Barru", "Sinjai", "Sehati Kopi Indonesia", "BUMMA", "Pandu Talenta Digital"].map((tag) => (
+                {["Toraja", "Enrekang", "Barru", "Sinjai", "Sehati Kopi Indonesia", "BUMMA", "Pandu Talenta Digital", "Pemberdayaan UMKM", "Konsultan Desa"].map((tag) => (
                   <span
                     key={tag}
                     className="rounded-full border border-coffee/10 bg-cream px-4 py-1.5 font-mono text-[10px] uppercase tracking-[0.1em] text-coffee/80 shadow-sm transition-all hover:border-terracotta/30 hover:text-terracotta"
