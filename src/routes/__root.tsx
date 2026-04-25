@@ -262,7 +262,10 @@ function RootComponent() {
     <>
       <ScrollRestoration />
       <Toaster position="top-center" richColors />
-      <Outlet />
+      <div key={location.pathname} className="animate-in fade-in slide-in-from-bottom-4 duration-700 ease-out">
+        <Outlet />
+      </div>
     </>
   );
 }
+

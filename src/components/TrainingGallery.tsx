@@ -50,12 +50,12 @@ export function TrainingGallery() {
                   alt={act.title}
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-coffee/80 via-coffee/20 to-transparent opacity-60 transition-opacity group-hover:opacity-80" />
+                <div className="absolute inset-0 bg-gradient-to-t from-coffee/90 via-coffee/40 to-transparent opacity-90 transition-opacity md:opacity-60 group-hover:opacity-90" />
 
                 <div className="absolute bottom-0 left-0 right-0 p-8">
                   <div className="font-mono text-[10px] uppercase tracking-widest text-mustard">{act.location}</div>
                   <h3 className="mt-2 font-display text-2xl text-cream">{act.title}</h3>
-                  <p className="mt-4 text-sm text-cream/70 leading-relaxed opacity-0 transition-all duration-500 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
+                  <p className="mt-4 text-sm text-cream/70 leading-relaxed opacity-100 translate-y-0 transition-all duration-500 md:opacity-0 md:translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
                     {act.description}
                   </p>
                 </div>

@@ -87,6 +87,7 @@ export function InteractiveMap() {
         viewBox="0 0 600 450"
         className="relative z-10 w-full h-full p-12 select-none"
         onMouseLeave={() => setActiveLoc(null)}
+        onClick={() => setActiveLoc(null)}
       >
         {/* Connection Lines (Supply Chain Lines) */}
         <g className="opacity-20">
@@ -117,6 +118,8 @@ export function InteractiveMap() {
             key={loc.id}
             className="cursor-pointer"
             onMouseEnter={() => setActiveLoc(loc)}
+            onClick={(e) => { e.stopPropagation(); setActiveLoc(loc); }}
+            onTouchStart={(e) => { e.stopPropagation(); setActiveLoc(loc); }}
           >
             {/* Glow Effect */}
             <circle
