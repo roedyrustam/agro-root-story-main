@@ -16,12 +16,12 @@ const experiences = [
   },
   {
     role: "Fasilitator Komunitas",
-    org: "Aliansi Masyarakat Adat Sulawesi Selatan",
+    org: "Aliansi Masyarakat Adat & Jirak Celebes",
     period: "Berjalan",
     chapter: "II",
     points: [
       "Penguatan tata kelola Badan Usaha Milik Masyarakat Adat (BUMMA).",
-      "Memetakan peluang pasar dan akses distribusi produk lokal komunitas.",
+      "Mendirikan jaringan radio komunitas untuk kedaulatan informasi di Sulsel & Sulbar.",
       "Jembatan komunikasi antar pemangku kepentingan di tingkat lapangan.",
     ],
   },
@@ -39,12 +39,12 @@ const experiences = [
   {
     role: "Trainer & Konsultan",
     org: "Pemberdayaan Desa & UMKM",
-    period: "2024 — Sekarang",
+    period: "2018 — Sekarang",
     chapter: "II",
     points: [
+      "Project Manager Pandu Desa 4.0 untuk literasi digital dan tata kelola informasi desa.",
       "Melatih literasi digital dan strategi kewirausahaan untuk UMKM di berbagai wilayah.",
-      "Konsultan pengembangan potensi ekonomi desa melalui pemetaan komoditas lokal.",
-      "Menyusun strategi transformasi digital untuk meningkatkan daya saing produk desa.",
+      "Konsultan pengembangan ekonomi desa melalui pemetaan komoditas lokal.",
     ],
   },
 ];

@@ -13,9 +13,9 @@ const groups = [
   {
     title: "Pemberdayaan",
     items: [
-      "Fasilitasi BUMMA",
-      "Pendampingan kelompok tani",
-      "Pemetaan pasar lokal",
+      "Fasilitasi Radio Komunitas",
+      "Literasi Digital Desa (Pandu Desa)",
+      "Pendampingan UMKM & BUMDes",
       "Komunikasi lintas pemangku",
     ],
   },

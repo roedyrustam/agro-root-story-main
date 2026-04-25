@@ -9,6 +9,20 @@ const chapters = [
 
 const milestones = [
   {
+    year: "1998+",
+    title: "Jirak Celebes",
+    desc: "Mendirikan Jaringan Radio Komunitas Sulawesi Selatan & Barat — pelopor kedaulatan informasi warga.",
+    tag: "Legacy",
+    chapter: "I",
+  },
+  {
+    year: "2018 — 2020",
+    title: "Pandu Desa 4.0",
+    desc: "Project Manager untuk inisiatif literasi digital, pemetaan desa, dan digitalisasi tata kelola informasi desa.",
+    tag: "Leadership",
+    chapter: "II",
+  },
+  {
     year: "2019",
     title: "Sertifikasi BNSP",
     desc: "Klaster Perencanaan Produksi Sektor Industri Agro — fondasi disiplin operasional.",

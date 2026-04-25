@@ -52,9 +52,9 @@ export function About() {
             </div>
             
             <div className="space-y-6 text-base leading-relaxed text-coffee/75">
-              <p>
-                Perjalanan saya dimulai dari pemetaan panen kopi di bukit Toraja hingga mengelola rantai ekspor di Makassar. Setiap langkah mengajarkan bahwa data yang jujur adalah fondasi dari keadilan bagi petani.
-              </p>
+      <p>
+        Perjalanan saya dimulai dari pemetaan radio komunitas di pelosok Sulawesi hingga pemetaan panen kopi di bukit Malino dan Toraja. Setiap langkah mengajarkan bahwa kedaulatan informasi dan data yang jujur adalah fondasi keadilan.
+      </p>
               <p>
                 Kini, saya fokus mengembangkan ekosistem digital seperti <span className="text-terracotta font-medium">beanhub.online</span> yang menghubungkan kebun langsung ke meja barista dengan jejak digital yang bisa dipertanggungjawabkan.
               </p>
@@ -63,7 +63,7 @@ export function About() {
             <div className="pt-6">
               <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-coffee/50 mb-4">Wilayah & Kolaborasi</div>
               <div className="flex flex-wrap gap-2">
-                {["Toraja", "Enrekang", "Barru", "Sinjai", "Sehati Kopi Indonesia", "BUMMA", "Pandu Talenta Digital", "Pemberdayaan UMKM", "Konsultan Desa"].map((tag) => (
+                {["Toraja", "Enrekang", "Barru", "Sinjai", "Malino", "Jirak Celebes", "BUMMA", "Pandu Desa 4.0", "Pemberdayaan UMKM", "Konsultan Desa"].map((tag) => (
                   <span
                     key={tag}
                     className="rounded-full border border-coffee/10 bg-cream px-4 py-1.5 font-mono text-[10px] uppercase tracking-[0.1em] text-coffee/80 shadow-sm transition-all hover:border-terracotta/30 hover:text-terracotta"

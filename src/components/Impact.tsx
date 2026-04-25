@@ -48,6 +48,7 @@ export function Impact() {
                 { name: "Barru", note: "Pesisir & dataran rendah · pengembangan komoditas baru" },
                 { name: "Toraja", note: "Highland klasik · arabika premium turun-temurun" },
                 { name: "Enrekang", note: "Dataran tinggi · Arabika Specialty · Natural & Honey" },
+                { name: "Malino", note: "Pusat edukasi & promosi kopi Sulsel · Sehati Kopi Malino" },
                 { name: "Sinjai", note: "Komunitas adat · tata kelola BUMMA & akses pasar" },
               ].map((r, i) => (
                 <div
