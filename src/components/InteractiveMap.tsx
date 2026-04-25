@@ -1,7 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { MapContainer, TileLayer, Marker, Polyline } from "react-leaflet";
-import L from "leaflet";
-import "leaflet/dist/leaflet.css";
 
 interface Location {
   id: string;
@@ -28,6 +25,14 @@ const locations: Location[] = [
     lng: 119.4327,
     type: "hub",
     details: "Ibu Kota Provinsi · Roastery & Supply Chain",
+  },
+  {
+    id: "tasikmalaya",
+    name: "Tasikmalaya",
+    lat: -7.3274,
+    lng: 108.2032,
+    type: "origin",
+    details: "Pertanian Jawa Barat · Optimalisasi Supply",
   },
   {
     id: "barru",
@@ -69,15 +74,66 @@ const locations: Location[] = [
     type: "origin",
     details: "Komunitas Adat · Tata Kelola BUMMA",
   },
+  {
+    id: "dobo",
+    name: "Dobo, Kepulauan Aru",
+    lat: -5.7601,
+    lng: 134.2255,
+    type: "origin",
+    details: "Potensi Kepulauan · Pengembangan Ekonomi Mandiri",
+  },
+  {
+    id: "supiori",
+    name: "Biak Supiori",
+    lat: -0.8384,
+    lng: 135.5978,
+    type: "origin",
+    details: "Pulau Samudra · Ekosistem Pertanian Pesisir",
+  },
+  {
+    id: "pegunungan-bintang",
+    name: "Pegunungan Bintang",
+    lat: -4.5662,
+    lng: 140.2981,
+    type: "origin",
+    details: "Dataran Tinggi Papua · Komoditas Eksotis",
+  },
+  {
+    id: "belu",
+    name: "Kabupaten Belu, NTT",
+    lat: -9.1833,
+    lng: 124.8927,
+    type: "origin",
+    details: "Perbatasan Negara · Ketahanan Pangan Terintegrasi",
+  }
 ];
 
 export function InteractiveMap() {
   const [activeLoc, setActiveLoc] = useState<Location | null>(null);
-  const [isMounted, setIsMounted] = useState(false);
+  const [MapComponents, setMapComponents] = useState<any>(null);
 
   useEffect(() => {
-    setIsMounted(true);
+    // Dynamic import to bypass SSR ReferenceError: window is not defined
+    Promise.all([
+      import("react-leaflet"),
+      import("leaflet"),
+      import("leaflet/dist/leaflet.css")
+    ]).then(([ReactLeaflet, Leaflet]) => {
+      setMapComponents({
+        MapContainer: ReactLeaflet.MapContainer,
+        TileLayer: ReactLeaflet.TileLayer,
+        Marker: ReactLeaflet.Marker,
+        Polyline: ReactLeaflet.Polyline,
+        L: Leaflet.default || Leaflet
+      });
+    });
   }, []);
+
+  if (!MapComponents) {
+    return <div className="w-full aspect-[4/3] bg-coffee rounded-3xl animate-pulse flex items-center justify-center text-cream/50 font-mono text-sm">Memuat Peta...</div>;
+  }
+
+  const { MapContainer, TileLayer, Marker, Polyline, L } = MapComponents;
 
   const createCustomIcon = (type: "hub" | "origin", isActive: boolean) => {
     const colorClass = type === "hub" ? "bg-terracotta" : "bg-mustard";
@@ -95,17 +151,37 @@ export function InteractiveMap() {
     });
   };
 
-  const originToMakassar = locations.filter(l => l.type === 'origin').map(origin => [
-    [origin.lat, origin.lng],
-    [-5.1476, 119.4327] // Makassar
-  ] as [number, number][]);
+  // Group origins by logical hubs for cleaner lines
+  // Sulsel origins -> Makassar
+  const sulselOrigins = ["barru", "toraja", "enrekang", "malino", "sinjai"];
+  const toMakassar = locations
+    .filter(l => sulselOrigins.includes(l.id))
+    .map(origin => [
+      [origin.lat, origin.lng],
+      [-5.1476, 119.4327] // Makassar
+    ] as [number, number][]);
+
+  // Tasikmalaya -> Jakarta
+  const toJakarta = locations
+    .filter(l => l.id === "tasikmalaya")
+    .map(origin => [
+      [origin.lat, origin.lng],
+      [-6.2088, 106.8456] // Jakarta
+    ] as [number, number][]);
+
+  // Eastern origins -> Makassar (hub)
+  const easternOrigins = ["dobo", "supiori", "pegunungan-bintang", "belu"];
+  const toEasternHub = locations
+    .filter(l => easternOrigins.includes(l.id))
+    .map(origin => [
+      [origin.lat, origin.lng],
+      [-5.1476, 119.4327] // Connecting Eastern Indonesia to Makassar Hub
+    ] as [number, number][]);
 
   const makassarToJakarta: [number, number][] = [
     [-5.1476, 119.4327], // Makassar
     [-6.2088, 106.8456] // Jakarta
   ];
-
-  if (!isMounted) return <div className="w-full aspect-[4/3] bg-coffee rounded-3xl animate-pulse" />;
 
   return (
     <div className="relative w-full aspect-[4/3] bg-coffee rounded-3xl overflow-hidden group/map border border-white/10 shadow-2xl">
@@ -117,8 +193,8 @@ export function InteractiveMap() {
       </div>
 
       <MapContainer 
-        center={[-4.5, 113.5]} 
-        zoom={5} 
+        center={[-3.5, 122]} // Adjusted center to fit from West Java to Papua
+        zoom={4.5} 
         className="w-full h-full z-0"
         zoomControl={false}
         scrollWheelZoom={false}
@@ -130,15 +206,14 @@ export function InteractiveMap() {
         />
 
         {/* Connections */}
-        {originToMakassar.map((pos, i) => (
-          <Polyline 
-            key={i} 
-            positions={pos} 
-            color="#E6A15C" 
-            weight={1.5} 
-            dashArray="5, 8" 
-            opacity={0.5} 
-          />
+        {toMakassar.map((pos, i) => (
+          <Polyline key={`makassar-${i}`} positions={pos} color="#E6A15C" weight={1.5} dashArray="5, 8" opacity={0.5} />
+        ))}
+        {toJakarta.map((pos, i) => (
+          <Polyline key={`jakarta-${i}`} positions={pos} color="#E6A15C" weight={1.5} dashArray="5, 8" opacity={0.5} />
+        ))}
+        {toEasternHub.map((pos, i) => (
+          <Polyline key={`eastern-${i}`} positions={pos} color="#E6A15C" weight={1.5} dashArray="5, 8" opacity={0.3} />
         ))}
         <Polyline 
           positions={makassarToJakarta} 
@@ -181,7 +256,7 @@ export function InteractiveMap() {
       </div>
 
       {/* Legend */}
-      <div className="absolute top-8 right-8 z-[400] flex flex-col gap-3 bg-coffee/80 backdrop-blur-md p-4 rounded-xl border border-white/10 shadow-lg">
+      <div className="absolute top-8 right-8 z-[400] flex flex-col gap-3 bg-coffee/80 backdrop-blur-md p-4 rounded-xl border border-white/10 shadow-lg hidden md:flex">
         <div className="flex items-center gap-3">
           <div className="relative w-3 h-3 flex items-center justify-center">
             <div className="absolute inset-0 rounded-full border border-terracotta/40 animate-ping" />
