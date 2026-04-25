@@ -30,15 +30,19 @@ export function Impact() {
 
           <div className="lg:col-span-5">
             <h2 className="font-display text-[clamp(2rem,4.5vw,3.5rem)] leading-[1.05] text-coffee">
-              Enam wilayah, <br />
+              Tujuh wilayah, <br />
               <span className="italic text-terracotta">satu janji.</span>
             </h2>
             <p className="mt-6 text-base leading-relaxed text-coffee/75">
-              Pekerjaan saya tersebar di enam geografi kunci Sulawesi Selatan. Dari pesisir hingga pegunungan, saya mendampingi komunitas petani dan UMKM untuk membangun kedaulatan ekonomi melalui literasi digital dan tata kelola yang jujur.
+              Pekerjaan saya menjangkau tujuh titik strategis. Dari desa-desa di Sulawesi Selatan hingga pusat ekonomi di Jakarta, saya menjembatani potensi lokal dengan pasar nasional melalui literasi digital dan tata kelola yang jujur.
             </p>
 
             <div className="mt-10 space-y-3">
               {[
+                {
+                  name: "Jakarta",
+                  note: "Ibu Kota Negara · Pusat Ekonomi Nasional & Akses Pasar Strategis",
+                },
                 {
                   name: "Makassar",
                   note: "Ibu Kota Provinsi · Roastery, Coffee Shop & Supply Chain",

@@ -82,8 +82,8 @@ export function Hero() {
               style={{ animationDelay: "0.55s" }}
             >
               {[
-                { n: "5+", l: "Wilayah dampingan", icon: "🌿" },
-                { n: "3", l: "Produk digital", icon: "💻" },
+                { n: "7+", l: "Wilayah dampingan", icon: "🌿" },
+                { n: "4", l: "Produk digital", icon: "💻" },
                 { n: "BNSP", l: "Tersertifikasi", icon: "🏅" },
               ].map((s) => (
                 <div key={s.l} className="group relative rounded-2xl border border-coffee/8 bg-cream-soft/60 p-5 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-terracotta/20 hover:shadow-sm">
@@ -126,7 +126,7 @@ export function Hero() {
                     Origin
                   </span>
                 </div>
-                <div className="mt-2 font-display text-sm text-coffee">Barru · Toraja · Sinjai</div>
+                <div className="mt-2 font-display text-sm text-coffee">Jakarta · Barru · Toraja · Sinjai</div>
               </div>
 
               {/* Single origin badge */}
