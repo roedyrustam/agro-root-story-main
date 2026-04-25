@@ -61,57 +61,78 @@ function CuppingNotesPage() {
   return (
     <div className="min-h-screen bg-cream text-coffee selection:bg-terracotta/20 selection:text-terracotta">
       <Nav />
+      
+      {/* Project Header */}
+      <section className="relative pt-32 pb-16 md:pt-40 md:pb-20 bg-background overflow-hidden border-b border-border">
+        {/* Subtle background element */}
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_30%,rgba(211,93,71,0.03),transparent_50%)]" />
 
-      <main className="pt-32">
-        {/* Header Section */}
-        <section className="mx-auto max-w-7xl px-6 md:px-10">
-          <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between border-b border-border/60 pb-16">
-            <div className="max-w-2xl">
-              <div className="flex flex-wrap items-center gap-3">
-                <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-terracotta">
-                  Platform
-                </span>
-                <span className="h-1 w-1 rounded-full bg-coffee/20"></span>
-                <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-coffee/60">
-                  Coffee Quality
-                </span>
-                <span className="h-1 w-1 rounded-full bg-coffee/20"></span>
-                <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-coffee/60">
-                  2026
-                </span>
-              </div>
-              <h1 className="mt-6 font-display text-[clamp(2.5rem,6vw,5rem)] leading-[1] text-coffee">
-                Digitalisasi <br />
-                <span className="italic text-terracotta">Profil Rasa.</span>
-              </h1>
+        <div className="mx-auto max-w-6xl px-6 md:px-10 relative z-10">
+          <Link
+            to="/"
+            className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-coffee/60 hover:text-terracotta"
+          >
+            ← Kembali
+          </Link>
+          
+          <div className="mt-12 flex flex-wrap items-center gap-3 font-mono text-xs uppercase tracking-[0.2em] text-coffee">
+            <span className="rounded-full bg-coffee/10 px-3 py-1">Sensory Tool</span>
+            <span>2026</span>
+            <span className="text-coffee/60">·</span>
+            <span className="text-coffee/60">Quality Control</span>
+          </div>
+
+          <h1 className="mt-8 font-display text-[clamp(3.5rem,10vw,8.5rem)] leading-[0.9] text-coffee text-balance">
+            Objektivitas <br />
+            <span className="italic text-terracotta">profil rasa</span> <br />
+            digital.
+          </h1>
+          
+          <div className="mt-12 max-w-2xl">
+            <p className="text-xl leading-relaxed text-coffee/80">
+              CuppingNotes.online adalah manifestasi digital dari protokol SCA (Specialty Coffee Association). Sebuah alat yang saya bangun untuk memastikan evaluasi kualitas kopi tidak hanya berhenti di catatan kertas, tapi menjadi data yang bisa dipertanggungjawabkan.
+            </p>
+          </div>
+
+          <div className="mt-12 flex flex-wrap gap-5">
+            <a href="https://cuppingnotes.online" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 rounded-full bg-coffee px-7 py-4 font-mono text-xs uppercase tracking-[0.2em] text-cream transition-all hover:bg-terracotta">
+              Buka Platform ↗
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Narrative Section: The Consultant's View */}
+      <section className="py-24 md:py-32 bg-cream-soft border-b border-border">
+        <div className="mx-auto max-w-6xl px-6 md:px-10">
+          <div className="grid gap-16 lg:grid-cols-2 lg:items-start">
+            <div className="space-y-8">
+              <div className="font-mono text-xs uppercase tracking-[0.2em] text-terracotta">Catatan Konsultan</div>
+              <h2 className="font-display text-4xl text-coffee leading-[1.1]">
+                "Data sensoris adalah <br />
+                <span className="italic">bahasa universal</span> <br />
+                industri kopi."
+              </h2>
+              <p className="text-lg leading-relaxed text-coffee/75">
+                Dalam rantai pasok global, skor *cupping* adalah penentu harga. Tanpa sistem yang standar, perdebatan kualitas antara petani dan pembeli seringkali merugikan pihak yang lebih lemah.
+              </p>
+              <p className="text-lg leading-relaxed text-coffee/75">
+                CuppingNotes saya bangun untuk memberikan standarisasi evaluasi di lapangan. Dengan algoritma yang menghitung skor SCA secara otomatis dan visualisasi radar chart, platform ini memungkinkan roaster di Jakarta atau mancanegara "melihat" potensi rasa kopi dari Toraja atau Enrekang sebelum fisik kopinya sampai.
+              </p>
             </div>
-
-            <div className="flex flex-wrap items-center gap-4">
-              <a
-                href="https://cuppingnotes.online"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group inline-flex items-center gap-3 rounded-full border border-coffee bg-coffee px-7 py-4 font-mono text-[11px] uppercase tracking-[0.2em] text-cream transition-all hover:bg-terracotta"
-              >
-                Kunjungi Platform ↗
-              </a>
-              <button
-                onClick={() => {
-                  if (navigator.share) {
-                    navigator.share({
-                      title: "CuppingNotes.online — Digitalisasi Profil Rasa",
-                      text: "Studi kasus platform evaluasi kualitas kopi.",
-                      url: window.location.href,
-                    });
-                  }
-                }}
-                className="inline-flex items-center gap-3 rounded-full border border-coffee/20 px-7 py-4 font-mono text-[11px] uppercase tracking-[0.2em] text-coffee transition-all hover:border-coffee hover:bg-cream-soft"
-              >
-                Bagikan
-              </button>
+            <div className="relative">
+              <div className="aspect-[4/5] rounded-3xl overflow-hidden bg-coffee/5 border border-border shadow-2xl">
+                <div className="absolute inset-0 bg-coffee/5" />
+                <div className="relative h-full p-10 flex flex-col justify-end">
+                  <div className="font-mono text-sm text-terracotta">Protocol Standard</div>
+                  <div className="mt-2 font-display text-5xl text-coffee">SCA</div>
+                  <div className="mt-2 text-coffee/70">Kepatuhan penuh pada protokol Coffee Value Assessment.</div>
+                </div>
+              </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
         {/* Story Section */}
         <section className="reveal mx-auto max-w-7xl px-6 py-24 md:px-10">

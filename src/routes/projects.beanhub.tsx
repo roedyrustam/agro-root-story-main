@@ -97,61 +97,80 @@ function BeanhubPage() {
     <main className="min-h-screen bg-background">
       <Nav />
 
-      {/* Hero */}
-      <section className="relative pt-32 pb-16 md:pt-40 md:pb-20">
-        <div className="mx-auto max-w-6xl px-6 md:px-10">
+      {/* Project Header */}
+      <section className="relative pt-32 pb-16 md:pt-40 md:pb-20 bg-background overflow-hidden border-b border-border">
+        {/* Subtle background element */}
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_30%,rgba(211,93,71,0.03),transparent_50%)]" />
+
+        <div className="mx-auto max-w-6xl px-6 md:px-10 relative z-10">
           <Link
             to="/"
             className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-coffee/60 hover:text-terracotta"
           >
             ← Kembali
           </Link>
-
-          <div className="mt-10 flex flex-wrap items-center gap-3 font-mono text-xs uppercase tracking-[0.2em] text-terracotta">
-            <span className="rounded-full bg-terracotta/10 px-3 py-1">Platform</span>
+          
+          <div className="mt-12 flex flex-wrap items-center gap-3 font-mono text-xs uppercase tracking-[0.2em] text-terracotta">
+            <span className="rounded-full bg-terracotta/10 px-3 py-1">Supply Chain</span>
             <span>2025</span>
             <span className="text-coffee/60">·</span>
-            <span className="text-coffee/60">Pandu Talenta Digital</span>
+            <span className="text-coffee/60">Agro-Digital</span>
           </div>
 
-          <h1 className="mt-8 font-display text-[clamp(3rem,9vw,8rem)] leading-[0.9] text-coffee text-balance">
-            beanhub<span className="italic text-terracotta">.online</span>
+          <h1 className="mt-8 font-display text-[clamp(3.5rem,10vw,8.5rem)] leading-[0.9] text-coffee text-balance">
+            Digitalisasi <br />
+            <span className="italic text-terracotta">hulu kopi</span> <br />
+            Sulawesi.
           </h1>
+          
+          <div className="mt-12 max-w-2xl">
+            <p className="text-xl leading-relaxed text-coffee/80">
+              Beanhub.online bukan sekadar aplikasi pencatatan. Ini adalah instrumen transparansi yang lahir dari kegelisahan saya melihat petani kopi di pegunungan Sulawesi seringkali kehilangan kendali atas nilai komoditas mereka sendiri.
+            </p>
+          </div>
 
-          <p className="mt-8 max-w-2xl text-xl leading-relaxed text-coffee/75">
-            Platform rantai pasok kopi yang membuat perjalanan biji — dari pohon di Toraja sampai
-            cangkir di Jakarta — bisa <em className="text-coffee">dilihat semua orang.</em>
-          </p>
-
-          <div className="mt-10 flex flex-wrap items-center gap-4">
-            <a
-              href="https://beanhub.online"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 rounded-full border border-coffee bg-coffee px-7 py-4 font-mono text-xs uppercase tracking-[0.2em] text-cream transition-all hover:bg-terracotta hover:border-terracotta"
-            >
-              Kunjungi platform ↗
+          <div className="mt-12 flex flex-wrap gap-5">
+            <a href="https://beanhub.online" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 rounded-full bg-coffee px-7 py-4 font-mono text-xs uppercase tracking-[0.2em] text-cream transition-all hover:bg-terracotta">
+              Buka Platform ↗
             </a>
-            <button
-              onClick={() => {
-                if (navigator.share) {
-                  navigator.share({
-                    title: "Beanhub.online — Rantai Pasok Kopi Sulawesi",
-                    text: "Studi kasus pengembangan platform supply chain kopi yang transparan.",
-                    url: window.location.href,
-                  });
-                }
-              }}
-              className="inline-flex items-center gap-3 rounded-full border border-coffee/20 px-7 py-4 font-mono text-xs uppercase tracking-[0.2em] text-coffee transition-all hover:border-coffee hover:bg-cream-soft"
-            >
-              Bagikan
-            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Narrative Section: The Consultant's View */}
+      <section className="py-24 md:py-32 bg-cream-soft border-b border-border">
+        <div className="mx-auto max-w-6xl px-6 md:px-10">
+          <div className="grid gap-16 lg:grid-cols-2 lg:items-start">
+            <div className="space-y-8">
+              <div className="font-mono text-xs uppercase tracking-[0.2em] text-terracotta">Catatan Konsultan</div>
+              <h2 className="font-display text-4xl text-coffee leading-[1.1]">
+                "Aplikasi tidak akan <br />
+                <span className="italic">membereskan masalah</span> <br />
+                jika hubungan tidak dibangun."
+              </h2>
+              <p className="text-lg leading-relaxed text-coffee/75">
+                Saat mendampingi petani di Barru dan Toraja, saya menyadari bahwa hambatan terbesar digitalisasi bukan pada kemampuan teknis, melainkan pada **kepercayaan**. Petani enggan mencatat jika data tersebut hanya digunakan untuk menekan harga.
+              </p>
+              <p className="text-lg leading-relaxed text-coffee/75">
+                Beanhub saya rancang untuk menjadi "jembatan kepercayaan". Dengan pencatatan yang terbuka, pengepul dan roaster bisa memberikan harga yang lebih adil (premium) karena mereka memiliki bukti kualitas dan asal-usul yang sah.
+              </p>
+            </div>
+            <div className="relative">
+              <div className="aspect-[4/5] rounded-3xl overflow-hidden bg-coffee/5 border border-border shadow-2xl">
+                <div className="absolute inset-0 bg-coffee/5" />
+                <div className="relative h-full p-10 flex flex-col justify-end">
+                  <div className="font-mono text-sm text-terracotta">Impact Metric</div>
+                  <div className="mt-2 font-display text-5xl text-coffee">100%</div>
+                  <div className="mt-2 text-coffee/70">Traceability terjamin dari pohon ke karung.</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Visual block */}
-      <section className="px-6 md:px-10">
+      <section className="px-6 md:px-10 mt-24 md:mt-32">
         <div className="mx-auto max-w-6xl">
           <div className="grain relative aspect-[16/8] overflow-hidden rounded-3xl bg-gradient-to-br from-terracotta/30 via-mustard/30 to-sage/30">
             <div className="absolute inset-0 grid place-items-center">

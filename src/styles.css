@@ -196,6 +196,26 @@
     animation: marquee 40s linear infinite;
   }
 
+  @keyframes dash {
+    to {
+      stroke-dashoffset: -20;
+    }
+  }
+  .animate-dash {
+    animation: dash 5s linear infinite;
+    stroke-dashoffset: 0;
+  }
+
+  @keyframes ping-slow {
+    75%, 100% {
+      transform: scale(2.5);
+      opacity: 0;
+    }
+  }
+  .animate-ping-slow {
+    animation: ping-slow 3s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+
   .reveal {
     transition:
       opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1),

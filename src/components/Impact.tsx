@@ -1,4 +1,5 @@
 import { SectionLabel } from "./SectionLabel";
+import { InteractiveMap } from "./InteractiveMap";
 import landscape from "../assets/impact-landscape.jpg";
 
 export function Impact() {
@@ -9,7 +10,9 @@ export function Impact() {
 
         <div className="mt-12 grid gap-12 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-7">
-            <div className="relative overflow-hidden rounded-3xl">
+            <InteractiveMap />
+
+            <div className="relative mt-12 overflow-hidden rounded-3xl">
               <img
                 src={landscape}
                 alt="Lanskap perkebunan kopi terasering Sulawesi saat matahari terbit"

@@ -7,6 +7,7 @@ import { Timeline } from "@/components/Timeline";
 import { Experience } from "@/components/Experience";
 import { Projects } from "@/components/Projects";
 import { Impact } from "@/components/Impact";
+import { TrainingGallery } from "@/components/TrainingGallery";
 import { Skills } from "@/components/Skills";
 import { Footer } from "@/components/Footer";
 
@@ -54,6 +55,9 @@ function Index() {
       </div>
       <div className="reveal">
         <Impact />
+      </div>
+      <div className="reveal">
+        <TrainingGallery />
       </div>
       <div className="reveal">
         <Skills />
