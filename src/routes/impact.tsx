@@ -7,9 +7,9 @@ export const Route = createFileRoute("/impact")({
   head: () => ({
     meta: [
       { title: "Dampak — Roedy Rustam" },
-      { name: "description", content: "Dampak nyata di 5 wilayah Sulawesi Selatan: Barru, Toraja, Enrekang, Sinjai, dan Makassar." },
+      { name: "description", content: "Dampak nyata di berbagai wilayah Indonesia: Barru, Toraja, Enrekang, Sinjai, dan pemberdayaan desa nasional." },
       { property: "og:title", content: "Dampak Nyata di Lapangan — Roedy Rustam" },
-      { property: "og:description", content: "5 wilayah dampingan di Sulawesi Selatan — transparansi di hulu, kualitas di hilir." },
+      { property: "og:description", content: "Dampingan wilayah Sulawesi Selatan dan konsultansi pengembangan desa di Indonesia." },
       { property: "og:image", content: "/og-impact.jpg" },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },

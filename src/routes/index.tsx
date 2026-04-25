@@ -17,13 +17,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Portfolio Roedy Rustam — Sociopreneur yang membangun ekosistem kopi Sulawesi (Barru, Toraja, Sinjai) dan perangkat digital untuk UMKM agro.",
+          "Portfolio Roedy Rustam — Trainer UMKM & Konsultan Desa yang membangun ekosistem kopi Sulawesi dan perangkat digital untuk pemberdayaan agro.",
       },
       { property: "og:title", content: "Roedy Rustam — Sociopreneur × Agro × Digital" },
       {
         property: "og:description",
         content:
-          "Mengelola operasional kopi hulu-hilir & membangun beanhub.online dan Kafeya POS untuk UMKM agro Sulawesi Selatan.",
+          "Trainer UMKM, Konsultan Desa, dan pengembang beanhub.online untuk ekosistem kopi Sulawesi Selatan.",
       },
       { property: "og:image", content: "/og-image.jpg" },
       { property: "og:type", content: "profile" },

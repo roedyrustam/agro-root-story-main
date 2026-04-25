@@ -10,13 +10,13 @@ export const Route = createFileRoute("/about")({
       {
         name: "description",
         content:
-          "Cerita Roedy Rustam: dari Teknik Industri ke ladang kopi Sulawesi, lalu menulis kode untuk membuat rantai pasok lebih jujur dan UMKM lebih ringan.",
+          "Cerita Roedy Rustam: Trainer UMKM & Konsultan Desa yang menjembatani kebun kopi Sulawesi dengan baris kode dan pemberdayaan komunitas.",
       },
-      { property: "og:title", content: "Tentang Roedy Rustam — Praktisi Agro × Digital" },
+      { property: "og:title", content: "Tentang Roedy Rustam — Trainer × Agro × Digital" },
       {
         property: "og:description",
         content:
-          "Latar Teknik Industri, fokus agro-komunitas Sulawesi, dan pendekatan membangun perangkat digital yang tetap sederhana.",
+          "Trainer UMKM, Konsultan Desa, dan pengembang sistem agro-komunitas dengan latar Teknik Industri.",
       },
       { property: "og:image", content: "/og-about.jpg" },
       { property: "og:image:width", content: "1200" },
@@ -58,7 +58,8 @@ const toolbox = {
     "Perencanaan produksi agro",
     "Manajemen rantai pasok kopi",
     "Quality control & cupping basics",
-    "Fasilitasi BUMMA & kelompok tani",
+    "Pelatihan & Literasi Digital UMKM",
+    "Konsultansi Pengembangan Ekonomi Desa",
   ],
   Studio: [
     "React & TypeScript",

@@ -7,9 +7,9 @@ export const Route = createFileRoute("/experience")({
   head: () => ({
     meta: [
       { title: "Pengalaman — Roedy Rustam" },
-      { name: "description", content: "Pengalaman profesional Roedy Rustam di bidang agro operations, pemberdayaan komunitas, dan pengembangan digital." },
+      { name: "description", content: "Pengalaman profesional Roedy Rustam: Trainer UMKM, Konsultan Desa, Agro Operations, dan Digital Developer." },
       { property: "og:title", content: "Pengalaman Profesional — Roedy Rustam" },
-      { property: "og:description", content: "Sehati Kopi Indonesia · Pandu Talenta Digital · JURnal Celebes · Aliansi Masyarakat Adat" },
+      { property: "og:description", content: "Trainer UMKM · Konsultan Desa · Sehati Kopi Indonesia · Pandu Talenta Digital · Aliansi Masyarakat Adat" },
       { property: "og:image", content: "/og-experience.jpg" },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
