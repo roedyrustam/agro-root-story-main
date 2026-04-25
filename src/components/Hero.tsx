@@ -56,26 +56,32 @@ export function Hero() {
               Saya <strong className="text-coffee">Roedy Rustam</strong> — Trainer UMKM dan konsultan pengembangan desa yang menemani petani kopi Sulawesi dari bukit Toraja sampai ke meja barista, sambil menulis kode untuk membuat rantai pasok mereka lebih jujur.
             </p>
 
-            <div
-              className="mt-10 flex flex-wrap items-center gap-5 animate-fade-up"
-              style={{ animationDelay: "0.4s" }}
-            >
-              <Link
-                to="/"
-                hash="projects"
-                className="group inline-flex items-center gap-3 rounded-full bg-coffee px-7 py-4 font-mono text-xs uppercase tracking-[0.2em] text-cream transition-all duration-300 hover:bg-terracotta hover:shadow-[0_8px_30px_-8px_rgba(211,93,71,0.4)]"
+              <div
+                className="mt-10 flex flex-wrap items-center gap-5 animate-fade-up"
+                style={{ animationDelay: "0.4s" }}
               >
-                Lihat karya
-                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-cream/20 transition-transform duration-300 group-hover:translate-x-1">→</span>
-              </Link>
-              <Link
-                to="/contact"
-                className="group inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-coffee/80 transition-colors hover:text-terracotta"
-              >
-                Ngobrol kopi & data
-                <span className="h-px w-0 bg-terracotta transition-all duration-300 group-hover:w-6" />
-              </Link>
-            </div>
+                <Link
+                  to="/"
+                  hash="projects"
+                  className="group inline-flex items-center gap-3 rounded-full bg-coffee px-7 py-4 font-mono text-xs uppercase tracking-[0.2em] text-cream transition-all duration-300 hover:bg-terracotta hover:shadow-[0_8px_30px_-8px_rgba(211,93,71,0.4)]"
+                >
+                  Lihat karya
+                  <span className="flex h-6 w-6 items-center justify-center rounded-full bg-cream/20 transition-transform duration-300 group-hover:translate-x-1">→</span>
+                </Link>
+                <button
+                  onClick={() => window.print()}
+                  className="group inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-coffee/80 transition-colors hover:text-terracotta"
+                >
+                  Unduh Profil PDF
+                  <span className="h-px w-0 bg-terracotta transition-all duration-300 group-hover:w-6" />
+                </button>
+                <Link
+                  to="/contact"
+                  className="group inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-coffee/60 transition-colors hover:text-terracotta"
+                >
+                  Hubungi
+                </Link>
+              </div>
 
             <div
               className="mt-16 grid grid-cols-3 gap-6 animate-fade-up"

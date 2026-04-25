@@ -232,3 +232,68 @@
     transform: translateY(0);
   }
 }
+
+/* Print Styles for PDF Export */
+@media print {
+  nav, footer, button, .marquee, .grain {
+    display: none !important;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+    font-size: 12pt;
+  }
+
+  section {
+    page-break-inside: avoid;
+    border: none !important;
+    padding: 2rem 0 !important;
+    margin: 0 !important;
+  }
+
+  .mx-auto {
+    max-width: 100% !important;
+    padding: 0 2rem !important;
+  }
+
+  .font-display {
+    color: #3C2A21 !important; /* coffee */
+  }
+
+  .text-terracotta {
+    color: #D35D47 !important;
+  }
+
+  .grid {
+    display: block !important;
+  }
+
+  .lg\:col-span-7, .lg\:col-span-5, .md\:col-span-4 {
+    width: 100% !important;
+    margin-bottom: 2rem;
+  }
+
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+    border-radius: 8px !important;
+  }
+
+  /* Reset layout for print */
+  .relative { position: static !important; }
+  .absolute { position: static !important; }
+  .translate-y-0, .translate-x-0 { transform: none !important; }
+  .opacity-0 { opacity: 1 !important; }
+  
+  /* Custom Print Header */
+  body::before {
+    content: "Professional Profile: Roedy Rustam — Trainer UMKM & Konsultan Desa";
+    display: block;
+    text-align: center;
+    font-family: var(--font-mono);
+    font-size: 8pt;
+    margin-bottom: 3rem;
+    color: gray;
+  }
+}
