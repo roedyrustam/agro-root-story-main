@@ -271,6 +271,7 @@ function AboutPage() {
           <div className="mt-12 flex flex-wrap items-center gap-4 border-t border-border pt-8 font-mono text-xs uppercase tracking-[0.2em] text-coffee/60">
             <span>Kredensial:</span>
             <span className="text-terracotta">★ BNSP Perencanaan Produksi Industri Agro</span>
+            <span className="text-terracotta">★ Pelatih Kewirausahaan UMKM · BNSP</span>
             <span className="text-terracotta">★ Rewako Export · Bank Indonesia</span>
           </div>
         </div>

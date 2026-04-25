@@ -81,6 +81,7 @@ export function Skills() {
         <div className="mt-12 flex flex-wrap items-center gap-4 border-t border-cream/15 pt-8 font-mono text-xs uppercase tracking-[0.2em] text-cream/60">
           <span>Kredensial:</span>
           <span className="text-mustard">★ BNSP Perencanaan Produksi Industri Agro (2019)</span>
+          <span className="text-mustard">★ Pelatih Kewirausahaan UMKM · BNSP</span>
           <span className="text-mustard">★ Rewako Export · Bank Indonesia</span>
         </div>
       </div>

@@ -5,6 +5,8 @@ const items = [
   "Digital Solutions",
   "Coffee Supply Chain",
   "BNSP Certified",
+  "Village Consultant",
+  "UMKM Trainer",
   "React & SQL",
   "Bugis · Indonesia",
 ];
