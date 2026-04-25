@@ -3,6 +3,7 @@ import { SectionLabel } from "./SectionLabel";
 import beanhubImg from "../assets/project-beanhub.png";
 import kafeyaImg from "../assets/project-kafeya.png";
 import cuppingnotesImg from "../assets/project-cuppingnotes.png";
+import pandudesaImg from "../assets/project-pandudesa.png";
 
 const projects = [
   {
@@ -42,6 +43,18 @@ const projects = [
     initial: "c",
     image: cuppingnotesImg,
   },
+  {
+    name: "Pandu Desa 4.0",
+    type: "Inisiatif · Literasi Digital",
+    year: "2018",
+    desc: "Sistem tata kelola informasi desa dan pemetaan potensi ekonomi berbasis digital. Membangun kedaulatan data dari tingkat desa.",
+    stack: ["Digital Literacy", "Mapping", "Policy"],
+    accent: "bg-mustard",
+    pattern: "from-mustard/20 via-sage/20 to-clay/20",
+    href: "/projects/pandudesa" as const,
+    initial: "p",
+    image: pandudesaImg,
+  },
 ];
 
 export function Projects() {
@@ -52,7 +65,7 @@ export function Projects() {
           <div>
             <SectionLabel number="04" label="Karya Digital" />
             <h2 className="mt-6 font-display text-[clamp(2rem,5vw,4rem)] leading-[1.05] text-coffee">
-              Tiga produk kecil <br />
+              Empat karya digital <br />
               dengan <span className="italic text-terracotta">dampak jujur.</span>
             </h2>
           </div>
