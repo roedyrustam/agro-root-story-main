@@ -1,13 +1,6 @@
-import {
-  Outlet,
-  Link,
-  createRootRoute,
-  HeadContent,
-  Scripts,
-  useRouterState,
-  ScrollRestoration,
-} from "@tanstack/react-router";
+import { useRouterState, ScrollRestoration, Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 import { useEffect } from "react";
+import { Toaster } from "sonner";
 
 import appCss from "../styles.css?url";
 
@@ -268,6 +261,7 @@ function RootComponent() {
   return (
     <>
       <ScrollRestoration />
+      <Toaster position="top-center" richColors />
       <Outlet />
     </>
   );
