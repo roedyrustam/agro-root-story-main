@@ -109,7 +109,7 @@ function KafeyaPage() {
           >
             ← Kembali
           </Link>
-          
+
           <div className="mt-12 flex flex-wrap items-center gap-3 font-mono text-xs uppercase tracking-[0.2em] text-coffee">
             <span className="rounded-full bg-coffee/10 px-3 py-1">Financial Tool</span>
             <span>2025</span>
@@ -122,7 +122,7 @@ function KafeyaPage() {
             <span className="italic text-terracotta">tanpa beban</span> <br />
             untuk warung.
           </h1>
-          
+
           <div className="mt-12 max-w-2xl">
             <p className="text-xl leading-relaxed text-coffee/80">
               Kafeya POS lahir dari ribuan jam saya mendampingi pemilik warung kopi kecil yang merasa "takut" dengan angka. Saya membangun alat yang membuat pembukuan terasa seperti aktivitas harian yang ringan.
@@ -275,7 +275,7 @@ function KafeyaPage() {
             Kolaborasi
           </div>
           <h2 className="mt-6 font-display text-[clamp(2rem,5vw,4rem)] leading-[1.05] text-cream text-balance">
-            Punya warung, café, atau jaringan UMKM kopi yang butuh sistem yang waras?
+            Punya Bisnis, café, atau jaringan UMKM kopi yang butuh sistem yang sesuai?
           </h2>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-cream/75">
             Saya terbuka untuk pilot, kustomisasi, atau kemitraan dengan inkubator/koperasi. Mari

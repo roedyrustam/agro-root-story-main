@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { Experience } from "@/components/Experience";
+import { Skills } from "@/components/Skills";
 
 export const Route = createFileRoute("/experience")({
   head: () => ({
@@ -46,6 +47,10 @@ function ExperiencePage() {
 
       <div className="reveal">
         <Experience />
+      </div>
+
+      <div className="reveal">
+        <Skills />
       </div>
 
       {/* Methodology Section */}
