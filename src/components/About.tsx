@@ -23,7 +23,7 @@ export function About() {
               </span>{" "}
               untuk membangun jembatan antara kebun & kode.
             </h2>
-            
+
             <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:mt-20 reveal delay-200">
               <div className="group relative rounded-3xl border border-coffee/5 bg-cream-soft p-8 transition-all hover:border-terracotta/20 hover:shadow-xl hover:shadow-terracotta/5">
                 <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-terracotta">Akar</div>
@@ -32,7 +32,7 @@ export function About() {
                   Latar belakang Teknik Industri yang fokus pada efisiensi produksi. Saya menerapkan logika sistemik ini pada rantai pasok kopi Sulawesi.
                 </p>
               </div>
-              
+
               <div className="group relative rounded-3xl border border-coffee/5 bg-cream-soft p-8 transition-all hover:border-sage/20 hover:shadow-xl hover:shadow-sage/5">
                 <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-sage">Tumbuh</div>
                 <h3 className="mt-4 font-display text-2xl text-coffee">Digital Native</h3>
@@ -50,11 +50,11 @@ export function About() {
                 Saya tidak melihat teknologi sebagai "solusi ajaib", melainkan sebagai <span className="font-medium text-coffee">alat bantu</span> untuk memperkuat apa yang sudah ada di lapangan.
               </p>
             </div>
-            
+
             <div className="space-y-6 text-base leading-relaxed text-coffee/75">
-      <p>
-        Perjalanan saya dimulai dari pemetaan radio komunitas di pelosok Sulawesi hingga pemetaan panen kopi di bukit Malino dan Toraja. Setiap langkah mengajarkan bahwa kedaulatan informasi dan data yang jujur adalah fondasi keadilan.
-      </p>
+              <p>
+                Perjalanan saya dimulai dari pemetaan radio komunitas di pelosok Sulawesi hingga pemetaan panen kopi di bukit Sinjai dan Toraja. Setiap langkah mengajarkan bahwa kedaulatan informasi dan data yang jujur adalah fondasi keadilan.
+              </p>
               <p>
                 Kini, saya fokus mengembangkan ekosistem digital seperti <span className="text-terracotta font-medium">beanhub.online</span> yang menghubungkan kebun langsung ke meja barista dengan jejak digital yang bisa dipertanggungjawabkan.
               </p>
