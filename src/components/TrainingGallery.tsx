@@ -51,7 +51,7 @@ export function TrainingGallery() {
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-coffee/80 via-coffee/20 to-transparent opacity-60 transition-opacity group-hover:opacity-80" />
-                
+
                 <div className="absolute bottom-0 left-0 right-0 p-8">
                   <div className="font-mono text-[10px] uppercase tracking-widest text-mustard">{act.location}</div>
                   <h3 className="mt-2 font-display text-2xl text-cream">{act.title}</h3>
@@ -69,7 +69,7 @@ export function TrainingGallery() {
           {[
             { label: "Jam Pelatihan", value: "1,200+" },
             { label: "Penerima Manfaat", value: "450+" },
-            { label: "Desa Digital", value: "12" },
+            { label: "Desa Digital", value: "120" },
             { label: "Kurikulum Kustom", value: "5" },
           ].map((stat, i) => (
             <div key={i}>
