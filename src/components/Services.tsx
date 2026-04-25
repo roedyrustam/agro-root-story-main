@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "@tanstack/react-router";
 
 const services = [
   {
@@ -62,9 +63,9 @@ export function Services() {
               </div>
               
               <div className="mt-10 pt-8 border-t border-coffee/5">
-                <button className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.2em] text-coffee/40 group-hover:text-terracotta transition-colors">
+                <Link to="/contact" className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.2em] text-coffee/40 group-hover:text-terracotta transition-colors">
                   Konsultasi Sekarang ↗
-                </button>
+                </Link>
               </div>
             </div>
           ))}

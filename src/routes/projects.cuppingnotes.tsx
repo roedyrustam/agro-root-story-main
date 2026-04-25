@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { Gallery, type GalleryItem } from "@/components/Gallery";
+import { FlavorWheel } from "@/components/FlavorWheel";
 import scaImg from "../assets/cuppingnotes-sca.png";
 import radarImg from "../assets/cuppingnotes-radar.png";
 
@@ -224,6 +225,17 @@ function CuppingNotesPage() {
               </p>
             </article>
           </div>
+        </div>
+      </section>
+
+      {/* Flavor Wheel Section */}
+      <section className="reveal bg-background py-24 md:py-32 border-t border-border/40">
+        <div className="mx-auto max-w-6xl px-6 md:px-10">
+          <div className="mb-16 text-center">
+            <div className="font-mono text-xs uppercase tracking-[0.2em] text-terracotta">Demo Modul</div>
+            <h2 className="mt-4 font-display text-4xl text-coffee md:text-5xl">Eksplorasi Profil Rasa</h2>
+          </div>
+          <FlavorWheel />
         </div>
       </section>
 
