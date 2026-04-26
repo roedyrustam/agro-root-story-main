@@ -28,28 +28,35 @@ export function Hero() {
             </div>
 
             <h1
-              className="font-display text-[clamp(2.8rem,8vw,7rem)] leading-[0.9] text-coffee text-balance animate-fade-up"
-              style={{ animationDelay: "0.1s" }}
+              className="font-display text-[clamp(2.8rem,8vw,7rem)] leading-[0.9] text-coffee text-balance"
             >
-              Membangun <span className="italic text-terracotta">jembatan</span> antara{" "}
-              <span className="relative inline-block">
-                kebun
-                <svg
-                  className="absolute -bottom-2 left-0 w-full"
-                  viewBox="0 0 200 12"
-                  fill="none"
-                  preserveAspectRatio="none"
-                >
-                  <path
-                    d="M2 8 Q 50 2, 100 6 T 198 5"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    className="text-mustard"
-                    strokeLinecap="round"
-                  />
-                </svg>
-              </span>{" "}
-              & kode.
+              <div className="overflow-hidden py-2">
+                <span className="block animate-slide-up">
+                  Membangun <span className="italic text-terracotta">jembatan</span>
+                </span>
+              </div>
+              <div className="overflow-hidden py-2">
+                <span className="block animate-slide-up [animation-delay:150ms]">
+                  antara <span className="relative inline-block">
+                    kebun
+                    <svg
+                      className="absolute -bottom-2 left-0 w-full"
+                      viewBox="0 0 200 12"
+                      fill="none"
+                      preserveAspectRatio="none"
+                    >
+                      <path
+                        d="M2 8 Q 50 2, 100 6 T 198 5"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        className="text-mustard"
+                        strokeLinecap="round"
+                      />
+                    </svg>
+                  </span>{" "}
+                  & kode.
+                </span>
+              </div>
             </h1>
 
             <p

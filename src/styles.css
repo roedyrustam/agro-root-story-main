@@ -42,6 +42,12 @@
   --font-mono: "JetBrains Mono", monospace;
 
   --animate-draw-line: draw-line 2s ease-in-out infinite;
+  --animate-slide-up: slide-up 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes slide-up {
+  from { transform: translateY(100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
 }
 
 @keyframes draw-line {
@@ -107,6 +113,12 @@
 @layer base {
   * {
     border-color: var(--color-border);
+  }
+
+  @media (min-width: 768px) {
+    body, a, button, input, textarea, [role="button"] {
+      cursor: none !important;
+    }
   }
 
   html {

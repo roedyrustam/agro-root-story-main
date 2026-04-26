@@ -1,6 +1,7 @@
 import { useRouterState, ScrollRestoration, Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 import { useEffect } from "react";
 import { Toaster } from "sonner";
+import { CustomCursor } from "@/components/CustomCursor";
 import { generatePersonSchema, generateWebSiteSchema } from "@/lib/schema";
 
 import appCss from "../styles.css?url";
@@ -247,6 +248,7 @@ function RootComponent() {
     <>
       <ScrollRestoration />
       <Toaster position="top-center" richColors />
+      <CustomCursor />
       
       {/* Route Loading Progress */}
       <div 
