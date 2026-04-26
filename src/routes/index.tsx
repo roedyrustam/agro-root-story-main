@@ -7,6 +7,7 @@ import { Partners } from "@/components/Partners";
 import { Projects } from "@/components/Projects";
 import { Services } from "@/components/Services";
 import { TrainingGallery } from "@/components/TrainingGallery";
+import { VideoDivider } from "@/components/VideoDivider";
 import { Footer } from "@/components/Footer";
 
 export const Route = createFileRoute("/")({
@@ -51,6 +52,7 @@ function Index() {
       <div className="reveal">
         <Services />
       </div>
+      <VideoDivider />
       <div className="reveal">
         <Projects />
       </div>

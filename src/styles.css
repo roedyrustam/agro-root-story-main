@@ -40,6 +40,15 @@
   --font-display: "Plus Jakarta Sans", sans-serif;
   --font-sans: "Rubik", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "JetBrains Mono", monospace;
+
+  --animate-draw-line: draw-line 2s ease-in-out infinite;
+}
+
+@keyframes draw-line {
+  0% { transform: scaleY(0); transform-origin: top; }
+  50% { transform: scaleY(1); transform-origin: top; }
+  50.1% { transform: scaleY(1); transform-origin: bottom; }
+  100% { transform: scaleY(0); transform-origin: bottom; }
 }
 
 :root {
