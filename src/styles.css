@@ -60,15 +60,15 @@
 :root {
   --radius: 0.5rem;
 
-  /* Warm earth palette */
-  --cream: oklch(0.97 0.018 80);
-  --cream-soft: oklch(0.94 0.022 78);
-  --ink: oklch(0.22 0.025 50);
-  --coffee: oklch(0.32 0.045 45);
-  --terracotta: oklch(0.62 0.13 35);
-  --clay: oklch(0.7 0.09 50);
-  --sage: oklch(0.6 0.05 145);
-  --mustard: oklch(0.78 0.13 80);
+  /* Luxury Earth & Mineral palette */
+  --cream: oklch(0.98 0.005 80); /* Cleaner, more sophisticated white */
+  --cream-soft: oklch(0.96 0.01 80);
+  --ink: oklch(0.18 0.02 45); /* Deeper, richer ink */
+  --coffee: oklch(0.24 0.035 45); /* Rich Espresso */
+  --terracotta: oklch(0.55 0.12 30); /* Matured Burnt Sienna */
+  --clay: oklch(0.65 0.07 45);
+  --sage: oklch(0.55 0.04 150); /* Muted Midnight Sage */
+  --mustard: oklch(0.82 0.08 85); /* Champagne Gold */
 
   --background: var(--cream);
   --foreground: var(--ink);
@@ -149,6 +149,7 @@
 
   body {
     background-color: var(--color-background);
+    background-image: radial-gradient(circle at 50% 50%, transparent 0%, rgba(26, 22, 18, 0.03) 100%);
     color: var(--color-foreground);
     font-family: var(--font-sans);
     font-feature-settings: "ss01", "cv11";
