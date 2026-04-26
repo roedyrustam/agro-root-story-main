@@ -9,6 +9,7 @@ import { Services } from "@/components/Services";
 import { TrainingGallery } from "@/components/TrainingGallery";
 import { VideoDivider } from "@/components/VideoDivider";
 import { Footer } from "@/components/Footer";
+import { Reveal } from "@/components/Reveal";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -46,19 +47,25 @@ function Index() {
       <Nav />
       <Hero />
       <Marquee />
-      <div className="reveal">
+      
+      <Reveal>
         <Partners />
-      </div>
-      <div className="reveal">
+      </Reveal>
+      
+      <Reveal>
         <Services />
-      </div>
+      </Reveal>
+      
       <VideoDivider />
-      <div className="reveal">
+      
+      <Reveal>
         <Projects />
-      </div>
-      <div className="reveal">
+      </Reveal>
+      
+      <Reveal>
         <TrainingGallery />
-      </div>
+      </Reveal>
+      
       <Footer />
     </main>
   );

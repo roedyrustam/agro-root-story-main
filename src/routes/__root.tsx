@@ -223,45 +223,8 @@ function RootComponent() {
     window.addEventListener("scroll", handleScroll);
     handleScroll(); // Initialize on mount/navigation
 
-    // Reveal on Scroll
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: "0px 0px -50px 0px",
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    }, observerOptions);
-
-    const observeElements = () => {
-      const revealElements = document.querySelectorAll(".reveal:not(.is-observed)");
-      revealElements.forEach((el) => {
-        el.classList.add("is-observed");
-        observer.observe(el);
-      });
-    };
-
-    observeElements();
-
-    // Observe DOM changes to catch newly added .reveal elements after route changes
-    const mutationObserver = new MutationObserver(() => {
-      observeElements();
-    });
-
-    const mainContent = document.getElementById("main-content");
-    if (mainContent) {
-      mutationObserver.observe(mainContent, { childList: true, subtree: true });
-    }
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      observer.disconnect();
-      mutationObserver.disconnect();
       lenis.destroy();
     };
   }, [location.pathname]); // Re-run on navigation
