@@ -15,7 +15,7 @@ export function Hero() {
       <div className="absolute -left-40 top-20 h-80 w-80 rounded-full bg-terracotta/5 blur-[100px]" />
       <div className="absolute -right-40 bottom-20 h-96 w-96 rounded-full bg-mustard/5 blur-[120px]" />
 
-      <div className="relative mx-auto max-w-7xl px-6 md:px-10">
+      <div className="relative content-container">
         <div className="grid items-center gap-12 lg:grid-cols-12">
           <div className="lg:col-span-7">
             <div className="mb-8 flex items-center gap-3 animate-fade-up">
@@ -29,7 +29,7 @@ export function Hero() {
             </div>
 
             <h1
-              className="font-display text-[clamp(2.8rem,8vw,7rem)] leading-[0.9] text-coffee text-balance"
+              className="font-display text-[clamp(2rem,6vw,4.5rem)] leading-[1.1] text-coffee text-balance"
             >
               <div className="overflow-hidden py-2">
                 <span className="block animate-slide-up">
@@ -108,7 +108,7 @@ export function Hero() {
                   <div className="absolute right-3 top-3 text-lg opacity-60 transition-transform duration-500 group-hover:scale-125 group-hover:opacity-100">
                     {s.icon}
                   </div>
-                  <div className="font-display text-3xl text-terracotta md:text-4xl">{s.n}</div>
+                  <div className="font-display text-3xl text-terracotta md:text-3xl">{s.n}</div>
                   <div className="mt-2 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
                     {s.l}
                   </div>

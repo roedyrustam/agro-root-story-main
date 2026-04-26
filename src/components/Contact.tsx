@@ -17,7 +17,7 @@ export function Contact() {
 
   return (
     <section id="contact" className="border-t border-border py-24 md:py-32">
-      <div className="mx-auto max-w-5xl px-6 md:px-10">
+      <div className="content-container">
         <SectionLabel number="07" label="Kontak" />
 
         <h2 className="mt-8 font-display text-[clamp(2.5rem,7vw,6rem)] leading-[0.95] text-coffee text-balance">

@@ -73,9 +73,9 @@ function CopyLinkBtn({ chapter, label }: { chapter: string; label: string }) {
 export function Experience() {
   return (
     <section className="border-t border-border py-24 md:py-32">
-      <div className="mx-auto max-w-7xl px-6 md:px-10">
+      <div className="content-container">
         <SectionLabel number="03" label="Pengalaman" />
-        <h2 className="mt-6 max-w-3xl font-display text-[clamp(2rem,5vw,4rem)] leading-[1.05] text-coffee">
+        <h2 className="mt-6 max-w-3xl font-display text-[clamp(1.75rem,4vw,3rem)] leading-[1.1] text-coffee">
           Empat peran, satu <span className="italic text-terracotta">benang merah</span>: efisiensi
           yang berpihak.
         </h2>

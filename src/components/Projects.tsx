@@ -64,7 +64,7 @@ export function Projects() {
 
   return (
     <section id="projects" className="border-t border-border bg-cream-soft py-24 md:py-32">
-      <div className="mx-auto max-w-7xl px-6 md:px-10">
+      <div className="content-container">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div>
             <SectionLabel number="04" label="Karya Digital" />
