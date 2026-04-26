@@ -1,7 +1,7 @@
 import { useRef, useEffect, useCallback } from "react";
 
-export function useMagnetic() {
-  const ref = useRef<HTMLButtonElement | HTMLAnchorElement | null>(null);
+export function useMagnetic<T extends HTMLElement = HTMLButtonElement>() {
+  const ref = useRef<T | null>(null);
 
   const handleMouseMove = useCallback((e: MouseEvent) => {
     if (!ref.current) return;

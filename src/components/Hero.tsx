@@ -4,7 +4,7 @@ import heroImg from "../assets/hero-coffee.jpg";
 import { LiquidImage } from "./LiquidImage";
 
 export function Hero() {
-  const magneticRef = useMagnetic();
+  const magneticRef = useMagnetic<HTMLAnchorElement>();
 
   return (
     <section className="relative overflow-hidden pt-32 pb-20 md:pt-40 md:pb-28">
