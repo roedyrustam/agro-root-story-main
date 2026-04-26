@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import { useMagnetic } from "@/hooks/use-magnetic";
 import heroImg from "../assets/hero-coffee.jpg";
 
