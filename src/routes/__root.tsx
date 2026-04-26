@@ -2,6 +2,7 @@ import { useRouterState, ScrollRestoration, Outlet, Link, createRootRoute, HeadC
 import { useEffect } from "react";
 import { Toaster } from "sonner";
 import { CustomCursor } from "@/components/CustomCursor";
+import Lenis from "lenis";
 import { generatePersonSchema, generateWebSiteSchema } from "@/lib/schema";
 
 import appCss from "../styles.css?url";
@@ -175,6 +176,25 @@ function RootComponent() {
   const isPending = routerState.isLoading;
 
   useEffect(() => {
+    // Initialize Lenis
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      orientation: 'vertical',
+      gestureOrientation: 'vertical',
+      smoothWheel: true,
+      wheelMultiplier: 1,
+      touchMultiplier: 2,
+      infinite: false,
+    });
+
+    function raf(time: number) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
     // Scroll Progress
     const handleScroll = () => {
       const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
@@ -241,6 +261,7 @@ function RootComponent() {
       window.removeEventListener("scroll", handleScroll);
       observer.disconnect();
       mutationObserver.disconnect();
+      lenis.destroy();
     };
   }, [location.pathname]); // Re-run on navigation
 
