@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "@tanstack/react-router";
+import { useMagnetic } from "@/hooks/use-magnetic";
 
 const navLinks = [
   { label: "Tentang", href: "/about", type: "route" as const },
@@ -12,6 +13,7 @@ const navLinks = [
 export function Nav() {
   const [open, setOpen] = useState(false);
   const location = useLocation();
+  const magneticRef = useMagnetic();
 
   // Close mobile menu on route change
   useEffect(() => {
@@ -88,6 +90,7 @@ export function Nav() {
 
         {/* Desktop CTA */}
         <Link
+          ref={magneticRef}
           to="/contact"
           className="hidden rounded-full bg-terracotta px-6 py-2.5 font-mono text-[11px] uppercase tracking-[0.18em] text-cream transition-all duration-300 hover:bg-coffee hover:shadow-[0_4px_20px_-6px_rgba(211,93,71,0.4)] md:inline-block"
         >

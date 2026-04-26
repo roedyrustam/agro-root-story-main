@@ -1,7 +1,9 @@
-import { Link } from "@tanstack/react-router";
+import { useMagnetic } from "@/hooks/use-magnetic";
 import heroImg from "../assets/hero-coffee.jpg";
 
 export function Hero() {
+  const magneticRef = useMagnetic();
+
   return (
     <section className="relative overflow-hidden pt-32 pb-20 md:pt-40 md:pb-28">
       {/* decorative grain */}
@@ -61,6 +63,7 @@ export function Hero() {
                 style={{ animationDelay: "0.4s" }}
               >
                 <Link
+                  ref={magneticRef}
                   to="/"
                   hash="projects"
                   className="group inline-flex items-center gap-3 rounded-full bg-coffee px-7 py-4 font-mono text-xs uppercase tracking-[0.2em] text-cream transition-all duration-300 hover:bg-terracotta hover:shadow-[0_8px_30px_-8px_rgba(211,93,71,0.4)]"

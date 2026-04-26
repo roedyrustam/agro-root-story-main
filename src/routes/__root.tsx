@@ -171,6 +171,7 @@ function RootShell({ children }: { children: React.ReactNode }) {
 function RootComponent() {
   const routerState = useRouterState();
   const location = routerState.location;
+  const isPending = routerState.isLoading;
 
   useEffect(() => {
     // Scroll Progress
@@ -179,7 +180,11 @@ function RootComponent() {
       const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
       const scrolled = (winScroll / height) * 100;
       const indicator = document.getElementById("scroll-indicator");
-      if (indicator) indicator.style.width = scrolled + "%";
+      if (indicator) {
+        indicator.style.width = scrolled + "%";
+        // Show/hide indicator based on scroll
+        indicator.style.opacity = scrolled > 1 ? "1" : "0";
+      }
 
       // Parallax for Hero Image
       const heroImg = document.querySelector(".hero-parallax") as HTMLElement;
@@ -242,7 +247,17 @@ function RootComponent() {
     <>
       <ScrollRestoration />
       <Toaster position="top-center" richColors />
-      <div key={location.pathname} className="animate-in fade-in slide-in-from-bottom-4 duration-700 ease-out">
+      
+      {/* Route Loading Progress */}
+      <div 
+        className={`fixed left-0 top-0 z-[110] h-[3px] bg-mustard transition-all duration-500 ease-in-out ${isPending ? 'opacity-100' : 'opacity-0'}`}
+        style={{ width: isPending ? '70%' : '100%' }}
+      />
+
+      <div 
+        key={location.pathname} 
+        className="animate-in fade-in slide-in-from-bottom-2 duration-1000 ease-[cubic-bezier(0.22,1,0.36,1)]"
+      >
         <Outlet />
       </div>
     </>

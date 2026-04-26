@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { SectionLabel } from "./SectionLabel";
 import beanhubImg from "../assets/project-beanhub.png";
@@ -58,6 +59,8 @@ const projects = [
 ];
 
 export function Projects() {
+  const [hoveredProject, setHoveredProject] = useState<string | null>(null);
+
   return (
     <section id="projects" className="border-t border-border bg-cream-soft py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-6 md:px-10">
@@ -76,7 +79,13 @@ export function Projects() {
             <Link
               key={p.name}
               to={p.href}
-              className="group relative overflow-hidden rounded-3xl border border-coffee/10 bg-cream-soft transition-all duration-500 hover:-translate-y-2 hover:border-coffee/30 hover:shadow-[0_20px_40px_-15px_rgba(44,36,27,0.15)]"
+              onMouseEnter={() => setHoveredProject(p.name)}
+              onMouseLeave={() => setHoveredProject(null)}
+              className={`group relative overflow-hidden rounded-3xl border border-coffee/10 bg-cream-soft transition-all duration-500 hover:-translate-y-2 hover:border-coffee/30 hover:shadow-[0_20px_40px_-15px_rgba(44,36,27,0.15)] ${
+                hoveredProject && hoveredProject !== p.name
+                  ? "scale-[0.98] opacity-40 blur-[2px]"
+                  : "scale-100 opacity-100 blur-0"
+              }`}
             >
               <div className={`relative h-56 bg-gradient-to-br ${p.pattern} grain overflow-hidden`}>
                 <img

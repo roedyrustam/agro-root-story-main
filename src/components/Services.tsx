@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "@tanstack/react-router";
 
 const services = [
@@ -23,6 +23,8 @@ const services = [
 ];
 
 export function Services() {
+  const [hoveredService, setHoveredService] = useState<number | null>(null);
+
   return (
     <section id="services" className="py-24 md:py-32 bg-background border-t border-border">
       <div className="mx-auto max-w-7xl px-6 md:px-10">
@@ -41,7 +43,16 @@ export function Services() {
 
         <div className="mt-20 grid gap-8 md:grid-cols-3">
           {services.map((service, i) => (
-            <div key={i} className="group relative rounded-3xl border border-coffee/5 bg-cream-soft p-10 transition-all duration-500 hover:border-terracotta/20 hover:shadow-2xl hover:-translate-y-2">
+            <div 
+              key={i} 
+              onMouseEnter={() => setHoveredService(i)}
+              onMouseLeave={() => setHoveredService(null)}
+              className={`group relative rounded-3xl border border-coffee/5 bg-cream-soft p-10 transition-all duration-500 hover:border-terracotta/20 hover:shadow-2xl hover:-translate-y-2 ${
+                hoveredService !== null && hoveredService !== i
+                  ? "scale-[0.98] opacity-40 blur-[2px]"
+                  : "scale-100 opacity-100 blur-0"
+              }`}
+            >
               <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-coffee/5 text-3xl transition-transform duration-500 group-hover:scale-110 group-hover:bg-terracotta/10">
                 {service.icon}
               </div>
