@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useMagnetic } from "@/hooks/use-magnetic";
 import heroImg from "../assets/hero-coffee.jpg";
+import { LiquidImage } from "./LiquidImage";
 
 export function Hero() {
   const magneticRef = useMagnetic();
@@ -124,14 +125,9 @@ export function Hero() {
               {/* Frame decoration */}
               <div className="absolute -inset-4 -rotate-2 rounded-3xl bg-gradient-to-br from-mustard/30 via-terracotta/10 to-sage/20 transition-transform duration-700 hover:rotate-0" />
               
-              <img
+              <LiquidImage
                 src={heroImg}
                 alt="Ilustrasi biji kopi dan lanskap pegunungan Sulawesi"
-                width={1024}
-                height={1024}
-                loading="eager"
-                fetchPriority="high"
-                decoding="async"
                 className="hero-parallax relative w-full rounded-2xl transition-transform duration-75 will-change-transform"
               />
 

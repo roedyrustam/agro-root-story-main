@@ -82,51 +82,51 @@ export function Experience() {
 
         <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-12">
           {experiences.map((exp, i) => {
-            // Memberikan ukuran grid yang berbeda untuk efek Bento
-            // Card pertama lebih besar (col-span-7), sisanya di sisi kanan (col-span-5)
-            const isFeatured = i === 0;
-            const isFullWidth = i === 3;
-            const gridClasses = isFeatured
-              ? "lg:col-span-7 lg:row-span-2"
-              : isFullWidth
-              ? "lg:col-span-12"
-              : "lg:col-span-5";
+            // Bento Grid spanning logic
+            const gridClasses = 
+              i === 0 ? "lg:col-span-8 lg:row-span-2 bg-cream-soft" :
+              i === 1 ? "lg:col-span-4 bg-sage/5 border-sage/20" :
+              i === 2 ? "lg:col-span-4 bg-mustard/5 border-mustard/20" :
+              "lg:col-span-12 bg-terracotta/5 border-terracotta/20";
 
             return (
               <article
                 key={exp.role}
-                className={`group relative overflow-hidden flex flex-col justify-between rounded-3xl border border-coffee/10 bg-cream-soft p-8 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(44,36,27,0.15)] ${gridClasses}`}
+                className={`group relative overflow-hidden flex flex-col justify-between rounded-[2.5rem] border border-coffee/10 p-8 md:p-10 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_30px_60px_-20px_rgba(44,36,27,0.15)] ${gridClasses}`}
               >
-                <div className="reveal">
-                  <div className="mb-4 flex flex-wrap items-center justify-between gap-4">
-                    <div className="font-mono text-xs uppercase tracking-widest text-terracotta">
+                {/* Decorative Pattern Background */}
+                <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-current opacity-[0.03] blur-3xl transition-transform duration-700 group-hover:scale-150" />
+                
+                <div className="reveal relative z-10">
+                  <div className="mb-6 flex flex-wrap items-center justify-between gap-4">
+                    <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-terracotta">
                       {exp.period}
                     </div>
                     <div className="flex gap-2">
-                      <span className="rounded-full bg-coffee/5 px-2.5 py-1 font-mono text-[10px] font-bold text-coffee/60">
-                        BAB {exp.chapter}
+                      <span className="rounded-full border border-coffee/10 bg-coffee/5 px-3 py-1 font-mono text-[10px] font-bold text-coffee/60">
+                        CH. {exp.chapter}
                       </span>
                     </div>
                   </div>
 
-                  <h3 className={`font-display text-coffee ${isFeatured ? 'text-4xl md:text-5xl' : 'text-3xl'} mb-2`}>
+                  <h3 className={`font-display text-coffee leading-tight ${i === 0 ? 'text-4xl md:text-6xl' : 'text-3xl md:text-4xl'} mb-3`}>
                     {exp.role}
                   </h3>
-                  <div className="mb-8 text-base font-medium text-coffee/80">
+                  <div className="mb-8 font-mono text-xs uppercase tracking-widest text-coffee/50">
                     {exp.org}
                   </div>
 
-                  <ul className="space-y-4">
+                  <ul className="space-y-5">
                     {exp.points.map((p) => (
                       <li key={p} className="flex gap-4 text-base leading-relaxed text-coffee/70">
-                        <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-terracotta/80" />
-                        <span>{p}</span>
+                        <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-terracotta/60" />
+                        <span className="text-pretty">{p}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
                 
-                <div className="mt-8 pt-6 border-t border-coffee/5 reveal delay-100">
+                <div className="mt-10 pt-8 border-t border-coffee/10 reveal delay-100 relative z-10">
                   <CopyLinkBtn chapter={exp.chapter} label={exp.role} />
                 </div>
               </article>

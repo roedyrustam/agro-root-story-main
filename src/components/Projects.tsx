@@ -5,6 +5,7 @@ import beanhubImg from "../assets/project-beanhub.png";
 import kafeyaImg from "../assets/project-kafeya.png";
 import cuppingnotesImg from "../assets/project-cuppingnotes.png";
 import pandudesaImg from "../assets/project-pandudesa.png";
+import { LiquidImage } from "./LiquidImage";
 
 const projects = [
   {
@@ -88,10 +89,10 @@ export function Projects() {
               }`}
             >
               <div className={`relative h-56 bg-gradient-to-br ${p.pattern} grain overflow-hidden`}>
-                <img
+                <LiquidImage
                   src={p.image}
                   alt={p.name}
-                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="absolute inset-0 h-full w-full"
                 />
                 <div className="absolute inset-0 bg-coffee/10 transition-colors group-hover:bg-transparent" />
                 

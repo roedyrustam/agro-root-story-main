@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { toast } from "sonner";
 import { SectionLabel } from "./SectionLabel";
+import { useMagnetic } from "@/hooks/use-magnetic";
 
 export function Contact() {
   const [isCopying, setIsCopying] = useState(false);
+  const magneticRef = useMagnetic();
   const email = "support@bijidata.online";
 
   const copyEmail = () => {
@@ -81,38 +83,84 @@ export function Contact() {
           </div>
 
           {/* Inquiry Form */}
-          <div className="rounded-3xl border border-coffee/10 bg-card p-10 shadow-sm">
-            <h3 className="font-display text-2xl text-coffee">Kirim Permintaan Konsultasi</h3>
-            <p className="mt-2 text-sm text-coffee/60">
+          <div className="reveal rounded-[2.5rem] border border-coffee/10 bg-card p-8 md:p-12 shadow-sm transition-all duration-500 hover:shadow-[0_40px_80px_-30px_rgba(44,36,27,0.1)]">
+            <h3 className="font-display text-3xl text-coffee">Kirim Permintaan Konsultasi</h3>
+            <p className="mt-4 text-base text-coffee/60">
               Butuh pendampingan digitalisasi desa atau UMKM? Isi formulir di bawah ini.
             </p>
 
-            <form className="mt-8 space-y-6" onSubmit={(e) => { e.preventDefault(); toast.success("Pesan Anda telah dikirim!"); }}>
-              <div className="grid gap-6 md:grid-cols-2">
-                <div className="space-y-2">
-                  <label className="font-mono text-[10px] uppercase tracking-widest text-coffee/60 px-1">Nama Lengkap</label>
-                  <input type="text" className="w-full rounded-xl border border-coffee/10 bg-cream-soft px-4 py-3 text-sm focus:border-terracotta focus:outline-none transition-colors" placeholder="Masukkan nama..." />
+            <form className="mt-10 space-y-8" onSubmit={(e) => { e.preventDefault(); toast.success("Pesan Anda telah dikirim!"); }}>
+              <div className="grid gap-8 md:grid-cols-2">
+                <div className="group relative space-y-2">
+                  <input 
+                    type="text" 
+                    id="name"
+                    required
+                    className="peer w-full border-b border-coffee/20 bg-transparent py-3 text-base text-coffee transition-all focus:border-terracotta focus:outline-none placeholder:text-transparent" 
+                    placeholder="Nama Lengkap" 
+                  />
+                  <label 
+                    htmlFor="name"
+                    className="absolute left-0 -top-3.5 font-mono text-[10px] uppercase tracking-widest text-coffee/40 transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-placeholder-shown:text-coffee/30 peer-focus:-top-3.5 peer-focus:text-[10px] peer-focus:text-terracotta cursor-text"
+                  >
+                    Nama Lengkap
+                  </label>
                 </div>
-                <div className="space-y-2">
-                  <label className="font-mono text-[10px] uppercase tracking-widest text-coffee/60 px-1">Instansi/UMKM</label>
-                  <input type="text" className="w-full rounded-xl border border-coffee/10 bg-cream-soft px-4 py-3 text-sm focus:border-terracotta focus:outline-none transition-colors" placeholder="Nama organisasi..." />
+                <div className="group relative space-y-2">
+                  <input 
+                    type="text" 
+                    id="org"
+                    className="peer w-full border-b border-coffee/20 bg-transparent py-3 text-base text-coffee transition-all focus:border-terracotta focus:outline-none placeholder:text-transparent" 
+                    placeholder="Instansi/UMKM" 
+                  />
+                  <label 
+                    htmlFor="org"
+                    className="absolute left-0 -top-3.5 font-mono text-[10px] uppercase tracking-widest text-coffee/40 transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-placeholder-shown:text-coffee/30 peer-focus:-top-3.5 peer-focus:text-[10px] peer-focus:text-terracotta cursor-text"
+                  >
+                    Instansi/UMKM
+                  </label>
                 </div>
               </div>
-              <div className="space-y-2">
-                <label className="font-mono text-[10px] uppercase tracking-widest text-coffee/60 px-1">Jenis Layanan</label>
-                <select className="w-full rounded-xl border border-coffee/10 bg-cream-soft px-4 py-3 text-sm focus:border-terracotta focus:outline-none transition-colors appearance-none">
+
+              <div className="group relative space-y-2">
+                <select className="w-full border-b border-coffee/20 bg-transparent py-3 text-base text-coffee focus:border-terracotta focus:outline-none appearance-none cursor-pointer transition-all">
+                  <option disabled selected className="text-coffee/30">Pilih Jenis Layanan</option>
                   <option>Digitalisasi Desa & BUMDes</option>
                   <option>Sensory & QC Training (SCA)</option>
                   <option>Pengembangan UMKM Agro</option>
                   <option>Lainnya</option>
                 </select>
+                <div className="pointer-events-none absolute right-0 top-4 text-coffee/30">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                </div>
               </div>
-              <div className="space-y-2">
-                <label className="font-mono text-[10px] uppercase tracking-widest text-coffee/60 px-1">Pesan</label>
-                <textarea rows={4} className="w-full rounded-xl border border-coffee/10 bg-cream-soft px-4 py-3 text-sm focus:border-terracotta focus:outline-none transition-colors" placeholder="Tuliskan kebutuhan Anda..."></textarea>
+
+              <div className="group relative space-y-2">
+                <textarea 
+                  id="message"
+                  rows={4} 
+                  required
+                  className="peer w-full border-b border-coffee/20 bg-transparent py-3 text-base text-coffee transition-all focus:border-terracotta focus:outline-none placeholder:text-transparent" 
+                  placeholder="Pesan"
+                ></textarea>
+                <label 
+                  htmlFor="message"
+                  className="absolute left-0 -top-3.5 font-mono text-[10px] uppercase tracking-widest text-coffee/40 transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-placeholder-shown:text-coffee/30 peer-focus:-top-3.5 peer-focus:text-[10px] peer-focus:text-terracotta cursor-text"
+                >
+                  Kebutuhan Anda
+                </label>
               </div>
-              <button type="submit" className="w-full rounded-full bg-coffee py-4 font-mono text-xs uppercase tracking-[0.2em] text-cream transition-all hover:bg-terracotta hover:shadow-lg">
-                Kirim Pesan ↗
+
+              <button 
+                ref={magneticRef}
+                type="submit" 
+                className="group relative w-full overflow-hidden rounded-full bg-coffee py-5 font-mono text-xs uppercase tracking-[0.3em] text-cream transition-all hover:bg-terracotta hover:shadow-xl"
+              >
+                <span className="relative z-10 flex items-center justify-center gap-3">
+                  Kirim Pesan
+                  <svg className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+                </span>
+                <div className="absolute inset-0 z-0 bg-gradient-to-r from-terracotta via-mustard to-terracotta opacity-0 transition-opacity duration-500 group-hover:opacity-20" />
               </button>
             </form>
           </div>

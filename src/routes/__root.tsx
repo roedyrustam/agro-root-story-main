@@ -2,6 +2,7 @@ import { useRouterState, ScrollRestoration, Outlet, Link, createRootRoute, HeadC
 import { useEffect } from "react";
 import { Toaster } from "sonner";
 import { CustomCursor } from "@/components/CustomCursor";
+import { DistortionFilters } from "@/components/DistortionFilters";
 import Lenis from "lenis";
 import { generatePersonSchema, generateWebSiteSchema } from "@/lib/schema";
 
@@ -269,6 +270,7 @@ function RootComponent() {
     <>
       <ScrollRestoration />
       <Toaster position="top-center" richColors />
+      <DistortionFilters />
       <CustomCursor />
       
       {/* Route Loading Progress */}
