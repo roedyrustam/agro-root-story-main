@@ -196,7 +196,7 @@ function RootComponent() {
 
     requestAnimationFrame(raf);
 
-    // Scroll Progress
+    // Scroll Progress & Parallax Logic
     const handleScroll = () => {
       const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
       const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -204,11 +204,9 @@ function RootComponent() {
       const indicator = document.getElementById("scroll-indicator");
       if (indicator) {
         indicator.style.width = scrolled + "%";
-        // Show/hide indicator based on scroll
         indicator.style.opacity = scrolled > 1 ? "1" : "0";
       }
 
-      // Parallax for Hero Image
       const heroImg = document.querySelector(".hero-parallax") as HTMLElement;
       if (heroImg) {
         const speed = 0.05;
@@ -220,12 +218,31 @@ function RootComponent() {
       }
     };
 
+    // Intersection Observer for .reveal elements
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      }
+    );
+
+    const revealElements = document.querySelectorAll(".reveal");
+    revealElements.forEach((el) => revealObserver.observe(el));
+
     window.addEventListener("scroll", handleScroll);
     handleScroll(); // Initialize on mount/navigation
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
       lenis.destroy();
+      revealObserver.disconnect();
     };
   }, [location.pathname]); // Re-run on navigation
 
