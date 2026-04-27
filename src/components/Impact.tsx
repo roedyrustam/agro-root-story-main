@@ -9,7 +9,7 @@ export function Impact() {
         <SectionLabel number="05" label="Dampak & Komunitas" />
 
         <div className="mt-12 grid gap-12 lg:grid-cols-12 lg:gap-16">
-          <div className="lg:col-span-7">
+          <div className="reveal lg:col-span-7">
             <InteractiveMap />
 
             <div className="relative mt-12 overflow-hidden rounded-3xl">
@@ -31,7 +31,7 @@ export function Impact() {
             </div>
           </div>
 
-          <div className="lg:col-span-5">
+          <div className="reveal delay-200 lg:col-span-5">
             <h2 className="font-display text-[clamp(2rem,4.5vw,3.5rem)] leading-[1.05] text-coffee">
               Tujuh wilayah, <br />
               <span className="italic text-terracotta">satu janji.</span>

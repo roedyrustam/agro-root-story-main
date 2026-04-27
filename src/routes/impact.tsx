@@ -48,9 +48,7 @@ function ImpactPage() {
         </div>
       </section>
 
-      <div className="reveal">
-        <Impact />
-      </div>
+      <Impact />
 
       {/* Impact Values Section */}
       <section className="py-24 md:py-32 bg-coffee text-cream overflow-hidden relative">

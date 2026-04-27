@@ -81,9 +81,7 @@ function JourneyPage() {
         </div>
       </section>
 
-      <div className="reveal">
-        <Timeline />
-      </div>
+      <Timeline />
 
       {/* Legacy Section */}
       <section className="py-24 md:py-32 bg-coffee text-cream">

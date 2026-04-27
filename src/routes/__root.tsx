@@ -219,30 +219,43 @@ function RootComponent() {
     };
 
     // Intersection Observer for .reveal elements
-    const revealObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-          }
-        });
-      },
-      {
-        threshold: 0.1,
-        rootMargin: "0px 0px -50px 0px",
-      }
-    );
+    const setupRevealObserver = () => {
+      const revealObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+            }
+          });
+        },
+        {
+          threshold: 0, // Trigger as soon as 1px is visible
+          rootMargin: "0px 0px -50px 0px",
+        }
+      );
 
-    const revealElements = document.querySelectorAll(".reveal");
-    revealElements.forEach((el) => revealObserver.observe(el));
+      const revealElements = document.querySelectorAll(".reveal");
+      revealElements.forEach((el) => revealObserver.observe(el));
+      return revealObserver;
+    };
+
+    // Initial setup with a small delay to ensure React has finished rendering
+    const timeoutId = setTimeout(() => {
+      const observer = setupRevealObserver();
+      // Store observer in a variable to disconnect it later
+      (window as any)._revealObserver = observer;
+    }, 100);
 
     window.addEventListener("scroll", handleScroll);
     handleScroll(); // Initialize on mount/navigation
 
     return () => {
+      clearTimeout(timeoutId);
       window.removeEventListener("scroll", handleScroll);
       lenis.destroy();
-      revealObserver.disconnect();
+      if ((window as any)._revealObserver) {
+        (window as any)._revealObserver.disconnect();
+      }
     };
   }, [location.pathname]); // Re-run on navigation
 

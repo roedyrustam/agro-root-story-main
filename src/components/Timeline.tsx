@@ -209,8 +209,9 @@ export function Timeline() {
                 id={`milestone-${m.chapter}-${i}`}
                 tabIndex={-1}
                 onKeyDown={(e) => handleKeyDown(e, i)}
-                className={`relative grid gap-4 pl-10 outline-none rounded-3xl focus-visible:ring-2 focus-visible:ring-terracotta focus-visible:ring-offset-8 focus-visible:ring-offset-cream-soft transition-all duration-500 md:grid-cols-2 md:pl-0 md:gap-12 ${isDimmed ? "opacity-20 grayscale-[0.5] scale-[0.98]" : "opacity-100"
+                className={`reveal relative grid gap-4 pl-10 outline-none rounded-3xl focus-visible:ring-2 focus-visible:ring-terracotta focus-visible:ring-offset-8 focus-visible:ring-offset-cream-soft transition-all duration-500 md:grid-cols-2 md:pl-0 md:gap-12 ${isDimmed ? "opacity-20 grayscale-[0.5] scale-[0.98]" : "opacity-100"
                   }`}
+                style={{ transitionDelay: `${(i % 3) * 100}ms` }}
               >
                 <span
                   className={`absolute left-0 top-10 h-4 w-4 rounded-full border-2 transition-colors duration-500 md:top-12 md:left-1/2 md:-translate-x-1/2 ${m.chapter === activeChapter
