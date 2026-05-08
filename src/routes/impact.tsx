@@ -30,7 +30,7 @@ function ImpactPage() {
         {/* Subtle background element */}
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_30%,rgba(211,93,71,0.03),transparent_50%)]" />
 
-        <div className="mx-auto max-w-6xl px-6 md:px-10 relative z-10">
+        <div className="content-container">
           <div className="font-mono text-xs uppercase tracking-[0.25em] text-terracotta">
             Dampak · Komunitas
           </div>
@@ -55,7 +55,7 @@ function ImpactPage() {
         {/* Decorative elements */}
         <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-96 h-96 rounded-full bg-mustard/10 blur-[80px]" />
         
-        <div className="mx-auto max-w-6xl px-6 md:px-10 relative z-10">
+        <div className="content-container">
           <div className="font-mono text-xs uppercase tracking-[0.2em] text-mustard">Prinsip Dampak</div>
           <h2 className="mt-6 font-display text-[clamp(2.5rem,6vw,4.5rem)] leading-[1.05] text-cream max-w-4xl">
             Tiga pilar yang menjaga <br />

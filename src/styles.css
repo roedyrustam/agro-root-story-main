@@ -51,7 +51,7 @@
   --space-8: 64px;
   --space-12: 96px;
 
-  --container-max: 1080px;
+  --container-max: 1280px;
 
   --animate-draw-line: draw-line 2s ease-in-out infinite;
   --animate-slide-up: slide-up 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;

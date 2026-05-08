@@ -82,7 +82,7 @@ function AboutPage() {
 
       {/* Hero */}
       <section className="relative pt-32 pb-20 md:pt-40 md:pb-28">
-        <div className="mx-auto max-w-7xl px-6 md:px-10">
+        <div className="content-container">
           <Link
             to="/"
             className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-coffee/60 hover:text-terracotta"
@@ -171,7 +171,7 @@ function AboutPage() {
 
       {/* Principles */}
       <section className="border-t border-border py-24 md:py-32">
-        <div className="mx-auto max-w-7xl px-6 md:px-10">
+        <div className="content-container">
           <div className="grid gap-10 md:grid-cols-12">
             <div className="md:col-span-5">
               <div className="font-mono text-xs uppercase tracking-[0.2em] text-terracotta">
@@ -242,7 +242,7 @@ function AboutPage() {
 
       {/* Toolbox */}
       <section className="border-t border-border py-24 md:py-32">
-        <div className="mx-auto max-w-7xl px-6 md:px-10">
+        <div className="content-container">
           <div className="font-mono text-xs uppercase tracking-[0.2em] text-terracotta">
             Toolkit
           </div>

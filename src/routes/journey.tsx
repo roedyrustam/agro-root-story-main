@@ -31,7 +31,7 @@ function JourneyPage() {
         <div className="absolute top-0 right-0 -translate-y-1/4 translate-x-1/4 w-[600px] h-[600px] rounded-full bg-terracotta/5 blur-[100px]" />
         <div className="absolute bottom-0 left-0 translate-y-1/4 -translate-x-1/4 w-[500px] h-[500px] rounded-full bg-mustard/5 blur-[100px]" />
 
-        <div className="mx-auto max-w-6xl px-6 md:px-10 relative z-10">
+        <div className="content-container">
           <div className="font-mono text-xs uppercase tracking-[0.25em] text-terracotta">
             Perjalanan · Naratif
           </div>
@@ -54,7 +54,7 @@ function JourneyPage() {
 
       {/* Philosophy Block */}
       <section className="py-20 border-y border-border bg-background">
-        <div className="mx-auto max-w-6xl px-6 md:px-10">
+        <div className="content-container">
           <div className="grid gap-12 lg:grid-cols-3">
             <div className="space-y-4">
               <div className="font-display text-4xl italic text-terracotta/40">01. Akar</div>
