@@ -75,58 +75,65 @@ export function Projects() {
           </div>
         </div>
 
-        <div className="mt-16 grid gap-8 md:grid-cols-2">
+        <div className="mt-20 grid gap-10 md:grid-cols-2">
           {projects.map((p) => (
             <Link
               key={p.name}
               to={p.href}
               onMouseEnter={() => setHoveredProject(p.name)}
               onMouseLeave={() => setHoveredProject(null)}
-              className={`group relative overflow-hidden rounded-3xl border border-coffee/10 bg-cream-soft transition-all duration-500 hover:-translate-y-2 hover:border-coffee/30 hover:shadow-[0_20px_40px_-15px_rgba(44,36,27,0.15)] ${
+              className={`group relative flex flex-col overflow-hidden rounded-[2.5rem] border border-coffee/5 bg-cream/50 transition-all duration-700 hover:-translate-y-3 hover:bg-cream hover:shadow-[0_40px_80px_-20px_rgba(44,36,27,0.12)] active:scale-[0.98] ${
                 hoveredProject && hoveredProject !== p.name
-                  ? "scale-[0.98] opacity-40 blur-[2px]"
+                  ? "scale-[0.96] opacity-30 grayscale-[0.5] blur-[1px]"
                   : "scale-100 opacity-100 blur-0"
               }`}
             >
-              <div className={`relative h-56 bg-gradient-to-br ${p.pattern} grain overflow-hidden`}>
+              <div className={`relative h-64 bg-gradient-to-br ${p.pattern} grain overflow-hidden`}>
                 <LiquidImage
                   src={p.image}
                   alt={p.name}
-                  className="absolute inset-0 h-full w-full"
+                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-1000 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-coffee/10 transition-colors group-hover:bg-transparent" />
+                <div className="absolute inset-0 bg-coffee/10 transition-opacity duration-700 group-hover:opacity-0" />
                 
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:scale-110">
-                  <div className="font-display text-8xl italic text-cream/30 drop-shadow-lg">
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 transition-all duration-700 group-hover:opacity-100 group-hover:scale-125">
+                  <div className="font-display text-9xl italic text-cream/40 drop-shadow-2xl">
                     {p.initial}
                   </div>
                 </div>
                 
-                <div className="absolute left-6 top-6 z-10 flex h-8 items-center rounded-full bg-coffee/20 px-4 font-mono text-[10px] uppercase tracking-[0.2em] text-cream drop-shadow-md backdrop-blur-sm border border-cream/20">
+                <div className="absolute left-8 top-8 z-10 flex h-8 items-center rounded-full bg-cream/30 px-5 font-mono text-[9px] uppercase tracking-[0.3em] text-coffee shadow-sm backdrop-blur-xl border border-cream/50 font-bold">
                   {p.year}
                 </div>
                 <div
-                  className={`absolute right-6 top-6 z-10 h-3 w-3 rounded-full ${p.accent} ring-4 ring-cream/20`}
+                  className={`absolute right-8 top-8 z-10 h-3.5 w-3.5 rounded-full ${p.accent} shadow-xl ring-8 ring-cream/20 transition-transform duration-700 group-hover:scale-150`}
                 />
               </div>
 
-              <div className="p-8">
+              <div className="flex flex-1 flex-col p-10">
                 <div className="flex items-center justify-between gap-4">
-                  <div className="font-mono text-[11px] uppercase tracking-[0.2em] text-terracotta">
+                  <div className="font-mono text-[10px] uppercase tracking-[0.25em] text-terracotta font-semibold">
                     {p.type}
                   </div>
-                  <span className="flex h-8 w-8 items-center justify-center rounded-full border border-coffee/10 bg-transparent text-coffee/60 transition-all duration-300 group-hover:bg-terracotta group-hover:text-cream group-hover:border-terracotta group-hover:rotate-45">
-                    ↗
+                  <span className="flex h-10 w-10 items-center justify-center rounded-full border border-coffee/5 bg-cream shadow-sm text-coffee/60 transition-all duration-500 group-hover:bg-coffee group-hover:text-cream group-hover:scale-110 group-hover:rotate-[360deg]">
+                    <span className="text-xl">↗</span>
                   </span>
                 </div>
-                <h3 className="mt-5 font-display text-3xl text-coffee transition-colors group-hover:text-terracotta">{p.name}</h3>
-                <p className="mt-4 text-base leading-relaxed text-coffee/75">{p.desc}</p>
+                
+                <div className="mt-6 flex-1">
+                  <h3 className="font-display text-4xl text-coffee leading-tight transition-colors group-hover:text-terracotta tracking-tight">
+                    {p.name}
+                  </h3>
+                  <p className="mt-5 text-lg leading-relaxed text-coffee/65 line-clamp-3">
+                    {p.desc}
+                  </p>
+                </div>
 
-                <div className="mt-8 flex flex-wrap gap-2">
+                <div className="mt-10 flex flex-wrap gap-2.5">
                   {p.stack.map((s) => (
                     <span
                       key={s}
-                      className="rounded-full bg-coffee/5 px-4 py-1.5 font-mono text-[10px] uppercase tracking-[0.15em] text-coffee/70 transition-colors group-hover:bg-coffee/10"
+                      className="rounded-full bg-coffee/5 px-4 py-1.5 font-mono text-[9px] uppercase tracking-[0.2em] text-coffee/50 transition-all duration-500 group-hover:bg-coffee/10 group-hover:text-coffee/80"
                     >
                       {s}
                     </span>
