@@ -80,19 +80,19 @@
   --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
   --shadow-inner: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
 
-  /* Luxury Earth & Mineral palette */
-  --cream: oklch(0.98 0.005 80); 
-  --cream-soft: oklch(0.96 0.01 80);
-  --ink: oklch(0.18 0.02 45); 
-  --coffee: oklch(0.24 0.035 45); 
-  --terracotta: oklch(0.55 0.12 30); 
-  --clay: oklch(0.65 0.07 45);
-  --sage: oklch(0.55 0.04 150); 
-  --mustard: oklch(0.82 0.08 85); 
+  /* Sejuk & Premium palette (Cool & Refreshing) */
+  --cream: oklch(0.98 0.008 200); 
+  --cream-soft: oklch(0.96 0.012 200);
+  --ink: oklch(0.18 0.02 240); 
+  --coffee: oklch(0.22 0.03 160); 
+  --terracotta: oklch(0.55 0.1 220); 
+  --clay: oklch(0.65 0.05 200);
+  --sage: oklch(0.6 0.06 150); 
+  --mustard: oklch(0.92 0.04 160); 
 
   --background: var(--cream);
   --foreground: var(--ink);
-  --card: oklch(0.99 0.01 80);
+  --card: oklch(0.99 0.005 200);
   --card-foreground: var(--ink);
   --popover: var(--card);
   --popover-foreground: var(--ink);
@@ -101,33 +101,33 @@
   --secondary: var(--cream-soft);
   --secondary-foreground: var(--ink);
   --muted: var(--cream-soft);
-  --muted-foreground: oklch(0.45 0.025 50);
+  --muted-foreground: oklch(0.45 0.02 200);
   --accent: var(--terracotta);
   --accent-foreground: var(--cream);
   --destructive: oklch(0.55 0.2 27);
   --destructive-foreground: var(--cream);
-  --border: oklch(0.88 0.022 70);
-  --input: oklch(0.88 0.022 70);
+  --border: oklch(0.88 0.015 200);
+  --input: oklch(0.88 0.015 200);
   --ring: var(--terracotta);
 }
 
 .dark {
-  --background: oklch(0.12 0.02 50); /* Darker for better contrast */
+  --background: oklch(0.12 0.02 220); 
   --foreground: var(--cream);
-  --card: oklch(0.16 0.025 50);
+  --card: oklch(0.16 0.025 220);
   --card-foreground: var(--cream);
   --popover: var(--card);
   --popover-foreground: var(--cream);
   --primary: var(--cream);
   --primary-foreground: var(--ink);
-  --secondary: oklch(0.2 0.03 50);
+  --secondary: oklch(0.2 0.03 220);
   --secondary-foreground: var(--cream);
-  --muted: oklch(0.2 0.03 50);
-  --muted-foreground: oklch(0.6 0.03 70);
+  --muted: oklch(0.2 0.03 220);
+  --muted-foreground: oklch(0.6 0.03 200);
   --accent: var(--terracotta);
   --accent-foreground: var(--cream);
-  --border: oklch(0.25 0.03 50);
-  --input: oklch(0.25 0.03 50);
+  --border: oklch(0.25 0.03 220);
+  --input: oklch(0.25 0.03 220);
 }
 
 @layer base {
@@ -169,7 +169,7 @@
 
   body {
     background-color: var(--color-background);
-    background-image: radial-gradient(circle at 50% 50%, transparent 0%, rgba(26, 22, 18, 0.03) 100%);
+    background-image: radial-gradient(circle at 50% 50%, transparent 0%, rgba(18, 22, 26, 0.03) 100%);
     color: var(--color-foreground);
     font-family: var(--font-sans);
     font-feature-settings: "ss01", "cv11";
