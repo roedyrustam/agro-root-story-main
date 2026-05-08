@@ -169,6 +169,45 @@ function AboutPage() {
         </div>
       </section>
 
+      {/* Now Section */}
+      <section className="border-t border-border py-24 md:py-32 overflow-hidden relative">
+        <div className="absolute top-0 right-0 w-64 h-64 bg-sage/5 blur-[100px] rounded-full -translate-y-1/2 translate-x-1/2" />
+        <div className="content-container">
+          <div className="flex flex-col gap-12 lg:flex-row lg:items-start lg:justify-between">
+            <div className="max-w-xl">
+              <div className="font-mono text-xs uppercase tracking-[0.2em] text-terracotta">Sekarang</div>
+              <h2 className="mt-4 font-display text-4xl text-coffee">Apa yang sedang saya <br /><span className="italic text-terracotta">kerjakan & pelajari.</span></h2>
+              <p className="mt-6 text-base leading-relaxed text-coffee/70">
+                Terinspirasi oleh konsep <em className="text-coffee">/now</em>, berikut adalah fokus utama saya di paruh pertama tahun 2026.
+              </p>
+            </div>
+
+            <div className="grid gap-6 sm:grid-cols-2 lg:w-[60%]">
+              <div className="p-8 rounded-3xl bg-card border border-coffee/5 shadow-sm">
+                <div className="text-2xl mb-4">☕</div>
+                <h3 className="font-display text-xl text-coffee">Digital Sensory</h3>
+                <p className="mt-2 text-sm text-coffee/60">Mengintegrasikan standar SCA (Specialty Coffee Association) terbaru ke dalam sistem CuppingNotes.</p>
+              </div>
+              <div className="p-8 rounded-3xl bg-card border border-coffee/5 shadow-sm">
+                <div className="text-2xl mb-4">🚜</div>
+                <h3 className="font-display text-xl text-coffee">Smart Supply Chain</h3>
+                <p className="mt-2 text-sm text-coffee/60">Optimasi logistik kopi dari hulu Sulawesi ke pasar strategis di Jakarta dan luar negeri.</p>
+              </div>
+              <div className="p-8 rounded-3xl bg-card border border-coffee/5 shadow-sm">
+                <div className="text-2xl mb-4">📊</div>
+                <h3 className="font-display text-xl text-coffee">Data Literacy</h3>
+                <p className="mt-2 text-sm text-coffee/60">Mengembangkan kurikulum data sederhana untuk BUMDes agar mandiri dalam mengelola potensi ekonomi.</p>
+              </div>
+              <div className="p-8 rounded-3xl bg-card border border-coffee/5 shadow-sm">
+                <div className="text-2xl mb-4">🌱</div>
+                <h3 className="font-display text-xl text-coffee">Regenerative Agro</h3>
+                <p className="mt-2 text-sm text-coffee/60">Mempelajari praktik pertanian regeneratif untuk menjaga kelestarian tanah di wilayah dampingan.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Principles */}
       <section className="border-t border-border py-24 md:py-32">
         <div className="content-container">
@@ -236,6 +275,59 @@ function AboutPage() {
               title="Iterasi pelan"
               body="Rilis kecil, dengar lagi, perbaiki. Saya lebih suka tool yang tumbuh perlahan tapi dipakai, daripada platform megah yang dilupakan setelah peluncuran."
             />
+          </div>
+        </div>
+      </section>
+
+      {/* Education & Certifications */}
+      <section className="border-t border-border bg-background py-24 md:py-32">
+        <div className="content-container">
+          <div className="grid gap-16 lg:grid-cols-2">
+            <div>
+              <div className="font-mono text-xs uppercase tracking-[0.2em] text-terracotta">Pendidikan</div>
+              <h2 className="mt-4 font-display text-4xl text-coffee">Fondasi Akademik</h2>
+              <div className="mt-10 space-y-10">
+                <div className="group relative pl-8 border-l border-coffee/10 transition-colors hover:border-terracotta">
+                  <div className="font-mono text-[10px] uppercase tracking-widest text-coffee/40">2014 — 2018</div>
+                  <h3 className="mt-2 font-display text-xl text-coffee">Sarjana Teknik Industri</h3>
+                  <p className="mt-2 text-sm text-coffee/60">Universitas Hasanuddin (UNHAS)</p>
+                  <p className="mt-4 text-base text-coffee/75">
+                    Fokus pada manajemen rantai pasok dan optimasi sistem produksi industri agro. Skripsi mengenai efisiensi operasional pada pengolahan komoditas lokal.
+                  </p>
+                </div>
+                <div className="group relative pl-8 border-l border-coffee/10 transition-colors hover:border-terracotta">
+                  <div className="font-mono text-[10px] uppercase tracking-widest text-coffee/40">Berlanjut</div>
+                  <h3 className="mt-2 font-display text-xl text-coffee">Pembelajar Mandiri</h3>
+                  <p className="mt-2 text-sm text-coffee/60">Agro-Entrepreneurship & Digital Systems</p>
+                  <p className="mt-4 text-base text-coffee/75">
+                    Terus memperbarui keahlian melalui praktisi langsung di lapangan dan literatur modern mengenai ekonomi sirkular dan teknologi berbasis web.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div className="font-mono text-xs uppercase tracking-[0.2em] text-terracotta">Sertifikasi</div>
+              <h2 className="mt-4 font-display text-4xl text-coffee">Kredensial Profesional</h2>
+              <div className="mt-10 grid gap-4">
+                {[
+                  { title: "Perencanaan Produksi Industri Agro", org: "BNSP (2019)", color: "bg-sage/10 text-sage" },
+                  { title: "Pelatih Kewirausahaan UMKM", org: "BNSP", color: "bg-terracotta/10 text-terracotta" },
+                  { title: "Inkubasi Rewako Export", org: "Bank Indonesia", color: "bg-mustard/10 text-mustard" },
+                  { title: "Trainer Literasi Digital", org: "Pandu Desa 4.0", color: "bg-coffee/10 text-coffee" },
+                ].map((cert) => (
+                  <div key={cert.title} className="flex items-center justify-between rounded-2xl border border-coffee/5 bg-card p-6 transition-all hover:border-terracotta/20 hover:shadow-md">
+                    <div>
+                      <h4 className="font-display text-lg text-coffee">{cert.title}</h4>
+                      <p className="text-xs font-mono uppercase tracking-wider text-coffee/40 mt-1">{cert.org}</p>
+                    </div>
+                    <span className={`rounded-full px-3 py-1 font-mono text-[9px] font-bold uppercase tracking-widest ${cert.color}`}>
+                      Verified
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
