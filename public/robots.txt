@@ -1,4 +1,17 @@
 User-agent: *
 Allow: /
 
+# Explicit permissions for AI Search Engines & LLM Crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
 Sitemap: https://roedyrustam.pages.dev/sitemap.xml

@@ -1,0 +1,23 @@
+# Roedy Rustam — Sociopreneur × Agro × Digital
+> Portfolio Roedy Rustam, a professional consultant and fullstack developer focused on the coffee supply chain, agro digital tools, and digitalizing village cooperatives (BUMDes) in Sulawesi, Indonesia.
+
+## Core Pages
+- [Home -> https://roedyrustam.pages.dev/]: Overview of professional services, partnerships, key projects, and training gallery.
+- [About -> https://roedyrustam.pages.dev/about]: Professional background, BNSP Sektor Industri Agro certification, and skill set.
+- [Journey -> https://roedyrustam.pages.dev/journey]: Detailed historical timeline from 1998 (radio community Jirak Celebes) to present day (Sehati Kopi Indonesia).
+- [Experience -> https://roedyrustam.pages.dev/experience]: Professional consulting, community facilitation, and software architecture details.
+- [Impact -> https://roedyrustam.pages.dev/impact]: Narrative and metrics of social and agricultural impact in Sulawesi.
+- [Contact -> https://roedyrustam.pages.dev/contact]: Methods to reach out for consulting, development, or speaking engagements.
+
+## Case Studies
+- [Beanhub -> https://roedyrustam.pages.dev/projects/beanhub]: A digital coffee supply chain platform connecting farmers to roasteries in Barru, Toraja, and Sinjai.
+- [CuppingNotes -> https://roedyrustam.pages.dev/projects/cuppingnotes]: A mobile-first SCA coffee cupping app for quality control, featuring an interactive flavor wheel and social sharing capabilities.
+- [Kafeya POS -> https://roedyrustam.pages.dev/projects/kafeya]: An accounting and point of sale tool built specifically for small coffee shop owners (UMKM).
+- [Pandu Desa 4.0 -> https://roedyrustam.pages.dev/projects/pandudesa]: A digital transformation initiative for village governance, economy mapping, and digital literacy.
+
+## Key Facts
+- Founded Sehati Kopi Indonesia in 2025 to manage coffee operations.
+- Graduated with an Industrial Engineering background.
+- Over 20 years of experience in community radio networks (Jirak Celebes, JRKI) and village consulting.
+- Certified by BNSP for Agro Industrial Sektor Production Planning.
+- Developer of beanhub.online, cuppingnotes.online, and kafeya.online.
