@@ -220,7 +220,7 @@ export function Timeline() {
                     }`}
                 />
 
-                <div className={`${left ? "md:mr-12" : "md:order-2 md:ml-12"} flex flex-col items-start p-6 sm:p-8 rounded-3xl border border-coffee/5 bg-card shadow-sm transition-all duration-500 hover:shadow-[0_15px_30px_-10px_rgba(44,36,27,0.1)] hover:-translate-y-2 hover:border-coffee/15 w-full relative overflow-hidden group`}>
+                <div className={`${left ? "md:mr-12" : "md:order-2 md:ml-12"} flex flex-col items-start p-6 sm:p-8 rounded-3xl border border-coffee/5 bg-card shadow-sm transition-all duration-500 hover:shadow-[0_15px_30px_-10px_rgba(44,36,27,0.1)] hover:-translate-y-2 hover:border-coffee/15 w-full relative overflow-hidden group interactive cursor-pointer`}>
                   {/* Decorative subtle element inside card */}
                   <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-terracotta/5 blur-2xl transition-all duration-500 group-hover:bg-terracotta/10"></div>
                   

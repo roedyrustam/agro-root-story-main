@@ -104,9 +104,9 @@ export function Hero() {
               style={{ animationDelay: "0.55s" }}
             >
               {[
-                { n: "7+", l: "Wilayah", icon: "🌿" },
-                { n: "4", l: "Digital", icon: "💻" },
-                { n: "BNSP", l: "Trainer", icon: "🏅" },
+                { n: "7+", l: "Wilayah", icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-map-pin"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> },
+                { n: "4", l: "Digital", icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-code-2"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg> },
+                { n: "BNSP", l: "Trainer", icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-award"><path d="m12 15 5 5-5-5 5 5ZM12 15l-5 5 5-5-5 5Z"/><circle cx="12" cy="7" r="4"/></svg> },
               ].map((s) => (
                 <div key={s.l} className="group relative overflow-hidden rounded-3xl border border-coffee/5 bg-cream-soft/40 p-6 backdrop-blur-xl transition-all duration-500 hover:bg-cream-soft/60 hover:shadow-2xl hover:shadow-coffee/5">
                   <div className="absolute -right-2 -top-2 text-3xl opacity-[0.05] transition-all duration-700 group-hover:rotate-12 group-hover:scale-150 group-hover:opacity-[0.1]">
@@ -140,7 +140,9 @@ export function Hero() {
               {/* Origin badge - Glassmorphism floating */}
               <div className="absolute -bottom-8 -left-8 max-w-[220px] rotate-[-2deg] rounded-3xl border border-cream/50 bg-cream/80 p-6 shadow-2xl backdrop-blur-2xl transition-transform duration-500 hover:rotate-0 hover:scale-105">
                 <div className="flex items-center gap-3">
-                  <span className="flex h-8 w-8 items-center justify-center rounded-full bg-terracotta/10 text-sm">☕</span>
+                  <span className="flex h-8 w-8 items-center justify-center rounded-full bg-terracotta/10 text-terracotta">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-coffee"><path d="M10 2v2"/><path d="M14 2v2"/><path d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h12Z"/><path d="M17 12h2a2 2 0 0 1 0 4h-2"/></svg>
+                  </span>
                   <div className="leading-tight">
                     <span className="block font-mono text-[9px] uppercase tracking-[0.25em] text-terracotta font-bold">
                       Impact Areas

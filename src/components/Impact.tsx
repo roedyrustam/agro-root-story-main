@@ -58,7 +58,7 @@ export function Impact() {
               ].map((r, i) => (
                 <div
                   key={r.name}
-                  className="group flex items-center justify-between gap-5 rounded-2xl border border-transparent bg-transparent p-4 transition-all duration-300 hover:border-coffee/10 hover:bg-cream-soft hover:shadow-sm"
+                  className="group interactive flex items-center justify-between gap-5 rounded-2xl border border-transparent bg-transparent p-4 transition-all duration-300 hover:border-coffee/10 hover:bg-cream-soft hover:shadow-sm cursor-pointer"
                 >
                   <div className="flex items-start gap-5">
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-coffee/5 font-mono text-xs text-terracotta transition-transform duration-500 group-hover:scale-110 group-hover:bg-terracotta/10">

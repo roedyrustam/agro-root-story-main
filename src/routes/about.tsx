@@ -183,23 +183,31 @@ function AboutPage() {
             </div>
 
             <div className="grid gap-6 sm:grid-cols-2 lg:w-[60%]">
-              <div className="p-8 rounded-3xl bg-card border border-coffee/5 shadow-sm">
-                <div className="text-2xl mb-4">☕</div>
+              <div className="p-8 rounded-3xl bg-card border border-coffee/5 shadow-sm group/card hover:border-terracotta/20 transition-colors">
+                <div className="mb-4 text-terracotta">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-coffee"><path d="M10 2v2"/><path d="M14 2v2"/><path d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h12Z"/><path d="M17 12h2a2 2 0 0 1 0 4h-2"/></svg>
+                </div>
                 <h3 className="font-display text-xl text-coffee">Digital Sensory</h3>
                 <p className="mt-2 text-sm text-coffee/60">Mengintegrasikan standar SCA (Specialty Coffee Association) terbaru ke dalam sistem CuppingNotes.</p>
               </div>
-              <div className="p-8 rounded-3xl bg-card border border-coffee/5 shadow-sm">
-                <div className="text-2xl mb-4">🚜</div>
+              <div className="p-8 rounded-3xl bg-card border border-coffee/5 shadow-sm group/card hover:border-terracotta/20 transition-colors">
+                <div className="mb-4 text-terracotta">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-truck"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-5l-4-4h-3v9Z"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>
+                </div>
                 <h3 className="font-display text-xl text-coffee">Smart Supply Chain</h3>
                 <p className="mt-2 text-sm text-coffee/60">Optimasi logistik kopi dari hulu Sulawesi ke pasar strategis di Jakarta dan luar negeri.</p>
               </div>
-              <div className="p-8 rounded-3xl bg-card border border-coffee/5 shadow-sm">
-                <div className="text-2xl mb-4">📊</div>
+              <div className="p-8 rounded-3xl bg-card border border-coffee/5 shadow-sm group/card hover:border-terracotta/20 transition-colors">
+                <div className="mb-4 text-terracotta">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-bar-chart-3"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
+                </div>
                 <h3 className="font-display text-xl text-coffee">Data Literacy</h3>
                 <p className="mt-2 text-sm text-coffee/60">Mengembangkan kurikulum data sederhana untuk BUMDes agar mandiri dalam mengelola potensi ekonomi.</p>
               </div>
-              <div className="p-8 rounded-3xl bg-card border border-coffee/5 shadow-sm">
-                <div className="text-2xl mb-4">🌱</div>
+              <div className="p-8 rounded-3xl bg-card border border-coffee/5 shadow-sm group/card hover:border-terracotta/20 transition-colors">
+                <div className="mb-4 text-terracotta">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-sprout"><path d="M7 20h10"/><path d="M10 20c5.5-3 5.5-13 0-16"/><path d="M10 13c4.5 1.5 5 6 5 6"/><path d="M10 8c5.5-3 5.5-13 0-16"/><path d="M10 13c-4.5 1.5-5 6-5 6"/><path d="M10 8c-5.5-3-5.5-13 0-16"/></svg>
+                </div>
                 <h3 className="font-display text-xl text-coffee">Regenerative Agro</h3>
                 <p className="mt-2 text-sm text-coffee/60">Mempelajari praktik pertanian regeneratif untuk menjaga kelestarian tanah di wilayah dampingan.</p>
               </div>

@@ -92,7 +92,7 @@ export function Experience() {
             return (
               <article
                 key={exp.role}
-                className={`group relative overflow-hidden flex flex-col justify-between rounded-[2.5rem] border border-coffee/10 p-8 md:p-10 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_30px_60px_-20px_rgba(44,36,27,0.15)] ${gridClasses}`}
+                className={`group interactive cursor-pointer relative overflow-hidden flex flex-col justify-between rounded-[2.5rem] border border-coffee/10 p-8 md:p-10 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_30px_60px_-20px_rgba(44,36,27,0.15)] ${gridClasses}`}
               >
                 {/* Decorative Pattern Background */}
                 <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-current opacity-[0.03] blur-3xl transition-transform duration-700 group-hover:scale-150" />

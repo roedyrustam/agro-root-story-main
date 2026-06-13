@@ -159,7 +159,7 @@ export function Nav() {
               {link.type === "route" ? (
                 <Link
                   to={link.href}
-                  className="flex items-center gap-4 rounded-2xl px-4 py-3.5 font-mono text-[10px] uppercase tracking-[0.2em] text-coffee/70 transition-all hover:bg-coffee hover:text-cream active:scale-[0.97]"
+                  className="flex items-center gap-4 rounded-2xl px-4 py-4 font-mono text-[10px] uppercase tracking-[0.2em] text-coffee/70 transition-all hover:bg-coffee hover:text-cream active:scale-[0.97]"
                   activeProps={{ className: "bg-coffee text-cream" }}
                   onClick={() => setOpen(false)}
                 >
@@ -172,7 +172,7 @@ export function Nav() {
                 <Link
                   to="/"
                   hash={link.href.replace("/#", "")}
-                  className="flex items-center gap-4 rounded-2xl px-4 py-3.5 font-mono text-[10px] uppercase tracking-[0.2em] text-coffee/70 transition-all hover:bg-coffee hover:text-cream active:scale-[0.97]"
+                  className="flex items-center gap-4 rounded-2xl px-4 py-4 font-mono text-[10px] uppercase tracking-[0.2em] text-coffee/70 transition-all hover:bg-coffee hover:text-cream active:scale-[0.97]"
                   onClick={() => setOpen(false)}
                 >
                   <span className="font-display text-lg opacity-40">
