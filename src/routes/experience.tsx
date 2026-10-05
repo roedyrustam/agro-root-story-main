@@ -7,10 +7,10 @@ import { Skills } from "@/components/Skills";
 export const Route = createFileRoute("/experience")({
   head: () => ({
     meta: [
-      { title: "Pengalaman — Roedy Rustam" },
-      { name: "description", content: "Pengalaman profesional Roedy Rustam: Trainer UMKM, Konsultan Desa, Agro Operations, dan Digital Developer." },
+      { title: "Pengalaman — Roedy Rustam · AI Systems & Agentic Developer" },
+      { name: "description", content: "Pengalaman profesional Roedy Rustam: AI Systems Architect, Pengembang Server MCP, Konsultan Agro, dan Pengembang Edge Web." },
       { property: "og:title", content: "Pengalaman Profesional — Roedy Rustam" },
-      { property: "og:description", content: "Trainer UMKM · Konsultan Desa · Sehati Kopi Indonesia · Pandu Talenta Digital · Aliansi Masyarakat Adat" },
+      { property: "og:description", content: "AI Systems Architect · Model Context Protocol · Sehati Kopi Indonesia · Pandu Talenta Digital · Aliansi Masyarakat Adat" },
       { property: "og:image", content: "/og-experience.jpg" },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },

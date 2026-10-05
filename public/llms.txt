@@ -1,23 +1,30 @@
-# Roedy Rustam — Sociopreneur × Agro × Digital
-> Portfolio Roedy Rustam, a professional consultant and fullstack developer focused on the coffee supply chain, agro digital tools, and digitalizing village cooperatives (BUMDes) in Sulawesi, Indonesia.
+# Roedy Rustam — AI Systems & Agentic Developer × Agro-Tech Sociopreneur
+> Portfolio of Roedy Rustam, an AI Systems Architect, Model Context Protocol (MCP) developer, and Agro-Industrial consultant building autonomous agent workflows, modern edge applications, and digital tools for the coffee supply chain and village cooperatives (BUMDes) in Sulawesi, Indonesia.
+> Full comprehensive AI documentation available at: https://roedyrustam.pages.dev/llms-full.txt
 
 ## Core Pages
-- [Home -> https://roedyrustam.pages.dev/]: Overview of professional services, partnerships, key projects, and training gallery.
-- [About -> https://roedyrustam.pages.dev/about]: Professional background, BNSP Sektor Industri Agro certification, and skill set.
-- [Journey -> https://roedyrustam.pages.dev/journey]: Detailed historical timeline from 1998 (radio community Jirak Celebes) to present day (Sehati Kopi Indonesia).
-- [Experience -> https://roedyrustam.pages.dev/experience]: Professional consulting, community facilitation, and software architecture details.
-- [Impact -> https://roedyrustam.pages.dev/impact]: Narrative and metrics of social and agricultural impact in Sulawesi.
-- [Contact -> https://roedyrustam.pages.dev/contact]: Methods to reach out for consulting, development, or speaking engagements.
+- [Home -> https://roedyrustam.pages.dev/]: Dual-engine portfolio featuring autonomous agent status, interactive MCP tool console, featured digital projects, services, and impact timeline.
+- [About -> https://roedyrustam.pages.dev/about]: Professional background combining AI engineering, agentic architecture, Industrial Engineering background, and BNSP Agro certification.
+- [Journey -> https://roedyrustam.pages.dev/journey]: Historical timeline from community networks (Jirak Celebes, JRKI) to modern Agentic AI workflows and Sehati Kopi Indonesia.
+- [Experience -> https://roedyrustam.pages.dev/experience]: Fullstack AI systems development, Model Context Protocol integration, rural economic consulting, and software architecture.
+- [Impact -> https://roedyrustam.pages.dev/impact]: Measurable social, technological, and agricultural impact across Sulawesi, Indonesia.
+- [Contact -> https://roedyrustam.pages.dev/contact]: Channels for AI consulting, agentic tool development, speaking engagements, and agro-digital collaborations.
 
-## Case Studies
+## Case Studies & Flagship Projects
+- [AgroAgent MCP Server -> https://roedyrustam.pages.dev/projects/agroagent-mcp]: An enterprise-grade Model Context Protocol (MCP v1.x) server connecting LLM agents to coffee inventory, farm telemetry, and supply chain ERP APIs.
+- [Multi-Agent Swarm Orchestrator -> https://roedyrustam.pages.dev/projects/agent-swarm]: An autonomous multi-agent pipeline coordinating quality inspection, SCA cupping analysis, and logistics routing.
 - [Beanhub -> https://roedyrustam.pages.dev/projects/beanhub]: A digital coffee supply chain platform connecting farmers to roasteries in Barru, Toraja, and Sinjai.
-- [CuppingNotes -> https://roedyrustam.pages.dev/projects/cuppingnotes]: A mobile-first SCA coffee cupping app for quality control, featuring an interactive flavor wheel and social sharing capabilities.
+- [CuppingNotes -> https://roedyrustam.pages.dev/projects/cuppingnotes]: A mobile-first SCA coffee cupping app for quality control, featuring an interactive flavor wheel and AI-assisted profile extraction.
 - [Kafeya POS -> https://roedyrustam.pages.dev/projects/kafeya]: An accounting and point of sale tool built specifically for small coffee shop owners (UMKM).
 - [Pandu Desa 4.0 -> https://roedyrustam.pages.dev/projects/pandudesa]: A digital transformation initiative for village governance, economy mapping, and digital literacy.
 
+## Core Competencies & Tech Stack
+- AI & Agentic Systems: Model Context Protocol (MCP v1.x), Multi-Agent Swarms, Tool Calling, Structured Outputs, LangGraph, Vercel AI SDK, Context Window Engineering.
+- Fullstack & Edge: React 19, TanStack Start (SSR), TanStack Router, TypeScript 5.8+, Tailwind CSS v4, Cloudflare Pages/Workers.
+- Agro & Industry: Agro-Industrial Production Planning (BNSP Certified), Coffee Supply Chain Management, SCA Cupping Protocol, Village Cooperative (BUMDes) Digitalization.
+
 ## Key Facts
-- Founded Sehati Kopi Indonesia in 2025 to manage coffee operations.
-- Graduated with an Industrial Engineering background.
-- Over 20 years of experience in community radio networks (Jirak Celebes, JRKI) and village consulting.
-- Certified by BNSP for Agro Industrial Sektor Production Planning.
-- Developer of beanhub.online, cuppingnotes.online, and kafeya.online.
+- Founded Sehati Kopi Indonesia in 2025 to manage coffee operations and digital supply logistics.
+- Industrial Engineering background with specialized BNSP Agro Industrial Sektor certification.
+- Pioneer in community networks (Radio Komunitas Jirak Celebes, JRKI) and village-level digital sovereignty.
+- Creator of beanhub.online, cuppingnotes.online, kafeya.online, and open-source MCP tools for agricultural data.

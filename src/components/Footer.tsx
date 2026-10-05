@@ -28,7 +28,7 @@ export function Footer() {
               <div>
                 <div className="font-display text-lg text-coffee">Roedy Rustam</div>
                 <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-coffee/50">
-                  Sociopreneur · Trainer · Village Consultant
+                  AI Systems & Agentic Architect · Agro-Tech Sociopreneur
                 </div>
               </div>
             </div>

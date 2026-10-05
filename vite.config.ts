@@ -8,9 +8,7 @@ export default defineConfig(({ mode }) => ({
   plugins: [
     tailwindcss(),
     tsConfigPaths({ projects: ["./tsconfig.json"] }),
-    tanstackStart({
-      deployment: "cloudflare-pages",
-    }),
+    tanstackStart(),
     react(),
   ],
   ssr: {

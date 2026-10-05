@@ -19,6 +19,8 @@ import { Route as ProjectsPandudesaRouteImport } from './routes/projects.pandude
 import { Route as ProjectsKafeyaRouteImport } from './routes/projects.kafeya'
 import { Route as ProjectsCuppingnotesRouteImport } from './routes/projects.cuppingnotes'
 import { Route as ProjectsBeanhubRouteImport } from './routes/projects.beanhub'
+import { Route as ProjectsAgroagentMcpRouteImport } from './routes/projects.agroagent-mcp'
+import { Route as ProjectsAgentSwarmRouteImport } from './routes/projects.agent-swarm'
 
 const JourneyRoute = JourneyRouteImport.update({
   id: '/journey',
@@ -70,6 +72,16 @@ const ProjectsBeanhubRoute = ProjectsBeanhubRouteImport.update({
   path: '/projects/beanhub',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProjectsAgroagentMcpRoute = ProjectsAgroagentMcpRouteImport.update({
+  id: '/projects/agroagent-mcp',
+  path: '/projects/agroagent-mcp',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjectsAgentSwarmRoute = ProjectsAgentSwarmRouteImport.update({
+  id: '/projects/agent-swarm',
+  path: '/projects/agent-swarm',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -78,6 +90,8 @@ export interface FileRoutesByFullPath {
   '/experience': typeof ExperienceRoute
   '/impact': typeof ImpactRoute
   '/journey': typeof JourneyRoute
+  '/projects/agent-swarm': typeof ProjectsAgentSwarmRoute
+  '/projects/agroagent-mcp': typeof ProjectsAgroagentMcpRoute
   '/projects/beanhub': typeof ProjectsBeanhubRoute
   '/projects/cuppingnotes': typeof ProjectsCuppingnotesRoute
   '/projects/kafeya': typeof ProjectsKafeyaRoute
@@ -90,6 +104,8 @@ export interface FileRoutesByTo {
   '/experience': typeof ExperienceRoute
   '/impact': typeof ImpactRoute
   '/journey': typeof JourneyRoute
+  '/projects/agent-swarm': typeof ProjectsAgentSwarmRoute
+  '/projects/agroagent-mcp': typeof ProjectsAgroagentMcpRoute
   '/projects/beanhub': typeof ProjectsBeanhubRoute
   '/projects/cuppingnotes': typeof ProjectsCuppingnotesRoute
   '/projects/kafeya': typeof ProjectsKafeyaRoute
@@ -103,6 +119,8 @@ export interface FileRoutesById {
   '/experience': typeof ExperienceRoute
   '/impact': typeof ImpactRoute
   '/journey': typeof JourneyRoute
+  '/projects/agent-swarm': typeof ProjectsAgentSwarmRoute
+  '/projects/agroagent-mcp': typeof ProjectsAgroagentMcpRoute
   '/projects/beanhub': typeof ProjectsBeanhubRoute
   '/projects/cuppingnotes': typeof ProjectsCuppingnotesRoute
   '/projects/kafeya': typeof ProjectsKafeyaRoute
@@ -117,6 +135,8 @@ export interface FileRouteTypes {
     | '/experience'
     | '/impact'
     | '/journey'
+    | '/projects/agent-swarm'
+    | '/projects/agroagent-mcp'
     | '/projects/beanhub'
     | '/projects/cuppingnotes'
     | '/projects/kafeya'
@@ -129,6 +149,8 @@ export interface FileRouteTypes {
     | '/experience'
     | '/impact'
     | '/journey'
+    | '/projects/agent-swarm'
+    | '/projects/agroagent-mcp'
     | '/projects/beanhub'
     | '/projects/cuppingnotes'
     | '/projects/kafeya'
@@ -141,6 +163,8 @@ export interface FileRouteTypes {
     | '/experience'
     | '/impact'
     | '/journey'
+    | '/projects/agent-swarm'
+    | '/projects/agroagent-mcp'
     | '/projects/beanhub'
     | '/projects/cuppingnotes'
     | '/projects/kafeya'
@@ -154,6 +178,8 @@ export interface RootRouteChildren {
   ExperienceRoute: typeof ExperienceRoute
   ImpactRoute: typeof ImpactRoute
   JourneyRoute: typeof JourneyRoute
+  ProjectsAgentSwarmRoute: typeof ProjectsAgentSwarmRoute
+  ProjectsAgroagentMcpRoute: typeof ProjectsAgroagentMcpRoute
   ProjectsBeanhubRoute: typeof ProjectsBeanhubRoute
   ProjectsCuppingnotesRoute: typeof ProjectsCuppingnotesRoute
   ProjectsKafeyaRoute: typeof ProjectsKafeyaRoute
@@ -232,6 +258,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProjectsBeanhubRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/projects/agroagent-mcp': {
+      id: '/projects/agroagent-mcp'
+      path: '/projects/agroagent-mcp'
+      fullPath: '/projects/agroagent-mcp'
+      preLoaderRoute: typeof ProjectsAgroagentMcpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projects/agent-swarm': {
+      id: '/projects/agent-swarm'
+      path: '/projects/agent-swarm'
+      fullPath: '/projects/agent-swarm'
+      preLoaderRoute: typeof ProjectsAgentSwarmRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -242,6 +282,8 @@ const rootRouteChildren: RootRouteChildren = {
   ExperienceRoute: ExperienceRoute,
   ImpactRoute: ImpactRoute,
   JourneyRoute: JourneyRoute,
+  ProjectsAgentSwarmRoute: ProjectsAgentSwarmRoute,
+  ProjectsAgroagentMcpRoute: ProjectsAgroagentMcpRoute,
   ProjectsBeanhubRoute: ProjectsBeanhubRoute,
   ProjectsCuppingnotesRoute: ProjectsCuppingnotesRoute,
   ProjectsKafeyaRoute: ProjectsKafeyaRoute,

@@ -13,7 +13,7 @@ const navLinks = [
 export function Nav() {
   const [open, setOpen] = useState(false);
   const location = useLocation();
-  const magneticRef = useMagnetic();
+  const magneticRef = useMagnetic<HTMLAnchorElement>();
 
   // Close mobile menu on route change
   useEffect(() => {
@@ -47,7 +47,7 @@ export function Nav() {
           <div className="leading-none">
             <div className="font-display text-base text-coffee tracking-tight">Roedy Rustam</div>
             <div className="font-mono text-[9px] uppercase tracking-[0.25em] text-coffee/50">
-              Sociopreneur × Digital
+              AI Systems × Agro-Tech
             </div>
           </div>
         </Link>

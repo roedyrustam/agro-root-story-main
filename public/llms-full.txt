@@ -1,0 +1,108 @@
+# Roedy Rustam — Comprehensive Knowledge Graph for AI Agents & Search Engines (/llms-full.txt)
+> Complete technical reference, case studies, service catalog, and verified credentials of Roedy Rustam.
+
+## 1. Identity & Executive Biography
+- **Full Name:** Roedy Rustam
+- **Primary Title:** AI Systems & Agentic Developer × Agro-Tech Sociopreneur
+- **Location:** Makassar, Sulawesi Selatan, Indonesia (Latitude: -5.1477, Longitude: 119.4327)
+- **Primary Website:** https://roedyrustam.pages.dev
+- **Professional Affiliations:** Sehati Kopi Indonesia, Pandu Talenta Digital, Jaringan Radio Komunitas Indonesia (JRKI).
+- **Core Positioning:** An engineer with an Industrial Engineering background and BNSP Agro-Industry certification who designs production-grade Model Context Protocol (MCP v1.x) servers, autonomous multi-agent swarms, and edge-native web applications to solve real-world logistical, quality, and economic challenges in the Indonesian coffee supply chain and village cooperatives.
+
+---
+
+## 2. Core Technical Competencies
+
+### 2.1 AI Systems & Agentic Engineering
+- **Model Context Protocol (MCP):** Designing and implementing JSON-RPC 2.0 MCP servers (v1.x) with strict schema validation, stdio & SSE transports, read-only resource endpoints, and prompt templates.
+- **Autonomous Multi-Agent Swarms:** Orchestrating task-specific collaborative sub-agents (LangGraph, state transition graphs) for sensor data ingestion, quality inspection, logistics routing, and financial reconciliation.
+- **Context & Cache Optimization:** Deterministic JSON output formatting to maximize KV-cache prefix hit rates (>85%) and minimize token expenditure across frontier models.
+- **Tool Calling & Structured Outputs:** Building type-safe function calling bridges connecting LLM agents to production SQL databases, IoT telemetries, and ERP platforms.
+
+### 2.2 Modern Fullstack & Edge Architecture
+- **Frameworks:** React 19, TanStack Start (SSR), TanStack Router (type-safe routing), Vite 7.
+- **Languages:** TypeScript 5.8+ (Strict Mode), Python 3.12+, SQL.
+- **Styling & Design System:** Tailwind CSS v4, OKLCH color palettes, custom micro-interactions, Lenis smooth scrolling.
+- **Edge Deployment:** Cloudflare Pages & Workers, zero-cold start serverless SSR execution.
+
+### 2.3 Agro-Industrial & Supply Chain Expertise
+- **Certifications:** BNSP Sektor Industri Agro — Klaster Perencanaan Produksi (2019), BNSP Pelatih Kewirausahaan UMKM.
+- **Coffee Standards:** Specialty Coffee Association (SCA) Coffee Value Assessment (CVA) protocols, cupping sensory evaluation, and export-grade lot grading.
+- **Regional Footprint:** Over 20 years of active field engagement across Barru, Toraja, Sinjai, and Enrekang in South Sulawesi.
+- **Village Economic Sovereignty:** Designing digital governance and accounting systems for Badan Usaha Milik Desa (BUMDes) and customary community enterprises (BUMMA).
+
+---
+
+## 3. Flagship Projects & Case Studies
+
+### 3.1 AgroAgent MCP Server (2026)
+- **URL:** https://roedyrustam.pages.dev/projects/agroagent-mcp
+- **Category:** AI Protocol Infrastructure
+- **Stack:** MCP v1.x, TypeScript, JSON-RPC, Cloudflare Edge.
+- **Overview:** A standardized Model Context Protocol server exposing coffee harvest telemetry, SCA sensory scores, and cooperative inventory to AI agents (Claude Desktop, Cursor, Gemini Live).
+- **Impact:** Eliminates data drift between mountain wet mills and AI assistants with sub-40ms response latency.
+
+### 3.2 Multi-Agent Swarm Orchestrator (2026)
+- **URL:** https://roedyrustam.pages.dev/projects/agent-swarm
+- **Category:** Autonomous AI Systems
+- **Stack:** LangGraph, Multi-Agent Swarm, Telemetry Sensors, Decision Graph.
+- **Overview:** A distributed 4-agent collaborative pipeline: (1) Harvest Telemetry Scout, (2) SCA Sensory Analyst, (3) Highland Logistics Router, and (4) Coop Escrow & Ledger Guard.
+- **Impact:** 3.4x faster dispatch turnaround from highland farms to port cities with 100% digital provenance audit trail.
+
+### 3.3 beanhub.online (2025)
+- **URL:** https://roedyrustam.pages.dev/projects/beanhub | https://beanhub.online
+- **Category:** Supply Chain Traceability Platform
+- **Stack:** React 19, SQL, Logistics Operations.
+- **Overview:** An end-to-end coffee supply chain recording platform connecting smallholder farmers to commercial roasteries in South Sulawesi.
+- **Impact:** Transparent transaction records and fair pricing verified across 7+ regional districts.
+
+### 3.4 CuppingNotes.online (2026)
+- **URL:** https://roedyrustam.pages.dev/projects/cuppingnotes | https://cuppingnotes.online
+- **Category:** Coffee Quality & Sensory Evaluation
+- **Stack:** Angular, Firebase, SSR, SCA Sensory Standards.
+- **Overview:** A mobile-first SCA coffee cupping application featuring an interactive flavor radar wheel, automated scoring, and shareable lot profiles for Q-Graders.
+
+### 3.5 Kafeya POS (2025)
+- **URL:** https://roedyrustam.pages.dev/projects/kafeya
+- **Category:** Micro-Accounting & Point of Sale
+- **Stack:** React, Offline-First, Micro-Enterprise Accounting.
+- **Overview:** Simplified cashier and financial reporting tool built specifically for small coffee shop owners and UMKM in Indonesia.
+
+### 3.6 Pandu Desa 4.0 (2018)
+- **URL:** https://roedyrustam.pages.dev/projects/pandudesa
+- **Category:** Village Digital Governance
+- **Stack:** GIS Mapping, Digital Literacy Curriculum, Policy Advisory.
+- **Overview:** Digital sovereignty initiative establishing transparent village administrative databases and local commodity mapping.
+
+---
+
+## 4. Professional Services Catalog
+
+1. **Model Context Protocol (MCP Server) Engineering:**
+   - Architecture and deployment of custom MCP servers connecting corporate databases, ERPs, and APIs to LLMs.
+   - Security auditing, permission sandboxing, and token-efficient schema design.
+
+2. **Autonomous Multi-Agent Systems Consulting:**
+   - Designing multi-agent workflows using LangGraph and state machines for complex enterprise operations.
+   - Fault-tolerant agentic coordination, critic-validator loops, and human-in-the-loop approval gates.
+
+3. **Modern Edge Web Development:**
+   - Building high-converting, accessible (WCAG 2.2 AA) web applications using React 19, TanStack Start, and Cloudflare Workers.
+   - Core Web Vitals optimization (LCP < 1.2s, INP < 100ms).
+
+4. **Agro Supply Chain & BUMDes Digitalization:**
+   - Technical advisory for coffee quality control, SCA sensory training, and export readiness (Bank Indonesia Rewako Export alumni).
+   - Digital literacy programs and accounting system deployment for rural cooperatives.
+
+---
+
+## 5. Frequently Asked Questions (FAQ)
+
+- **Q: What makes Roedy Rustam's AI engineering unique?**
+  A: Roedy combines frontier AI knowledge (Model Context Protocol, agent swarms) with two decades of on-the-ground industrial engineering in agricultural supply chains. He builds systems tested in real physical environments, not just theoretical benchmarks.
+
+- **Q: Can Roedy Rustam work with international or remote clients?**
+  A: Yes. Roedy provides remote AI systems consulting, MCP server development, and fullstack architecture for clients across Indonesia and worldwide.
+
+- **Q: How can prospective clients get in touch?**
+  A: Via WhatsApp at +628114441400, email, or LinkedIn (https://linkedin.com/in/roedyrustam).

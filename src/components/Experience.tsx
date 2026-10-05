@@ -4,14 +4,25 @@ import { useState } from "react";
 
 const experiences = [
   {
+    role: "AI Systems & Agentic Architect",
+    org: "AgroAgent & Pandu Talenta Digital",
+    period: "2025 — Sekarang",
+    chapter: "III",
+    points: [
+      "Merancang dan mengimplementasikan server Model Context Protocol (MCP v1.x) untuk menghubungkan agen AI otonom ke database rantai pasok.",
+      "Membangun arsitektur multi-agen swarm kolaboratif untuk evaluasi mutu biji kopi dan mitigasi rute armada pegunungan.",
+      "Mengembangkan dan memelihara beanhub.online, cuppingnotes.online, dan kafeya.online berbasis React 19 & Cloudflare Edge.",
+    ],
+  },
+  {
     role: "Pengelola Operasional",
     org: "Sehati Kopi Indonesia",
     period: "2025 — Sekarang",
     chapter: "II",
     points: [
-      "Bertanggung jawab atas alur produksi, manajemen stok, dan koordinasi tim operasional.",
+      "Bertanggung jawab atas alur produksi, manajemen stok, dan koordinasi tim operasional hulu-hilir.",
       "Mendampingi pengembangan potensi komoditas kopi di Barru, Toraja, dan Sinjai.",
-      "Menjaga standar kualitas produk untuk kepuasan mitra dan pelanggan.",
+      "Menjaga standar kualitas produk untuk kepuasan mitra dan pasar ekspor.",
     ],
   },
   {
@@ -26,25 +37,14 @@ const experiences = [
     ],
   },
   {
-    role: "Pengembang Sistem",
-    org: "Pandu Talenta Digital",
-    period: "2025 — Sekarang",
-    chapter: "III",
-    points: [
-      "Merancang dan memelihara platform beanhub.online untuk pencatatan rantai pasok kopi.",
-      "Mengembangkan Kafeya POS — alat bantu akuntansi UMKM sesuai standar pelaporan.",
-      "Merancang dan memelihara sistem cuppingnotes.online untuk pencatatan kualitas kopi.",
-    ],
-  },
-  {
-    role: "Trainer & Konsultan",
-    org: "Pemberdayaan Desa & UMKM",
+    role: "Trainer & Konsultan Desa",
+    org: "Pemberdayaan Desa & UMKM Agro",
     period: "2018 — Sekarang",
     chapter: "II",
     points: [
-      "Project Manager Pandu Desa 4.0 untuk literasi digital dan tata kelola informasi desa.",
-      "Melatih literasi digital dan strategi kewirausahaan untuk UMKM di berbagai wilayah.",
-      "Konsultan pengembangan ekonomi desa melalui pemetaan komoditas lokal.",
+      "Project Manager Pandu Desa 4.0 untuk literasi digital dan tata kelola informasi desa mandiri.",
+      "Melatih literasi digital, strategi kewirausahaan, dan kurikulum data untuk UMKM dan BUMDes.",
+      "Konsultan perencanaan produksi sektor industri agro berlisensi BNSP.",
     ],
   },
 ];
@@ -77,7 +77,7 @@ export function Experience() {
         <SectionLabel number="03" label="Pengalaman" />
         <h2 className="mt-6 max-w-3xl font-display text-[clamp(1.75rem,4vw,3rem)] leading-[1.1] text-coffee">
           Empat peran, satu <span className="italic text-terracotta">benang merah</span>: efisiensi
-          yang berpihak.
+          dan kecerdasan yang berpihak.
         </h2>
 
         <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-12">
@@ -99,7 +99,7 @@ export function Experience() {
                 
                 <div className="reveal relative z-10">
                   <div className="mb-6 flex flex-wrap items-center justify-between gap-4">
-                    <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-terracotta">
+                    <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-terracotta font-bold">
                       {exp.period}
                     </div>
                     <div className="flex gap-2">
@@ -109,16 +109,16 @@ export function Experience() {
                     </div>
                   </div>
 
-                  <h3 className={`font-display text-coffee leading-tight ${i === 0 ? 'text-4xl md:text-6xl' : 'text-3xl md:text-4xl'} mb-3`}>
+                  <h3 className={`font-display text-coffee leading-tight ${i === 0 ? 'text-4xl md:text-5xl' : 'text-2xl md:text-3xl'} mb-3`}>
                     {exp.role}
                   </h3>
-                  <div className="mb-8 font-mono text-xs uppercase tracking-widest text-coffee/50">
+                  <div className="mb-8 font-mono text-xs uppercase tracking-widest text-coffee/50 font-semibold">
                     {exp.org}
                   </div>
 
-                  <ul className="space-y-5">
+                  <ul className="space-y-4">
                     {exp.points.map((p) => (
-                      <li key={p} className="flex gap-4 text-base leading-relaxed text-coffee/70">
+                      <li key={p} className="flex gap-4 text-sm md:text-base leading-relaxed text-coffee/75">
                         <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-terracotta/60" />
                         <span className="text-pretty">{p}</span>
                       </li>

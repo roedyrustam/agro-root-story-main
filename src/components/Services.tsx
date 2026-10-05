@@ -1,24 +1,24 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 
 const services = [
   {
-    title: "Digitalisasi Desa & BUMDes",
-    description: "Implementasi sistem manajemen berbasis cloud (Pandu Desa 4.0) untuk transparansi tata kelola dan efisiensi administrasi desa.",
-    icon: "🏗️",
-    tags: ["Cloud Ops", "Data Governance", "Capacity Building"],
+    title: "Agentic AI & Protocol Engineering",
+    description: "Perancangan server Model Context Protocol (MCP v1.x), orkestrasi multi-agen otonom, dan integrasi agen LLM dengan database operasional dunia nyata.",
+    icon: "⚡",
+    tags: ["MCP v1.x", "Multi-Agent Swarms", "Tool Calling", "Type-safe Schemas"],
   },
   {
-    title: "Sensory & Quality Control",
-    description: "Pelatihan evaluasi kopi standar SCA CVA 2025 untuk petani dan roaster guna meningkatkan standarisasi profil rasa.",
-    icon: "🔬",
-    tags: ["SCA Protocols", "Quality Audit", "Flavor Profiling"],
+    title: "Modern Fullstack & Edge Architecture",
+    description: "Pengembangan web app berskala produksi dengan React 19, TanStack Start SSR, Tailwind CSS v4, dan deployment Cloudflare Workers yang ultra-responsif.",
+    icon: "🌐",
+    tags: ["TanStack Start", "React 19", "Cloudflare Edge", "TypeScript"],
   },
   {
-    title: "Scaling Up UMKM Agro",
-    description: "Pendampingan manajemen usaha, literasi keuangan digital, dan pembukaan akses pasar nasional bagi produk unggulan daerah.",
-    icon: "📈",
-    tags: ["Business Growth", "Market Access", "Digital Literacy"],
+    title: "Agro Supply Chain & Rural Empowerment",
+    description: "Transformasi rantai pasok kopi hulu-hilir, audit mutu sensorik standar SCA, perencanaan industri bersertifikasi BNSP, dan digitalisasi kedaulatan data desa.",
+    icon: "🌱",
+    tags: ["BNSP Certified", "SCA Protocols", "Supply Chain", "BUMDes Digital"],
   },
 ];
 
@@ -30,14 +30,14 @@ export function Services() {
       <div className="mx-auto max-w-7xl px-6 md:px-10">
         <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
           <div className="max-w-2xl">
-            <div className="font-mono text-xs uppercase tracking-[0.2em] text-terracotta">Professional Services</div>
+            <div className="font-mono text-xs uppercase tracking-[0.2em] text-terracotta">Professional Services & Architecture</div>
             <h2 className="mt-4 font-display text-[clamp(2.5rem,5vw,4rem)] leading-[1.1] text-coffee">
-              Solusi Untuk <br />
-              <span className="italic text-terracotta">Ekosistem Agro.</span>
+              Tiga Pilar Solusi <br />
+              <span className="italic text-terracotta">AI, Web Modern & Agro.</span>
             </h2>
           </div>
           <p className="max-w-sm text-sm leading-relaxed text-coffee/60">
-            Membantu organisasi dan komunitas menjembatani kesenjangan antara potensi tradisional dan peluang ekonomi modern.
+            Menjembatani keunggulan rekayasa sistem kecerdasan buatan otonom dengan operasi lapangan dan dampak ekonomi riil.
           </p>
         </div>
 
@@ -67,14 +67,14 @@ export function Services() {
 
               <div className="mt-8 flex flex-wrap gap-2">
                 {service.tags.map(tag => (
-                  <span key={tag} className="rounded-full border border-coffee/10 px-3 py-1 font-mono text-[9px] uppercase tracking-wider text-coffee/50 group-hover:border-terracotta/20 group-hover:text-terracotta transition-colors">
+                  <span key={tag} className="rounded-full border border-coffee/10 px-3 py-1 font-mono text-[9px] uppercase tracking-wider text-coffee/60 group-hover:border-terracotta/20 group-hover:text-terracotta transition-colors">
                     {tag}
                   </span>
                 ))}
               </div>
               
               <div className="mt-10 pt-8 border-t border-coffee/5">
-                <Link to="/contact" className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.2em] text-coffee/40 group-hover:text-terracotta transition-colors">
+                <Link to="/contact" className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.2em] text-coffee/50 group-hover:text-terracotta transition-colors">
                   Konsultasi Sekarang ↗
                 </Link>
               </div>

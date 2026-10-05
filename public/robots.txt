@@ -14,4 +14,13 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
 Sitemap: https://roedyrustam.pages.dev/sitemap.xml
+# LLM Knowledge Graph
+# https://roedyrustam.pages.dev/llms.txt
+# https://roedyrustam.pages.dev/llms-full.txt

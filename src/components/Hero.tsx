@@ -18,18 +18,25 @@ export function Hero() {
       <div className="relative content-container">
         <div className="grid items-center gap-12 lg:grid-cols-12">
           <div className="lg:col-span-7">
-            <div className="mb-8 flex items-center gap-3 animate-fade-up">
-              <span className="flex items-center gap-2.5 rounded-full border border-terracotta/20 bg-terracotta/5 px-4 py-1.5 font-mono text-xs uppercase tracking-[0.2em] text-terracotta backdrop-blur-sm">
+            {/* Cyber-Organic Status Pill */}
+            <div className="mb-8 flex flex-wrap items-center gap-3 animate-fade-up">
+              <span className="flex items-center gap-2.5 rounded-full border border-terracotta/25 bg-terracotta/5 px-4 py-1.5 font-mono text-[11px] uppercase tracking-[0.2em] text-terracotta backdrop-blur-sm shadow-sm">
                 <span className="relative flex h-2 w-2">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-terracotta/60" />
-                  <span className="relative inline-flex h-2 w-2 rounded-full bg-terracotta" />
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-sage/60" />
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-sage" />
                 </span>
-                Portfolio · 2025
+                Agent Node: Active
+              </span>
+              <span className="hidden sm:inline-flex items-center gap-2 rounded-full border border-coffee/10 bg-coffee/5 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-coffee/60">
+                Protocol: MCP v1.x
+              </span>
+              <span className="inline-flex items-center gap-2 rounded-full border border-coffee/10 bg-coffee/5 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-coffee/60">
+                Sulawesi · ID
               </span>
             </div>
 
             <h1
-              className="font-display text-[clamp(2.5rem,8vw,5.5rem)] leading-[1.05] tracking-tight text-coffee text-balance"
+              className="font-display text-[clamp(2.5rem,7vw,5.2rem)] leading-[1.08] tracking-tight text-coffee text-balance"
             >
               <div className="overflow-hidden py-1">
                 <span className="block animate-slide-up">
@@ -38,8 +45,9 @@ export function Hero() {
               </div>
               <div className="overflow-hidden py-1">
                 <span className="block animate-slide-up [animation-delay:150ms]">
-                  antara <span className="relative inline-block px-2">
-                    kebun
+                  antara{" "}
+                  <span className="relative inline-block px-2">
+                    agen AI
                     <svg
                       className="absolute -bottom-2 left-0 w-full opacity-60"
                       viewBox="0 0 200 12"
@@ -54,34 +62,42 @@ export function Hero() {
                         strokeLinecap="round"
                       />
                     </svg>
-                  </span>{" "}
-                  & kode.
+                  </span>
+                  , kode & agro.
                 </span>
               </div>
             </h1>
 
             <p
-              className="mt-10 max-w-xl text-lg leading-relaxed text-coffee/70 text-pretty animate-fade-up font-normal"
+              className="mt-8 max-w-xl text-lg leading-relaxed text-coffee/75 text-pretty animate-fade-up font-normal"
               style={{ animationDelay: "0.25s" }}
             >
-              Saya <strong className="text-coffee font-semibold">Roedy Rustam</strong> — Trainer UMKM dan konsultan pengembangan desa yang menemani petani kopi Sulawesi dari bukit Toraja sampai ke meja barista, sambil menulis kode untuk membuat rantai pasok mereka lebih jujur.
+              Saya <strong className="text-coffee font-semibold">Roedy Rustam</strong> — AI Systems & Agentic Developer serta Konsultan Agro-Industri. Mengintegrasikan Model Context Protocol (MCP), arsitektur multi-agen otonom, dan aplikasi edge modern dengan dampak nyata di rantai pasok kopi hulu-hilir Sulawesi.
             </p>
 
             <div
-              className="mt-12 flex flex-wrap items-center gap-6 animate-fade-up"
+              className="mt-10 flex flex-wrap items-center gap-5 animate-fade-up"
               style={{ animationDelay: "0.4s" }}
             >
               <Link
                 ref={magneticRef}
                 to="/"
                 hash="projects"
-                className="group relative inline-flex items-center gap-4 rounded-full bg-coffee px-8 py-5 font-mono text-[11px] uppercase tracking-[0.2em] text-cream transition-all duration-500 hover:bg-terracotta hover:scale-[1.03] active:scale-[0.98] shadow-xl shadow-coffee/10 hover:shadow-terracotta/25"
+                className="group relative inline-flex items-center gap-4 rounded-full bg-coffee px-8 py-4 font-mono text-[11px] uppercase tracking-[0.2em] text-cream transition-all duration-500 hover:bg-terracotta hover:scale-[1.03] active:scale-[0.98] shadow-xl shadow-coffee/10 hover:shadow-terracotta/25"
               >
-                Lihat karya
+                Lihat karya & agen
                 <span className="flex h-6 w-6 items-center justify-center rounded-full bg-cream/20 transition-transform duration-500 group-hover:rotate-45">→</span>
               </Link>
+
+              <Link
+                to="/"
+                hash="mcp-console"
+                className="inline-flex items-center gap-2 rounded-full border border-coffee/20 bg-cream-soft/60 px-6 py-4 font-mono text-[11px] uppercase tracking-[0.2em] text-coffee transition-all duration-300 hover:border-terracotta hover:bg-cream hover:text-terracotta"
+              >
+                Konsol MCP
+              </Link>
               
-              <div className="flex items-center gap-8 pl-2">
+              <div className="flex items-center gap-6 pl-2">
                 <button
                   onClick={() => window.print()}
                   className="group relative flex items-center font-mono text-[10px] uppercase tracking-[0.25em] text-coffee/60 transition-all hover:text-coffee"
@@ -100,20 +116,20 @@ export function Hero() {
             </div>
 
             <div
-              className="mt-20 grid grid-cols-3 gap-4 animate-fade-up md:gap-8"
+              className="mt-16 grid grid-cols-3 gap-4 animate-fade-up md:gap-8"
               style={{ animationDelay: "0.55s" }}
             >
               {[
-                { n: "7+", l: "Wilayah", icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-map-pin"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> },
-                { n: "4", l: "Digital", icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-code-2"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg> },
-                { n: "BNSP", l: "Trainer", icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-award"><path d="m12 15 5 5-5-5 5 5ZM12 15l-5 5 5-5-5 5Z"/><circle cx="12" cy="7" r="4"/></svg> },
+                { n: "MCP", l: "Protocol v1.x", icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-cpu"><rect width="16" height="16" x="4" y="4" rx="2"/><rect width="6" height="6" x="9" y="9" rx="1"/><path d="M15 2v2"/><path d="M15 20v2"/><path d="M2 15h2"/><path d="M2 9h2"/><path d="M20 15h2"/><path d="M20 9h2"/><path d="M9 2v2"/><path d="M9 20v2"/></svg> },
+                { n: "6+", l: "Karya Digital", icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-code-2"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg> },
+                { n: "BNSP", l: "Agro Planner", icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-award"><path d="m12 15 5 5-5-5 5 5ZM12 15l-5 5 5-5-5 5Z"/><circle cx="12" cy="7" r="4"/></svg> },
               ].map((s) => (
                 <div key={s.l} className="group relative overflow-hidden rounded-3xl border border-coffee/5 bg-cream-soft/40 p-6 backdrop-blur-xl transition-all duration-500 hover:bg-cream-soft/60 hover:shadow-2xl hover:shadow-coffee/5">
                   <div className="absolute -right-2 -top-2 text-3xl opacity-[0.05] transition-all duration-700 group-hover:rotate-12 group-hover:scale-150 group-hover:opacity-[0.1]">
                     {s.icon}
                   </div>
                   <div className="font-display text-4xl text-coffee/90">{s.n}</div>
-                  <div className="mt-3 font-mono text-[9px] uppercase tracking-[0.25em] text-coffee/40 font-medium">
+                  <div className="mt-3 font-mono text-[9px] uppercase tracking-[0.25em] text-coffee/50 font-medium">
                     {s.l}
                   </div>
                 </div>
@@ -138,23 +154,23 @@ export function Hero() {
               </div>
 
               {/* Origin badge - Glassmorphism floating */}
-              <div className="absolute -bottom-8 -left-8 max-w-[220px] rotate-[-2deg] rounded-3xl border border-cream/50 bg-cream/80 p-6 shadow-2xl backdrop-blur-2xl transition-transform duration-500 hover:rotate-0 hover:scale-105">
+              <div className="absolute -bottom-8 -left-8 max-w-[220px] rotate-[-2deg] rounded-3xl border border-cream/50 bg-cream/85 p-6 shadow-2xl backdrop-blur-2xl transition-transform duration-500 hover:rotate-0 hover:scale-105">
                 <div className="flex items-center gap-3">
                   <span className="flex h-8 w-8 items-center justify-center rounded-full bg-terracotta/10 text-terracotta">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-coffee"><path d="M10 2v2"/><path d="M14 2v2"/><path d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h12Z"/><path d="M17 12h2a2 2 0 0 1 0 4h-2"/></svg>
                   </span>
                   <div className="leading-tight">
                     <span className="block font-mono text-[9px] uppercase tracking-[0.25em] text-terracotta font-bold">
-                      Impact Areas
+                      Domain Impact
                     </span>
                     <div className="mt-1 font-display text-base text-coffee">Toraja · Barru · Sinjai</div>
                   </div>
                 </div>
               </div>
 
-              {/* Single origin badge - Concentric Capsule */}
-              <div className="absolute -top-6 -right-6 rotate-[8deg] rounded-full border border-cream/50 bg-coffee/90 px-6 py-3 font-mono text-[10px] uppercase tracking-[0.3em] text-cream shadow-2xl backdrop-blur-xl transition-all duration-500 hover:rotate-0 hover:scale-110">
-                Sociopreneur
+              {/* Dual-Engine badge - Concentric Capsule */}
+              <div className="absolute -top-6 -right-6 rotate-[6deg] rounded-full border border-cream/50 bg-coffee/95 px-6 py-3 font-mono text-[10px] uppercase tracking-[0.25em] text-cream shadow-2xl backdrop-blur-xl transition-all duration-500 hover:rotate-0 hover:scale-110">
+                AI × Agro Systems
               </div>
             </div>
           </div>

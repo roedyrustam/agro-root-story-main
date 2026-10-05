@@ -6,24 +6,24 @@ import portrait from "@/assets/about-portrait.jpg";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "Tentang — Roedy Rustam · Sociopreneur  × Agro × Digital" },
+      { title: "Tentang — Roedy Rustam · AI Systems & Agentic Developer × Agro-Tech" },
       {
         name: "description",
         content:
-          "Cerita Roedy Rustam: Trainer UMKM & Konsultan Desa yang menjembatani kebun kopi Sulawesi dengan baris kode dan pemberdayaan komunitas.",
+          "Cerita Roedy Rustam: AI Systems Architect & Konsultan Agro-Industri yang menjembatani kebun kopi Sulawesi dengan arsitektur agen otonom, Model Context Protocol (MCP), dan pemberdayaan komunitas.",
       },
-      { property: "og:title", content: "Tentang Roedy Rustam — Trainer × Agro × Digital" },
+      { property: "og:title", content: "Tentang Roedy Rustam — AI Systems × Agro-Tech Sociopreneur" },
       {
         property: "og:description",
         content:
-          "Trainer UMKM, Konsultan Desa, dan pengembang sistem agro-komunitas dengan latar Teknik Industri.",
+          "AI Systems Architect, Pengembang Server MCP, dan Konsultan Agro-Industri dengan latar Teknik Industri & sertifikasi BNSP.",
       },
       { property: "og:image", content: "/og-about.jpg" },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
       { property: "og:type", content: "profile" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Tentang Roedy Rustam — Praktisi Agro × Digital" },
+      { name: "twitter:title", content: "Tentang Roedy Rustam — AI Systems & Agro-Tech" },
       { name: "twitter:image", content: "/og-about.jpg" },
     ],
   }),
@@ -34,38 +34,43 @@ const principles = [
   {
     n: "01",
     title: "Mulai dari lapangan",
-    body: "Solusi yang baik dilahirkan di kebun, di belakang mesin kasir, di rapat komunitas — bukan di whiteboard. Saya mendengar dulu, mengetik kemudian.",
+    body: "Solusi yang baik dilahirkan di kebun, di belakang mesin kasir, di rapat komunitas — bukan di whiteboard. Saya mendengar dulu, merancang sistem kemudian.",
   },
   {
     n: "02",
     title: "Sederhana adalah disiplin",
-    body: "Setiap fitur harus berjuang untuk eksis. Yang dibuang sama pentingnya dengan yang dibangun. Petani dan pemilik warung tidak punya waktu untuk training.",
+    body: "Setiap fitur dan protokol harus berjuang untuk eksis. Yang dibuang sama pentingnya dengan yang dibangun. Agen AI harus mempermudah, bukan membingungkan pengguna.",
   },
   {
     n: "03",
     title: "Transparansi sebagai nilai",
-    body: "Data yang jujur menghasilkan harga yang adil. Sistem yang saya bangun selalu menempatkan keterlacakan di atas kosmetik.",
+    body: "Data yang jujur menghasilkan harga yang adil. Sistem dan protokol agen yang saya bangun selalu menempatkan keterlacakan di atas kosmetik.",
   },
   {
     n: "04",
     title: "Komunitas dulu, produk kemudian",
-    body: "Teknologi adalah alat, bukan tujuan. Yang saya kerjakan harus memperkuat tata kelola yang sudah ada di komunitas, bukan menggantinya.",
+    body: "Teknologi adalah alat kedaulatan, bukan tujuan. Rekayasa cerdas harus memperkuat daya tawar komunitas dan petani, bukan mengeksploitasinya.",
   },
 ];
 
 const toolbox = {
+  "AI & Agen": [
+    "Model Context Protocol (MCP v1.x)",
+    "Autonomous Multi-Agent Swarms",
+    "Tool Calling & Structured JSON-RPC",
+    "LangGraph & Edge AI Workflows",
+  ],
   Lapangan: [
-    "Perencanaan produksi agro",
+    "Perencanaan produksi agro (BNSP)",
     "Manajemen rantai pasok kopi",
-    "Quality control & cupping basics",
-    "Pelatihan & Literasi Digital UMKM",
-    "Konsultansi Pengembangan Ekonomi Desa",
+    "Quality control & SCA protocols",
+    "Konsultansi ekonomi BUMDes",
   ],
   Studio: [
-    "React & TypeScript",
-    "SQL & data modeling",
-    "Sistem informasi akuntansi",
-    "Excel power-user",
+    "React 19 & TanStack Start",
+    "TypeScript & Python",
+    "Cloudflare Edge Workers",
+    "Type-safe SQL Data Modeling",
   ],
   Manusia: [
     "Bahasa Indonesia",
@@ -185,31 +190,31 @@ function AboutPage() {
             <div className="grid gap-6 sm:grid-cols-2 lg:w-[60%]">
               <div className="p-8 rounded-3xl bg-card border border-coffee/5 shadow-sm group/card hover:border-terracotta/20 transition-colors">
                 <div className="mb-4 text-terracotta">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-cpu"><rect width="16" height="16" x="4" y="4" rx="2"/><rect width="6" height="6" x="9" y="9" rx="1"/><path d="M15 2v2"/><path d="M15 20v2"/><path d="M2 15h2"/><path d="M2 9h2"/><path d="M20 15h2"/><path d="M20 9h2"/><path d="M9 2v2"/><path d="M9 20v2"/></svg>
+                </div>
+                <h3 className="font-display text-xl text-coffee">Model Context Protocol (MCP)</h3>
+                <p className="mt-2 text-sm text-coffee/60">Membangun server MCP terbuka untuk mengintegrasikan agen AI otonom langsung dengan data inventori kopi dan telemetri kebun.</p>
+              </div>
+              <div className="p-8 rounded-3xl bg-card border border-coffee/5 shadow-sm group/card hover:border-terracotta/20 transition-colors">
+                <div className="mb-4 text-terracotta">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-network"><rect x="16" y="16" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="9" y="2" width="6" height="6" rx="1"/><path d="m5 16 4-8 4 8"/><path d="M12 10v6"/></svg>
+                </div>
+                <h3 className="font-display text-xl text-coffee">Multi-Agent Swarms</h3>
+                <p className="mt-2 text-sm text-coffee/60">Eksplorasi orkestrasi kolaboratif sub-agen untuk verifikasi mutu, mitigasi risiko cuaca logistik, dan transparansi harga.</p>
+              </div>
+              <div className="p-8 rounded-3xl bg-card border border-coffee/5 shadow-sm group/card hover:border-terracotta/20 transition-colors">
+                <div className="mb-4 text-terracotta">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-coffee"><path d="M10 2v2"/><path d="M14 2v2"/><path d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h12Z"/><path d="M17 12h2a2 2 0 0 1 0 4h-2"/></svg>
                 </div>
-                <h3 className="font-display text-xl text-coffee">Digital Sensory</h3>
-                <p className="mt-2 text-sm text-coffee/60">Mengintegrasikan standar SCA (Specialty Coffee Association) terbaru ke dalam sistem CuppingNotes.</p>
+                <h3 className="font-display text-xl text-coffee">Digital Sensory & SCA</h3>
+                <p className="mt-2 text-sm text-coffee/60">Mengintegrasikan standar SCA Coffee Value Assessment (CVA) terbaru ke dalam platform CuppingNotes.online.</p>
               </div>
               <div className="p-8 rounded-3xl bg-card border border-coffee/5 shadow-sm group/card hover:border-terracotta/20 transition-colors">
                 <div className="mb-4 text-terracotta">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-truck"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-5l-4-4h-3v9Z"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-shield-check"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
                 </div>
-                <h3 className="font-display text-xl text-coffee">Smart Supply Chain</h3>
-                <p className="mt-2 text-sm text-coffee/60">Optimasi logistik kopi dari hulu Sulawesi ke pasar strategis di Jakarta dan luar negeri.</p>
-              </div>
-              <div className="p-8 rounded-3xl bg-card border border-coffee/5 shadow-sm group/card hover:border-terracotta/20 transition-colors">
-                <div className="mb-4 text-terracotta">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-bar-chart-3"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
-                </div>
-                <h3 className="font-display text-xl text-coffee">Data Literacy</h3>
-                <p className="mt-2 text-sm text-coffee/60">Mengembangkan kurikulum data sederhana untuk BUMDes agar mandiri dalam mengelola potensi ekonomi.</p>
-              </div>
-              <div className="p-8 rounded-3xl bg-card border border-coffee/5 shadow-sm group/card hover:border-terracotta/20 transition-colors">
-                <div className="mb-4 text-terracotta">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-sprout"><path d="M7 20h10"/><path d="M10 20c5.5-3 5.5-13 0-16"/><path d="M10 13c4.5 1.5 5 6 5 6"/><path d="M10 8c5.5-3 5.5-13 0-16"/><path d="M10 13c-4.5 1.5-5 6-5 6"/><path d="M10 8c-5.5-3-5.5-13 0-16"/></svg>
-                </div>
-                <h3 className="font-display text-xl text-coffee">Regenerative Agro</h3>
-                <p className="mt-2 text-sm text-coffee/60">Mempelajari praktik pertanian regeneratif untuk menjaga kelestarian tanah di wilayah dampingan.</p>
+                <h3 className="font-display text-xl text-coffee">Kedaulatan Data BUMDes</h3>
+                <p className="mt-2 text-sm text-coffee/60">Mengembangkan kedaulatan data dan literasi mandiri untuk desa agar tangguh menghadapi disrupsi ekonomi digital.</p>
               </div>
             </div>
           </div>

@@ -1,40 +1,38 @@
-import { SectionLabel } from "./SectionLabel";
-
 const groups = [
   {
-    title: "Operasional Agro",
+    title: "AI & Agentic Systems",
     items: [
-      "Perencanaan produksi",
-      "Manajemen rantai pasok",
-      "Quality control kopi",
-      "Standar pasar ekspor",
+      "Model Context Protocol (MCP v1.x)",
+      "Autonomous Multi-Agent Swarms",
+      "Tool Calling & Structured Outputs",
+      "LangGraph & Edge AI Integration",
     ],
   },
   {
-    title: "Pemberdayaan",
+    title: "Modern Fullstack & Edge",
     items: [
-      "Fasilitasi Radio Komunitas",
-      "Literasi Digital Desa (Pandu Desa)",
+      "React 19 & TanStack Start (SSR)",
+      "TypeScript 5.8+ & Python",
+      "Cloudflare Workers & Pages Edge",
+      "Type-Safe APIs & SQL Modeling",
+    ],
+  },
+  {
+    title: "Operasional Agro & Kopi",
+    items: [
+      "Perencanaan produksi agro (BNSP)",
+      "Manajemen rantai pasok kopi",
+      "Quality control kopi (SCA Protocols)",
+      "Standarisasi pasar & kesiapan ekspor",
+    ],
+  },
+  {
+    title: "Pemberdayaan & Konteks",
+    items: [
+      "Kedaulatan digital desa (Pandu Desa)",
+      "Fasilitasi radio komunitas (JRKI)",
       "Pendampingan UMKM & BUMDes",
-      "Komunikasi lintas pemangku",
-    ],
-  },
-  {
-    title: "Teknis & Digital",
-    items: [
-      "React & TypeScript",
-      "SQL & data modeling",
-      "Sistem informasi akuntansi",
-      "Manajemen data (Excel)",
-    ],
-  },
-  {
-    title: "Bahasa & Konteks",
-    items: [
-      "Bahasa Indonesia",
-      "Bahasa Bugis",
-      "Komunikasi lintas budaya",
-      "Pemahaman komunitas adat",
+      "Bahasa Bugis & komunikasi lintas budaya",
     ],
   },
 ];
@@ -46,12 +44,12 @@ export function Skills() {
         <div className="flex items-center gap-3 font-mono text-xs uppercase tracking-[0.25em] text-mustard">
           <span>06</span>
           <span className="h-px w-8 bg-mustard/60" />
-          <span className="text-cream/70">Keahlian</span>
+          <span className="text-cream/70">Keahlian & Toolkit</span>
         </div>
 
         <h2 className="mt-6 max-w-3xl font-display text-[clamp(2rem,5vw,4rem)] leading-[1.05] text-cream">
           Toolkit yang dibentuk lapangan, <br />
-          bukan ruang kelas.
+          diperkuat <span className="italic text-mustard">arsitektur agen cerdas.</span>
         </h2>
 
         <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
@@ -79,7 +77,8 @@ export function Skills() {
         </div>
 
         <div className="mt-12 flex flex-wrap items-center gap-4 border-t border-cream/15 pt-8 font-mono text-xs uppercase tracking-[0.2em] text-cream/60">
-          <span>Kredensial:</span>
+          <span>Kredensial & Spesialisasi:</span>
+          <span className="text-mustard">★ Model Context Protocol (MCP) Architect</span>
           <span className="text-mustard">★ BNSP Perencanaan Produksi Industri Agro (2019)</span>
           <span className="text-mustard">★ Pelatih Kewirausahaan UMKM · BNSP</span>
           <span className="text-mustard">★ Rewako Export · Bank Indonesia</span>
