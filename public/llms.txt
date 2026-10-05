@@ -18,6 +18,13 @@
 - [Kafeya POS -> https://roedyrustam.pages.dev/projects/kafeya]: An accounting and point of sale tool built specifically for small coffee shop owners (UMKM).
 - [Pandu Desa 4.0 -> https://roedyrustam.pages.dev/projects/pandudesa]: A digital transformation initiative for village governance, economy mapping, and digital literacy.
 
+## Open Source & GitHub Ecosystem (https://github.com/roedyrustam)
+- [vibes-plug -> https://github.com/roedyrustam/vibes-plug]: 73★, 18 forks, published npm package (`vibes-plug`). Universal Skill AI Agent Swarm Architecture for Google Antigravity, Claude Code, Cursor, and Windsurf enabling Vibe Coding 2.0 with zero tech debt.
+- [sinapsai -> https://github.com/roedyrustam/sinapsai]: In-process AI Gateway & Control Plane with Circuit Breaker, Automatic Failover, and Unified LLM API for Node.js & TypeScript.
+- [doku-gemini-mcp -> https://github.com/roedyrustam/doku-gemini-mcp]: Model Context Protocol (MCP) Server connecting Gemini & Antigravity agents to DOKU Payment Gateway (VA, QRIS, SNAP BI).
+- [API-Wilayah-2024 -> https://github.com/roedyrustam/API-Wilayah-2024]: 21★, 10 forks. Indonesian administrative geographic hierarchy data and open REST API for village-level spatial queries.
+- [macli & multi_agent_cli -> https://github.com/roedyrustam/macli]: Autonomous multi-agent CLI tooling and execution runtime.
+
 ## Core Competencies & Tech Stack
 - AI & Agentic Systems: Model Context Protocol (MCP v1.x), Multi-Agent Swarms, Tool Calling, Structured Outputs, LangGraph, Vercel AI SDK, Context Window Engineering.
 - Fullstack & Edge: React 19, TanStack Start (SSR), TanStack Router, TypeScript 5.8+, Tailwind CSS v4, Cloudflare Pages/Workers.
@@ -25,6 +32,8 @@
 
 ## Key Facts
 - Founded Sehati Kopi Indonesia in 2025 to manage coffee operations and digital supply logistics.
+- Open Source author of `vibes-plug` (73★, npm) and `API-Wilayah-2024` (21★).
+- GitHub Profile: https://github.com/roedyrustam with active agentic and AI infrastructure repositories.
 - Industrial Engineering background with specialized BNSP Agro Industrial Sektor certification.
 - Pioneer in community networks (Radio Komunitas Jirak Celebes, JRKI) and village-level digital sovereignty.
 - Creator of beanhub.online, cuppingnotes.online, kafeya.online, and open-source MCP tools for agricultural data.

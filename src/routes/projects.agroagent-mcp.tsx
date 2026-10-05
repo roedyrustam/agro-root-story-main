@@ -3,7 +3,7 @@ import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { generateSoftwareAppSchema, generateBreadcrumbSchema } from "@/lib/schema";
 import agroagentImg from "../assets/project-agroagent-mcp.jpg";
-import { Terminal, Cpu, Database, ShieldCheck, CheckCircle2, ArrowLeft, ArrowRight } from "lucide-react";
+import { Terminal, Cpu, Database, ShieldCheck, CheckCircle2, ArrowLeft, ArrowRight, Github } from "lucide-react";
 
 export const Route = createFileRoute("/projects/agroagent-mcp")({
   head: () => ({
@@ -88,6 +88,26 @@ function AgroAgentMcpPage() {
             Implementasi server berstandar open <strong>Model Context Protocol (MCP)</strong> yang memungkinkan asisten AI masa depan melakukan *tool discovery*, membaca telemetri panen kopi, dan memvalidasi lot biji secara terenkripsi langsung dari edge server di Sulawesi.
           </p>
 
+          <div className="mt-8 flex flex-wrap gap-4">
+            <a
+              href="https://github.com/roedyrustam/doku-gemini-mcp"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 px-6 py-3 font-mono text-xs uppercase tracking-wider text-stone-950 font-bold hover:scale-105 transition-all shadow-lg shadow-amber-500/20"
+            >
+              <Github className="h-4 w-4" />
+              <span>doku-gemini-mcp di GitHub ↗</span>
+            </a>
+            <a
+              href="https://github.com/roedyrustam"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-6 py-3 font-mono text-xs uppercase tracking-wider text-stone-300 hover:border-amber-400 hover:text-white transition-colors"
+            >
+              <span>Semua MCP di @roedyrustam ↗</span>
+            </a>
+          </div>
+
           <div className="mt-12 overflow-hidden rounded-3xl border border-white/10 shadow-2xl">
             <img
               src={agroagentImg}
@@ -99,20 +119,20 @@ function AgroAgentMcpPage() {
       </section>
 
       {/* Deep Dive Architecture */}
-      <section className="py-24 bg-background">
+      <section className="py-24 bg-[#090807]">
         <div className="content-container">
           <div className="grid gap-16 lg:grid-cols-12">
             <div className="lg:col-span-5 space-y-6">
-              <span className="font-mono text-xs uppercase tracking-[0.2em] text-mustard">
+              <span className="font-mono text-xs uppercase tracking-[0.2em] text-amber-400 font-semibold">
                 01 · Latar Belakang & Masalah
               </span>
-              <h2 className="font-display text-3xl md:text-4xl text-coffee leading-tight">
+              <h2 className="font-display text-3xl md:text-4xl text-white leading-tight font-bold">
                 Mengapa Ekosistem Pertanian Membutuhkan MCP Server?
               </h2>
-              <p className="text-base leading-relaxed text-coffee/75">
+              <p className="text-base leading-relaxed text-stone-300">
                 Model Bahasa Besar (LLM) umumnya terisolasi dari database riil di perkebunan rakyat. Petani, konsultan desa, dan roaster membutuhkan asisten AI yang tidak sekadar berhalusinasi, melainkan memiliki akses langsung ke data telemetri, kelembaban biji kopi (*moisture*), elevasi GPS, dan histori transaksi koperasi.
               </p>
-              <p className="text-base leading-relaxed text-coffee/75">
+              <p className="text-base leading-relaxed text-stone-300">
                 Dengan mengadopsi spesifikasi **Model Context Protocol (MCP v1.x)**, AgroAgent menyediakan lapisan interoperabilitas standar yang kompatibel dengan Claude Desktop, Cursor AI, maupun sub-agent swarms otonom.
               </p>
 

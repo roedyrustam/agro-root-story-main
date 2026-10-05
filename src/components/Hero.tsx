@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useMagnetic } from "@/hooks/use-magnetic";
+import { Github, Star } from "lucide-react";
 import heroImg from "../assets/hero-coffee.jpg";
 import { LiquidImage } from "./LiquidImage";
 
@@ -30,6 +31,16 @@ export function Hero() {
                 </span>
                 NODE: AGENTIC DEV ONLINE
               </span>
+              <a
+                href="https://github.com/roedyrustam"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1 font-mono text-[10px] uppercase tracking-wider text-stone-300 hover:border-amber-400/40 hover:text-white transition-colors"
+              >
+                <Github className="h-3 w-3 text-stone-400" />
+                <span>@roedyrustam</span>
+                <span className="rounded-full bg-amber-400/20 px-1.5 py-0.5 text-[9px] text-amber-300 font-bold">73★</span>
+              </a>
               <span className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-stone-300">
                 <span className="text-amber-400">⚡</span> MCP v1.x Ready
               </span>
@@ -81,11 +92,21 @@ export function Hero() {
                 <span className="text-emerald-400">▶</span> Konsol MCP
               </Link>
 
+              <a
+                href="https://github.com/roedyrustam"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-5 py-3.5 font-mono text-[11px] uppercase tracking-[0.2em] text-stone-200 transition-all duration-300 hover:border-amber-400/50 hover:bg-white/10 hover:text-white backdrop-blur-md"
+              >
+                <Github className="h-3.5 w-3.5 text-amber-400" />
+                <span>GitHub ↗</span>
+              </a>
+
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2 px-4 py-3 font-mono text-[11px] uppercase tracking-[0.2em] text-stone-400 transition-colors hover:text-amber-300"
+                className="inline-flex items-center gap-2 px-3 py-3 font-mono text-[11px] uppercase tracking-[0.2em] text-stone-400 transition-colors hover:text-amber-300"
               >
-                Konsultasi & Kontak ↗
+                Kontak ↗
               </Link>
             </div>
           </div>

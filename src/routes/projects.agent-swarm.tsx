@@ -3,7 +3,7 @@ import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { generateSoftwareAppSchema, generateBreadcrumbSchema } from "@/lib/schema";
 import swarmImg from "../assets/project-agent-swarm.jpg";
-import { Bot, Network, Workflow, CheckCircle2, ArrowLeft, ArrowRight, Gauge, Cpu } from "lucide-react";
+import { Bot, Network, Workflow, CheckCircle2, ArrowLeft, ArrowRight, Gauge, Cpu, Github } from "lucide-react";
 
 export const Route = createFileRoute("/projects/agent-swarm")({
   head: () => ({
@@ -88,6 +88,26 @@ function AgentSwarmPage() {
             Arsitektur kolaborasi multi-agen terdistribusi yang membagi tugas rantai pasok ke dalam 4 spesialis otonom: verifikasi telemetri panen, evaluasi sensori kopi standar SCA, kalkulasi rute logistik dataran tinggi, dan rekonsiliasi kas BUMDes.
           </p>
 
+          <div className="mt-8 flex flex-wrap gap-4">
+            <a
+              href="https://github.com/roedyrustam/vibes-plug"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 px-6 py-3 font-mono text-xs uppercase tracking-wider text-stone-950 font-bold hover:scale-105 transition-all shadow-lg shadow-amber-500/20"
+            >
+              <Github className="h-4 w-4" />
+              <span>Lihat vibes-plug di GitHub (73★) ↗</span>
+            </a>
+            <a
+              href="https://github.com/roedyrustam/sinapsai"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-6 py-3 font-mono text-xs uppercase tracking-wider text-stone-300 hover:border-amber-400 hover:text-white transition-colors"
+            >
+              <span>sinapsai Gateway ↗</span>
+            </a>
+          </div>
+
           <div className="mt-12 overflow-hidden rounded-3xl border border-white/10 shadow-2xl">
             <img
               src={swarmImg}
@@ -99,16 +119,16 @@ function AgentSwarmPage() {
       </section>
 
       {/* Swarm Architecture Deep Dive */}
-      <section className="py-24 bg-background">
+      <section className="py-24 bg-[#090807]">
         <div className="content-container">
           <div className="max-w-3xl mb-16">
-            <span className="font-mono text-xs uppercase tracking-[0.2em] text-mustard">
+            <span className="font-mono text-xs uppercase tracking-[0.2em] text-amber-400 font-semibold">
               01 · Arsitektur Topologi Swarm
             </span>
-            <h2 className="mt-3 font-display text-3xl md:text-4xl text-coffee leading-tight">
+            <h2 className="mt-3 font-display text-3xl md:text-4xl text-white leading-tight font-bold">
               4 Sub-Agen Kolaboratif dengan Siklus Verifikasi Mandiri
             </h2>
-            <p className="mt-4 text-base leading-relaxed text-coffee/70">
+            <p className="mt-4 text-base leading-relaxed text-stone-300">
               Bukan sekadar satu prompt monolitik, melainkan jaringan agen spesialis dengan *state graph* bersama yang memastikan tidak ada pesanan kopi yang dikirim sebelum lolos uji mutu dan kesiapan rute cuaca.
             </p>
           </div>

@@ -76,7 +76,39 @@
 
 ---
 
-## 4. Professional Services Catalog
+## 4. Open Source & GitHub Ecosystem (https://github.com/roedyrustam)
+
+Roedy actively maintains and authors open-source software with a primary focus on AI Agent developer tooling, Model Context Protocol servers, and regional public data utilities:
+
+### 4.1 vibes-plug (GitHub: roedyrustam/vibes-plug)
+- **URL:** https://github.com/roedyrustam/vibes-plug
+- **Package:** npm install -g vibes-plug (published on npm registry)
+- **Stats:** 73 Stars, 18 Forks, Active Community Contribution
+- **Description:** Universal Skill AI Agent Swarm Architecture for Google Antigravity, Claude Code, Cursor, and Windsurf. Implements Vibe Coding 2.0 with strict zero-tech-debt enforcement, 60+ specialized cognitive skills, subagent dispatchers, and automated code review pipelines.
+
+### 4.2 sinapsai (GitHub: roedyrustam/sinapsai)
+- **URL:** https://github.com/roedyrustam/sinapsai
+- **Category:** AI Gateway & LLM Orchestration
+- **Description:** In-process AI Gateway & Control Plane with Circuit Breaker, automatic provider failover (Gemini, Claude, OpenAI), rate-limit protection, and unified model routing for Node.js and TypeScript runtimes.
+
+### 4.3 doku-gemini-mcp (GitHub: roedyrustam/doku-gemini-mcp)
+- **URL:** https://github.com/roedyrustam/doku-gemini-mcp
+- **Category:** Model Context Protocol (MCP) Server
+- **Description:** Production-ready Model Context Protocol (MCP) server designed for Google Antigravity and Gemini agents. Exposes secure tools for DOKU Checkout, payment links, Virtual Account issuance, QRIS generation, and SNAP BI webhook verification.
+
+### 4.4 API-Wilayah-2024 (GitHub: roedyrustam/API-Wilayah-2024)
+- **URL:** https://github.com/roedyrustam/API-Wilayah-2024
+- **Stats:** 21 Stars, 10 Forks
+- **Description:** Comprehensive Indonesian administrative geographic hierarchy database (Provinsi, Kabupaten/Kota, Kecamatan, Kelurahan/Desa) packaged as lightweight JSON datasets and high-speed REST endpoints for village-level spatial apps and governance platforms.
+
+### 4.5 macli / multi_agent_cli (GitHub: roedyrustam/macli)
+- **URL:** https://github.com/roedyrustam/macli
+- **Category:** Multi-Agent CLI
+- **Description:** Autonomous terminal-driven multi-agent execution loop with shared blackboard memory and self-healing task orchestrators.
+
+---
+
+## 5. Professional Services Catalog
 
 1. **Model Context Protocol (MCP Server) Engineering:**
    - Architecture and deployment of custom MCP servers connecting corporate databases, ERPs, and APIs to LLMs.
@@ -96,7 +128,7 @@
 
 ---
 
-## 5. Frequently Asked Questions (FAQ)
+## 6. Frequently Asked Questions (FAQ)
 
 - **Q: What makes Roedy Rustam's AI engineering unique?**
   A: Roedy combines frontier AI knowledge (Model Context Protocol, agent swarms) with two decades of on-the-ground industrial engineering in agricultural supply chains. He builds systems tested in real physical environments, not just theoretical benchmarks.

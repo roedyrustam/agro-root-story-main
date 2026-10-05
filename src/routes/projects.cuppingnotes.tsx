@@ -128,30 +128,30 @@ function CuppingNotesPage() {
       </section>
 
       {/* Narrative Section: The Consultant's View */}
-      <section className="py-24 md:py-32 bg-cream-soft border-b border-border">
+      <section className="py-24 md:py-32 bg-[#0e0c0a] border-b border-white/10">
         <div className="mx-auto max-w-6xl px-6 md:px-10">
           <div className="grid gap-16 lg:grid-cols-2 lg:items-start">
             <div className="space-y-8">
-              <div className="font-mono text-xs uppercase tracking-[0.2em] text-terracotta">Catatan Konsultan</div>
-              <h2 className="font-display text-4xl text-coffee leading-[1.1]">
+              <div className="font-mono text-xs uppercase tracking-[0.2em] text-amber-400 font-semibold">Catatan Konsultan</div>
+              <h2 className="font-display text-4xl text-white leading-[1.1] font-bold">
                 "Data sensoris adalah <br />
-                <span className="italic">bahasa universal</span> <br />
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-300">bahasa universal</span> <br />
                 industri kopi."
               </h2>
-              <p className="text-lg leading-relaxed text-coffee/75">
+              <p className="text-lg leading-relaxed text-stone-300">
                 Dalam rantai pasok global, skor *cupping* adalah penentu harga. Tanpa sistem yang standar, perdebatan kualitas antara petani dan pembeli seringkali merugikan pihak yang lebih lemah.
               </p>
-              <p className="text-lg leading-relaxed text-coffee/75">
+              <p className="text-lg leading-relaxed text-stone-300">
                 CuppingNotes saya bangun untuk memberikan standarisasi evaluasi di lapangan. Dengan algoritma yang menghitung skor SCA secara otomatis dan visualisasi radar chart, platform ini memungkinkan roaster di Jakarta atau mancanegara "melihat" potensi rasa kopi dari Toraja atau Enrekang sebelum fisik kopinya sampai.
               </p>
             </div>
             <div className="relative">
-              <div className="aspect-[4/5] rounded-3xl overflow-hidden bg-coffee/5 border border-border shadow-2xl">
-                <div className="absolute inset-0 bg-coffee/5" />
+              <div className="aspect-[4/5] rounded-3xl overflow-hidden bg-[#14110e] border border-white/10 shadow-2xl">
+                <div className="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-transparent to-transparent" />
                 <div className="relative h-full p-10 flex flex-col justify-end">
-                  <div className="font-mono text-sm text-terracotta">Protocol Standard</div>
-                  <div className="mt-2 font-display text-5xl text-coffee">SCA</div>
-                  <div className="mt-2 text-coffee/70">Kepatuhan penuh pada protokol Coffee Value Assessment.</div>
+                  <div className="font-mono text-sm text-amber-400 font-semibold">Protocol Standard</div>
+                  <div className="mt-2 font-display text-6xl text-white font-bold">SCA</div>
+                  <div className="mt-2 text-stone-400">Kepatuhan penuh pada protokol Coffee Value Assessment.</div>
                 </div>
               </div>
             </div>
@@ -165,34 +165,34 @@ function CuppingNotesPage() {
           <div className="md:col-span-4 lg:col-span-3">
             <div className="sticky top-32 space-y-8">
               <div>
-                <h3 className="font-mono text-[10px] uppercase tracking-[0.2em] text-coffee/70">
+                <h3 className="font-mono text-[10px] uppercase tracking-[0.2em] text-amber-400 font-bold">
                   Role
                 </h3>
-                <p className="mt-2 text-sm text-coffee/80">
+                <p className="mt-2 text-sm text-stone-300">
                   Fullstack Developer & System Architect
                 </p>
               </div>
               <div>
-                <h3 className="font-mono text-[10px] uppercase tracking-[0.2em] text-coffee/70">
+                <h3 className="font-mono text-[10px] uppercase tracking-[0.2em] text-amber-400 font-bold">
                   Stack
                 </h3>
-                <ul className="mt-2 space-y-1 text-sm text-coffee/80">
+                <ul className="mt-2 space-y-1 text-sm text-stone-300">
                   <li>Angular 21 (Signals, SSR)</li>
                   <li>Firebase (Auth, Firestore, Storage)</li>
                   <li>Tailwind CSS (Glassmorphism)</li>
                 </ul>
               </div>
               <div>
-                <h3 className="font-mono text-[10px] uppercase tracking-[0.2em] text-coffee/70">
+                <h3 className="font-mono text-[10px] uppercase tracking-[0.2em] text-amber-400 font-bold">
                   Context
                 </h3>
-                <p className="mt-2 text-sm text-coffee/80">Production-grade coffee platform.</p>
+                <p className="mt-2 text-sm text-stone-300">Production-grade coffee platform.</p>
               </div>
             </div>
           </div>
 
           <div className="space-y-16 md:col-span-8 md:col-start-6 lg:col-span-7">
-            <article className="prose prose-stone max-w-none prose-p:leading-relaxed prose-p:text-coffee/80 prose-headings:font-display prose-headings:text-coffee prose-strong:text-terracotta">
+            <article className="prose prose-invert max-w-none prose-p:leading-relaxed prose-p:text-stone-300 prose-headings:font-display prose-headings:text-white prose-strong:text-amber-400">
               <h2>Latar Belakang</h2>
               <p>
                 Evaluasi kualitas kopi (cupping) adalah proses vital bagi roaster dan Q-Grader.
@@ -210,30 +210,30 @@ function CuppingNotesPage() {
 
               <h2>Solusi Arsitektural</h2>
               <div className="my-8 grid gap-6 sm:grid-cols-2">
-                <div className="rounded-2xl bg-cream-soft p-6">
-                  <h4 className="mt-0 font-display text-xl">Mobile Stability</h4>
-                  <p className="mb-0 text-sm opacity-80">
+                <div className="rounded-2xl border border-white/10 bg-[#14110e]/80 p-6 transition-colors hover:border-amber-400/30">
+                  <h4 className="mt-0 font-display text-xl text-white font-bold">Mobile Stability</h4>
+                  <p className="mb-0 text-sm text-stone-300">
                     Penggunaan Angular 21 Signals untuk reaktivitas UI tingkat tinggi, menjamin
                     state tidak rusak walau koneksi terputus sesaat.
                   </p>
                 </div>
-                <div className="rounded-2xl bg-cream-soft p-6">
-                  <h4 className="mt-0 font-display text-xl">Data Integrity</h4>
-                  <p className="mb-0 text-sm opacity-80">
+                <div className="rounded-2xl border border-white/10 bg-[#14110e]/80 p-6 transition-colors hover:border-amber-400/30">
+                  <h4 className="mt-0 font-display text-xl text-white font-bold">Data Integrity</h4>
+                  <p className="mb-0 text-sm text-stone-300">
                     Penerapan Firebase Security Rules yang ketat dan atomic transactions mencegah
                     spoofing skor dan modifikasi data tanpa otorisasi.
                   </p>
                 </div>
-                <div className="rounded-2xl bg-cream-soft p-6">
-                  <h4 className="mt-0 font-display text-xl">Social Sharing</h4>
-                  <p className="mb-0 text-sm opacity-80">
+                <div className="rounded-2xl border border-white/10 bg-[#14110e]/80 p-6 transition-colors hover:border-amber-400/30">
+                  <h4 className="mt-0 font-display text-xl text-white font-bold">Social Sharing</h4>
+                  <p className="mb-0 text-sm text-stone-300">
                     Implementasi SSR (Server-Side Rendering) untuk meng-generate Open Graph meta
                     tags dinamis berisi preview hasil cupping.
                   </p>
                 </div>
-                <div className="rounded-2xl bg-cream-soft p-6">
-                  <h4 className="mt-0 font-display text-xl">Image Processing</h4>
-                  <p className="mb-0 text-sm opacity-80">
+                <div className="rounded-2xl border border-white/10 bg-[#14110e]/80 p-6 transition-colors hover:border-amber-400/30">
+                  <h4 className="mt-0 font-display text-xl text-white font-bold">Image Processing</h4>
+                  <p className="mb-0 text-sm text-stone-300">
                     Sistem yang dapat mengolah data skor numerik menjadi radar chart visual untuk
                     langsung dianalisis oleh roaster.
                   </p>
@@ -253,21 +253,21 @@ function CuppingNotesPage() {
       </section>
 
       {/* Flavor Wheel Section */}
-      <section className="reveal bg-background py-24 md:py-32 border-t border-border/40">
+      <section className="reveal bg-[#090807] py-24 md:py-32 border-t border-white/10">
         <div className="mx-auto max-w-6xl px-6 md:px-10">
           <div className="mb-16 text-center">
-            <div className="font-mono text-xs uppercase tracking-[0.2em] text-terracotta">Demo Modul</div>
-            <h2 className="mt-4 font-display text-4xl text-coffee md:text-5xl">Eksplorasi Profil Rasa</h2>
+            <div className="font-mono text-xs uppercase tracking-[0.2em] text-amber-400 font-semibold">Demo Modul</div>
+            <h2 className="mt-4 font-display text-4xl text-white md:text-5xl font-bold">Eksplorasi Profil Rasa</h2>
           </div>
           <FlavorWheel />
         </div>
       </section>
 
       {/* Gallery Section */}
-      <section className="reveal border-t border-border/40 py-24 md:py-32">
+      <section className="reveal border-t border-white/10 py-24 md:py-32 bg-[#090807]">
         <div className="mx-auto max-w-7xl px-6 md:px-10">
-          <h2 className="font-display text-3xl text-coffee">Artefak Produk</h2>
-          <p className="mt-2 text-sm text-coffee/60">
+          <h2 className="font-display text-3xl text-white font-bold">Artefak Produk</h2>
+          <p className="mt-2 text-sm text-stone-400">
             Beberapa tangkapan layar dari antarmuka platform.
           </p>
         </div>
