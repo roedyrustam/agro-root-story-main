@@ -84,14 +84,14 @@ function JourneyPage() {
       <Timeline />
 
       {/* Legacy Section */}
-      <section className="py-24 md:py-32 bg-coffee text-cream">
+      <section className="py-24 md:py-32 border-t border-white/10 bg-[#120f0d] text-stone-200">
         <div className="mx-auto max-w-4xl px-6 text-center md:px-10">
-          <div className="font-mono text-xs uppercase tracking-[0.2em] text-mustard">Visi ke Depan</div>
-          <h2 className="mt-8 font-display text-[clamp(2.5rem,6vw,4.5rem)] leading-[1.05] text-cream">
+          <div className="font-mono text-xs uppercase tracking-[0.2em] text-amber-400 font-semibold">Visi ke Depan</div>
+          <h2 className="mt-8 font-display text-[clamp(2.5rem,6vw,4.5rem)] leading-[1.05] text-white">
             Membangun kedaulatan data <br />
-            <span className="italic">dari setiap jengkal desa.</span>
+            <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-amber-200">dari setiap jengkal desa.</span>
           </h2>
-          <p className="mt-8 text-lg text-cream/75 leading-relaxed">
+          <p className="mt-8 text-lg text-stone-300 leading-relaxed">
             Perjalanan ini belum usai. Saya terus mencari cara agar teknologi tidak menjadi pemisah, melainkan perekat yang memperkuat daya tawar masyarakat di hulu rantai nilai.
           </p>
         </div>

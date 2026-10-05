@@ -122,11 +122,11 @@ function AboutPage() {
                 height={1280}
                 className="relative w-full rounded-2xl"
               />
-              <div className="absolute -bottom-5 -right-5 max-w-[180px] rotate-[3deg] rounded-lg bg-cream px-4 py-3 shadow-xl ring-1 ring-border">
-                <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-terracotta">
+              <div className="absolute -bottom-5 -right-5 max-w-[180px] rotate-[3deg] rounded-2xl border border-white/10 bg-[#14110e]/90 backdrop-blur-xl px-4 py-3 shadow-xl">
+                <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-amber-400 font-semibold">
                   Berbasis
                 </div>
-                <div className="mt-1 font-display text-sm text-coffee">Sulawesi Selatan, ID</div>
+                <div className="mt-1 font-display text-sm text-stone-200">Sulawesi Selatan, ID</div>
               </div>
             </div>
           </div>
@@ -134,7 +134,7 @@ function AboutPage() {
       </section>
 
       {/* Story chapters */}
-      <section className="border-t border-border bg-cream-soft py-24 md:py-32">
+      <section className="border-t border-white/10 bg-[#0c0a08]/60 py-24 md:py-32">
         <div className="mx-auto max-w-5xl px-6 md:px-10">
           <div className="font-mono text-xs uppercase tracking-[0.2em] text-terracotta">Cerita</div>
           <h2 className="mt-4 font-display text-[clamp(2rem,5vw,4rem)] leading-[1.05] text-coffee">
@@ -242,14 +242,14 @@ function AboutPage() {
               {principles.map((p) => (
                 <li
                   key={p.n}
-                  className="group grid gap-4 bg-card p-7 transition-colors hover:bg-cream-soft md:grid-cols-12 md:p-8"
+                  className="group grid gap-4 bg-[#14110e]/80 border-b border-white/5 p-7 transition-colors hover:bg-white/[0.04] md:grid-cols-12 md:p-8"
                 >
-                  <div className="font-mono text-xs uppercase tracking-[0.2em] text-terracotta md:col-span-2">
+                  <div className="font-mono text-xs uppercase tracking-[0.2em] text-amber-400 font-semibold md:col-span-2">
                     {p.n}
                   </div>
                   <div className="md:col-span-10">
-                    <h3 className="font-display text-2xl text-coffee">{p.title}</h3>
-                    <p className="mt-2 text-base leading-relaxed text-coffee/75">{p.body}</p>
+                    <h3 className="font-display text-2xl text-white font-semibold">{p.title}</h3>
+                    <p className="mt-2 text-base leading-relaxed text-stone-300">{p.body}</p>
                   </div>
                 </li>
               ))}
@@ -259,16 +259,16 @@ function AboutPage() {
       </section>
 
       {/* How I work — pull quote */}
-      <section className="border-t border-border bg-coffee py-24 text-cream md:py-32">
+      <section className="border-t border-white/10 bg-[#120f0d] py-24 text-stone-200 md:py-32">
         <div className="mx-auto max-w-5xl px-6 md:px-10">
-          <div className="font-mono text-xs uppercase tracking-[0.2em] text-mustard">
+          <div className="font-mono text-xs uppercase tracking-[0.2em] text-amber-400 font-semibold">
             Pendekatan
           </div>
           <blockquote className="mt-8">
-            <p className="font-display text-[clamp(1.8rem,4.5vw,3.5rem)] leading-[1.1] text-cream text-balance">
-              <span className="text-mustard">"</span>Sederhana itu mahal.{" "}
-              <span className="italic">Setiap fitur yang tidak ada</span> adalah keputusan yang
-              dibuat dengan hati-hati — bukan kelalaian.<span className="text-mustard">"</span>
+            <p className="font-display text-[clamp(1.8rem,4.5vw,3.5rem)] leading-[1.1] text-white text-balance">
+              <span className="text-amber-400">"</span>Sederhana itu mahal.{" "}
+              <span className="italic text-stone-300">Setiap fitur yang tidak ada</span> adalah keputusan yang
+              dibuat dengan hati-hati — bukan kelalaian.<span className="text-amber-400">"</span>
             </p>
           </blockquote>
 
@@ -383,27 +383,27 @@ function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="border-t border-border bg-cream-soft py-24 md:py-32">
+      <section className="border-t border-white/10 bg-[#090807] py-24 md:py-32">
         <div className="mx-auto max-w-4xl px-6 text-center md:px-10">
-          <div className="font-mono text-xs uppercase tracking-[0.2em] text-terracotta">
+          <div className="font-mono text-xs uppercase tracking-[0.2em] text-amber-400 font-semibold">
             Mari bicara
           </div>
-          <h2 className="mt-6 font-display text-[clamp(2rem,5vw,4rem)] leading-[1.05] text-coffee text-balance">
+          <h2 className="mt-6 font-display text-[clamp(2rem,5vw,4rem)] leading-[1.05] text-white text-balance">
             Kalau cerita ini terdengar selaras dengan apa yang sedang kamu kerjakan —{" "}
-            <span className="italic text-terracotta">mari ngobrol.</span>
+            <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-amber-200">mari berkolaborasi.</span>
           </h2>
 
           <div className="mt-10 flex flex-wrap justify-center gap-5">
             <Link
               to="/contact"
-              className="inline-flex items-center gap-3 rounded-full bg-coffee px-7 py-4 font-mono text-xs uppercase tracking-[0.2em] text-cream transition-all hover:bg-terracotta"
+              className="inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 px-7 py-4 font-mono text-xs uppercase tracking-[0.2em] text-stone-950 font-semibold transition-all hover:scale-105 shadow-lg shadow-amber-500/20"
             >
               Lihat kontak →
             </Link>
             <Link
               to="/"
               hash="projects"
-              className="inline-flex items-center gap-3 rounded-full border border-coffee/30 px-7 py-4 font-mono text-xs uppercase tracking-[0.2em] text-coffee transition-all hover:border-terracotta hover:text-terracotta"
+              className="inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-7 py-4 font-mono text-xs uppercase tracking-[0.2em] text-stone-200 transition-all hover:border-amber-400 hover:text-amber-300 backdrop-blur-md"
             >
               Lihat karya
             </Link>

@@ -51,36 +51,36 @@ function ImpactPage() {
       <Impact />
 
       {/* Impact Values Section */}
-      <section className="py-24 md:py-32 bg-coffee text-cream overflow-hidden relative">
+      <section className="py-24 md:py-32 border-t border-white/10 bg-[#120f0d] text-stone-200 overflow-hidden relative">
         {/* Decorative elements */}
-        <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-96 h-96 rounded-full bg-mustard/10 blur-[80px]" />
+        <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-96 h-96 rounded-full bg-amber-500/10 blur-[80px]" />
         
         <div className="content-container">
-          <div className="font-mono text-xs uppercase tracking-[0.2em] text-mustard">Prinsip Dampak</div>
-          <h2 className="mt-6 font-display text-[clamp(2.5rem,6vw,4.5rem)] leading-[1.05] text-cream max-w-4xl">
+          <div className="font-mono text-xs uppercase tracking-[0.2em] text-amber-400 font-semibold">Prinsip Dampak</div>
+          <h2 className="mt-6 font-display text-[clamp(2.5rem,6vw,4.5rem)] leading-[1.05] text-white max-w-4xl">
             Tiga pilar yang menjaga <br />
-            <span className="italic">keberlanjutan di lapangan.</span>
+            <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-amber-200">keberlanjutan di lapangan.</span>
           </h2>
           
           <div className="mt-16 grid gap-12 md:grid-cols-3">
             <div className="space-y-4">
-              <div className="font-mono text-sm text-mustard">01</div>
-              <h3 className="font-display text-2xl">Keadilan Harga</h3>
-              <p className="text-cream/70 leading-relaxed">
+              <div className="font-mono text-sm text-amber-400 font-bold">01</div>
+              <h3 className="font-display text-2xl text-white">Keadilan Harga</h3>
+              <p className="text-stone-300 leading-relaxed">
                 Memastikan transparansi rantai pasok agar nilai ekonomi terdistribusi lebih adil kepada mereka yang berkeringat di kebun.
               </p>
             </div>
             <div className="space-y-4">
-              <div className="font-mono text-sm text-mustard">02</div>
-              <h3 className="font-display text-2xl">Kemandirian Digital</h3>
-              <p className="text-cream/70 leading-relaxed">
+              <div className="font-mono text-sm text-amber-400 font-bold">02</div>
+              <h3 className="font-display text-2xl text-white">Kemandirian Digital</h3>
+              <p className="text-stone-300 leading-relaxed">
                 Membangun kapasitas warga desa untuk menguasai teknologi, bukan hanya menjadi konsumen aplikasi yang mereka tidak mengerti.
               </p>
             </div>
             <div className="space-y-4">
-              <div className="font-mono text-sm text-mustard">03</div>
-              <h3 className="font-display text-2xl">Pelestarian Budaya</h3>
-              <p className="text-cream/70 leading-relaxed">
+              <div className="font-mono text-sm text-amber-400 font-bold">03</div>
+              <h3 className="font-display text-2xl text-white">Pelestarian Budaya</h3>
+              <p className="text-stone-300 leading-relaxed">
                 Menghormati tata kelola adat dan kearifan lokal dalam setiap intervensi teknologi dan pengembangan ekonomi.
               </p>
             </div>

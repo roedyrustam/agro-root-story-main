@@ -42,7 +42,7 @@ export const faqsData: FaqItem[] = [
   {
     question: "Bagaimana alur memulai konsultasi atau penjajakan proyek?",
     answer:
-      "Klien dapat memulai dengan konsultasi singkat via formulir kontak atau WhatsApp resmi (+628114441400) untuk mendiskusikan kebutuhan arsitektur, estimasi lingkup kerja, dan jadwal implementasi.",
+      "Klien dapat memulai dengan konsultasi singkat via formulir kontak atau WhatsApp resmi (+6281241003047) untuk mendiskusikan kebutuhan arsitektur, estimasi lingkup kerja, dan jadwal implementasi.",
     category: "consulting",
   },
 ];
@@ -77,11 +77,10 @@ export function FaqSection() {
             return (
               <div
                 key={idx}
-                className={`overflow-hidden rounded-3xl border transition-all duration-300 ${
-                  isOpen
+                className={`overflow-hidden rounded-3xl border transition-all duration-300 ${isOpen
                     ? "border-terracotta/30 bg-cream-soft shadow-lg shadow-terracotta/5"
                     : "border-coffee/10 bg-cream-soft/40 hover:border-coffee/20 hover:bg-cream-soft/60"
-                }`}
+                  }`}
               >
                 <button
                   onClick={() => toggle(idx)}
@@ -97,9 +96,8 @@ export function FaqSection() {
                     </span>
                   </span>
                   <ChevronDown
-                    className={`h-5 w-5 shrink-0 text-coffee/50 transition-transform duration-300 ${
-                      isOpen ? "rotate-180 text-terracotta" : ""
-                    }`}
+                    className={`h-5 w-5 shrink-0 text-coffee/50 transition-transform duration-300 ${isOpen ? "rotate-180 text-terracotta" : ""
+                      }`}
                   />
                 </button>
 
@@ -118,7 +116,7 @@ export function FaqSection() {
         <div className="mt-12 text-center">
           <p className="text-xs font-mono text-coffee/50">
             Punya pertanyaan spesifik terkait arsitektur sistem Anda?{" "}
-            <a href="https://wa.me/628114441400" target="_blank" rel="noopener noreferrer" className="text-terracotta underline font-semibold">
+            <a href="https://wa.me/6281241003047" target="_blank" rel="noopener noreferrer" className="text-terracotta underline font-semibold">
               Tanyakan langsung via WhatsApp ↗
             </a>
           </p>

@@ -8,174 +8,212 @@ export function Hero() {
 
   return (
     <section className="relative overflow-hidden pt-32 pb-20 md:pt-40 md:pb-28">
-      {/* decorative grain */}
-      <div className="grain absolute inset-0" />
+      {/* Decorative grain & obsidian mesh */}
+      <div className="grain absolute inset-0 opacity-40 pointer-events-none" />
 
-      {/* Ambient background blobs */}
-      <div className="absolute -left-40 top-20 h-80 w-80 rounded-full bg-terracotta/5 blur-[100px]" />
-      <div className="absolute -right-40 bottom-20 h-96 w-96 rounded-full bg-mustard/5 blur-[120px]" />
+      {/* Luminous Ambient Glows */}
+      <div className="absolute -left-40 top-16 h-96 w-96 rounded-full bg-amber-500/10 blur-[120px] pointer-events-none" />
+      <div className="absolute right-0 top-1/4 h-[30rem] w-[30rem] rounded-full bg-emerald-500/10 blur-[140px] pointer-events-none" />
+      <div className="absolute bottom-10 left-1/3 h-64 w-64 rounded-full bg-orange-600/10 blur-[100px] pointer-events-none" />
 
       <div className="relative content-container">
-        <div className="grid items-center gap-12 lg:grid-cols-12">
-          <div className="lg:col-span-7">
-            {/* Cyber-Organic Status Pill */}
-            <div className="mb-8 flex flex-wrap items-center gap-3 animate-fade-up">
-              <span className="flex items-center gap-2.5 rounded-full border border-terracotta/25 bg-terracotta/5 px-4 py-1.5 font-mono text-[11px] uppercase tracking-[0.2em] text-terracotta backdrop-blur-sm shadow-sm">
+        {/* Main Bento Grid Header */}
+        <div className="grid items-start gap-8 lg:grid-cols-12 lg:gap-12">
+          {/* Left Column (Span 7): Identity, Vision & CTAs */}
+          <div className="lg:col-span-7 flex flex-col justify-between">
+            {/* Live Pulsing Node Status Pill */}
+            <div className="mb-6 flex flex-wrap items-center gap-2.5 animate-fade-up">
+              <span className="flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-950/40 px-3.5 py-1 font-mono text-[11px] uppercase tracking-[0.2em] text-emerald-400 backdrop-blur-md shadow-[0_0_15px_rgba(16,185,129,0.2)]">
                 <span className="relative flex h-2 w-2">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-sage/60" />
-                  <span className="relative inline-flex h-2 w-2 rounded-full bg-sage" />
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400/80" />
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
                 </span>
-                Agent Node: Active
+                NODE: AGENTIC DEV ONLINE
               </span>
-              <span className="hidden sm:inline-flex items-center gap-2 rounded-full border border-coffee/10 bg-coffee/5 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-coffee/60">
-                Protocol: MCP v1.x
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-stone-300">
+                <span className="text-amber-400">⚡</span> MCP v1.x Ready
               </span>
-              <span className="inline-flex items-center gap-2 rounded-full border border-coffee/10 bg-coffee/5 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-coffee/60">
-                Sulawesi · ID
+              <span className="hidden sm:inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-stone-400">
+                Sulawesi · 119.4° E, 5.1° S
               </span>
             </div>
 
-            <h1
-              className="font-display text-[clamp(2.5rem,7vw,5.2rem)] leading-[1.08] tracking-tight text-coffee text-balance"
-            >
-              <div className="overflow-hidden py-1">
-                <span className="block animate-slide-up">
-                  Membangun <span className="italic font-light text-terracotta/90">jembatan</span>
-                </span>
-              </div>
-              <div className="overflow-hidden py-1">
-                <span className="block animate-slide-up [animation-delay:150ms]">
-                  antara{" "}
-                  <span className="relative inline-block px-2">
-                    agen AI
-                    <svg
-                      className="absolute -bottom-2 left-0 w-full opacity-60"
-                      viewBox="0 0 200 12"
-                      fill="none"
-                      preserveAspectRatio="none"
-                    >
-                      <path
-                        d="M2 8 Q 50 2, 100 6 T 198 5"
-                        stroke="currentColor"
-                        strokeWidth="3"
-                        className="text-mustard"
-                        strokeLinecap="round"
-                      />
-                    </svg>
-                  </span>
-                  , kode & agro.
-                </span>
-              </div>
+            {/* Display Headline */}
+            <h1 className="font-display text-[clamp(2.4rem,5.5vw,4.6rem)] leading-[1.08] tracking-tight text-stone-100 text-balance">
+              <span className="block">
+                Membangun <span className="italic font-light text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-amber-200">jembatan cerdas</span>
+              </span>
+              <span className="block mt-1">
+                antara <span className="relative inline-block text-white font-semibold underline decoration-amber-500/50 decoration-wavy decoration-2">agen AI</span>, kode modern, & ekosistem agro.
+              </span>
             </h1>
 
+            {/* 32-word AEO Extraction Paragraph */}
             <p
-              className="mt-8 max-w-xl text-lg leading-relaxed text-coffee/75 text-pretty animate-fade-up font-normal"
-              style={{ animationDelay: "0.25s" }}
+              className="mt-6 max-w-2xl text-base md:text-lg leading-relaxed text-stone-300 text-pretty font-normal animate-fade-up"
+              style={{ animationDelay: "0.2s" }}
             >
-              Saya <strong className="text-coffee font-semibold">Roedy Rustam</strong> — AI Systems & Agentic Developer serta Konsultan Agro-Industri. Mengintegrasikan Model Context Protocol (MCP), arsitektur multi-agen otonom, dan aplikasi edge modern dengan dampak nyata di rantai pasok kopi hulu-hilir Sulawesi.
+              Saya <strong className="text-white font-medium">Roedy Rustam</strong> — AI Systems & Agentic Developer serta Konsultan Agro-Industri berbasis di Makassar, Sulawesi Selatan. Mengembangkan arsitektur Model Context Protocol (MCP), orkestrasi multi-agen otonom, dan transformasi rantai pasok kopi hulu-hilir dengan dampak riil terukur.
             </p>
 
+            {/* Action Row */}
             <div
-              className="mt-10 flex flex-wrap items-center gap-5 animate-fade-up"
-              style={{ animationDelay: "0.4s" }}
+              className="mt-8 flex flex-wrap items-center gap-4 animate-fade-up"
+              style={{ animationDelay: "0.35s" }}
             >
               <Link
                 ref={magneticRef}
                 to="/"
-                hash="projects"
-                className="group relative inline-flex items-center gap-4 rounded-full bg-coffee px-8 py-4 font-mono text-[11px] uppercase tracking-[0.2em] text-cream transition-all duration-500 hover:bg-terracotta hover:scale-[1.03] active:scale-[0.98] shadow-xl shadow-coffee/10 hover:shadow-terracotta/25"
+                hash="estimator"
+                className="group relative inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-amber-500 via-orange-500 to-amber-600 px-7 py-3.5 font-mono text-[11px] uppercase tracking-[0.2em] text-stone-950 font-semibold transition-all duration-300 hover:shadow-[0_0_25px_rgba(245,158,11,0.4)] hover:scale-[1.02] active:scale-[0.98]"
               >
-                Lihat karya & agen
-                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-cream/20 transition-transform duration-500 group-hover:rotate-45">→</span>
+                Rancang Blueprint
+                <span className="flex h-5 w-5 items-center justify-center rounded-full bg-black/20 text-stone-950 transition-transform duration-300 group-hover:translate-x-0.5">
+                  →
+                </span>
               </Link>
 
               <Link
                 to="/"
                 hash="mcp-console"
-                className="inline-flex items-center gap-2 rounded-full border border-coffee/20 bg-cream-soft/60 px-6 py-4 font-mono text-[11px] uppercase tracking-[0.2em] text-coffee transition-all duration-300 hover:border-terracotta hover:bg-cream hover:text-terracotta"
+                className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-3.5 font-mono text-[11px] uppercase tracking-[0.2em] text-stone-200 transition-all duration-300 hover:border-amber-400/50 hover:bg-white/10 hover:text-white backdrop-blur-md"
               >
-                Konsol MCP
+                <span className="text-emerald-400">▶</span> Konsol MCP
               </Link>
-              
-              <div className="flex items-center gap-6 pl-2">
-                <button
-                  onClick={() => window.print()}
-                  className="group relative flex items-center font-mono text-[10px] uppercase tracking-[0.25em] text-coffee/60 transition-all hover:text-coffee"
-                >
-                  Unduh CV
-                  <span className="absolute -bottom-1 left-0 h-px w-0 bg-coffee/20 transition-all duration-500 group-hover:w-full" />
-                </button>
-                <Link
-                  to="/contact"
-                  className="group relative flex items-center font-mono text-[10px] uppercase tracking-[0.25em] text-coffee/60 transition-all hover:text-coffee"
-                >
-                  Hubungi
-                  <span className="absolute -bottom-1 left-0 h-px w-0 bg-coffee/20 transition-all duration-500 group-hover:w-full" />
-                </Link>
-              </div>
-            </div>
 
-            <div
-              className="mt-16 grid grid-cols-3 gap-4 animate-fade-up md:gap-8"
-              style={{ animationDelay: "0.55s" }}
-            >
-              {[
-                { n: "MCP", l: "Protocol v1.x", icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-cpu"><rect width="16" height="16" x="4" y="4" rx="2"/><rect width="6" height="6" x="9" y="9" rx="1"/><path d="M15 2v2"/><path d="M15 20v2"/><path d="M2 15h2"/><path d="M2 9h2"/><path d="M20 15h2"/><path d="M20 9h2"/><path d="M9 2v2"/><path d="M9 20v2"/></svg> },
-                { n: "6+", l: "Karya Digital", icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-code-2"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg> },
-                { n: "BNSP", l: "Agro Planner", icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-award"><path d="m12 15 5 5-5-5 5 5ZM12 15l-5 5 5-5-5 5Z"/><circle cx="12" cy="7" r="4"/></svg> },
-              ].map((s) => (
-                <div key={s.l} className="group relative overflow-hidden rounded-3xl border border-coffee/5 bg-cream-soft/40 p-6 backdrop-blur-xl transition-all duration-500 hover:bg-cream-soft/60 hover:shadow-2xl hover:shadow-coffee/5">
-                  <div className="absolute -right-2 -top-2 text-3xl opacity-[0.05] transition-all duration-700 group-hover:rotate-12 group-hover:scale-150 group-hover:opacity-[0.1]">
-                    {s.icon}
-                  </div>
-                  <div className="font-display text-4xl text-coffee/90">{s.n}</div>
-                  <div className="mt-3 font-mono text-[9px] uppercase tracking-[0.25em] text-coffee/50 font-medium">
-                    {s.l}
-                  </div>
-                </div>
-              ))}
+              <Link
+                to="/contact"
+                className="inline-flex items-center gap-2 px-4 py-3 font-mono text-[11px] uppercase tracking-[0.2em] text-stone-400 transition-colors hover:text-amber-300"
+              >
+                Konsultasi & Kontak ↗
+              </Link>
             </div>
           </div>
 
+          {/* Right Column (Span 5): Live Holographic Telemetry & Node Visual Card */}
           <div
-            className="relative lg:col-span-5 animate-fade-up"
-            style={{ animationDelay: "0.3s" }}
+            className="lg:col-span-5 animate-fade-up"
+            style={{ animationDelay: "0.25s" }}
           >
-            <div className="relative group">
-              {/* Concentric Frame decoration */}
-              <div className="absolute -inset-6 -rotate-3 rounded-[3rem] bg-gradient-to-br from-mustard/20 via-terracotta/10 to-sage/15 transition-all duration-1000 group-hover:rotate-0 group-hover:scale-105 opacity-60 blur-xl" />
-              
-              <div className="relative overflow-hidden rounded-[2.5rem] border-[12px] border-cream shadow-2xl shadow-coffee/10">
-                <LiquidImage
-                  src={heroImg}
-                  alt="Ilustrasi biji kopi dan lanskap pegunungan Sulawesi"
-                  className="hero-parallax w-full scale-110 transition-transform duration-75 will-change-transform"
-                />
+            <div className="relative group rounded-3xl border border-white/10 bg-[#14110e]/80 p-5 backdrop-blur-2xl shadow-[0_20px_60px_-15px_rgba(0,0,0,0.8)] transition-all duration-500 hover:border-amber-500/30">
+              {/* Telemetry Console Header */}
+              <div className="flex items-center justify-between border-b border-white/10 pb-3 mb-4 font-mono text-[10px] uppercase tracking-wider text-stone-400">
+                <div className="flex items-center gap-2">
+                  <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
+                  <span className="text-stone-200 font-semibold">NODE_ID: RR-SULAWESI-01</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-stone-400">EDGE POP:</span>
+                  <span className="text-emerald-400 font-medium">UPTIME 99.98%</span>
+                </div>
               </div>
 
-              {/* Origin badge - Glassmorphism floating */}
-              <div className="absolute -bottom-8 -left-8 max-w-[220px] rotate-[-2deg] rounded-3xl border border-cream/50 bg-cream/85 p-6 shadow-2xl backdrop-blur-2xl transition-transform duration-500 hover:rotate-0 hover:scale-105">
-                <div className="flex items-center gap-3">
-                  <span className="flex h-8 w-8 items-center justify-center rounded-full bg-terracotta/10 text-terracotta">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-coffee"><path d="M10 2v2"/><path d="M14 2v2"/><path d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h12Z"/><path d="M17 12h2a2 2 0 0 1 0 4h-2"/></svg>
-                  </span>
-                  <div className="leading-tight">
-                    <span className="block font-mono text-[9px] uppercase tracking-[0.25em] text-terracotta font-bold">
-                      Domain Impact
+              {/* Main Visual Image with Parallax & Liquid Mask */}
+              <div className="relative overflow-hidden rounded-2xl border border-white/10 shadow-inner group/img aspect-[4/3]">
+                <LiquidImage
+                  src={heroImg}
+                  alt="Roedy Rustam - AI Systems & Agro-Tech Specialist"
+                  className="w-full h-full object-cover scale-105 transition-transform duration-700 group-hover/img:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#090807] via-transparent to-transparent opacity-80" />
+
+                {/* Floating Micro-Badges */}
+                <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between">
+                  <div className="flex items-center gap-2 rounded-full border border-white/15 bg-black/75 px-3 py-1.5 backdrop-blur-md">
+                    <span className="text-amber-400 text-xs">☕</span>
+                    <span className="font-mono text-[10px] uppercase tracking-wider text-stone-200">
+                      Toraja · Barru · Sinjai
                     </span>
-                    <div className="mt-1 font-display text-base text-coffee">Toraja · Barru · Sinjai</div>
+                  </div>
+                  <div className="rounded-full border border-emerald-500/30 bg-emerald-950/70 px-3 py-1 font-mono text-[10px] uppercase tracking-wider text-emerald-300 backdrop-blur-md">
+                    ~38ms Latency
                   </div>
                 </div>
               </div>
 
-              {/* Dual-Engine badge - Concentric Capsule */}
-              <div className="absolute -top-6 -right-6 rotate-[6deg] rounded-full border border-cream/50 bg-coffee/95 px-6 py-3 font-mono text-[10px] uppercase tracking-[0.25em] text-cream shadow-2xl backdrop-blur-xl transition-all duration-500 hover:rotate-0 hover:scale-110">
-                AI × Agro Systems
+              {/* Active Agent Systems Bar */}
+              <div className="mt-4 grid grid-cols-3 gap-2 font-mono text-[9px] uppercase tracking-wider">
+                <div className="rounded-xl border border-white/5 bg-white/[0.03] p-2.5 text-center">
+                  <div className="text-emerald-400 font-semibold flex items-center justify-center gap-1">
+                    <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" /> ACTIVE
+                  </div>
+                  <div className="text-stone-400 mt-1">AgroAgent MCP</div>
+                </div>
+                <div className="rounded-xl border border-white/5 bg-white/[0.03] p-2.5 text-center">
+                  <div className="text-amber-400 font-semibold flex items-center justify-center gap-1">
+                    <span className="h-1.5 w-1.5 rounded-full bg-amber-400 animate-pulse" /> SYNCING
+                  </div>
+                  <div className="text-stone-400 mt-1">Agent Swarm</div>
+                </div>
+                <div className="rounded-xl border border-white/5 bg-white/[0.03] p-2.5 text-center">
+                  <div className="text-cyan-400 font-semibold flex items-center justify-center gap-1">
+                    <span className="h-1.5 w-1.5 rounded-full bg-cyan-400" /> VERIFIED
+                  </div>
+                  <div className="text-stone-400 mt-1">BNSP Planner</div>
+                </div>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Bottom Bento Metric Strip */}
+        <div
+          className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-3 lg:gap-6 animate-fade-up"
+          style={{ animationDelay: "0.45s" }}
+        >
+          <div className="group relative overflow-hidden rounded-3xl border border-white/10 bg-[#14110e]/70 p-6 backdrop-blur-xl transition-all duration-500 hover:border-amber-500/30 hover:bg-[#181410] hover:-translate-y-1">
+            <div className="flex items-center justify-between">
+              <span className="font-display text-4xl font-bold tracking-tight text-white group-hover:text-amber-300 transition-colors">
+                20+ <span className="text-xl font-normal text-amber-400/80">Tahun</span>
+              </span>
+              <span className="rounded-full border border-amber-500/20 bg-amber-500/10 p-2.5 text-amber-400">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m12 15 5 5-5-5 5 5ZM12 15l-5 5 5-5-5 5Z"/><circle cx="12" cy="7" r="4"/></svg>
+              </span>
+            </div>
+            <div className="mt-3 font-mono text-[10px] uppercase tracking-[0.2em] text-stone-400">
+              Sintesis Domain Kopi & Agro
+            </div>
+            <p className="mt-2 text-xs text-stone-400 leading-relaxed">
+              Penguasaan rantai nilai dari kebun rakyat Barru & Toraja hingga standar industri ekspor dan hilirisasi.
+            </p>
+          </div>
+
+          <div className="group relative overflow-hidden rounded-3xl border border-white/10 bg-[#14110e]/70 p-6 backdrop-blur-xl transition-all duration-500 hover:border-emerald-500/30 hover:bg-[#181410] hover:-translate-y-1">
+            <div className="flex items-center justify-between">
+              <span className="font-display text-4xl font-bold tracking-tight text-white group-hover:text-emerald-300 transition-colors">
+                6+ <span className="text-xl font-normal text-emerald-400/80">Platform</span>
+              </span>
+              <span className="rounded-full border border-emerald-500/20 bg-emerald-500/10 p-2.5 text-emerald-400">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="16" height="16" x="4" y="4" rx="2"/><rect width="6" height="6" x="9" y="9" rx="1"/><path d="M15 2v2"/><path d="M15 20v2"/><path d="M2 15h2"/><path d="M2 9h2"/><path d="M20 15h2"/><path d="M20 9h2"/><path d="M9 2v2"/><path d="M9 20v2"/></svg>
+              </span>
+            </div>
+            <div className="mt-3 font-mono text-[10px] uppercase tracking-[0.2em] text-stone-400">
+              Agentic Systems & Modern Web
+            </div>
+            <p className="mt-2 text-xs text-stone-400 leading-relaxed">
+              Arsitektur MCP v1.x, Swarm Worker Autonomous, Beanhub, Pandu Desa, Kafeya, dan CuppingNotes.
+            </p>
+          </div>
+
+          <div className="group relative overflow-hidden rounded-3xl border border-white/10 bg-[#14110e]/70 p-6 backdrop-blur-xl transition-all duration-500 hover:border-cyan-500/30 hover:bg-[#181410] hover:-translate-y-1">
+            <div className="flex items-center justify-between">
+              <span className="font-display text-4xl font-bold tracking-tight text-white group-hover:text-cyan-300 transition-colors">
+                4.700+ <span className="text-xl font-normal text-cyan-400/80">Petani</span>
+              </span>
+              <span className="rounded-full border border-cyan-500/20 bg-cyan-500/10 p-2.5 text-cyan-400">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </span>
+            </div>
+            <div className="mt-3 font-mono text-[10px] uppercase tracking-[0.2em] text-stone-400">
+              Dampak Riil Ekosistem
+            </div>
+            <p className="mt-2 text-xs text-stone-400 leading-relaxed">
+              Pemberdayaan hulu-hilir, peningkatan nilai tambah komoditas kopi, dan transfer teknologi aplikatif.
+            </p>
           </div>
         </div>
       </div>
     </section>
   );
 }
+

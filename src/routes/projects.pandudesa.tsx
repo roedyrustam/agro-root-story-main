@@ -183,20 +183,20 @@ function PanduDesaPage() {
       </section>
 
       {/* CTA */}
-      <section className="border-t border-border bg-coffee py-24 text-cream md:py-32">
+      <section className="border-t border-white/10 bg-[#120f0d] py-24 text-stone-200 md:py-32">
         <div className="mx-auto max-w-5xl px-6 md:px-10">
-          <div className="font-mono text-xs uppercase tracking-[0.2em] text-mustard">Kolaborasi</div>
-          <h2 className="mt-6 font-display text-[clamp(2rem,5vw,4rem)] leading-[1.05] text-cream text-balance">
+          <div className="font-mono text-xs uppercase tracking-[0.2em] text-amber-400 font-semibold">Kolaborasi</div>
+          <h2 className="mt-6 font-display text-[clamp(2rem,5vw,4rem)] leading-[1.05] text-white text-balance font-bold">
             Tertarik membangun narasi pembangunan berbasis data?
           </h2>
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-cream/75">
+          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-stone-300">
             Saya terbuka untuk diskusi mengenai pengembangan ekosistem digital desa, pelatihan literasi, atau kolaborasi kebijakan berbasis komunitas.
           </p>
 
           <div className="mt-10 flex flex-wrap gap-5">
             <Link
               to="/contact"
-              className="inline-flex items-center gap-3 rounded-full bg-mustard px-7 py-4 font-mono text-xs uppercase tracking-[0.2em] text-coffee transition-all hover:bg-cream"
+              className="inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 px-7 py-4 font-mono text-xs uppercase tracking-[0.2em] text-stone-950 font-bold transition-all hover:scale-105 shadow-lg shadow-amber-500/20"
             >
               Mari Ngobrol →
             </Link>

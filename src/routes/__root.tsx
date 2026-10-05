@@ -10,22 +10,22 @@ import appCss from "../styles.css?url";
 
 function NotFoundComponent() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-cream px-6 selection:bg-terracotta/20 selection:text-terracotta">
-      <div className="max-w-md text-center">
-        <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-terracotta mb-4">
-          Error 404
+    <div className="flex min-h-screen items-center justify-center bg-[#090807] px-6 selection:bg-amber-500/20 selection:text-amber-400">
+      <div className="max-w-md text-center rounded-3xl border border-white/10 bg-[#14110e]/80 p-8 backdrop-blur-2xl shadow-2xl">
+        <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-amber-400 mb-4">
+          Error 404 · Node Offline
         </div>
-        <h1 className="font-display text-[clamp(4rem,10vw,8rem)] leading-none text-coffee">
+        <h1 className="font-display text-[clamp(3.5rem,8vw,6rem)] leading-none text-white">
           Tersesat.
         </h1>
-        <p className="mt-6 text-lg leading-relaxed text-coffee/75">
+        <p className="mt-6 text-base leading-relaxed text-stone-300">
           Halaman yang Anda cari mungkin sudah dipindahkan atau tidak pernah ada di peta ekosistem
           ini.
         </p>
-        <div className="mt-10">
+        <div className="mt-8">
           <Link
             to="/"
-            className="group inline-flex items-center gap-3 rounded-full border border-coffee bg-transparent px-8 py-4 font-mono text-[11px] uppercase tracking-[0.2em] text-coffee transition-all hover:bg-coffee hover:text-cream"
+            className="group inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 px-7 py-3.5 font-mono text-[11px] uppercase tracking-[0.2em] text-stone-950 font-semibold transition-all hover:scale-105 shadow-lg shadow-amber-500/20"
           >
             <span className="transition-transform duration-300 group-hover:-translate-x-1">←</span>
             Kembali ke Beranda
@@ -45,21 +45,21 @@ export const Route = createRootRoute({
         name: "google-site-verification",
         content: "pBTvdE97aC22PQnmJv_ZDD3c2B9O2IXJlLeQNYp4c_E",
       },
-      { title: "Roedy Rustam — Sociopreneur × Agro × Digital" },
+      { title: "Roedy Rustam — AI Systems & Agentic Developer × Agro-Tech Sociopreneur" },
       {
         name: "description",
         content:
-          "Portfolio Roedy Rustam — Sociopreneur yang membangun ekosistem kopi Sulawesi (Barru, Toraja, Sinjai) & perangkat digital untuk UMKM agro.",
+          "Portfolio & blueprint Roedy Rustam — AI Systems & Agentic Developer serta Konsultan Agro-Industri. Arsitektur Model Context Protocol (MCP), orkestrasi multi-agen, dan transformasi rantai pasok kopi hulu-hilir Sulawesi.",
       },
-      { name: "keywords", content: "Roedy Rustam, Sociopreneur, Kopi Sulawesi, Agro Digital, UMKM, beanhub, Kafeya POS, Teknik Industri, Makassar" },
+      { name: "keywords", content: "Roedy Rustam, AI Systems, Agentic Developer, Model Context Protocol, MCP Server, Swarm AI, Kopi Sulawesi, Agro Digital, Barru, Toraja, Sinjai, beanhub, Kafeya POS, Teknik Industri, Makassar" },
       { name: "author", content: "Roedy Rustam" },
-      { name: "theme-color", content: "#3d2b1f" },
+      { name: "theme-color", content: "#090807" },
       // Open Graph
-      { property: "og:title", content: "Roedy Rustam — Sociopreneur × Agro × Digital" },
+      { property: "og:title", content: "Roedy Rustam — AI Systems & Agentic Developer × Agro-Tech Sociopreneur" },
       {
         property: "og:description",
         content:
-          "Sociopreneur yang membangun ekosistem kopi Sulawesi & perangkat digital (beanhub.online, Kafeya POS) untuk UMKM agro.",
+          "Portfolio & blueprint Roedy Rustam — AI Systems & Agentic Developer serta Konsultan Agro-Industri Sulawesi Selatan. Arsitektur MCP, agen otonom, dan aplikasi edge modern.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://roedyrustam.pages.dev" },
@@ -70,15 +70,15 @@ export const Route = createRootRoute({
       { property: "og:image:height", content: "630" },
       {
         property: "og:image:alt",
-        content: "Roedy Rustam — Sociopreneur × Agro × Digital",
+        content: "Roedy Rustam — AI Systems & Agentic Developer × Agro-Tech Sociopreneur",
       },
       // Twitter Card
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Roedy Rustam — Sociopreneur × Agro × Digital" },
+      { name: "twitter:title", content: "Roedy Rustam — AI Systems & Agentic Developer × Agro-Tech Sociopreneur" },
       {
         name: "twitter:description",
         content:
-          "Sociopreneur yang membangun ekosistem kopi Sulawesi & perangkat digital untuk UMKM agro.",
+          "Portfolio & blueprint Roedy Rustam — AI Systems & Agentic Developer serta Konsultan Agro-Industri Sulawesi Selatan.",
       },
       { name: "twitter:image", content: "/og-image.jpg" },
       // Additional SEO

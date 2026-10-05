@@ -84,43 +84,43 @@ export const Route = createFileRoute("/projects/cuppingnotes")({
 
 function CuppingNotesPage() {
   return (
-    <main className="min-h-screen bg-cream text-coffee selection:bg-terracotta/20 selection:text-terracotta">
+    <main className="min-h-screen bg-background text-foreground selection:bg-amber-500/20 selection:text-amber-400">
       <Nav />
       
       {/* Project Header */}
-      <section className="relative pt-32 pb-16 md:pt-40 md:pb-20 bg-background overflow-hidden border-b border-border">
+      <section className="relative pt-32 pb-16 md:pt-40 md:pb-20 bg-background overflow-hidden border-b border-white/10">
         {/* Subtle background element */}
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_30%,rgba(211,93,71,0.03),transparent_50%)]" />
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_30%,rgba(245,158,11,0.05),transparent_50%)]" />
 
         <div className="mx-auto max-w-6xl px-6 md:px-10 relative z-10">
           <Link
             to="/"
-            className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-coffee/60 hover:text-terracotta"
+            className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-stone-400 hover:text-amber-400"
           >
             ← Kembali
           </Link>
           
-          <div className="mt-12 flex flex-wrap items-center gap-3 font-mono text-xs uppercase tracking-[0.2em] text-coffee">
-            <span className="rounded-full bg-coffee/10 px-3 py-1">Sensory Tool</span>
+          <div className="mt-12 flex flex-wrap items-center gap-3 font-mono text-xs uppercase tracking-[0.2em] text-stone-300">
+            <span className="rounded-full bg-white/10 px-3 py-1 text-amber-400 font-semibold border border-white/10">Sensory Tool</span>
             <span>2026</span>
-            <span className="text-coffee/60">·</span>
-            <span className="text-coffee/60">Quality Control</span>
+            <span className="text-stone-500">·</span>
+            <span className="text-stone-400">Quality Control</span>
           </div>
 
-          <h1 className="mt-8 font-display text-[clamp(3.5rem,10vw,8.5rem)] leading-[0.9] text-coffee text-balance">
+          <h1 className="mt-8 font-display text-[clamp(3.5rem,10vw,8.5rem)] leading-[0.9] text-white text-balance font-bold">
             Objektivitas <br />
-            <span className="italic text-terracotta">profil rasa</span> <br />
+            <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-amber-200">profil rasa</span> <br />
             digital.
           </h1>
           
           <div className="mt-12 max-w-2xl">
-            <p className="text-xl leading-relaxed text-coffee/80">
+            <p className="text-xl leading-relaxed text-stone-300">
               CuppingNotes.online adalah manifestasi digital dari protokol SCA (Specialty Coffee Association). Sebuah alat yang saya bangun untuk memastikan evaluasi kualitas kopi tidak hanya berhenti di catatan kertas, tapi menjadi data yang bisa dipertanggungjawabkan.
             </p>
           </div>
 
           <div className="mt-12 flex flex-wrap gap-5">
-            <a href="https://cuppingnotes.online" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 rounded-full bg-coffee px-7 py-4 font-mono text-xs uppercase tracking-[0.2em] text-cream transition-all hover:bg-terracotta">
+            <a href="https://cuppingnotes.online" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 px-7 py-4 font-mono text-xs uppercase tracking-[0.2em] text-stone-950 font-bold transition-all hover:scale-105 shadow-lg shadow-amber-500/20">
               Buka Platform ↗
             </a>
           </div>
@@ -281,15 +281,15 @@ function CuppingNotesPage() {
       </section>
 
       {/* Next Project Nav */}
-      <section className="border-t border-border bg-cream-soft">
+      <section className="border-t border-white/10 bg-[#090807]">
         <Link
           to="/projects/beanhub"
-          className="group flex flex-col items-center justify-center gap-4 py-24 transition-colors hover:bg-terracotta/5"
+          className="group flex flex-col items-center justify-center gap-4 py-24 transition-colors hover:bg-white/[0.02]"
         >
-          <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-coffee/60 transition-colors group-hover:text-terracotta/80">
+          <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-stone-400 transition-colors group-hover:text-amber-400">
             Proyek Selanjutnya
           </span>
-          <h2 className="font-display text-4xl text-coffee transition-colors group-hover:text-terracotta md:text-5xl">
+          <h2 className="font-display text-4xl text-white transition-colors group-hover:text-amber-300 md:text-5xl font-bold">
             Beanhub.online
           </h2>
         </Link>

@@ -56,39 +56,39 @@ function AgentSwarmPage() {
       <Nav />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden pt-36 pb-20 md:pt-44 md:pb-28 border-b border-border bg-cream-soft">
+      <section className="relative overflow-hidden pt-36 pb-20 md:pt-44 md:pb-28 border-b border-white/10 bg-[#090807]">
         <div className="grain absolute inset-0 opacity-40" />
         <div className="content-container relative">
           <Link
             to="/"
             hash="projects"
-            className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-coffee/60 hover:text-terracotta transition-colors mb-8"
+            className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-stone-400 hover:text-amber-400 transition-colors mb-8"
           >
             <ArrowLeft className="h-3.5 w-3.5" /> Kembali ke Karya Digital
           </Link>
 
           <div className="flex flex-wrap items-center gap-3 mb-6">
-            <span className="rounded-full border border-mustard/40 bg-mustard/10 px-4 py-1 font-mono text-xs uppercase tracking-widest text-coffee font-semibold">
+            <span className="rounded-full border border-amber-500/30 bg-amber-500/10 px-4 py-1 font-mono text-xs uppercase tracking-widest text-amber-400 font-semibold">
               Multi-Agent AI
             </span>
-            <span className="rounded-full border border-coffee/10 bg-coffee/5 px-3 py-1 font-mono text-xs uppercase tracking-widest text-coffee/60">
+            <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 font-mono text-xs uppercase tracking-widest text-stone-400">
               LangGraph & Telemetry
             </span>
-            <span className="rounded-full border border-coffee/10 bg-coffee/5 px-3 py-1 font-mono text-xs uppercase tracking-widest text-coffee/60">
+            <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 font-mono text-xs uppercase tracking-widest text-stone-400">
               Tahun: 2026
             </span>
           </div>
 
-          <h1 className="font-display text-[clamp(2.5rem,6vw,4.8rem)] leading-[1.08] text-coffee max-w-4xl">
+          <h1 className="font-display text-[clamp(2.5rem,6vw,4.8rem)] leading-[1.08] text-white max-w-4xl font-bold">
             Multi-Agent Swarm Orchestrator: <br />
-            <span className="italic text-terracotta">Otomasi Cerdas Rantai Pasok Pegunungan.</span>
+            <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-amber-200">Otomasi Cerdas Rantai Pasok Pegunungan.</span>
           </h1>
 
-          <p className="mt-8 text-xl leading-relaxed text-coffee/75 max-w-3xl">
+          <p className="mt-8 text-xl leading-relaxed text-stone-300 max-w-3xl">
             Arsitektur kolaborasi multi-agen terdistribusi yang membagi tugas rantai pasok ke dalam 4 spesialis otonom: verifikasi telemetri panen, evaluasi sensori kopi standar SCA, kalkulasi rute logistik dataran tinggi, dan rekonsiliasi kas BUMDes.
           </p>
 
-          <div className="mt-12 overflow-hidden rounded-3xl border border-coffee/15 shadow-2xl">
+          <div className="mt-12 overflow-hidden rounded-3xl border border-white/10 shadow-2xl">
             <img
               src={swarmImg}
               alt="Visualisasi Multi-Agent Swarm Orchestrator"
@@ -190,54 +190,54 @@ function AgentSwarmPage() {
       </section>
 
       {/* Real World Impact */}
-      <section className="py-20 bg-coffee text-cream border-t border-border">
+      <section className="py-20 bg-[#0c0a08] text-stone-200 border-t border-white/10">
         <div className="content-container">
           <div className="grid gap-12 lg:grid-cols-12 items-center">
             <div className="lg:col-span-6 space-y-6">
-              <span className="font-mono text-xs uppercase tracking-[0.2em] text-mustard">
+              <span className="font-mono text-xs uppercase tracking-[0.2em] text-amber-400 font-semibold">
                 02 · Dampak Operasional
               </span>
-              <h2 className="font-display text-3xl md:text-4xl text-cream leading-tight">
+              <h2 className="font-display text-3xl md:text-4xl text-white font-bold leading-tight">
                 Efisiensi Koordinasi Tanpa Kehilangan Sentuhan Manusia
               </h2>
-              <p className="text-base leading-relaxed text-cream/75">
+              <p className="text-base leading-relaxed text-stone-300">
                 Swarm ini bukan untuk menggantikan peran petani atau q-grader, melainkan memangkas 70% waktu birokrasi penyiapan dokumen ekspor dan koordinasi armada dari pelosok pegunungan ke kota besar.
               </p>
               
               <div className="grid grid-cols-2 gap-6 pt-4">
-                <div className="border-l-2 border-mustard pl-4">
-                  <div className="font-display text-3xl text-mustard">3.4x</div>
-                  <div className="font-mono text-xs text-cream/60 mt-1 uppercase tracking-wider">Percepatan Dispatch</div>
+                <div className="border-l-2 border-amber-400 pl-4">
+                  <div className="font-display text-3xl text-amber-400 font-bold">3.4x</div>
+                  <div className="font-mono text-xs text-stone-400 mt-1 uppercase tracking-wider">Percepatan Dispatch</div>
                 </div>
-                <div className="border-l-2 border-sage pl-4">
-                  <div className="font-display text-3xl text-sage">100%</div>
-                  <div className="font-mono text-xs text-cream/60 mt-1 uppercase tracking-wider">Audit Traceability</div>
+                <div className="border-l-2 border-emerald-400 pl-4">
+                  <div className="font-display text-3xl text-emerald-400 font-bold">100%</div>
+                  <div className="font-mono text-xs text-stone-400 mt-1 uppercase tracking-wider">Audit Traceability</div>
                 </div>
               </div>
             </div>
 
             <div className="lg:col-span-6">
-              <div className="rounded-3xl border border-cream/10 bg-cream/5 p-8 backdrop-blur-xl">
-                <div className="flex items-center gap-3 mb-4 font-mono text-xs text-mustard">
+              <div className="rounded-3xl border border-white/10 bg-[#14110e]/90 p-8 backdrop-blur-xl shadow-2xl">
+                <div className="flex items-center gap-3 mb-4 font-mono text-xs text-amber-400 font-semibold">
                   <Workflow className="h-4 w-4" />
                   <span>State Transition Graph</span>
                 </div>
-                <div className="space-y-4 font-mono text-xs text-cream/80">
-                  <div className="rounded-xl bg-black/30 p-3 flex items-center justify-between">
+                <div className="space-y-4 font-mono text-xs text-stone-200">
+                  <div className="rounded-xl bg-black/40 border border-white/5 p-3 flex items-center justify-between">
                     <span>1. HARVEST_LOGGED</span>
-                    <span className="text-sage font-bold">Passed</span>
+                    <span className="text-emerald-400 font-bold">Passed</span>
                   </div>
-                  <div className="rounded-xl bg-black/30 p-3 flex items-center justify-between">
+                  <div className="rounded-xl bg-black/40 border border-white/5 p-3 flex items-center justify-between">
                     <span>2. SENSORY_SCORED (≥84 SCA)</span>
-                    <span className="text-sage font-bold">Grade 1 Verified</span>
+                    <span className="text-emerald-400 font-bold">Grade 1 Verified</span>
                   </div>
-                  <div className="rounded-xl bg-black/30 p-3 flex items-center justify-between">
+                  <div className="rounded-xl bg-black/40 border border-white/5 p-3 flex items-center justify-between">
                     <span>3. LOGISTICS_DISPATCHED</span>
-                    <span className="text-mustard font-bold">In Transit</span>
+                    <span className="text-amber-400 font-bold">In Transit</span>
                   </div>
-                  <div className="rounded-xl bg-black/30 p-3 flex items-center justify-between">
+                  <div className="rounded-xl bg-black/40 border border-white/5 p-3 flex items-center justify-between">
                     <span>4. BUMDES_SETTLEMENT</span>
-                    <span className="text-cream/50">Auto-Reconcile</span>
+                    <span className="text-stone-400">Auto-Reconcile</span>
                   </div>
                 </div>
               </div>

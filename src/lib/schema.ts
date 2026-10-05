@@ -115,7 +115,7 @@ export const generateProfessionalServiceSchema = () => ({
   "name": "Roedy Rustam — AI Systems & Agentic Developer × Agro-Tech Sociopreneur",
   "image": "https://roedyrustam.pages.dev/logo.jpg",
   "url": "https://roedyrustam.pages.dev",
-  "telephone": "+628114441400",
+  "telephone": "+6281241003047",
   "priceRange": "$$",
   "address": {
     "@type": "PostalAddress",

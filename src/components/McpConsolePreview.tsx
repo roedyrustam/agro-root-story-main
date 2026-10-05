@@ -140,35 +140,35 @@ export function McpConsolePreview() {
   };
 
   return (
-    <div className="relative mx-auto mt-16 max-w-5xl overflow-hidden rounded-3xl border border-coffee/15 bg-coffee text-cream shadow-2xl">
+    <div className="relative mx-auto mt-16 max-w-5xl overflow-hidden rounded-3xl border border-white/10 bg-[#0e0c0a] text-stone-200 shadow-2xl">
       {/* Decorative top ambient bar */}
-      <div className="flex flex-wrap items-center justify-between border-b border-cream/10 bg-coffee-dark/80 px-6 py-4 backdrop-blur-md">
+      <div className="flex flex-wrap items-center justify-between border-b border-white/10 bg-[#161310] px-6 py-4 backdrop-blur-md">
         <div className="flex items-center gap-3">
           <div className="flex gap-2">
-            <span className="h-3 w-3 rounded-full bg-terracotta/80" />
-            <span className="h-3 w-3 rounded-full bg-mustard/80" />
-            <span className="h-3 w-3 rounded-full bg-sage/80" />
+            <span className="h-3 w-3 rounded-full bg-amber-500/80" />
+            <span className="h-3 w-3 rounded-full bg-orange-500/80" />
+            <span className="h-3 w-3 rounded-full bg-emerald-500/80" />
           </div>
-          <span className="flex items-center gap-2 font-mono text-xs text-cream/70">
-            <Terminal className="h-3.5 w-3.5 text-mustard" />
-            <span className="text-terracotta font-semibold">roedy@agro-agent</span>: ~
-            <span className="text-cream/40">/mcp-server-v1</span>
+          <span className="flex items-center gap-2 font-mono text-xs text-stone-300">
+            <Terminal className="h-3.5 w-3.5 text-amber-400" />
+            <span className="text-amber-400 font-semibold">roedy@agro-agent</span>: ~
+            <span className="text-stone-500">/mcp-server-v1</span>
           </span>
         </div>
 
         <div className="flex items-center gap-4 text-xs font-mono">
-          <span className="inline-flex items-center gap-1.5 rounded-full border border-sage/30 bg-sage/10 px-3 py-1 text-sage">
-            <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-sage" />
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/30 bg-emerald-950/40 px-3 py-1 text-emerald-400">
+            <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-400" />
             MCP v1.x Ready
           </span>
           <button
             onClick={handleCopy}
-            className="flex items-center gap-1.5 rounded-lg border border-cream/10 bg-cream/5 px-3 py-1 text-cream/70 transition-all hover:bg-cream/10 hover:text-cream"
+            className="flex items-center gap-1.5 rounded-lg border border-white/10 bg-white/5 px-3 py-1 text-stone-300 transition-all hover:bg-white/10 hover:text-white"
             title="Salin JSON-RPC Payload"
           >
             {copied ? (
               <>
-                <Check className="h-3.5 w-3.5 text-sage" />
+                <Check className="h-3.5 w-3.5 text-emerald-400" />
                 <span>Disalin</span>
               </>
             ) : (
@@ -184,13 +184,13 @@ export function McpConsolePreview() {
       {/* Main Grid */}
       <div className="grid lg:grid-cols-12">
         {/* Sidebar Tools Selector */}
-        <div className="border-b border-cream/10 bg-coffee/60 p-6 lg:col-span-5 lg:border-b-0 lg:border-r">
+        <div className="border-b border-white/10 bg-[#120f0d] p-6 lg:col-span-5 lg:border-b-0 lg:border-r">
           <div className="mb-4 flex items-center justify-between">
-            <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-mustard">
+            <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-amber-400 font-semibold">
               Available MCP Tools
             </span>
-            <span className="flex items-center gap-1 text-[10px] font-mono text-cream/50">
-              <Cpu className="h-3 w-3 text-terracotta" /> Live JSON-RPC
+            <span className="flex items-center gap-1 text-[10px] font-mono text-stone-400">
+              <Cpu className="h-3 w-3 text-orange-400" /> Live JSON-RPC
             </span>
           </div>
 
@@ -203,25 +203,25 @@ export function McpConsolePreview() {
                   onClick={() => setActiveScenarioId(sc.id)}
                   className={`w-full rounded-2xl p-4 text-left transition-all duration-300 ${
                     isSelected
-                      ? "border border-terracotta/50 bg-cream/10 shadow-lg shadow-terracotta/5"
-                      : "border border-cream/5 bg-cream/[0.03] hover:border-cream/20 hover:bg-cream/[0.06]"
+                      ? "border border-amber-500/50 bg-amber-500/10 shadow-[0_0_15px_rgba(245,158,11,0.15)]"
+                      : "border border-white/5 bg-white/[0.02] hover:border-white/20 hover:bg-white/[0.05]"
                   }`}
                 >
                   <div className="flex items-center justify-between">
-                    <span className="font-mono text-xs font-semibold text-cream">
+                    <span className="font-mono text-xs font-semibold text-white">
                       {sc.title}
                     </span>
                     {isSelected && (
-                      <span className="rounded bg-terracotta/20 px-2 py-0.5 font-mono text-[10px] text-terracotta font-medium">
+                      <span className="rounded bg-amber-500/20 px-2 py-0.5 font-mono text-[10px] text-amber-300 font-medium">
                         Active
                       </span>
                     )}
                   </div>
-                  <p className="mt-2 text-xs leading-relaxed text-cream/70">
+                  <p className="mt-2 text-xs leading-relaxed text-stone-300">
                     {sc.desc}
                   </p>
-                  <div className="mt-3 flex items-center gap-2 font-mono text-[10px] text-cream/40">
-                    <span className="rounded bg-cream/5 px-2 py-0.5">tool: {sc.name}()</span>
+                  <div className="mt-3 flex items-center gap-2 font-mono text-[10px] text-stone-400">
+                    <span className="rounded bg-white/5 px-2 py-0.5 border border-white/5">tool: {sc.name}()</span>
                     <span>~{sc.latencyMs}ms</span>
                   </div>
                 </button>
@@ -229,14 +229,14 @@ export function McpConsolePreview() {
             })}
           </div>
 
-          <div className="mt-6 rounded-2xl border border-cream/10 bg-coffee-dark/60 p-4">
+          <div className="mt-6 rounded-2xl border border-white/10 bg-[#0a0908] p-4">
             <div className="flex items-start gap-3">
-              <Bot className="mt-0.5 h-4 w-4 text-mustard shrink-0" />
+              <Bot className="mt-0.5 h-4 w-4 text-amber-400 shrink-0" />
               <div>
-                <h4 className="font-mono text-xs font-semibold text-cream">
+                <h4 className="font-mono text-xs font-semibold text-white">
                   Agentic Interoperability
                 </h4>
-                <p className="mt-1 text-[11px] leading-relaxed text-cream/60">
+                <p className="mt-1 text-[11px] leading-relaxed text-stone-400">
                   Didesain untuk beroperasi native dengan Claude Desktop, Cursor, Gemini Live, dan autonomous swarms di jaringan desa.
                 </p>
               </div>
@@ -245,7 +245,7 @@ export function McpConsolePreview() {
         </div>
 
         {/* Console Execution Display */}
-        <div className="flex flex-col bg-coffee-dark/95 p-6 lg:col-span-7">
+        <div className="flex flex-col bg-[#070605] p-6 lg:col-span-7">
           <div className="mb-4 flex items-center justify-between">
             <div className="flex items-center gap-2">
               <span className="font-mono text-xs text-cream/50">Request & Payload Response</span>

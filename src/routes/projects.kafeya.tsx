@@ -293,15 +293,15 @@ function KafeyaPage() {
         subtitle="Empat artefak dari pengembangan Kafeya — geser untuk menelusuri."
       />
 
-      <section className="border-t border-border bg-coffee py-24 text-cream md:py-32">
+      <section className="border-t border-white/10 bg-[#120f0d] py-24 text-stone-200 md:py-32">
         <div className="mx-auto max-w-5xl px-6 md:px-10">
-          <div className="font-mono text-xs uppercase tracking-[0.2em] text-mustard">
+          <div className="font-mono text-xs uppercase tracking-[0.2em] text-amber-400 font-semibold">
             Kolaborasi
           </div>
-          <h2 className="mt-6 font-display text-[clamp(2rem,5vw,4rem)] leading-[1.05] text-cream text-balance">
+          <h2 className="mt-6 font-display text-[clamp(2rem,5vw,4rem)] leading-[1.05] text-white text-balance font-bold">
             Punya Bisnis, café, atau jaringan UMKM kopi yang butuh sistem yang sesuai?
           </h2>
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-cream/75">
+          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-stone-300">
             Saya terbuka untuk pilot, kustomisasi, atau kemitraan dengan inkubator/koperasi. Mari
             bangun perangkat yang benar-benar dipakai, bukan cuma diinstall.
           </p>
@@ -311,7 +311,7 @@ function KafeyaPage() {
               href="https://kafeya.online"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 rounded-full border border-cream bg-cream px-7 py-4 font-mono text-xs uppercase tracking-[0.2em] text-coffee transition-all hover:bg-mustard hover:border-mustard"
+              className="inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 px-7 py-4 font-mono text-xs uppercase tracking-[0.2em] text-stone-950 font-bold transition-all hover:scale-105 shadow-lg shadow-amber-500/20"
             >
               Coba sekarang ↗
             </a>
@@ -325,7 +325,7 @@ function KafeyaPage() {
                   });
                 }
               }}
-              className="inline-flex items-center gap-3 rounded-full border border-cream/30 px-7 py-4 font-mono text-xs uppercase tracking-[0.2em] text-cream transition-all hover:border-mustard hover:text-mustard"
+              className="inline-flex items-center gap-3 rounded-full border border-white/20 bg-white/5 px-7 py-4 font-mono text-xs uppercase tracking-[0.2em] text-stone-200 transition-all hover:border-amber-400 hover:text-amber-300"
             >
               Bagikan
             </button>

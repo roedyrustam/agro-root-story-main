@@ -54,25 +54,25 @@ function ExperiencePage() {
       </div>
 
       {/* Methodology Section */}
-      <section className="py-24 md:py-32 bg-cream-soft border-t border-border">
+      <section className="py-24 md:py-32 bg-[#090807] border-t border-white/10">
         <div className="content-container">
-          <div className="font-mono text-xs uppercase tracking-[0.2em] text-terracotta">Metodologi</div>
-          <h2 className="mt-6 font-display text-[clamp(2rem,5vw,4rem)] leading-[1.05] text-coffee max-w-3xl">
+          <div className="font-mono text-xs uppercase tracking-[0.2em] text-amber-400 font-semibold">Metodologi</div>
+          <h2 className="mt-6 font-display text-[clamp(2rem,5vw,4rem)] leading-[1.05] text-white max-w-3xl">
             Cara saya mendampingi <br />
-            <span className="italic text-terracotta">perubahan.</span>
+            <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-amber-200">perubahan & transformasi.</span>
           </h2>
           
           <div className="mt-16 grid gap-8 md:grid-cols-2">
-            <div className="p-8 rounded-3xl bg-card border border-coffee/5">
-              <h3 className="font-display text-2xl text-coffee">Empati Lapangan</h3>
-              <p className="mt-4 text-coffee/70 leading-relaxed">
-                Tidak ada perubahan yang langgeng jika tidak dimulai dari pemahaman mendalam tentang kecemasan dan harapan orang-orang yang menjalaninya. Saya memulai dengan mendengar.
+            <div className="p-8 md:p-10 rounded-3xl bg-[#14110e]/80 border border-white/10 backdrop-blur-xl transition-all hover:border-amber-500/30">
+              <h3 className="font-display text-2xl text-white font-bold">Empati Lapangan & Verifikasi Riil</h3>
+              <p className="mt-4 text-stone-300 leading-relaxed">
+                Tidak ada perubahan yang langgeng jika tidak dimulai dari pemahaman mendalam tentang kecemasan dan harapan orang-orang yang menjalaninya. Sistem agen AI dibangun di atas kebutuhan riil pelaku usaha dan petani.
               </p>
             </div>
-            <div className="p-8 rounded-3xl bg-card border border-coffee/5">
-              <h3 className="font-display text-2xl text-coffee">Kedaulatan Data</h3>
-              <p className="mt-4 text-coffee/70 leading-relaxed">
-                Informasi adalah kekuatan. Fokus saya adalah memastikan data tidak hanya mengalir ke atas, tapi juga kembali menjadi alat bagi masyarakat untuk mengambil keputusan.
+            <div className="p-8 md:p-10 rounded-3xl bg-[#14110e]/80 border border-white/10 backdrop-blur-xl transition-all hover:border-amber-500/30">
+              <h3 className="font-display text-2xl text-white font-bold">Kedaulatan Data & Interoperabilitas</h3>
+              <p className="mt-4 text-stone-300 leading-relaxed">
+                Informasi adalah kekuatan kedaulatan. Fokus saya adalah memastikan data tidak hanya mengalir ke atas, tapi juga kembali menjadi alat bantu prediktif bagi komunitas untuk mengambil keputusan bisnis yang presisi.
               </p>
             </div>
           </div>

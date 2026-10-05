@@ -77,14 +77,14 @@ function Index() {
       </Reveal>
 
       {/* Interactive MCP Tool Console Section */}
-      <section id="mcp-console" className="border-t border-border bg-cream-soft py-20 md:py-28">
+      <section id="mcp-console" className="border-t border-white/10 bg-[#090807] py-20 md:py-28">
         <div className="content-container">
           <SectionLabel number="03" label="Protokol & Agen Otonom" />
           <div className="mt-6 max-w-3xl">
-            <h2 className="font-display text-[clamp(2rem,5vw,3.8rem)] leading-[1.08] text-coffee">
-              Interaksi nyata dengan <span className="italic text-terracotta">Model Context Protocol</span>
+            <h2 className="font-display text-[clamp(2rem,5vw,3.8rem)] leading-[1.08] text-white">
+              Interaksi nyata dengan <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-amber-200">Model Context Protocol</span>
             </h2>
-            <p className="mt-4 text-base text-coffee/70 leading-relaxed">
+            <p className="mt-4 text-base text-stone-400 leading-relaxed">
               Uji coba simulasi pemanggilan tool standar industri (MCP v1.x) yang menghubungkan agen AI otonom langsung ke telemetri kebun, catatan cupping SCA, dan rute logistik kopi.
             </p>
           </div>

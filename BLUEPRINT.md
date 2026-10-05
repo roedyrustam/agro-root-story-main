@@ -1,86 +1,49 @@
 # Agro Root Story — Design & Skill Orchestration Document (BLUEPRINT.md)
+> Versi 2.1.0: Perombakan Total UI/UX — Dark Obsidian & Luminous Neural Architecture
 
 ## 1. Understanding Summary
-* **Core Goal:** Mereposisi portofolio personal Roedy Rustam menjadi profil **Dual-Engine / Hybrid**: *AI Systems & Agentic Developer × Agro-Tech Sociopreneur*, menampilkan keahlian dalam rekayasa agen otonom, Model Context Protocol (MCP), dan pengembangan fullstack modern yang terhubung langsung dengan dampak industri riil (rantai pasok kopi & pemberdayaan ekonomi desa).
-* **Target Audience:** Tech recruiters, venture/startup partners, klien AI/software architecture, pemangku kepentingan agro/koperasi desa, dan komunitas teknologi.
-* **Key User Flows:**
-  1. Visitor masuk ke beranda -> Melihat Hero dengan status terminal aktif agen AI dan headline dual-engine.
-  2. Visitor mengeksplorasi preview interaktif konsol MCP Tool-Call -> Mengamati protokol data JSON-RPC kopi.
-  3. Visitor menjelajahi grid 6 karya digital: 2 proyek AI/Agentic unggulan baru (*AgroAgent MCP Server*, *Multi-Agent Swarm Orchestrator*) dan 4 proyek agro-tech (*Beanhub*, *CuppingNotes*, *Kafeya POS*, *Pandu Desa*).
-  4. Visitor membaca 3 pilar layanan terpadu (*Agentic AI*, *Modern Fullstack*, *Agro Empowerment*).
-  5. AI crawler (Perplexity, ChatGPT, Claude) membaca `/llms.txt` dan Schema JSON-LD yang terstruktur rapi.
-* **Non-Goals:**
-  - Tidak merombak fondasi framework (tetap mempertahankan TanStack Start SSR + Cloudflare Pages).
-  - Tidak menghapus riwayat sejarah komunitas (Jirak Celebes, JRKI, Sehati Kopi Indonesia tetap diabadikan di halaman Journey).
+* **Core Goal:** Merombak total seluruh desain UI dan UX situs portofolio Roedy Rustam menjadi standar **Dark Obsidian & Luminous Neural** (Linear.app / Vercel Enterprise level) yang memadukan wibawa kecerdasan buatan otonom dengan bukti dampak riil di sektor agro dan komunitas desa.
+* **Target Audience:** Tech founders, engineering leads, enterprise clients, partner bisnis AI/software, dan komunitas kopi/desa global.
+* **Key Visual Architecture:**
+  - Background: Deep Obsidian Espresso (`#0a0807` / `oklch(0.12 0.015 50)`).
+  - Cards & Glass: Frosted Dark Glassmorphism (`backdrop-blur-xl`, `border-white/10`, glow hover).
+  - Accents: Luminous Amber (kejujuran api roasting/kopi) & Radiant Emerald (live node status).
+* **Key Page Sections:**
+  1. **Bento Grid Hero:** Live node status, headline tajam, live telemetry card, dan 3 metric counter riil.
+  2. **Interactive MCP Console Preview:** Simulasi tool-call JSON-RPC 2.0 yang responsif.
+  3. **Tiga Pilar Layanan:** Rekayasa Agen AI & MCP, Arsitektur Edge Web, dan Transformasi Rantai Pasok Agro.
+  4. **Holographic Projects Bento:** 6 karya digital dengan tab filter interaktif.
+  5. **Interactive Scope Estimator:** Kalkulator blueprint kebutuhan klien yang langsung terhubung ke WhatsApp.
+  6. **GEO-Optimized FAQ Section:** Q&A terstruktur di bawah 50 kata untuk kutipan Google AI Mode & Perplexity.
 
 ---
 
 ## 2. Technical Architecture & Skill Delegation
 
-### 2.1 Rendering & Frontend Framework (`senior-frontend`, `tailwind-expert`)
-* **Stack:** TanStack Start v1.167+, React 19.2+, Tailwind CSS v4.2+.
-* **Runtime Target:** Cloudflare Pages Workers SSR (`_worker.js`).
-* **Routing:** `@tanstack/react-router` dengan type-safe route generation.
-* **Aesthetics:** *Cyber-Organic Harmony* — perpaduan palet earth-tone (Coffee, Terracotta, Sage, Mustard, Cream) dengan aksen terminal tech (mono badges, live node pulse, glow borders).
+### 2.1 Design System & Tokens (`design-system-architect`, `tailwind-expert`)
+* **Tokens CSS (`src/styles.css`):**
+  - `--background`: Deep Obsidian Espresso (`#0a0807`).
+  - `--foreground`: Crisp off-white (`#f5f5f4`).
+  - `--card`: Dark frosted glass (`rgba(20, 18, 16, 0.75)`).
+  - `--border`: `rgba(255, 255, 255, 0.08)`.
+  - `--terracotta`: Vibrant warm terracotta glow (`#e05d44`).
+  - `--mustard`: Luminous Amber (`#f59e0b`).
+  - `--sage`: Radiant Emerald (`#10b981`).
+* **Typography:** Plus Jakarta Sans (Headings), Rubik (Body text), JetBrains Mono (Badges & Code).
 
-### 2.2 AI & Intelligent Systems (`mcp-server-architect`, `ai-llm-integration-expert`)
-* **Protokol:** Model Context Protocol (MCP v1.x) standard specification.
-* **Flagship Proyek AI:**
-  1. **AgroAgent / CoffeeSupply MCP Server:** JSON-RPC tool schema & resource endpoints untuk inventori kebun kopi, batching, dan grading.
-  2. **Multi-Agent Swarm Orchestrator:** Sistem kolaboratif multi-agen (Scout, Cupping Analyst, Logistics Router, Reporting Agent).
-* **Komponen Interaktif:** `McpConsolePreview.tsx` untuk simulasi panggilan tool di antarmuka web.
-
-### 2.3 SEO, GEO & AI Engine Optimization (`seo`)
-* **JSON-LD Structured Data:** Schema `Person` dan `ProfessionalService` yang diperluas dengan keahlian AI dan komputasi agen.
-* **LLM Engine Discovery:** Pembaruan menyeluruh file `public/llms.txt`, `robots.txt`, dan `sitemap.xml`.
-
----
-
-## 3. Component & UI Architecture
-
-### 3.1 Komponen Beranda (`src/components/`)
-* `Hero.tsx`: Headline dual-engine, live agent status pill, magnetic CTA button.
-* `McpConsolePreview.tsx`: *(Komponen Baru)* Konsol simulasi pemanggilan tool MCP interaktif.
-* `Projects.tsx`: 6 kartu proyek modular dengan hover blur liquid, badge kategori, dan stack chip mono.
-* `Services.tsx`: 3 pilar layanan terpadu (Agentic AI, Modern Web, Agro Impact).
-* `Skills.tsx`: Klasifikasi keahlian teknis (AI/LLM/MCP, Frontend/Fullstack, Agro Engineering).
-* `Nav.tsx` & `Footer.tsx`: Navigasi responsif dan footer terpadu.
-
-### 3.2 Halaman & Rute Detail (`src/routes/`)
-* `index.tsx`: Halaman utama portofolio.
-* `projects.agroagent-mcp.tsx`: *(Rute Baru)* Studi kasus mendalam arsitektur MCP Server.
-* `projects.agent-swarm.tsx`: *(Rute Baru)* Studi kasus arsitektur orkestrasi multi-agen.
-* `projects.beanhub.tsx`: Studi kasus platform rantai pasok kopi.
-* `projects.cuppingnotes.tsx`: Studi kasus platform evaluasi mutu kopi SCA.
-* `about.tsx`, `journey.tsx`, `experience.tsx`, `impact.tsx`, `contact.tsx`: Diperbarui untuk merefleksikan profil terkini.
+### 2.2 Frontend Execution (`senior-frontend`, `anti-slop`)
+* **Framework:** React 19 + TanStack Start (SSR) + `@tanstack/react-router`.
+* **Motion & Smooth Scroll:** Lenis smooth scrolling dan CSS spring animations.
+* **Performance:** Skor Core Web Vitals tinggi (LCP < 1.0s, INP < 50ms, CLS 0).
 
 ---
 
-## 4. Decision Log
+## 3. Decision Log
 
-| # | Keputusan | Alternatif Dipertimbangkan | Rasional & Prinsip Web Modern | Skill yang Diorkestrasikan |
-|---|-----------|---------------------------|-------------------------------|----------------------------|
-| 1 | Dual-Engine / Hybrid Positioning | AI-First Murni / Agro-First Tradisional | Memanfaatkan keunikan pembeda langka: arsitek AI yang memiliki domain knowledge dan dampak riil di sektor riil. | `brainstorming`, `prd-architect` |
-| 2 | Unified Cyber-Organic Aesthetics | Dual-Track View Switcher / Dark Dev Theme | Menyajikan satu cerita visual utuh tanpa memecah audiens atau menambah kompleksitas state UI. | `design-system-architect`, `tailwind-expert` |
-| 3 | Interactive MCP Console Preview | Teks statis / Screenshot statis | Memberikan bukti teknis interaktif (*tangible interactive proof*) tentang pemahaman mendalam MCP v1.x. | `mcp-server-architect`, `senior-frontend` |
-| 4 | Penambahan 2 Rute Proyek AI Baru | Hanya memperbarui deskripsi di beranda | Memastikan deep-linking, SEO teknis, dan keterbacaan mendalam untuk reviewer/recruiter tingkat lanjut. | `senior-frontend`, `seo` |
-| 5 | Pembaruan Komprehensif `llms.txt` | Hanya meta tags HTML standar | Mengoptimalkan Generative Engine Optimization (GEO) untuk agen AI masa depan. | `seo` |
-
----
-
-## 5. Penilaian Risiko & Mitigasi
-* **Risiko 1 (Route Generation Mismatch):** Penambahan file rute baru pada TanStack Start berpotensi memerlukan regenerasi `routeTree.gen.ts`.
-  * *Mitigasi:* Verifikasi kompilasi Vite dan pastikan plugin TanStack Router men-generate tree rute dengan sempurna.
-* **Risiko 2 (Bundle Bloat):** Penambahan komponen interaktif baru dapat memperbesar ukuran bundel JavaScript.
-  * *Mitigasi:* Zero external heavy libs; MCP Console diimplementasikan murni dengan React State lokal dan styling native Tailwind v4.
-* **Risiko 3 (Inkonsistensi Tone of Voice):** Perubahan narasi ke arah AI bisa terdengar dingin jika mengikis empati kebun dan desa.
-  * *Mitigasi:* Menggunakan pendekatan *Cyber-Organic* di mana teknologi agen AI diposisikan sebagai akselerator kedaulatan petani dan efisiensi rantai pasok.
-
----
-
-## 6. Execution Roadmap (Fase Implementasi)
-1. **Fase 1 (SEO & AI Discovery):** Update `public/llms.txt`, `src/lib/schema.ts`, dan meta tags.
-2. **Fase 2 (Komponen Beranda Core):** Update `Hero.tsx`, implementasi `McpConsolePreview.tsx`, perbarui data `Projects.tsx`, `Services.tsx`, dan `Skills.tsx`.
-3. **Fase 3 (Rute Studi Kasus AI):** Buat `projects.agroagent-mcp.tsx` dan `projects.agent-swarm.tsx`.
-4. **Fase 4 (Sub-Halaman Update):** Perbarui `about.tsx`, `experience.tsx`, dan `journey.tsx`.
-5. **Fase 5 (Testing & Build Hardening):** Lakukan typecheck (`npx tsc --noEmit`), test build (`npm run build`), dan audit visual responsif.
+| # | Keputusan | Alternatif Dipertimbangkan | Rasional & Standar Web Modern | Skill Terkait |
+|---|-----------|---------------------------|-------------------------------|---------------|
+| 1 | Dark Obsidian & Luminous Neural | Light Mode Rustic / Monokrom Kaku | Memberikan wibawa teknologi tingkat tinggi bagi klien korporat tanpa menghilangkan jiwa kehangatan kopi. | `design-system-architect`, `ui-ux-pro-max` |
+| 2 | Bento Grid Hero dengan Telemetri Riil | Hero Sederhana 1 Kolom | Menampilkan kredibilitas instan (20+ tahun, 6+ platform, 4700+ petani) dalam 5 detik pertama. | `senior-frontend`, `anti-slop` |
+| 3 | Holographic Glow Bento Cards | Flat Grid Tradisional | Meningkatkan dwell time dan interaktivitas pengunjung melalui efek hover modern. | `design-system-architect` |
+| 4 | Interactive Estimator + WhatsApp Action | Form Kontak Statis | Mengubah pengunjung pasif menjadi prospek klien aktif dengan estimasi blueprint instan. | `senior-frontend` |
+| 5 | Keseragaman Seluruh Sub-halaman | Hanya Beranda yang Gelap | Memastikan konsistensi pengalaman visual 100% di setiap rute situs. | `senior-frontend` |

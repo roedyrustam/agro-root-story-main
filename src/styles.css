@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=JetBrains+Mono:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=JetBrains+Mono:wght@400;500;600&display=swap");
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
@@ -9,7 +9,7 @@
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
+  --radius-xl: calc(var(--radius) + 6px);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -35,13 +35,13 @@
   --color-mustard: var(--mustard);
   --color-coffee: var(--coffee);
   --color-cream: var(--cream);
+  --color-cream-soft: var(--cream-soft);
   --color-ink: var(--ink);
 
-  --font-display: "Plus Jakarta Sans", sans-serif;
+  --font-display: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
   --font-sans: "Rubik", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "JetBrains Mono", monospace;
 
-  /* UI/UX Expert Spacing System */
   --space-1: 8px;
   --space-2: 16px;
   --space-3: 24px;
@@ -70,64 +70,48 @@
 }
 
 :root {
-  --radius: 1rem; /* Slightly larger for a more modern, friendly feel */
+  --radius: 1.25rem;
 
-  /* HIG-inspired Elevation System */
-  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-  --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-  --shadow-inner: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+  /* Obsidian Elevation System */
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 4px 14px -2px rgba(0, 0, 0, 0.65);
+  --shadow-lg: 0 12px 28px -4px rgba(0, 0, 0, 0.75);
+  --shadow-xl: 0 20px 40px -6px rgba(0, 0, 0, 0.85);
+  --shadow-2xl: 0 30px 60px -12px rgba(0, 0, 0, 0.95);
+  --shadow-inner: inset 0 1px 2px 0 rgba(255, 255, 255, 0.05);
 
-  /* Sejuk & Premium palette (Cool & Refreshing) */
-  --cream: oklch(0.98 0.008 200); 
-  --cream-soft: oklch(0.96 0.012 200);
-  --ink: oklch(0.18 0.02 240); 
-  --coffee: oklch(0.22 0.03 160); 
-  --terracotta: oklch(0.55 0.1 220); 
-  --clay: oklch(0.65 0.05 200);
-  --sage: oklch(0.6 0.06 150); 
-  --mustard: oklch(0.92 0.04 160); 
+  /* Dark Obsidian & Luminous Neural Tokens */
+  --background: #090807;
+  --foreground: #f5f5f4;
+  --card: rgba(22, 19, 16, 0.75);
+  --card-foreground: #f5f5f4;
+  --popover: #14110e;
+  --popover-foreground: #f5f5f4;
+  
+  --primary: #f97316;
+  --primary-foreground: #090807;
+  --secondary: #181512;
+  --secondary-foreground: #f5f5f4;
+  --muted: #181512;
+  --muted-foreground: #a8a29e;
+  --accent: #f97316;
+  --accent-foreground: #090807;
+  --destructive: #ef4444;
+  --destructive-foreground: #f5f5f4;
+  --border: rgba(255, 255, 255, 0.08);
+  --input: rgba(255, 255, 255, 0.12);
+  --ring: #f97316;
 
-  --background: var(--cream);
-  --foreground: var(--ink);
-  --card: oklch(0.99 0.005 200);
-  --card-foreground: var(--ink);
-  --popover: var(--card);
-  --popover-foreground: var(--ink);
-  --primary: var(--coffee);
-  --primary-foreground: var(--cream);
-  --secondary: var(--cream-soft);
-  --secondary-foreground: var(--ink);
-  --muted: var(--cream-soft);
-  --muted-foreground: oklch(0.45 0.02 200);
-  --accent: var(--terracotta);
-  --accent-foreground: var(--cream);
-  --destructive: oklch(0.55 0.2 27);
-  --destructive-foreground: var(--cream);
-  --border: oklch(0.88 0.015 200);
-  --input: oklch(0.88 0.015 200);
-  --ring: var(--terracotta);
-}
-
-.dark {
-  --background: oklch(0.12 0.02 220); 
-  --foreground: var(--cream);
-  --card: oklch(0.16 0.025 220);
-  --card-foreground: var(--cream);
-  --popover: var(--card);
-  --popover-foreground: var(--cream);
-  --primary: var(--cream);
-  --primary-foreground: var(--ink);
-  --secondary: oklch(0.2 0.03 220);
-  --secondary-foreground: var(--cream);
-  --muted: oklch(0.2 0.03 220);
-  --muted-foreground: oklch(0.6 0.03 200);
-  --accent: var(--terracotta);
-  --accent-foreground: var(--cream);
-  --border: oklch(0.25 0.03 220);
-  --input: oklch(0.25 0.03 220);
+  /* Palette Mappings for Components */
+  --cream: rgba(26, 22, 19, 0.7);
+  --cream-soft: #0e0c0a;
+  --ink: #f5f5f4;
+  --coffee: #f5f5f4; /* High-contrast crisp off-white for headlines */
+  --coffee-dark: #090807;
+  --terracotta: #f97316; /* Luminous warm amber-terracotta */
+  --clay: #a8a29e;
+  --sage: #10b981; /* Radiant Emerald for verified nodes */
+  --mustard: #f59e0b; /* Amber gold */
 }
 
 @layer base {
@@ -135,79 +119,19 @@
     border-color: var(--color-border);
   }
 
-  @media (min-width: 768px) {
-    body, a, button, input, textarea, [role="button"] {
-      cursor: none !important;
-    }
-  }
-
-  html {
-    scroll-behavior: smooth;
-  }
-
-  /* Lenis smooth scrolling support */
-  html.lenis,
-  html.lenis body {
-    height: auto;
-  }
-
-  .lenis.lenis-smooth {
-    scroll-behavior: auto !important;
-  }
-
-  .lenis.lenis-smooth [data-lenis-prevent] {
-    overscroll-behavior: contain;
-  }
-
-  .lenis.lenis-stopped {
-    overflow: hidden;
-  }
-
-  .lenis.lenis-scrolling iframe {
-    pointer-events: none;
-  }
-
   body {
     background-color: var(--color-background);
-    background-image: radial-gradient(circle at 50% 50%, transparent 0%, rgba(18, 22, 26, 0.03) 100%);
     color: var(--color-foreground);
     font-family: var(--font-sans);
-    font-feature-settings: "ss01", "cv11";
+    overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
-    position: relative;
+    -moz-osx-font-smoothing: grayscale;
   }
 
-  body::after {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-    opacity: 0.04;
-    pointer-events: none;
-    z-index: 9999;
-    filter: contrast(120%) brightness(100%);
-  }
-
-  h1 {
-    font-size: clamp(24px, 5vw, 48px); /* Adjusted for readability and premium feel */
-    line-height: 1.1;
-  }
-
-  h2 {
-    font-size: clamp(18px, 4vw, 32px);
-    line-height: 1.2;
-  }
-
-  h3 {
-    font-size: clamp(16px, 3vw, 24px);
-  }
-
-  p, body {
-    font-size: 16px;
-    line-height: 1.6;
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    color: var(--color-coffee);
+    letter-spacing: -0.025em;
   }
 
   .content-container {
@@ -215,8 +139,8 @@
     max-width: var(--container-max);
     margin-left: auto;
     margin-right: auto;
-    padding-left: var(--space-3);
-    padding-right: var(--space-3);
+    padding-left: var(--space-4);
+    padding-right: var(--space-4);
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -260,9 +184,30 @@
     position: absolute;
     inset: 0;
     pointer-events: none;
-    opacity: 0.06;
-    mix-blend-mode: multiply;
+    opacity: 0.03;
+    mix-blend-mode: screen;
     background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.7'/></svg>");
+  }
+
+  .glow-mesh {
+    background: radial-gradient(circle at 15% 15%, rgba(249, 115, 22, 0.08) 0%, transparent 45%),
+                radial-gradient(circle at 85% 85%, rgba(16, 185, 129, 0.06) 0%, transparent 45%);
+  }
+
+  .glass-panel {
+    background: rgba(22, 19, 16, 0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .glass-panel-hover {
+    transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .glass-panel-hover:hover {
+    border-color: rgba(249, 115, 22, 0.3);
+    box-shadow: 0 0 30px -5px rgba(249, 115, 22, 0.12);
+    transform: translateY(-2px);
   }
 
   .divider-dot::before {
@@ -285,19 +230,6 @@
     animation: fade-up 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
   }
 
-  @keyframes draw-line {
-    from {
-      transform: scaleY(0);
-    }
-    to {
-      transform: scaleY(1);
-    }
-  }
-  .animate-draw-line {
-    animation: draw-line 1.4s cubic-bezier(0.65, 0, 0.35, 1) both;
-    transform-origin: top;
-  }
-
   @keyframes marquee {
     from {
       transform: translateX(0);
@@ -308,26 +240,6 @@
   }
   .animate-marquee {
     animation: marquee 40s linear infinite;
-  }
-
-  @keyframes dash {
-    to {
-      stroke-dashoffset: -20;
-    }
-  }
-  .animate-dash {
-    animation: dash 5s linear infinite;
-    stroke-dashoffset: 0;
-  }
-
-  @keyframes ping-slow {
-    75%, 100% {
-      transform: scale(2.5);
-      opacity: 0;
-    }
-  }
-  .animate-ping-slow {
-    animation: ping-slow 3s cubic-bezier(0, 0, 0.2, 1) infinite;
   }
 
   .reveal {
@@ -344,70 +256,5 @@
   html.js-enabled .reveal.is-visible {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-/* Print Styles for PDF Export */
-@media print {
-  nav, footer, button, .marquee, .grain {
-    display: none !important;
-  }
-
-  body {
-    background: white !important;
-    color: black !important;
-    font-size: 12pt;
-  }
-
-  section {
-    page-break-inside: avoid;
-    border: none !important;
-    padding: 2rem 0 !important;
-    margin: 0 !important;
-  }
-
-  .mx-auto {
-    max-width: 100% !important;
-    padding: 0 2rem !important;
-  }
-
-  .font-display {
-    color: #3C2A21 !important; /* coffee */
-  }
-
-  .text-terracotta {
-    color: #D35D47 !important;
-  }
-
-  .grid {
-    display: block !important;
-  }
-
-  .lg\:col-span-7, .lg\:col-span-5, .md\:col-span-4 {
-    width: 100% !important;
-    margin-bottom: 2rem;
-  }
-
-  img {
-    max-width: 100% !important;
-    height: auto !important;
-    border-radius: 8px !important;
-  }
-
-  /* Reset layout for print */
-  .relative { position: static !important; }
-  .absolute { position: static !important; }
-  .translate-y-0, .translate-x-0 { transform: none !important; }
-  .opacity-0 { opacity: 1 !important; }
-  
-  /* Custom Print Header */
-  body::before {
-    content: "Professional Profile: Roedy Rustam — Trainer UMKM & Konsultan Desa";
-    display: block;
-    text-align: center;
-    font-family: var(--font-mono);
-    font-size: 8pt;
-    margin-bottom: 3rem;
-    color: gray;
   }
 }
