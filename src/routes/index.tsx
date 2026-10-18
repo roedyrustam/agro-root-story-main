@@ -12,13 +12,16 @@ import { Partners } from "@/components/Partners";
 import { Projects } from "@/components/Projects";
 import { Services } from "@/components/Services";
 import { McpConsolePreview } from "@/components/McpConsolePreview";
+import { UmkmAiDiagnosticTool } from "@/components/UmkmAiDiagnosticTool";
 import { InteractiveScopeEstimator } from "@/components/InteractiveScopeEstimator";
+import { Insights } from "@/components/Insights";
 import { FaqSection, faqsData } from "@/components/FaqSection";
 import { TrainingGallery } from "@/components/TrainingGallery";
 import { VideoDivider } from "@/components/VideoDivider";
 import { Footer } from "@/components/Footer";
 import { Reveal } from "@/components/Reveal";
 import { SectionLabel } from "@/components/SectionLabel";
+import { RoedyAgentWidget } from "@/components/RoedyAgentWidget";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -122,6 +125,10 @@ function Index() {
         </div>
       </section>
 
+      <Reveal>
+        <UmkmAiDiagnosticTool />
+      </Reveal>
+
       <VideoDivider />
 
       <Reveal>
@@ -137,12 +144,20 @@ function Index() {
         <TrainingGallery />
       </Reveal>
 
+      {/* Knowledge Hub & Field Notes (Articles) */}
+      <Reveal>
+        <Insights />
+      </Reveal>
+
       {/* GEO & AI Search FAQ Section */}
       <Reveal>
         <FaqSection />
       </Reveal>
 
       <Footer />
+
+      {/* Interactive AI Persona Assistant (Roedy-Agent AI v2.6) */}
+      <RoedyAgentWidget />
     </main>
   );
 }

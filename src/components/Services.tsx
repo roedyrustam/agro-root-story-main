@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
+import { BnspCredentialsModal } from "./BnspCredentialsModal";
+import { Award } from "lucide-react";
 
 const services = [
   {
@@ -38,9 +40,12 @@ const services = [
 
 export function Services() {
   const [hoveredService, setHoveredService] = useState<number | null>(null);
+  const [isBnspOpen, setIsBnspOpen] = useState(false);
 
   return (
     <section id="services" className="py-24 md:py-32 bg-[#090807] border-t border-white/10">
+      <BnspCredentialsModal isOpen={isBnspOpen} onClose={() => setIsBnspOpen(false)} />
+
       <div className="mx-auto max-w-7xl px-6 md:px-10">
         <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
           <div className="max-w-3xl">
@@ -105,7 +110,17 @@ export function Services() {
                 </div>
               </div>
 
-              <div className="mt-8 pt-5 border-t border-white/10">
+              <div className="mt-8 pt-5 border-t border-white/10 flex flex-col gap-2">
+                {service.title.includes("BNSP") && (
+                  <button
+                    type="button"
+                    onClick={() => setIsBnspOpen(true)}
+                    className="inline-flex items-center gap-1.5 text-left font-mono text-[10px] uppercase tracking-wider text-amber-400 hover:text-amber-300 transition-colors cursor-pointer mb-1"
+                  >
+                    <Award className="h-3 w-3" />
+                    <span>Verifikasi ID BNSP ↗</span>
+                  </button>
+                )}
                 <Link
                   to="/contact"
                   className="flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.2em] text-stone-300 group-hover:text-amber-300 transition-colors"

@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { SectionLabel } from "./SectionLabel";
-import { Star, GitFork, ExternalLink, Github } from "lucide-react";
+import { Star, GitFork, ExternalLink, Github, Radio } from "lucide-react";
+import { useGitHubRepoStats } from "@/hooks/use-github-stats";
 import agroagentImg from "../assets/project-agroagent-mcp.jpg";
 import swarmImg from "../assets/project-agent-swarm.jpg";
 import beanhubImg from "../assets/project-beanhub.png";
@@ -36,7 +37,7 @@ interface ProjectItem {
   image?: string;
 }
 
-const projects: ProjectItem[] = [
+const rawProjects: ProjectItem[] = [
   {
     name: "AgroAgent MCP Server",
     type: "Platform · Model Context Protocol",
@@ -207,6 +208,37 @@ const categoryTabs = [
 export function Projects() {
   const [activeCategory, setActiveCategory] = useState<ProjectCategory>("all");
   const [hoveredProject, setHoveredProject] = useState<string | null>(null);
+
+  const vibesLive = useGitHubRepoStats("vibes-plug");
+  const wilayahLive = useGitHubRepoStats("API-Wilayah-2024");
+  const sinapsLive = useGitHubRepoStats("sinapsai");
+
+  const projects = rawProjects.map((p) => {
+    if (p.name === "vibes-plug") {
+      return {
+        ...p,
+        stars: String(vibesLive.stars),
+        forks: String(vibesLive.forks),
+        badge: `${vibesLive.stars}★ Live GitHub`,
+      };
+    }
+    if (p.name === "API Wilayah Indonesia") {
+      return {
+        ...p,
+        stars: String(wilayahLive.stars),
+        forks: String(wilayahLive.forks),
+        badge: `${wilayahLive.stars}★ Live GitHub`,
+      };
+    }
+    if (p.name === "sinapsai") {
+      return {
+        ...p,
+        stars: String(sinapsLive.stars),
+        forks: String(sinapsLive.forks),
+      };
+    }
+    return p;
+  });
 
   const filteredProjects =
     activeCategory === "all" ? projects : projects.filter((p) => p.category === activeCategory);

@@ -1,17 +1,24 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { useMagnetic } from "@/hooks/use-magnetic";
-import { Github, Star, UserCheck, Coffee } from "lucide-react";
+import { useGitHubRepoStats } from "@/hooks/use-github-stats";
+import { Github, Star, UserCheck, Coffee, ShieldCheck, Award } from "lucide-react";
 import heroImg from "../assets/hero-coffee.jpg";
 import portraitImg from "../assets/roedy-rustam-portrait.jpg";
 import { LiquidImage } from "./LiquidImage";
+import { BnspCredentialsModal } from "./BnspCredentialsModal";
 
 export function Hero() {
   const magneticRef = useMagnetic<HTMLAnchorElement>();
   const [visualMode, setVisualMode] = useState<"portrait" | "agro">("portrait");
+  const [isBnspOpen, setIsBnspOpen] = useState(false);
+  const vibesStats = useGitHubRepoStats("vibes-plug");
 
   return (
     <section className="relative overflow-hidden pt-32 pb-20 md:pt-40 md:pb-28">
+      {/* BNSP Credential Verification Modal */}
+      <BnspCredentialsModal isOpen={isBnspOpen} onClose={() => setIsBnspOpen(false)} />
+
       {/* Decorative grain & obsidian mesh */}
       <div className="grain absolute inset-0 opacity-40 pointer-events-none" />
 
@@ -39,19 +46,27 @@ export function Hero() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1 font-mono text-[10px] uppercase tracking-wider text-stone-300 hover:border-amber-400/40 hover:text-white transition-colors"
+                title="Buka Repositori GitHub @roedyrustam"
               >
                 <Github className="h-3 w-3 text-stone-400" />
                 <span>@roedyrustam</span>
                 <span className="rounded-full bg-amber-400/20 px-1.5 py-0.5 text-[9px] text-amber-300 font-bold">
-                  77★
+                  {vibesStats.stars}★
                 </span>
               </a>
               <span className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-stone-300">
                 <span className="text-amber-400">⚡</span> MCP v1.x Ready
               </span>
-              <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/20 bg-emerald-950/40 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-emerald-300">
-                Trainer UMKM (BNSP)
-              </span>
+              <button
+                type="button"
+                onClick={() => setIsBnspOpen(true)}
+                className="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/30 bg-emerald-950/50 hover:bg-emerald-900/60 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-emerald-300 transition-colors cursor-pointer group"
+                title="Klik untuk verifikasi sertifikasi resmi BNSP"
+              >
+                <Award className="h-3 w-3 text-emerald-400 group-hover:scale-110 transition-transform" />
+                <span>Trainer UMKM (BNSP)</span>
+                <span className="text-[9px] text-emerald-400/70 font-sans">↗</span>
+              </button>
               <span className="hidden sm:inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-stone-400">
                 Indonesia · 119.4° E, 5.1° S
               </span>
@@ -216,7 +231,8 @@ export function Hero() {
                   className="rounded-xl border border-white/5 bg-white/[0.03] p-2.5 text-center transition-all hover:border-amber-500/40 hover:bg-white/[0.06]"
                 >
                   <div className="text-amber-400 font-semibold flex items-center justify-center gap-1">
-                    <span className="h-1.5 w-1.5 rounded-full bg-amber-400" /> 77★ REPO
+                    <span className="h-1.5 w-1.5 rounded-full bg-amber-400" /> {vibesStats.stars}★
+                    REPO
                   </div>
                   <div className="text-stone-300 mt-1 font-medium truncate">vibes-plug (155s)</div>
                 </a>
