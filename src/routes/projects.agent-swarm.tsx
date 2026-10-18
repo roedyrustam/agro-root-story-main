@@ -3,7 +3,17 @@ import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { generateSoftwareAppSchema, generateBreadcrumbSchema } from "@/lib/schema";
 import swarmImg from "../assets/project-agent-swarm.jpg";
-import { Bot, Network, Workflow, CheckCircle2, ArrowLeft, ArrowRight, Gauge, Cpu, Github } from "lucide-react";
+import {
+  Bot,
+  Network,
+  Workflow,
+  CheckCircle2,
+  ArrowLeft,
+  ArrowRight,
+  Gauge,
+  Cpu,
+  Github,
+} from "lucide-react";
 
 export const Route = createFileRoute("/projects/agent-swarm")({
   head: () => ({
@@ -32,7 +42,7 @@ export const Route = createFileRoute("/projects/agent-swarm")({
             description:
               "Autonomous multi-agent orchestration pipeline coordinating coffee quality inspection, SCA cupping evaluation, and highland logistics routing.",
             url: "https://roedyrustam.pages.dev/projects/agent-swarm",
-          })
+          }),
         ),
       },
       {
@@ -42,7 +52,7 @@ export const Route = createFileRoute("/projects/agent-swarm")({
             { name: "Home", item: "/" },
             { name: "Projects", item: "/#projects" },
             { name: "Agent Swarm", item: "/projects/agent-swarm" },
-          ])
+          ]),
         ),
       },
     ],
@@ -81,11 +91,15 @@ function AgentSwarmPage() {
 
           <h1 className="font-display text-[clamp(2.5rem,6vw,4.8rem)] leading-[1.08] text-white max-w-4xl font-bold">
             Multi-Agent Swarm Orchestrator: <br />
-            <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-amber-200">Otomasi Cerdas Rantai Pasok Pegunungan.</span>
+            <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-amber-200">
+              Otomasi Cerdas Rantai Pasok Pegunungan.
+            </span>
           </h1>
 
           <p className="mt-8 text-xl leading-relaxed text-stone-300 max-w-3xl">
-            Arsitektur kolaborasi multi-agen terdistribusi yang membagi tugas rantai pasok ke dalam 4 spesialis otonom: verifikasi telemetri panen, evaluasi sensori kopi standar SCA, kalkulasi rute logistik dataran tinggi, dan rekonsiliasi kas BUMDes.
+            Arsitektur kolaborasi multi-agen terdistribusi yang membagi tugas rantai pasok ke dalam
+            4 spesialis otonom: verifikasi telemetri panen, evaluasi sensori kopi standar SCA,
+            kalkulasi rute logistik dataran tinggi, dan rekonsiliasi kas BUMDes.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
@@ -129,7 +143,9 @@ function AgentSwarmPage() {
               4 Sub-Agen Kolaboratif dengan Siklus Verifikasi Mandiri
             </h2>
             <p className="mt-4 text-base leading-relaxed text-stone-300">
-              Bukan sekadar satu prompt monolitik, melainkan jaringan agen spesialis dengan *state graph* bersama yang memastikan tidak ada pesanan kopi yang dikirim sebelum lolos uji mutu dan kesiapan rute cuaca.
+              Bukan sekadar satu prompt monolitik, melainkan jaringan agen spesialis dengan *state
+              graph* bersama yang memastikan tidak ada pesanan kopi yang dikirim sebelum lolos uji
+              mutu dan kesiapan rute cuaca.
             </p>
           </div>
 
@@ -184,7 +200,10 @@ function AgentSwarmPage() {
                 accent: "border-coffee/20 bg-coffee/5",
               },
             ].map((ag) => (
-              <div key={ag.id} className={`rounded-3xl border ${ag.accent} p-8 shadow-sm transition-all hover:shadow-xl`}>
+              <div
+                key={ag.id}
+                className={`rounded-3xl border ${ag.accent} p-8 shadow-sm transition-all hover:shadow-xl`}
+              >
                 <div className="flex items-center justify-between mb-4">
                   <span className="font-mono text-xs uppercase tracking-widest text-coffee/60 font-semibold">
                     {ag.id}
@@ -221,17 +240,23 @@ function AgentSwarmPage() {
                 Efisiensi Koordinasi Tanpa Kehilangan Sentuhan Manusia
               </h2>
               <p className="text-base leading-relaxed text-stone-300">
-                Swarm ini bukan untuk menggantikan peran petani atau q-grader, melainkan memangkas 70% waktu birokrasi penyiapan dokumen ekspor dan koordinasi armada dari pelosok pegunungan ke kota besar.
+                Swarm ini bukan untuk menggantikan peran petani atau q-grader, melainkan memangkas
+                70% waktu birokrasi penyiapan dokumen ekspor dan koordinasi armada dari pelosok
+                pegunungan ke kota besar.
               </p>
-              
+
               <div className="grid grid-cols-2 gap-6 pt-4">
                 <div className="border-l-2 border-amber-400 pl-4">
                   <div className="font-display text-3xl text-amber-400 font-bold">3.4x</div>
-                  <div className="font-mono text-xs text-stone-400 mt-1 uppercase tracking-wider">Percepatan Dispatch</div>
+                  <div className="font-mono text-xs text-stone-400 mt-1 uppercase tracking-wider">
+                    Percepatan Dispatch
+                  </div>
                 </div>
                 <div className="border-l-2 border-emerald-400 pl-4">
                   <div className="font-display text-3xl text-emerald-400 font-bold">100%</div>
-                  <div className="font-mono text-xs text-stone-400 mt-1 uppercase tracking-wider">Audit Traceability</div>
+                  <div className="font-mono text-xs text-stone-400 mt-1 uppercase tracking-wider">
+                    Audit Traceability
+                  </div>
                 </div>
               </div>
             </div>

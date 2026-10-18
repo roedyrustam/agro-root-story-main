@@ -17,7 +17,7 @@ export function useMagnetic<T extends HTMLElement = HTMLButtonElement>() {
 
     // Movement intensity
     const strength = 0.3;
-    
+
     ref.current.style.transform = `translate(${distanceX * strength}px, ${distanceY * strength}px)`;
   }, []);
 
@@ -31,7 +31,7 @@ export function useMagnetic<T extends HTMLElement = HTMLButtonElement>() {
     if (node) {
       node.addEventListener("mousemove", handleMouseMove);
       node.addEventListener("mouseleave", handleMouseLeave);
-      
+
       // Ensure smooth transition back
       node.style.transition = "transform 0.3s cubic-bezier(0.22, 1, 0.36, 1)";
     }

@@ -3,6 +3,7 @@ import { Nav } from "@/components/Nav";
 import {
   generateProfessionalServiceSchema,
   generatePersonSchema,
+  generateProfilePageSchema,
   generateFaqSchema,
 } from "@/lib/schema";
 import { Hero } from "@/components/Hero";
@@ -22,31 +23,55 @@ import { SectionLabel } from "@/components/SectionLabel";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Roedy Rustam — AI Systems & Agentic Developer × Agro-Tech Sociopreneur" },
+      { title: "Roedy Rustam — Konsultan IT, Praktisi AI, Trainer & Konsultan UMKM Indonesia" },
       {
         name: "description",
         content:
-          "Roedy Rustam adalah AI Systems Architect & Konsultan Agro-Industri yang merancang Model Context Protocol (MCP v1.x), orkestrasi multi-agen otonom, dan digitalisasi rantai pasok kopi hulu-hilir di Sulawesi.",
+          "Roedy Rustam adalah Konsultan IT, Praktisi AI, Trainer IT/UMKM bersertifikasi BNSP, dan Konsultan UMKM Indonesia. Terbukti melalui repositori open-source GitHub @roedyrustam (vibes-plug 77★, Centaury Engine, sinapsai, doku-gemini-mcp, API-Wilayah-2024) serta implementasi beanhub.online dan Kafeya POS.",
       },
-      { property: "og:title", content: "Roedy Rustam — AI Systems & Agentic Developer × Agro-Tech Sociopreneur" },
+      {
+        name: "keywords",
+        content:
+          "Konsultan IT Indonesia, Praktisi AI Indonesia, Trainer IT, Trainer UMKM, Konsultan UMKM Indonesia, Pelatih Kewirausahaan BNSP, Roedy Rustam, vibes-plug GitHub, Centaury Engine, Model Context Protocol, MCP Server, Konsultan IT Makassar, Digitalisasi UMKM, beanhub, Kafeya POS",
+      },
+      {
+        property: "og:title",
+        content: "Roedy Rustam — Konsultan IT, Praktisi AI, Trainer & Konsultan UMKM Indonesia",
+      },
       {
         property: "og:description",
         content:
-          "AI Systems Architect, pengembang MCP Server & Multi-Agent Swarms terintegrasi dengan Beanhub dan ekosistem kopi Sulawesi.",
+          "Profil resmi Roedy Rustam: Konsultan IT, Praktisi AI, Trainer & Konsultan UMKM Indonesia. Dibuktikan dengan karya open-source GitHub (vibes-plug 77★, Centaury Engine), sertifikasi resmi BNSP, dan transformasi digital agro-kopi Sulawesi.",
       },
-      { property: "og:image", content: "/og-image.jpg" },
+      { property: "og:image", content: "/roedy-rustam.jpg" },
+      { property: "og:image:width", content: "800" },
+      { property: "og:image:height", content: "1000" },
       { property: "og:type", content: "profile" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:image", content: "/og-image.jpg" },
+      {
+        name: "twitter:title",
+        content: "Roedy Rustam — Konsultan IT, Praktisi AI, Trainer & Konsultan UMKM Indonesia",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Konsultan IT, Praktisi AI, Trainer & Konsultan UMKM Indonesia. Bukti karya GitHub: vibes-plug (77★), Centaury Engine, sinapsai, API-Wilayah-2024, & Sertifikasi BNSP.",
+      },
+      { name: "twitter:image", content: "/roedy-rustam.jpg" },
       { name: "geo.region", content: "ID-SN" },
-      { name: "geo.placename", content: "Makassar, Sulawesi Selatan" },
+      { name: "geo.placename", content: "Makassar, Sulawesi Selatan, Indonesia" },
       { name: "geo.position", content: "-5.1477;119.4327" },
       { name: "ICBM", content: "-5.1477, 119.4327" },
+      { name: "geo.country", content: "ID" },
     ],
     scripts: [
       {
         type: "application/ld+json",
         children: JSON.stringify(generatePersonSchema()),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(generateProfilePageSchema()),
       },
       {
         type: "application/ld+json",
@@ -67,11 +92,11 @@ function Index() {
       <Nav />
       <Hero />
       <Marquee />
-      
+
       <Reveal>
         <Partners />
       </Reveal>
-      
+
       <Reveal>
         <Services />
       </Reveal>
@@ -82,19 +107,23 @@ function Index() {
           <SectionLabel number="03" label="Protokol & Agen Otonom" />
           <div className="mt-6 max-w-3xl">
             <h2 className="font-display text-[clamp(2rem,5vw,3.8rem)] leading-[1.08] text-white">
-              Interaksi nyata dengan <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-amber-200">Model Context Protocol</span>
+              Interaksi nyata dengan{" "}
+              <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-amber-200">
+                Model Context Protocol
+              </span>
             </h2>
             <p className="mt-4 text-base text-stone-400 leading-relaxed">
-              Uji coba simulasi pemanggilan tool standar industri (MCP v1.x) yang menghubungkan agen AI otonom langsung ke telemetri kebun, catatan cupping SCA, dan rute logistik kopi.
+              Uji coba simulasi pemanggilan tool standar industri (MCP v1.x) yang menghubungkan agen
+              AI otonom langsung ke telemetri kebun, catatan cupping SCA, dan rute logistik kopi.
             </p>
           </div>
 
           <McpConsolePreview />
         </div>
       </section>
-      
+
       <VideoDivider />
-      
+
       <Reveal>
         <Projects />
       </Reveal>
@@ -103,7 +132,7 @@ function Index() {
       <Reveal>
         <InteractiveScopeEstimator />
       </Reveal>
-      
+
       <Reveal>
         <TrainingGallery />
       </Reveal>
@@ -112,7 +141,7 @@ function Index() {
       <Reveal>
         <FaqSection />
       </Reveal>
-      
+
       <Footer />
     </main>
   );

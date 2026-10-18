@@ -27,9 +27,9 @@ const scenarios: ToolScenario[] = [
           batch_id: "BRU-TYP-2026-08A",
           origin: "Barru, Sulawesi Selatan",
           elevation_masl: 1250,
-          varieties: ["Typica", "Lini S"]
-        }
-      }
+          varieties: ["Typica", "Lini S"],
+        },
+      },
     },
     responsePayload: {
       status: "success",
@@ -41,11 +41,11 @@ const scenarios: ToolScenario[] = [
         moisture_content_pct: 10.8,
         water_activity: 0.58,
         storage_temp_c: 21.4,
-        certification: "BNSP Agro Verified"
+        certification: "BNSP Agro Verified",
       },
-      audit_proof: "sha256:7f83b1657ff1fc53b92dc18148a1d65dfc2d4b1fa3d677284addd200126d9069"
+      audit_proof: "sha256:7f83b1657ff1fc53b92dc18148a1d65dfc2d4b1fa3d677284addd200126d9069",
     },
-    latencyMs: 38
+    latencyMs: 38,
   },
   {
     id: "cupping_eval",
@@ -67,10 +67,10 @@ const scenarios: ToolScenario[] = [
             acidity: 8.5,
             body: 8.25,
             balance: 8.5,
-            overall: 8.75
-          }
-        }
-      }
+            overall: 8.75,
+          },
+        },
+      },
     },
     responsePayload: {
       status: "success",
@@ -78,9 +78,9 @@ const scenarios: ToolScenario[] = [
       grade: "Specialty Grade 1",
       sensory_profile: ["Bergamot", "Brown Sugar", "Dark Plum", "Jasmine Finish"],
       recommendation: "Optimized for Light-Medium Filter Roast & Geisha-style showcase",
-      agent_confidence: 0.984
+      agent_confidence: 0.984,
     },
-    latencyMs: 54
+    latencyMs: 54,
   },
   {
     id: "dispatch_swarm",
@@ -97,9 +97,9 @@ const scenarios: ToolScenario[] = [
           destination_roastery: "Makassar Artisan Roasters",
           volume_kg: 600,
           max_transit_hours: 48,
-          temperature_controlled: true
-        }
-      }
+          temperature_controlled: true,
+        },
+      },
     },
     responsePayload: {
       status: "dispatched",
@@ -107,10 +107,10 @@ const scenarios: ToolScenario[] = [
       assigned_agents: ["Agent-Logistics-Router", "Agent-Quality-Check", "Agent-BUMDes-Ledger"],
       estimated_transit_time: "14h 30m",
       carbon_offset_kg: 18.2,
-      consignment_status: "LOCKED_IN_ESCROW"
+      consignment_status: "LOCKED_IN_ESCROW",
     },
-    latencyMs: 62
-  }
+    latencyMs: 62,
+  },
 ];
 
 export function McpConsolePreview() {
@@ -132,8 +132,8 @@ export function McpConsolePreview() {
       JSON.stringify(
         { request: activeScenario.requestPayload, response: activeScenario.responsePayload },
         null,
-        2
-      )
+        2,
+      ),
     );
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
@@ -208,20 +208,18 @@ export function McpConsolePreview() {
                   }`}
                 >
                   <div className="flex items-center justify-between">
-                    <span className="font-mono text-xs font-semibold text-white">
-                      {sc.title}
-                    </span>
+                    <span className="font-mono text-xs font-semibold text-white">{sc.title}</span>
                     {isSelected && (
                       <span className="rounded bg-amber-500/20 px-2 py-0.5 font-mono text-[10px] text-amber-300 font-medium">
                         Active
                       </span>
                     )}
                   </div>
-                  <p className="mt-2 text-xs leading-relaxed text-stone-300">
-                    {sc.desc}
-                  </p>
+                  <p className="mt-2 text-xs leading-relaxed text-stone-300">{sc.desc}</p>
                   <div className="mt-3 flex items-center gap-2 font-mono text-[10px] text-stone-400">
-                    <span className="rounded bg-white/5 px-2 py-0.5 border border-white/5">tool: {sc.name}()</span>
+                    <span className="rounded bg-white/5 px-2 py-0.5 border border-white/5">
+                      tool: {sc.name}()
+                    </span>
                     <span>~{sc.latencyMs}ms</span>
                   </div>
                 </button>
@@ -237,7 +235,8 @@ export function McpConsolePreview() {
                   Agentic Interoperability
                 </h4>
                 <p className="mt-1 text-[11px] leading-relaxed text-stone-400">
-                  Didesain untuk beroperasi native dengan Claude Desktop, Cursor, Gemini Live, dan autonomous swarms di jaringan desa.
+                  Didesain untuk beroperasi native dengan Claude Desktop, Cursor, Gemini Live, dan
+                  autonomous swarms di jaringan desa.
                 </p>
               </div>
             </div>
@@ -275,7 +274,9 @@ export function McpConsolePreview() {
             <div>
               <div className="mb-1.5 flex items-center justify-between text-[11px] text-sage">
                 <span>// 2. Verified Agent Response</span>
-                <span className="text-[10px] text-cream/40">latency: {activeScenario.latencyMs}ms</span>
+                <span className="text-[10px] text-cream/40">
+                  latency: {activeScenario.latencyMs}ms
+                </span>
               </div>
               <pre className="max-h-56 overflow-x-auto rounded-xl border border-sage/20 bg-black/40 p-4 text-[11px] leading-relaxed text-sage/90 selection:bg-sage/30">
                 <code>{JSON.stringify(activeScenario.responsePayload, null, 2)}</code>
@@ -286,7 +287,8 @@ export function McpConsolePreview() {
           {/* Footer metrics */}
           <div className="mt-4 flex flex-wrap items-center justify-between border-t border-cream/10 pt-4 font-mono text-[11px] text-cream/50">
             <span className="flex items-center gap-1.5">
-              <Database className="h-3 w-3 text-terracotta" /> Source: Distributed Edge SQLite & Telemetry
+              <Database className="h-3 w-3 text-terracotta" /> Source: Distributed Edge SQLite &
+              Telemetry
             </span>
             <span className="flex items-center gap-1 text-sage">
               <Sparkles className="h-3 w-3" /> Zero-Drift Type-Safe Schemas

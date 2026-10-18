@@ -58,15 +58,33 @@
 }
 
 @keyframes slide-up {
-  from { transform: translateY(100%); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 @keyframes draw-line {
-  0% { transform: scaleY(0); transform-origin: top; }
-  50% { transform: scaleY(1); transform-origin: top; }
-  50.1% { transform: scaleY(1); transform-origin: bottom; }
-  100% { transform: scaleY(0); transform-origin: bottom; }
+  0% {
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+  50% {
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+  50.1% {
+    transform: scaleY(1);
+    transform-origin: bottom;
+  }
+  100% {
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
 }
 
 :root {
@@ -87,7 +105,7 @@
   --card-foreground: #f5f5f4;
   --popover: #14110e;
   --popover-foreground: #f5f5f4;
-  
+
   --primary: #f97316;
   --primary-foreground: #090807;
   --secondary: #181512;
@@ -128,7 +146,12 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: var(--font-display);
     color: var(--color-coffee);
     letter-spacing: -0.025em;
@@ -144,7 +167,9 @@
   }
 
   @media (prefers-reduced-motion: reduce) {
-    *, ::before, ::after {
+    *,
+    ::before,
+    ::after {
       animation-duration: 0.01ms !important;
       animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;
@@ -190,8 +215,9 @@
   }
 
   .glow-mesh {
-    background: radial-gradient(circle at 15% 15%, rgba(249, 115, 22, 0.08) 0%, transparent 45%),
-                radial-gradient(circle at 85% 85%, rgba(16, 185, 129, 0.06) 0%, transparent 45%);
+    background:
+      radial-gradient(circle at 15% 15%, rgba(249, 115, 22, 0.08) 0%, transparent 45%),
+      radial-gradient(circle at 85% 85%, rgba(16, 185, 129, 0.06) 0%, transparent 45%);
   }
 
   .glass-panel {

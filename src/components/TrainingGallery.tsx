@@ -19,7 +19,8 @@ const activities = [
   {
     title: "Literasi Digital UMKM",
     location: "Jakarta & Sulawesi",
-    description: "Workshop manajemen usaha berbasis cloud untuk efisiensi operasional warung & kedai.",
+    description:
+      "Workshop manajemen usaha berbasis cloud untuk efisiensi operasional warung & kedai.",
     image: training3,
   },
 ];
@@ -30,14 +31,17 @@ export function TrainingGallery() {
       <div className="mx-auto max-w-7xl px-6 md:px-10">
         <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
           <div className="max-w-2xl">
-            <div className="font-mono text-xs uppercase tracking-[0.2em] text-terracotta">Proof of Work</div>
+            <div className="font-mono text-xs uppercase tracking-[0.2em] text-terracotta">
+              Proof of Work
+            </div>
             <h2 className="mt-4 font-display text-[clamp(2.5rem,5vw,4rem)] leading-[1.1] text-coffee">
               Aksi Nyata <br />
               <span className="italic text-terracotta">di Lapangan.</span>
             </h2>
           </div>
           <p className="max-w-md text-base leading-relaxed text-coffee/70">
-            Lebih dari sekadar kode, setiap platform yang saya bangun diuji langsung melalui ribuan jam interaksi dengan pelaku utama di hulu dan hilir.
+            Lebih dari sekadar kode, setiap platform yang saya bangun diuji langsung melalui ribuan
+            jam interaksi dengan pelaku utama di hulu dan hilir.
           </p>
         </div>
 
@@ -53,7 +57,9 @@ export function TrainingGallery() {
                 <div className="absolute inset-0 bg-gradient-to-t from-coffee/90 via-coffee/40 to-transparent opacity-90 transition-opacity md:opacity-60 group-hover:opacity-90" />
 
                 <div className="absolute bottom-0 left-0 right-0 p-8">
-                  <div className="font-mono text-[10px] uppercase tracking-widest text-mustard">{act.location}</div>
+                  <div className="font-mono text-[10px] uppercase tracking-widest text-mustard">
+                    {act.location}
+                  </div>
                   <h3 className="mt-2 font-display text-2xl text-cream">{act.title}</h3>
                   <p className="mt-4 text-sm text-cream/70 leading-relaxed opacity-100 translate-y-0 transition-all duration-500 md:opacity-0 md:translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
                     {act.description}
@@ -74,7 +80,9 @@ export function TrainingGallery() {
           ].map((stat, i) => (
             <div key={i}>
               <div className="font-display text-4xl text-coffee">{stat.value}</div>
-              <div className="mt-1 font-mono text-[10px] uppercase tracking-[0.2em] text-coffee/50">{stat.label}</div>
+              <div className="mt-1 font-mono text-[10px] uppercase tracking-[0.2em] text-coffee/50">
+                {stat.label}
+              </div>
             </div>
           ))}
         </div>

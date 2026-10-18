@@ -73,7 +73,7 @@ export const Route = createFileRoute("/projects/beanhub")({
             description: "Platform rantai pasok kopi dari kebun ke roastery yang transparan.",
             url: "https://beanhub.online",
             image: "https://roedyrustam.pages.dev/og-beanhub.jpg",
-          })
+          }),
         ),
       },
       {
@@ -83,7 +83,7 @@ export const Route = createFileRoute("/projects/beanhub")({
             { name: "Beranda", item: "/" },
             { name: "Proyek", item: "/" },
             { name: "Beanhub", item: "/projects/beanhub" },
-          ])
+          ]),
         ),
       },
     ],
@@ -133,9 +133,11 @@ function BeanhubPage() {
           >
             ← Kembali
           </Link>
-          
+
           <div className="mt-12 flex flex-wrap items-center gap-3 font-mono text-xs uppercase tracking-[0.2em]">
-            <span className="rounded-full bg-amber-500/10 px-3 py-1 text-amber-400 border border-amber-500/20 font-bold">Supply Chain</span>
+            <span className="rounded-full bg-amber-500/10 px-3 py-1 text-amber-400 border border-amber-500/20 font-bold">
+              Supply Chain
+            </span>
             <span className="text-stone-400">2025</span>
             <span className="text-stone-600">·</span>
             <span className="text-stone-400">Agro-Digital</span>
@@ -143,18 +145,28 @@ function BeanhubPage() {
 
           <h1 className="mt-8 font-display text-[clamp(3.5rem,10vw,8.5rem)] leading-[0.9] text-white text-balance font-bold">
             Digitalisasi <br />
-            <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-amber-200">hulu kopi</span> <br />
+            <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-amber-200">
+              hulu kopi
+            </span>{" "}
+            <br />
             Sulawesi.
           </h1>
-          
+
           <div className="mt-12 max-w-2xl">
             <p className="text-xl leading-relaxed text-stone-300">
-              Beanhub.online bukan sekadar aplikasi pencatatan. Ini adalah instrumen transparansi yang lahir dari kegelisahan saya melihat petani kopi di pegunungan Sulawesi seringkali kehilangan kendali atas nilai komoditas mereka sendiri.
+              Beanhub.online bukan sekadar aplikasi pencatatan. Ini adalah instrumen transparansi
+              yang lahir dari kegelisahan saya melihat petani kopi di pegunungan Sulawesi seringkali
+              kehilangan kendali atas nilai komoditas mereka sendiri.
             </p>
           </div>
 
           <div className="mt-12 flex flex-wrap gap-5">
-            <a href="https://beanhub.online" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 px-7 py-4 font-mono text-xs uppercase tracking-[0.2em] text-stone-950 font-bold transition-all hover:scale-105 shadow-lg shadow-amber-500/20">
+            <a
+              href="https://beanhub.online"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 px-7 py-4 font-mono text-xs uppercase tracking-[0.2em] text-stone-950 font-bold transition-all hover:scale-105 shadow-lg shadow-amber-500/20"
+            >
               Buka Platform ↗
             </a>
           </div>
@@ -166,26 +178,40 @@ function BeanhubPage() {
         <div className="mx-auto max-w-6xl px-6 md:px-10">
           <div className="grid gap-16 lg:grid-cols-2 lg:items-start">
             <div className="space-y-8">
-              <div className="font-mono text-xs uppercase tracking-[0.2em] text-amber-400 font-semibold">Catatan Konsultan</div>
+              <div className="font-mono text-xs uppercase tracking-[0.2em] text-amber-400 font-semibold">
+                Catatan Konsultan
+              </div>
               <h2 className="font-display text-4xl text-white leading-[1.1] font-bold">
                 "Aplikasi tidak akan <br />
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-300">membereskan masalah</span> <br />
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-300">
+                  membereskan masalah
+                </span>{" "}
+                <br />
                 jika hubungan tidak dibangun."
               </h2>
               <p className="text-lg leading-relaxed text-stone-300">
-                Saat mendampingi petani di Barru dan Toraja, saya menyadari bahwa hambatan terbesar digitalisasi bukan pada kemampuan teknis, melainkan pada <strong className="text-amber-400">kepercayaan</strong>. Petani enggan mencatat jika data tersebut hanya digunakan untuk menekan harga.
+                Saat mendampingi petani di Barru dan Toraja, saya menyadari bahwa hambatan terbesar
+                digitalisasi bukan pada kemampuan teknis, melainkan pada{" "}
+                <strong className="text-amber-400">kepercayaan</strong>. Petani enggan mencatat jika
+                data tersebut hanya digunakan untuk menekan harga.
               </p>
               <p className="text-lg leading-relaxed text-stone-300">
-                Beanhub saya rancang untuk menjadi "jembatan kepercayaan". Dengan pencatatan yang terbuka, pengepul dan roaster bisa memberikan harga yang lebih adil (premium) karena mereka memiliki bukti kualitas dan asal-usul yang sah.
+                Beanhub saya rancang untuk menjadi "jembatan kepercayaan". Dengan pencatatan yang
+                terbuka, pengepul dan roaster bisa memberikan harga yang lebih adil (premium) karena
+                mereka memiliki bukti kualitas dan asal-usul yang sah.
               </p>
             </div>
             <div className="relative">
               <div className="aspect-[4/5] rounded-3xl overflow-hidden bg-[#14110e] border border-white/10 shadow-2xl">
                 <div className="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-transparent to-transparent" />
                 <div className="relative h-full p-10 flex flex-col justify-end">
-                  <div className="font-mono text-sm text-amber-400 font-semibold">Impact Metric</div>
+                  <div className="font-mono text-sm text-amber-400 font-semibold">
+                    Impact Metric
+                  </div>
                   <div className="mt-2 font-display text-6xl text-white font-bold">100%</div>
-                  <div className="mt-2 text-stone-400">Traceability terjamin dari pohon ke karung.</div>
+                  <div className="mt-2 text-stone-400">
+                    Traceability terjamin dari pohon ke karung.
+                  </div>
                 </div>
               </div>
             </div>
@@ -219,7 +245,10 @@ function BeanhubPage() {
               Masalah
             </div>
             <h2 className="mt-4 font-display text-3xl text-white md:text-4xl font-bold">
-              Rantai pasok kopi sering jadi <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-300">kotak hitam.</span>
+              Rantai pasok kopi sering jadi{" "}
+              <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-300">
+                kotak hitam.
+              </span>
             </h2>
             <p className="mt-6 leading-relaxed text-stone-300">
               Petani tidak tahu berapa harga biji mereka dijual di kota. Pengepul kewalahan mencatat
@@ -240,9 +269,14 @@ function BeanhubPage() {
             </div>
           </div>
           <div className="order-1 lg:order-2">
-            <div className="font-mono text-xs uppercase tracking-[0.2em] text-emerald-400 font-semibold">Solusi</div>
+            <div className="font-mono text-xs uppercase tracking-[0.2em] text-emerald-400 font-semibold">
+              Solusi
+            </div>
             <h2 className="mt-4 font-display text-3xl text-white md:text-4xl font-bold">
-              Satu sistem ringan untuk <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-amber-300">semua simpul.</span>
+              Satu sistem ringan untuk{" "}
+              <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-amber-300">
+                semua simpul.
+              </span>
             </h2>
             <p className="mt-6 leading-relaxed text-stone-300">
               Beanhub.online adalah pencatatan terpusat yang ringan — bisa diakses petani via
@@ -283,7 +317,9 @@ function BeanhubPage() {
       {/* Results */}
       <section className="reveal py-24 md:py-32 bg-[#090807]">
         <div className="mx-auto max-w-6xl px-6 md:px-10">
-          <div className="font-mono text-xs uppercase tracking-[0.2em] text-amber-400 font-semibold">Hasil</div>
+          <div className="font-mono text-xs uppercase tracking-[0.2em] text-amber-400 font-semibold">
+            Hasil
+          </div>
           <h2 className="mt-4 max-w-2xl font-display text-3xl text-white md:text-5xl font-bold">
             Dampak nyata di lapangan.
           </h2>
@@ -291,7 +327,9 @@ function BeanhubPage() {
           <div className="mt-16 grid gap-8 md:grid-cols-3">
             {results.map((r) => (
               <div key={r.label} className="border-t-2 border-amber-400 pt-6">
-                <div className="font-display text-6xl text-white font-bold md:text-7xl">{r.metric}</div>
+                <div className="font-display text-6xl text-white font-bold md:text-7xl">
+                  {r.metric}
+                </div>
                 <div className="mt-3 font-display text-xl text-white font-bold">{r.label}</div>
                 <div className="mt-1 text-sm text-stone-400">{r.note}</div>
               </div>
@@ -322,7 +360,9 @@ function CtaBlock({ eyebrow, title, body }: { eyebrow: string; title: string; bo
   return (
     <section className="border-t border-white/10 bg-[#120f0d] py-24 text-stone-200 md:py-32">
       <div className="mx-auto max-w-5xl px-6 md:px-10">
-        <div className="font-mono text-xs uppercase tracking-[0.2em] text-amber-400 font-semibold">{eyebrow}</div>
+        <div className="font-mono text-xs uppercase tracking-[0.2em] text-amber-400 font-semibold">
+          {eyebrow}
+        </div>
         <h2 className="mt-6 font-display text-[clamp(2rem,5vw,4rem)] leading-[1.05] text-white text-balance font-bold">
           {title}
         </h2>

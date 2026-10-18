@@ -21,7 +21,7 @@ export function CustomCursor() {
       mouseX = e.clientX;
       mouseY = e.clientY;
       setIsHidden(false);
-      
+
       // Update main dot immediately
       cursor.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
     };
@@ -42,7 +42,9 @@ export function CustomCursor() {
     const handleHoverStart = () => setIsHovering(true);
     const handleHoverEnd = () => setIsHovering(false);
 
-    const interactiveElements = document.querySelectorAll("a, button, .interactive, input, textarea");
+    const interactiveElements = document.querySelectorAll(
+      "a, button, .interactive, input, textarea",
+    );
     interactiveElements.forEach((el) => {
       el.addEventListener("mouseenter", handleHoverStart);
       el.addEventListener("mouseleave", handleHoverEnd);
@@ -53,7 +55,7 @@ export function CustomCursor() {
     window.addEventListener("mouseleave", onMouseLeave);
     window.addEventListener("mousedown", onMouseDown);
     window.addEventListener("mouseup", onMouseUp);
-    
+
     const animationFrame = requestAnimationFrame(animateFollower);
 
     return () => {
@@ -71,13 +73,15 @@ export function CustomCursor() {
   }, []);
 
   return (
-    <div className={`pointer-events-none fixed inset-0 z-[9999] transition-opacity duration-300 ${isHidden ? "opacity-0" : "opacity-100"} hidden md:block`}>
+    <div
+      className={`pointer-events-none fixed inset-0 z-[9999] transition-opacity duration-300 ${isHidden ? "opacity-0" : "opacity-100"} hidden md:block`}
+    >
       {/* Main Dot */}
       <div
         ref={cursorRef}
         className="absolute left-0 top-0 h-1.5 w-1.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-terracotta transition-transform duration-100 ease-out"
       />
-      
+
       {/* Follower Ring */}
       <div
         ref={followerRef}

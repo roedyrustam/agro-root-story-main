@@ -21,7 +21,13 @@ interface ProjectItem {
   stack: string[];
   accent: string;
   pattern: string;
-  href?: "/projects/agroagent-mcp" | "/projects/agent-swarm" | "/projects/beanhub" | "/projects/cuppingnotes" | "/projects/kafeya" | "/projects/pandudesa";
+  href?:
+    | "/projects/agroagent-mcp"
+    | "/projects/agent-swarm"
+    | "/projects/beanhub"
+    | "/projects/cuppingnotes"
+    | "/projects/kafeya"
+    | "/projects/pandudesa";
   externalUrl?: string;
   stars?: string;
   forks?: string;
@@ -64,15 +70,30 @@ const projects: ProjectItem[] = [
     type: "Open Source · Agent Swarm Skills",
     category: "oss",
     year: "2026",
-    desc: "Universal Skill AI Agent Swarm Architecture untuk Google Antigravity, Claude Code, Cursor, & Windsurf. Vibe Coding 2.0 dengan standar Zero Tech Debt dan paket resmi npm.",
-    stack: ["Agent Swarms", "Antigravity", "Claude Code", "npm package", "73★ GitHub"],
+    desc: "Universal Skill AI Agent Swarm Architecture untuk Google Antigravity, Claude Code, Cursor, & Windsurf. Orkestrasi 155 specialized subagents dengan standar Zero Tech Debt dan paket resmi npm.",
+    stack: ["Agent Swarms", "155 Skills", "Antigravity", "npm package", "77★ GitHub"],
     accent: "bg-amber-500",
     pattern: "from-amber-950/40 via-stone-900 to-amber-900/30",
     externalUrl: "https://github.com/roedyrustam/vibes-plug",
-    stars: "73",
-    forks: "18",
+    stars: "77",
+    forks: "19",
     initial: "v",
-    badge: "73★ GitHub",
+    badge: "77★ GitHub",
+  },
+  {
+    name: "Centaury Engine",
+    type: "Open Source · Autonomous Fullstack Engine",
+    category: "ai",
+    year: "2026",
+    desc: "The Autonomous Fullstack Engine for Super-Intelligent Systems (Gemini 4 Pro, Project Astra, Dual-Citizen MCP v1.x, Zero-Hydration Signals, Ephemeral UI).",
+    stack: ["Gemini 4 Pro", "Project Astra", "MCP v1.x", "Ephemeral UI"],
+    accent: "bg-cyan-500",
+    pattern: "from-cyan-950/40 via-stone-900 to-cyan-900/30",
+    externalUrl: "https://github.com/roedyrustam/centaury",
+    stars: "1",
+    forks: "0",
+    initial: "c",
+    badge: "Gemini 4 Pro",
   },
   {
     name: "sinapsai",
@@ -84,6 +105,8 @@ const projects: ProjectItem[] = [
     accent: "bg-emerald-500",
     pattern: "from-emerald-950/40 via-stone-900 to-emerald-900/30",
     externalUrl: "https://github.com/roedyrustam/sinapsai",
+    stars: "4",
+    forks: "3",
     initial: "s",
     badge: "AI Gateway",
   },
@@ -174,9 +197,9 @@ const projects: ProjectItem[] = [
 ];
 
 const categoryTabs = [
-  { id: "all", label: "Semua Karya", count: 10 },
-  { id: "ai", label: "AI & Agentic Systems", count: 2 },
-  { id: "oss", label: "Open Source (GitHub)", count: 4 },
+  { id: "all", label: "Semua Karya", count: 11 },
+  { id: "ai", label: "AI & Agentic Systems", count: 3 },
+  { id: "oss", label: "Open Source (GitHub)", count: 5 },
   { id: "agro", label: "Rantai Pasok & Kopi", count: 2 },
   { id: "desa", label: "Kedaulatan Desa", count: 2 },
 ];
@@ -186,9 +209,7 @@ export function Projects() {
   const [hoveredProject, setHoveredProject] = useState<string | null>(null);
 
   const filteredProjects =
-    activeCategory === "all"
-      ? projects
-      : projects.filter((p) => p.category === activeCategory);
+    activeCategory === "all" ? projects : projects.filter((p) => p.category === activeCategory);
 
   return (
     <section id="projects" className="border-t border-white/10 bg-[#090807] py-24 md:py-32">
@@ -198,12 +219,15 @@ export function Projects() {
             <SectionLabel number="04" label="Karya Digital & Sistem Agen" />
             <h2 className="mt-6 font-display text-[clamp(2rem,5vw,4rem)] leading-[1.05] text-white">
               Karya digital & repository <br />
-              <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-amber-200">dampak nyata & teruji.</span>
+              <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-amber-200">
+                dampak nyata & teruji.
+              </span>
             </h2>
           </div>
           <div className="flex flex-col gap-2">
             <p className="max-w-md text-sm leading-relaxed text-stone-400">
-              Menampilkan platform produksi dan repository open-source terverifikasi di GitHub dengan implementasi agen cerdas.
+              Menampilkan platform produksi dan repository open-source terverifikasi di GitHub
+              dengan implementasi agen cerdas.
             </p>
             <a
               href="https://github.com/roedyrustam"
@@ -234,7 +258,9 @@ export function Projects() {
                 <span>{tab.label}</span>
                 <span
                   className={`rounded-full px-2 py-0.5 text-[9px] font-mono ${
-                    isSelected ? "bg-black/20 text-stone-950 font-bold" : "bg-white/10 text-stone-400"
+                    isSelected
+                      ? "bg-black/20 text-stone-950 font-bold"
+                      : "bg-white/10 text-stone-400"
                   }`}
                 >
                   {tab.count}
@@ -255,6 +281,7 @@ export function Projects() {
             return (
               <CardWrapper
                 key={p.name}
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
                 {...(linkProps as any)}
                 onMouseEnter={() => setHoveredProject(p.name)}
                 onMouseLeave={() => setHoveredProject(null)}
@@ -264,7 +291,9 @@ export function Projects() {
                     : "scale-100 opacity-100 blur-0"
                 }`}
               >
-                <div className={`relative h-64 bg-gradient-to-br ${p.pattern} grain overflow-hidden`}>
+                <div
+                  className={`relative h-64 bg-gradient-to-br ${p.pattern} grain overflow-hidden`}
+                >
                   {p.image ? (
                     <LiquidImage
                       src={p.image}
@@ -279,13 +308,13 @@ export function Projects() {
                     </div>
                   )}
                   <div className="absolute inset-0 bg-[#090807]/30 transition-opacity duration-700 group-hover:opacity-0" />
-                  
+
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 transition-all duration-700 group-hover:opacity-100 group-hover:scale-125">
                     <div className="font-display text-9xl italic text-white/30 drop-shadow-2xl">
                       {p.initial}
                     </div>
                   </div>
-                  
+
                   <div className="absolute left-6 top-6 z-10 flex h-8 items-center gap-2 rounded-full bg-black/75 px-3.5 font-mono text-[9px] uppercase tracking-[0.2em] text-stone-200 shadow-sm backdrop-blur-xl border border-white/15 font-semibold">
                     <span>{p.year}</span>
                     {p.badge && (
@@ -324,7 +353,7 @@ export function Projects() {
                       )}
                     </span>
                   </div>
-                  
+
                   <div className="mt-5 flex-1">
                     <h3 className="font-display text-2xl md:text-3xl text-white leading-tight transition-colors group-hover:text-amber-300 tracking-tight font-bold flex items-center gap-2">
                       <span>{p.name}</span>

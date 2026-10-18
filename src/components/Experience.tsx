@@ -76,18 +76,24 @@ export function Experience() {
       <div className="content-container">
         <SectionLabel number="03" label="Pengalaman" />
         <h2 className="mt-6 max-w-3xl font-display text-[clamp(1.75rem,4vw,3rem)] leading-[1.1] text-white">
-          Empat peran, satu <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-amber-200">benang merah</span>: efisiensi
-          dan kecerdasan yang berpihak.
+          Empat peran, satu{" "}
+          <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-amber-200">
+            benang merah
+          </span>
+          : efisiensi dan kecerdasan yang berpihak.
         </h2>
 
         <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-12">
           {experiences.map((exp, i) => {
             // Bento Grid spanning logic
-            const gridClasses = 
-              i === 0 ? "lg:col-span-8 lg:row-span-2 bg-[#14110e]/95 border-amber-500/30 shadow-[0_0_60px_rgba(245,158,11,0.06)]" :
-              i === 1 ? "lg:col-span-4 bg-[#120f0d]/90 border-emerald-500/30" :
-              i === 2 ? "lg:col-span-4 bg-[#120f0d]/90 border-amber-500/20" :
-              "lg:col-span-12 bg-[#120f0d]/90 border-white/10";
+            const gridClasses =
+              i === 0
+                ? "lg:col-span-8 lg:row-span-2 bg-[#14110e]/95 border-amber-500/30 shadow-[0_0_60px_rgba(245,158,11,0.06)]"
+                : i === 1
+                  ? "lg:col-span-4 bg-[#120f0d]/90 border-emerald-500/30"
+                  : i === 2
+                    ? "lg:col-span-4 bg-[#120f0d]/90 border-amber-500/20"
+                    : "lg:col-span-12 bg-[#120f0d]/90 border-white/10";
 
             return (
               <article
@@ -96,7 +102,7 @@ export function Experience() {
               >
                 {/* Decorative Pattern Background */}
                 <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-amber-500/10 opacity-[0.05] blur-3xl transition-transform duration-700 group-hover:scale-150" />
-                
+
                 <div className="reveal relative z-10">
                   <div className="mb-6 flex flex-wrap items-center justify-between gap-4">
                     <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-amber-400 font-bold">
@@ -109,7 +115,9 @@ export function Experience() {
                     </div>
                   </div>
 
-                  <h3 className={`font-display text-white leading-tight ${i === 0 ? 'text-4xl md:text-5xl' : 'text-2xl md:text-3xl'} mb-3 font-bold`}>
+                  <h3
+                    className={`font-display text-white leading-tight ${i === 0 ? "text-4xl md:text-5xl" : "text-2xl md:text-3xl"} mb-3 font-bold`}
+                  >
                     {exp.role}
                   </h3>
                   <div className="mb-8 font-mono text-xs uppercase tracking-widest text-amber-300/70 font-semibold">
@@ -118,14 +126,17 @@ export function Experience() {
 
                   <ul className="space-y-4">
                     {exp.points.map((p) => (
-                      <li key={p} className="flex gap-4 text-sm md:text-base leading-relaxed text-stone-300">
+                      <li
+                        key={p}
+                        className="flex gap-4 text-sm md:text-base leading-relaxed text-stone-300"
+                      >
                         <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-amber-400" />
                         <span className="text-pretty">{p}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
-                
+
                 <div className="mt-10 pt-8 border-t border-white/10 reveal delay-100 relative z-10">
                   <CopyLinkBtn chapter={exp.chapter} label={exp.role} />
                 </div>

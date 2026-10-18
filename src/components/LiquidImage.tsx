@@ -14,17 +14,13 @@ export function LiquidImage({ src, alt, className }: LiquidImageProps) {
   useEffect(() => {
     if (isHovered) {
       controls.start({
-        filter: [
-          "url(#distort-subtle)",
-          "url(#distort-liquid)",
-          "url(#distort-subtle)"
-        ],
-        transition: { duration: 0.8, ease: "easeInOut" }
+        filter: ["url(#distort-subtle)", "url(#distort-liquid)", "url(#distort-subtle)"],
+        transition: { duration: 0.8, ease: "easeInOut" },
       });
     } else {
       controls.start({
         filter: "url(#distort-subtle)",
-        transition: { duration: 0.4 }
+        transition: { duration: 0.4 },
       });
     }
   }, [isHovered, controls]);

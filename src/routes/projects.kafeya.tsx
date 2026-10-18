@@ -70,10 +70,11 @@ export const Route = createFileRoute("/projects/kafeya")({
         children: JSON.stringify(
           generateSoftwareAppSchema({
             name: "Kafeya POS",
-            description: "Alat bantu kasir & pelaporan keuangan sederhana untuk café dan UMKM kopi.",
+            description:
+              "Alat bantu kasir & pelaporan keuangan sederhana untuk café dan UMKM kopi.",
             url: "https://kafeya.online",
             image: "https://roedyrustam.pages.dev/og-kafeya.jpg",
-          })
+          }),
         ),
       },
       {
@@ -83,7 +84,7 @@ export const Route = createFileRoute("/projects/kafeya")({
             { name: "Beranda", item: "/" },
             { name: "Proyek", item: "/" },
             { name: "Kafeya", item: "/projects/kafeya" },
-          ])
+          ]),
         ),
       },
     ],
@@ -135,7 +136,9 @@ function KafeyaPage() {
           </Link>
 
           <div className="mt-12 flex flex-wrap items-center gap-3 font-mono text-xs uppercase tracking-[0.2em]">
-            <span className="rounded-full bg-amber-500/10 px-3 py-1 text-amber-400 font-bold border border-amber-500/20">Financial Tool</span>
+            <span className="rounded-full bg-amber-500/10 px-3 py-1 text-amber-400 font-bold border border-amber-500/20">
+              Financial Tool
+            </span>
             <span className="text-stone-400">2025</span>
             <span className="text-stone-600">·</span>
             <span className="text-stone-400">UMKM Empowerment</span>
@@ -143,18 +146,28 @@ function KafeyaPage() {
 
           <h1 className="mt-8 font-display text-[clamp(3.5rem,10vw,8.5rem)] leading-[0.9] text-white text-balance font-bold">
             Akuntansi <br />
-            <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-amber-200">tanpa beban</span> <br />
+            <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-amber-200">
+              tanpa beban
+            </span>{" "}
+            <br />
             untuk warung.
           </h1>
 
           <div className="mt-12 max-w-2xl">
             <p className="text-xl leading-relaxed text-stone-300">
-              Kafeya POS lahir dari ribuan jam saya mendampingi pemilik warung kopi kecil yang merasa "takut" dengan angka. Saya membangun alat yang membuat pembukuan terasa seperti aktivitas harian yang ringan.
+              Kafeya POS lahir dari ribuan jam saya mendampingi pemilik warung kopi kecil yang
+              merasa "takut" dengan angka. Saya membangun alat yang membuat pembukuan terasa seperti
+              aktivitas harian yang ringan.
             </p>
           </div>
 
           <div className="mt-12 flex flex-wrap gap-5">
-            <a href="https://kafeya.online" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 px-7 py-4 font-mono text-xs uppercase tracking-[0.2em] text-stone-950 font-bold transition-all hover:scale-105 shadow-lg shadow-amber-500/20">
+            <a
+              href="https://kafeya.online"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 px-7 py-4 font-mono text-xs uppercase tracking-[0.2em] text-stone-950 font-bold transition-all hover:scale-105 shadow-lg shadow-amber-500/20"
+            >
               Coba Sekarang ↗
             </a>
           </div>
@@ -166,26 +179,39 @@ function KafeyaPage() {
         <div className="mx-auto max-w-6xl px-6 md:px-10">
           <div className="grid gap-16 lg:grid-cols-2 lg:items-start">
             <div className="space-y-8">
-              <div className="font-mono text-xs uppercase tracking-[0.2em] text-amber-400 font-semibold">Catatan Trainer</div>
+              <div className="font-mono text-xs uppercase tracking-[0.2em] text-amber-400 font-semibold">
+                Catatan Trainer
+              </div>
               <h2 className="font-display text-4xl text-white leading-[1.1] font-bold">
                 "Mendidik mentalitas <br />
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-300">lebih sulit</span> <br />
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-300">
+                  lebih sulit
+                </span>{" "}
+                <br />
                 daripada mengajar fitur."
               </h2>
               <p className="text-lg leading-relaxed text-stone-300">
-                Banyak pemilik UMKM berhenti mencatat bukan karena aplikasinya sulit, tapi karena mereka tidak melihat manfaat langsung dari data. Tugas saya sebagai pelatih adalah menunjukkan bahwa satu baris transaksi adalah peta menuju profitabilitas.
+                Banyak pemilik UMKM berhenti mencatat bukan karena aplikasinya sulit, tapi karena
+                mereka tidak melihat manfaat langsung dari data. Tugas saya sebagai pelatih adalah
+                menunjukkan bahwa satu baris transaksi adalah peta menuju profitabilitas.
               </p>
               <p className="text-lg leading-relaxed text-stone-300">
-                Kafeya saya desain untuk "sembunyi". Dia tidak meminta banyak perhatian, tapi memastikan setiap rupiah yang masuk terdokumentasi dengan benar sesuai kaidah akuntansi, tanpa pemilik warung harus menjadi akuntan.
+                Kafeya saya desain untuk "sembunyi". Dia tidak meminta banyak perhatian, tapi
+                memastikan setiap rupiah yang masuk terdokumentasi dengan benar sesuai kaidah
+                akuntansi, tanpa pemilik warung harus menjadi akuntan.
               </p>
             </div>
             <div className="relative">
               <div className="aspect-[4/5] rounded-3xl overflow-hidden bg-[#14110e] border border-white/10 shadow-2xl">
                 <div className="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-transparent to-transparent" />
                 <div className="relative h-full p-10 flex flex-col justify-end">
-                  <div className="font-mono text-sm text-amber-400 font-semibold">Training Stat</div>
+                  <div className="font-mono text-sm text-amber-400 font-semibold">
+                    Training Stat
+                  </div>
                   <div className="mt-2 font-display text-6xl text-white font-bold">0</div>
-                  <div className="mt-2 text-stone-400">Kurva belajar mendekati nol untuk pemilik warung.</div>
+                  <div className="mt-2 text-stone-400">
+                    Kurva belajar mendekati nol untuk pemilik warung.
+                  </div>
                 </div>
               </div>
             </div>
@@ -218,7 +244,10 @@ function KafeyaPage() {
               Masalah
             </div>
             <h2 className="mt-4 font-display text-3xl text-white md:text-4xl font-bold">
-              UMKM kopi takut <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-300">"laporan keuangan".</span>
+              UMKM kopi takut{" "}
+              <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-300">
+                "laporan keuangan".
+              </span>
             </h2>
             <p className="mt-6 leading-relaxed text-stone-300">
               Pemilik warung sibuk meracik kopi, bukan mengoperasikan software akuntansi. POS yang
@@ -229,9 +258,14 @@ function KafeyaPage() {
           </div>
 
           <div>
-            <div className="font-mono text-xs uppercase tracking-[0.2em] text-emerald-400 font-semibold">Solusi</div>
+            <div className="font-mono text-xs uppercase tracking-[0.2em] text-emerald-400 font-semibold">
+              Solusi
+            </div>
             <h2 className="mt-4 font-display text-3xl text-white md:text-4xl font-bold">
-              Kasir & pembukuan <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-amber-300">dalam satu napas.</span>
+              Kasir & pembukuan{" "}
+              <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-amber-300">
+                dalam satu napas.
+              </span>
             </h2>
             <p className="mt-6 leading-relaxed text-stone-300">
               Kafeya POS dibangun dari mendengar barista dan pemilik warung langsung. Setiap
@@ -270,7 +304,9 @@ function KafeyaPage() {
 
       <section className="py-24 md:py-32 bg-[#090807]">
         <div className="mx-auto max-w-6xl px-6 md:px-10">
-          <div className="font-mono text-xs uppercase tracking-[0.2em] text-amber-400 font-semibold">Hasil</div>
+          <div className="font-mono text-xs uppercase tracking-[0.2em] text-amber-400 font-semibold">
+            Hasil
+          </div>
           <h2 className="mt-4 max-w-2xl font-display text-3xl text-white md:text-5xl font-bold">
             Yang dirasakan pemilik warung.
           </h2>
@@ -278,7 +314,9 @@ function KafeyaPage() {
           <div className="mt-16 grid gap-8 md:grid-cols-3">
             {results.map((r) => (
               <div key={r.label} className="border-t-2 border-amber-400 pt-6">
-                <div className="font-display text-6xl text-white font-bold md:text-7xl">{r.metric}</div>
+                <div className="font-display text-6xl text-white font-bold md:text-7xl">
+                  {r.metric}
+                </div>
                 <div className="mt-3 font-display text-xl text-white font-bold">{r.label}</div>
                 <div className="mt-1 text-sm text-stone-400">{r.note}</div>
               </div>

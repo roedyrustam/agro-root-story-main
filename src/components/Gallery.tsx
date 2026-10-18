@@ -55,7 +55,19 @@ export function Gallery({ items, eyebrow = "Galeri", title, subtitle }: Props) {
               aria-label="Scroll previous"
               className="group grid h-12 w-12 place-items-center rounded-full border border-coffee/15 text-coffee transition-all duration-300 hover:-translate-y-1 hover:border-terracotta hover:bg-terracotta hover:text-cream hover:shadow-md"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="m15 18-6-6 6-6" />
+              </svg>
             </button>
             <button
               type="button"
@@ -63,7 +75,19 @@ export function Gallery({ items, eyebrow = "Galeri", title, subtitle }: Props) {
               aria-label="Scroll next"
               className="group grid h-12 w-12 place-items-center rounded-full border border-coffee/15 text-coffee transition-all duration-300 hover:-translate-y-1 hover:border-terracotta hover:bg-terracotta hover:text-cream hover:shadow-md"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="m9 18 6-6-6-6" />
+              </svg>
             </button>
           </div>
         </div>
@@ -72,7 +96,10 @@ export function Gallery({ items, eyebrow = "Galeri", title, subtitle }: Props) {
         <div className="mt-8 flex flex-wrap items-center gap-4 font-mono text-[10px] uppercase tracking-[0.2em] text-coffee/50">
           <span>Tahapan:</span>
           {(["Problem", "Solution", "Result"] as const).map((s) => (
-            <span key={s} className={`flex items-center gap-2 rounded-full border px-4 py-1.5 ${stageConfig[s].bg} ${stageConfig[s].border}`}>
+            <span
+              key={s}
+              className={`flex items-center gap-2 rounded-full border px-4 py-1.5 ${stageConfig[s].bg} ${stageConfig[s].border}`}
+            >
               <span className={`h-2 w-2 rounded-full ${stageConfig[s].dot}`} />
               {s}
             </span>
@@ -125,7 +152,9 @@ export function Gallery({ items, eyebrow = "Galeri", title, subtitle }: Props) {
               </div>
 
               <figcaption className="mt-6 px-1">
-                <div className="font-display text-xl text-coffee transition-colors group-hover:text-terracotta md:text-2xl">{item.label}</div>
+                <div className="font-display text-xl text-coffee transition-colors group-hover:text-terracotta md:text-2xl">
+                  {item.label}
+                </div>
                 <p className="mt-2 text-sm leading-relaxed text-coffee/60">{item.caption}</p>
               </figcaption>
             </figure>

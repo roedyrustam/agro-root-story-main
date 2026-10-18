@@ -61,10 +61,11 @@ export const Route = createFileRoute("/projects/cuppingnotes")({
         children: JSON.stringify(
           generateSoftwareAppSchema({
             name: "CuppingNotes.online",
-            description: "Platform digital untuk mencatat, mengevaluasi, dan membagikan hasil cupping kopi.",
+            description:
+              "Platform digital untuk mencatat, mengevaluasi, dan membagikan hasil cupping kopi.",
             url: "https://cuppingnotes.online",
             image: "https://roedyrustam.pages.dev/og-cuppingnotes.jpg",
-          })
+          }),
         ),
       },
       {
@@ -74,7 +75,7 @@ export const Route = createFileRoute("/projects/cuppingnotes")({
             { name: "Beranda", item: "/" },
             { name: "Proyek", item: "/" },
             { name: "CuppingNotes", item: "/projects/cuppingnotes" },
-          ])
+          ]),
         ),
       },
     ],
@@ -86,7 +87,7 @@ function CuppingNotesPage() {
   return (
     <main className="min-h-screen bg-background text-foreground selection:bg-amber-500/20 selection:text-amber-400">
       <Nav />
-      
+
       {/* Project Header */}
       <section className="relative pt-32 pb-16 md:pt-40 md:pb-20 bg-background overflow-hidden border-b border-white/10">
         {/* Subtle background element */}
@@ -99,9 +100,11 @@ function CuppingNotesPage() {
           >
             ← Kembali
           </Link>
-          
+
           <div className="mt-12 flex flex-wrap items-center gap-3 font-mono text-xs uppercase tracking-[0.2em] text-stone-300">
-            <span className="rounded-full bg-white/10 px-3 py-1 text-amber-400 font-semibold border border-white/10">Sensory Tool</span>
+            <span className="rounded-full bg-white/10 px-3 py-1 text-amber-400 font-semibold border border-white/10">
+              Sensory Tool
+            </span>
             <span>2026</span>
             <span className="text-stone-500">·</span>
             <span className="text-stone-400">Quality Control</span>
@@ -109,18 +112,29 @@ function CuppingNotesPage() {
 
           <h1 className="mt-8 font-display text-[clamp(3.5rem,10vw,8.5rem)] leading-[0.9] text-white text-balance font-bold">
             Objektivitas <br />
-            <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-amber-200">profil rasa</span> <br />
+            <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-amber-200">
+              profil rasa
+            </span>{" "}
+            <br />
             digital.
           </h1>
-          
+
           <div className="mt-12 max-w-2xl">
             <p className="text-xl leading-relaxed text-stone-300">
-              CuppingNotes.online adalah manifestasi digital dari protokol SCA (Specialty Coffee Association). Sebuah alat yang saya bangun untuk memastikan evaluasi kualitas kopi tidak hanya berhenti di catatan kertas, tapi menjadi data yang bisa dipertanggungjawabkan.
+              CuppingNotes.online adalah manifestasi digital dari protokol SCA (Specialty Coffee
+              Association). Sebuah alat yang saya bangun untuk memastikan evaluasi kualitas kopi
+              tidak hanya berhenti di catatan kertas, tapi menjadi data yang bisa
+              dipertanggungjawabkan.
             </p>
           </div>
 
           <div className="mt-12 flex flex-wrap gap-5">
-            <a href="https://cuppingnotes.online" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 px-7 py-4 font-mono text-xs uppercase tracking-[0.2em] text-stone-950 font-bold transition-all hover:scale-105 shadow-lg shadow-amber-500/20">
+            <a
+              href="https://cuppingnotes.online"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 px-7 py-4 font-mono text-xs uppercase tracking-[0.2em] text-stone-950 font-bold transition-all hover:scale-105 shadow-lg shadow-amber-500/20"
+            >
               Buka Platform ↗
             </a>
           </div>
@@ -132,26 +146,40 @@ function CuppingNotesPage() {
         <div className="mx-auto max-w-6xl px-6 md:px-10">
           <div className="grid gap-16 lg:grid-cols-2 lg:items-start">
             <div className="space-y-8">
-              <div className="font-mono text-xs uppercase tracking-[0.2em] text-amber-400 font-semibold">Catatan Konsultan</div>
+              <div className="font-mono text-xs uppercase tracking-[0.2em] text-amber-400 font-semibold">
+                Catatan Konsultan
+              </div>
               <h2 className="font-display text-4xl text-white leading-[1.1] font-bold">
                 "Data sensoris adalah <br />
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-300">bahasa universal</span> <br />
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-300">
+                  bahasa universal
+                </span>{" "}
+                <br />
                 industri kopi."
               </h2>
               <p className="text-lg leading-relaxed text-stone-300">
-                Dalam rantai pasok global, skor *cupping* adalah penentu harga. Tanpa sistem yang standar, perdebatan kualitas antara petani dan pembeli seringkali merugikan pihak yang lebih lemah.
+                Dalam rantai pasok global, skor *cupping* adalah penentu harga. Tanpa sistem yang
+                standar, perdebatan kualitas antara petani dan pembeli seringkali merugikan pihak
+                yang lebih lemah.
               </p>
               <p className="text-lg leading-relaxed text-stone-300">
-                CuppingNotes saya bangun untuk memberikan standarisasi evaluasi di lapangan. Dengan algoritma yang menghitung skor SCA secara otomatis dan visualisasi radar chart, platform ini memungkinkan roaster di Jakarta atau mancanegara "melihat" potensi rasa kopi dari Toraja atau Enrekang sebelum fisik kopinya sampai.
+                CuppingNotes saya bangun untuk memberikan standarisasi evaluasi di lapangan. Dengan
+                algoritma yang menghitung skor SCA secara otomatis dan visualisasi radar chart,
+                platform ini memungkinkan roaster di Jakarta atau mancanegara "melihat" potensi rasa
+                kopi dari Toraja atau Enrekang sebelum fisik kopinya sampai.
               </p>
             </div>
             <div className="relative">
               <div className="aspect-[4/5] rounded-3xl overflow-hidden bg-[#14110e] border border-white/10 shadow-2xl">
                 <div className="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-transparent to-transparent" />
                 <div className="relative h-full p-10 flex flex-col justify-end">
-                  <div className="font-mono text-sm text-amber-400 font-semibold">Protocol Standard</div>
+                  <div className="font-mono text-sm text-amber-400 font-semibold">
+                    Protocol Standard
+                  </div>
                   <div className="mt-2 font-display text-6xl text-white font-bold">SCA</div>
-                  <div className="mt-2 text-stone-400">Kepatuhan penuh pada protokol Coffee Value Assessment.</div>
+                  <div className="mt-2 text-stone-400">
+                    Kepatuhan penuh pada protokol Coffee Value Assessment.
+                  </div>
                 </div>
               </div>
             </div>
@@ -202,16 +230,18 @@ function CuppingNotesPage() {
 
               <h2>Tantangan Sistem</h2>
               <p>
-                Aplikasi membutuhkan interaksi mobile yang sangat stabil saat digunakan di
-                lapangan, dengan data integrity yang kuat agar manipulasi metrik sosial (seperti
-                rating atau ulasan) tidak terjadi. Selain itu, pengguna menginginkan kemampuan
-                membagikan hasil cupping mereka secara estetik ke platform sosial media.
+                Aplikasi membutuhkan interaksi mobile yang sangat stabil saat digunakan di lapangan,
+                dengan data integrity yang kuat agar manipulasi metrik sosial (seperti rating atau
+                ulasan) tidak terjadi. Selain itu, pengguna menginginkan kemampuan membagikan hasil
+                cupping mereka secara estetik ke platform sosial media.
               </p>
 
               <h2>Solusi Arsitektural</h2>
               <div className="my-8 grid gap-6 sm:grid-cols-2">
                 <div className="rounded-2xl border border-white/10 bg-[#14110e]/80 p-6 transition-colors hover:border-amber-400/30">
-                  <h4 className="mt-0 font-display text-xl text-white font-bold">Mobile Stability</h4>
+                  <h4 className="mt-0 font-display text-xl text-white font-bold">
+                    Mobile Stability
+                  </h4>
                   <p className="mb-0 text-sm text-stone-300">
                     Penggunaan Angular 21 Signals untuk reaktivitas UI tingkat tinggi, menjamin
                     state tidak rusak walau koneksi terputus sesaat.
@@ -232,7 +262,9 @@ function CuppingNotesPage() {
                   </p>
                 </div>
                 <div className="rounded-2xl border border-white/10 bg-[#14110e]/80 p-6 transition-colors hover:border-amber-400/30">
-                  <h4 className="mt-0 font-display text-xl text-white font-bold">Image Processing</h4>
+                  <h4 className="mt-0 font-display text-xl text-white font-bold">
+                    Image Processing
+                  </h4>
                   <p className="mb-0 text-sm text-stone-300">
                     Sistem yang dapat mengolah data skor numerik menjadi radar chart visual untuk
                     langsung dianalisis oleh roaster.
@@ -244,8 +276,7 @@ function CuppingNotesPage() {
               <p>
                 CuppingNotes.online sukses bertransisi dari fungsional prototipe menjadi sistem
                 produksi yang ter-harden. Proses cupping tidak lagi berhenti di atas meja
-                laboratorium, tetapi terdokumentasi rapi, aman, dan siap dibagikan ke ranah
-                publik.
+                laboratorium, tetapi terdokumentasi rapi, aman, dan siap dibagikan ke ranah publik.
               </p>
             </article>
           </div>
@@ -256,8 +287,12 @@ function CuppingNotesPage() {
       <section className="reveal bg-[#090807] py-24 md:py-32 border-t border-white/10">
         <div className="mx-auto max-w-6xl px-6 md:px-10">
           <div className="mb-16 text-center">
-            <div className="font-mono text-xs uppercase tracking-[0.2em] text-amber-400 font-semibold">Demo Modul</div>
-            <h2 className="mt-4 font-display text-4xl text-white md:text-5xl font-bold">Eksplorasi Profil Rasa</h2>
+            <div className="font-mono text-xs uppercase tracking-[0.2em] text-amber-400 font-semibold">
+              Demo Modul
+            </div>
+            <h2 className="mt-4 font-display text-4xl text-white md:text-5xl font-bold">
+              Eksplorasi Profil Rasa
+            </h2>
           </div>
           <FlavorWheel />
         </div>

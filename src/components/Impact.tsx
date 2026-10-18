@@ -37,7 +37,9 @@ export function Impact() {
               <span className="italic text-terracotta">satu janji.</span>
             </h2>
             <p className="mt-6 text-base leading-relaxed text-coffee/75">
-              Pekerjaan saya menjangkau tujuh titik strategis. Dari desa-desa di Sulawesi Selatan hingga pusat ekonomi di Jakarta, saya menjembatani potensi lokal dengan pasar nasional melalui literasi digital dan tata kelola yang jujur.
+              Pekerjaan saya menjangkau tujuh titik strategis. Dari desa-desa di Sulawesi Selatan
+              hingga pusat ekonomi di Jakarta, saya menjembatani potensi lokal dengan pasar nasional
+              melalui literasi digital dan tata kelola yang jujur.
             </p>
 
             <div className="mt-10 space-y-3">
@@ -53,7 +55,10 @@ export function Impact() {
                 { name: "Barru", note: "Pesisir & dataran rendah · pengembangan komoditas baru" },
                 { name: "Toraja", note: "Highland klasik · arabika premium turun-temurun" },
                 { name: "Enrekang", note: "Dataran tinggi · Arabika Specialty · Natural & Honey" },
-                { name: "Malino", note: "Pusat edukasi & promosi kopi Sulsel · Sehati Kopi Malino" },
+                {
+                  name: "Malino",
+                  note: "Pusat edukasi & promosi kopi Sulsel · Sehati Kopi Malino",
+                },
                 { name: "Sinjai", note: "Komunitas adat · tata kelola BUMMA & akses pasar" },
               ].map((r, i) => (
                 <div

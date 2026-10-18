@@ -1,11 +1,14 @@
+import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { useMagnetic } from "@/hooks/use-magnetic";
-import { Github, Star } from "lucide-react";
+import { Github, Star, UserCheck, Coffee } from "lucide-react";
 import heroImg from "../assets/hero-coffee.jpg";
+import portraitImg from "../assets/roedy-rustam-portrait.jpg";
 import { LiquidImage } from "./LiquidImage";
 
 export function Hero() {
   const magneticRef = useMagnetic<HTMLAnchorElement>();
+  const [visualMode, setVisualMode] = useState<"portrait" | "agro">("portrait");
 
   return (
     <section className="relative overflow-hidden pt-32 pb-20 md:pt-40 md:pb-28">
@@ -29,7 +32,7 @@ export function Hero() {
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400/80" />
                   <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
                 </span>
-                NODE: AGENTIC DEV ONLINE
+                NODE: PRAKTISI AI & KONSULTAN IT
               </span>
               <a
                 href="https://github.com/roedyrustam"
@@ -39,32 +42,49 @@ export function Hero() {
               >
                 <Github className="h-3 w-3 text-stone-400" />
                 <span>@roedyrustam</span>
-                <span className="rounded-full bg-amber-400/20 px-1.5 py-0.5 text-[9px] text-amber-300 font-bold">73★</span>
+                <span className="rounded-full bg-amber-400/20 px-1.5 py-0.5 text-[9px] text-amber-300 font-bold">
+                  77★
+                </span>
               </a>
               <span className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-stone-300">
                 <span className="text-amber-400">⚡</span> MCP v1.x Ready
               </span>
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/20 bg-emerald-950/40 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-emerald-300">
+                Trainer UMKM (BNSP)
+              </span>
               <span className="hidden sm:inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-stone-400">
-                Sulawesi · 119.4° E, 5.1° S
+                Indonesia · 119.4° E, 5.1° S
               </span>
             </div>
 
             {/* Display Headline */}
             <h1 className="font-display text-[clamp(2.4rem,5.5vw,4.6rem)] leading-[1.08] tracking-tight text-stone-100 text-balance">
               <span className="block">
-                Membangun <span className="italic font-light text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-amber-200">jembatan cerdas</span>
+                Membangun{" "}
+                <span className="italic font-light text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-amber-200">
+                  jembatan cerdas
+                </span>
               </span>
               <span className="block mt-1">
-                antara <span className="relative inline-block text-white font-semibold underline decoration-amber-500/50 decoration-wavy decoration-2">agen AI</span>, kode modern, & ekosistem agro.
+                antara{" "}
+                <span className="relative inline-block text-white font-semibold underline decoration-amber-500/50 decoration-wavy decoration-2">
+                  agen AI
+                </span>
+                , kode modern, & ekosistem agro.
               </span>
             </h1>
 
-            {/* 32-word AEO Extraction Paragraph */}
+            {/* AEO Extraction Paragraph */}
             <p
               className="mt-6 max-w-2xl text-base md:text-lg leading-relaxed text-stone-300 text-pretty font-normal animate-fade-up"
               style={{ animationDelay: "0.2s" }}
             >
-              Saya <strong className="text-white font-medium">Roedy Rustam</strong> — AI Systems & Agentic Developer serta Konsultan Agro-Industri berbasis di Makassar, Sulawesi Selatan. Mengembangkan arsitektur Model Context Protocol (MCP), orkestrasi multi-agen otonom, dan transformasi rantai pasok kopi hulu-hilir dengan dampak riil terukur.
+              Saya <strong className="text-white font-medium">Roedy Rustam</strong> — Konsultan IT,
+              Praktisi AI, Trainer & Konsultan UMKM Indonesia berbasis di Makassar, Sulawesi
+              Selatan. Terbukti nyata melalui repositori open-source GitHub (
+              <span className="text-amber-400 font-medium">vibes-plug 77★</span>, Centaury Engine,
+              sinapsai), sertifikasi resmi BNSP, dan arsitektur Model Context Protocol (MCP v1.x)
+              untuk ekosistem digital nasional.
             </p>
 
             {/* Action Row */}
@@ -103,75 +123,124 @@ export function Hero() {
               </a>
 
               <Link
-                to="/contact"
+                to="/about"
                 className="inline-flex items-center gap-2 px-3 py-3 font-mono text-[11px] uppercase tracking-[0.2em] text-stone-400 transition-colors hover:text-amber-300"
               >
-                Kontak ↗
+                Tentang Saya ↗
               </Link>
             </div>
           </div>
 
           {/* Right Column (Span 5): Live Holographic Telemetry & Node Visual Card */}
-          <div
-            className="lg:col-span-5 animate-fade-up"
-            style={{ animationDelay: "0.25s" }}
-          >
+          <div className="lg:col-span-5 animate-fade-up" style={{ animationDelay: "0.25s" }}>
             <div className="relative group rounded-3xl border border-white/10 bg-[#14110e]/80 p-5 backdrop-blur-2xl shadow-[0_20px_60px_-15px_rgba(0,0,0,0.8)] transition-all duration-500 hover:border-amber-500/30">
-              {/* Telemetry Console Header */}
+              {/* Telemetry Console Header with Visual Toggle */}
               <div className="flex items-center justify-between border-b border-white/10 pb-3 mb-4 font-mono text-[10px] uppercase tracking-wider text-stone-400">
                 <div className="flex items-center gap-2">
                   <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
-                  <span className="text-stone-200 font-semibold">NODE_ID: RR-SULAWESI-01</span>
+                  <span className="text-stone-200 font-semibold">
+                    {visualMode === "portrait" ? "PRINSIPAL: ROEDY RUSTAM" : "NODE: RR-SULAWESI-01"}
+                  </span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <span className="text-stone-400">EDGE POP:</span>
-                  <span className="text-emerald-400 font-medium">UPTIME 99.98%</span>
+                {/* Visual Mode Selector */}
+                <div className="flex items-center gap-1 rounded-full border border-white/10 bg-white/5 p-0.5">
+                  <button
+                    type="button"
+                    onClick={() => setVisualMode("portrait")}
+                    className={`flex items-center gap-1 rounded-full px-2 py-0.5 text-[9px] transition-all ${
+                      visualMode === "portrait"
+                        ? "bg-amber-500 text-stone-950 font-semibold shadow-sm"
+                        : "text-stone-400 hover:text-stone-200"
+                    }`}
+                  >
+                    <UserCheck className="h-2.5 w-2.5" />
+                    Profil
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setVisualMode("agro")}
+                    className={`flex items-center gap-1 rounded-full px-2 py-0.5 text-[9px] transition-all ${
+                      visualMode === "agro"
+                        ? "bg-amber-500 text-stone-950 font-semibold shadow-sm"
+                        : "text-stone-400 hover:text-stone-200"
+                    }`}
+                  >
+                    <Coffee className="h-2.5 w-2.5" />
+                    Kebun
+                  </button>
                 </div>
               </div>
 
               {/* Main Visual Image with Parallax & Liquid Mask */}
-              <div className="relative overflow-hidden rounded-2xl border border-white/10 shadow-inner group/img aspect-[4/3]">
+              <div className="relative overflow-hidden rounded-2xl border border-white/10 shadow-inner group/img aspect-[4/3] bg-stone-950">
                 <LiquidImage
-                  src={heroImg}
-                  alt="Roedy Rustam - AI Systems & Agro-Tech Specialist"
-                  className="w-full h-full object-cover scale-105 transition-transform duration-700 group-hover/img:scale-110"
+                  key={visualMode}
+                  src={visualMode === "portrait" ? portraitImg : heroImg}
+                  alt={
+                    visualMode === "portrait"
+                      ? "Roedy Rustam - AI Systems & Agentic Developer"
+                      : "Kebun Kopi & Ekosistem Agro Sulawesi"
+                  }
+                  className={`w-full h-full ${
+                    visualMode === "portrait"
+                      ? "object-cover object-top scale-100 transition-transform duration-700 group-hover/img:scale-105"
+                      : "object-cover scale-105 transition-transform duration-700 group-hover/img:scale-110"
+                  }`}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#090807] via-transparent to-transparent opacity-80" />
 
                 {/* Floating Micro-Badges */}
                 <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between">
                   <div className="flex items-center gap-2 rounded-full border border-white/15 bg-black/75 px-3 py-1.5 backdrop-blur-md">
-                    <span className="text-amber-400 text-xs">☕</span>
+                    <span className="text-amber-400 text-xs">
+                      {visualMode === "portrait" ? "👤" : "☕"}
+                    </span>
                     <span className="font-mono text-[10px] uppercase tracking-wider text-stone-200">
-                      Toraja · Barru · Sinjai
+                      {visualMode === "portrait"
+                        ? "Makassar · Sulawesi"
+                        : "Toraja · Barru · Sinjai"}
                     </span>
                   </div>
                   <div className="rounded-full border border-emerald-500/30 bg-emerald-950/70 px-3 py-1 font-mono text-[10px] uppercase tracking-wider text-emerald-300 backdrop-blur-md">
-                    ~38ms Latency
+                    {visualMode === "portrait" ? "Verified Architect" : "~38ms Latency"}
                   </div>
                 </div>
               </div>
 
               {/* Active Agent Systems Bar */}
               <div className="mt-4 grid grid-cols-3 gap-2 font-mono text-[9px] uppercase tracking-wider">
-                <div className="rounded-xl border border-white/5 bg-white/[0.03] p-2.5 text-center">
-                  <div className="text-emerald-400 font-semibold flex items-center justify-center gap-1">
-                    <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" /> ACTIVE
-                  </div>
-                  <div className="text-stone-400 mt-1">AgroAgent MCP</div>
-                </div>
-                <div className="rounded-xl border border-white/5 bg-white/[0.03] p-2.5 text-center">
+                <a
+                  href="https://github.com/roedyrustam/vibes-plug"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-xl border border-white/5 bg-white/[0.03] p-2.5 text-center transition-all hover:border-amber-500/40 hover:bg-white/[0.06]"
+                >
                   <div className="text-amber-400 font-semibold flex items-center justify-center gap-1">
-                    <span className="h-1.5 w-1.5 rounded-full bg-amber-400 animate-pulse" /> SYNCING
+                    <span className="h-1.5 w-1.5 rounded-full bg-amber-400" /> 77★ REPO
                   </div>
-                  <div className="text-stone-400 mt-1">Agent Swarm</div>
-                </div>
-                <div className="rounded-xl border border-white/5 bg-white/[0.03] p-2.5 text-center">
+                  <div className="text-stone-300 mt-1 font-medium truncate">vibes-plug (155s)</div>
+                </a>
+                <Link
+                  to="/projects/agroagent-mcp"
+                  className="rounded-xl border border-white/5 bg-white/[0.03] p-2.5 text-center transition-all hover:border-emerald-500/40 hover:bg-white/[0.06]"
+                >
+                  <div className="text-emerald-400 font-semibold flex items-center justify-center gap-1">
+                    <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />{" "}
+                    ACTIVE
+                  </div>
+                  <div className="text-stone-300 mt-1 font-medium truncate">AgroAgent MCP</div>
+                </Link>
+                <a
+                  href="https://github.com/roedyrustam/centaury"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-xl border border-white/5 bg-white/[0.03] p-2.5 text-center transition-all hover:border-cyan-500/40 hover:bg-white/[0.06]"
+                >
                   <div className="text-cyan-400 font-semibold flex items-center justify-center gap-1">
-                    <span className="h-1.5 w-1.5 rounded-full bg-cyan-400" /> VERIFIED
+                    <span className="h-1.5 w-1.5 rounded-full bg-cyan-400" /> ENGINE
                   </div>
-                  <div className="text-stone-400 mt-1">BNSP Planner</div>
-                </div>
+                  <div className="text-stone-300 mt-1 font-medium truncate">Centaury (Gemini)</div>
+                </a>
               </div>
             </div>
           </div>
@@ -188,14 +257,28 @@ export function Hero() {
                 20+ <span className="text-xl font-normal text-amber-400/80">Tahun</span>
               </span>
               <span className="rounded-full border border-amber-500/20 bg-amber-500/10 p-2.5 text-amber-400">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m12 15 5 5-5-5 5 5ZM12 15l-5 5 5-5-5 5Z"/><circle cx="12" cy="7" r="4"/></svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="m12 15 5 5-5-5 5 5ZM12 15l-5 5 5-5-5 5Z" />
+                  <circle cx="12" cy="7" r="4" />
+                </svg>
               </span>
             </div>
             <div className="mt-3 font-mono text-[10px] uppercase tracking-[0.2em] text-stone-400">
               Sintesis Domain Kopi & Agro
             </div>
             <p className="mt-2 text-xs text-stone-400 leading-relaxed">
-              Penguasaan rantai nilai dari kebun rakyat Barru & Toraja hingga standar industri ekspor dan hilirisasi.
+              Penguasaan rantai nilai dari kebun rakyat Barru & Toraja hingga standar industri
+              ekspor dan hilirisasi.
             </p>
           </div>
 
@@ -205,14 +288,36 @@ export function Hero() {
                 6+ <span className="text-xl font-normal text-emerald-400/80">Platform</span>
               </span>
               <span className="rounded-full border border-emerald-500/20 bg-emerald-500/10 p-2.5 text-emerald-400">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="16" height="16" x="4" y="4" rx="2"/><rect width="6" height="6" x="9" y="9" rx="1"/><path d="M15 2v2"/><path d="M15 20v2"/><path d="M2 15h2"/><path d="M2 9h2"/><path d="M20 15h2"/><path d="M20 9h2"/><path d="M9 2v2"/><path d="M9 20v2"/></svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <rect width="16" height="16" x="4" y="4" rx="2" />
+                  <rect width="6" height="6" x="9" y="9" rx="1" />
+                  <path d="M15 2v2" />
+                  <path d="M15 20v2" />
+                  <path d="M2 15h2" />
+                  <path d="M2 9h2" />
+                  <path d="M20 15h2" />
+                  <path d="M20 9h2" />
+                  <path d="M9 2v2" />
+                  <path d="M9 20v2" />
+                </svg>
               </span>
             </div>
             <div className="mt-3 font-mono text-[10px] uppercase tracking-[0.2em] text-stone-400">
               Agentic Systems & Modern Web
             </div>
             <p className="mt-2 text-xs text-stone-400 leading-relaxed">
-              Arsitektur MCP v1.x, Swarm Worker Autonomous, Beanhub, Pandu Desa, Kafeya, dan CuppingNotes.
+              Arsitektur MCP v1.x, Swarm Worker Autonomous, Beanhub, Pandu Desa, Kafeya, dan
+              CuppingNotes.
             </p>
           </div>
 
@@ -222,14 +327,30 @@ export function Hero() {
                 4.700+ <span className="text-xl font-normal text-cyan-400/80">Petani</span>
               </span>
               <span className="rounded-full border border-cyan-500/20 bg-cyan-500/10 p-2.5 text-cyan-400">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                </svg>
               </span>
             </div>
             <div className="mt-3 font-mono text-[10px] uppercase tracking-[0.2em] text-stone-400">
               Dampak Riil Ekosistem
             </div>
             <p className="mt-2 text-xs text-stone-400 leading-relaxed">
-              Pemberdayaan hulu-hilir, peningkatan nilai tambah komoditas kopi, dan transfer teknologi aplikatif.
+              Pemberdayaan hulu-hilir, peningkatan nilai tambah komoditas kopi, dan transfer
+              teknologi aplikatif.
             </p>
           </div>
         </div>
@@ -237,4 +358,3 @@ export function Hero() {
     </section>
   );
 }
-

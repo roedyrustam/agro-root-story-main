@@ -7,9 +7,17 @@ export const Route = createFileRoute("/impact")({
   head: () => ({
     meta: [
       { title: "Dampak — Roedy Rustam" },
-      { name: "description", content: "Dampak nyata di berbagai wilayah Indonesia: Barru, Toraja, Enrekang, Sinjai, dan pemberdayaan desa nasional." },
+      {
+        name: "description",
+        content:
+          "Dampak nyata di berbagai wilayah Indonesia: Barru, Toraja, Enrekang, Sinjai, dan pemberdayaan desa nasional.",
+      },
       { property: "og:title", content: "Dampak Nyata di Lapangan — Roedy Rustam" },
-      { property: "og:description", content: "Dampingan wilayah Sulawesi Selatan dan konsultansi pengembangan desa di Indonesia." },
+      {
+        property: "og:description",
+        content:
+          "Dampingan wilayah Sulawesi Selatan dan konsultansi pengembangan desa di Indonesia.",
+      },
       { property: "og:image", content: "/og-impact.jpg" },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
@@ -24,7 +32,7 @@ function ImpactPage() {
   return (
     <main className="min-h-screen bg-background">
       <Nav />
-      
+
       {/* Impact Header */}
       <section className="relative pt-32 pb-16 md:pt-40 md:pb-20 bg-background overflow-hidden border-b border-border">
         {/* Subtle background element */}
@@ -39,10 +47,12 @@ function ImpactPage() {
             <span className="italic text-terracotta">kesejahteraan</span> <br />
             dari <span className="italic">hulu.</span>
           </h1>
-          
+
           <div className="mt-12 max-w-2xl">
             <p className="text-xl leading-relaxed text-coffee/80">
-              Bagi saya, dampak bukan sekadar angka di laporan tahunan. Dampak adalah ketika seorang petani memiliki daya tawar lebih tinggi, dan sebuah desa mampu mengelola datanya sendiri untuk masa depan yang lebih mandiri.
+              Bagi saya, dampak bukan sekadar angka di laporan tahunan. Dampak adalah ketika seorang
+              petani memiliki daya tawar lebih tinggi, dan sebuah desa mampu mengelola datanya
+              sendiri untuk masa depan yang lebih mandiri.
             </p>
           </div>
         </div>
@@ -54,34 +64,41 @@ function ImpactPage() {
       <section className="py-24 md:py-32 border-t border-white/10 bg-[#120f0d] text-stone-200 overflow-hidden relative">
         {/* Decorative elements */}
         <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-96 h-96 rounded-full bg-amber-500/10 blur-[80px]" />
-        
+
         <div className="content-container">
-          <div className="font-mono text-xs uppercase tracking-[0.2em] text-amber-400 font-semibold">Prinsip Dampak</div>
+          <div className="font-mono text-xs uppercase tracking-[0.2em] text-amber-400 font-semibold">
+            Prinsip Dampak
+          </div>
           <h2 className="mt-6 font-display text-[clamp(2.5rem,6vw,4.5rem)] leading-[1.05] text-white max-w-4xl">
             Tiga pilar yang menjaga <br />
-            <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-amber-200">keberlanjutan di lapangan.</span>
+            <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-amber-200">
+              keberlanjutan di lapangan.
+            </span>
           </h2>
-          
+
           <div className="mt-16 grid gap-12 md:grid-cols-3">
             <div className="space-y-4">
               <div className="font-mono text-sm text-amber-400 font-bold">01</div>
               <h3 className="font-display text-2xl text-white">Keadilan Harga</h3>
               <p className="text-stone-300 leading-relaxed">
-                Memastikan transparansi rantai pasok agar nilai ekonomi terdistribusi lebih adil kepada mereka yang berkeringat di kebun.
+                Memastikan transparansi rantai pasok agar nilai ekonomi terdistribusi lebih adil
+                kepada mereka yang berkeringat di kebun.
               </p>
             </div>
             <div className="space-y-4">
               <div className="font-mono text-sm text-amber-400 font-bold">02</div>
               <h3 className="font-display text-2xl text-white">Kemandirian Digital</h3>
               <p className="text-stone-300 leading-relaxed">
-                Membangun kapasitas warga desa untuk menguasai teknologi, bukan hanya menjadi konsumen aplikasi yang mereka tidak mengerti.
+                Membangun kapasitas warga desa untuk menguasai teknologi, bukan hanya menjadi
+                konsumen aplikasi yang mereka tidak mengerti.
               </p>
             </div>
             <div className="space-y-4">
               <div className="font-mono text-sm text-amber-400 font-bold">03</div>
               <h3 className="font-display text-2xl text-white">Pelestarian Budaya</h3>
               <p className="text-stone-300 leading-relaxed">
-                Menghormati tata kelola adat dan kearifan lokal dalam setiap intervensi teknologi dan pengembangan ekonomi.
+                Menghormati tata kelola adat dan kearifan lokal dalam setiap intervensi teknologi
+                dan pengembangan ekonomi.
               </p>
             </div>
           </div>
@@ -92,7 +109,8 @@ function ImpactPage() {
       <section className="py-24 md:py-32 bg-background">
         <div className="mx-auto max-w-4xl px-6 text-center md:px-10">
           <blockquote className="font-display text-[clamp(1.8rem,4.5vw,3rem)] leading-[1.2] text-coffee italic">
-            "Pemberdayaan bukan tentang memberi ikan atau kail, tapi tentang memastikan mereka memiliki hak atas kolamnya sendiri."
+            "Pemberdayaan bukan tentang memberi ikan atau kail, tapi tentang memastikan mereka
+            memiliki hak atas kolamnya sendiri."
           </blockquote>
           <div className="mt-8 font-mono text-xs uppercase tracking-[0.2em] text-terracotta">
             — Roedy Rustam

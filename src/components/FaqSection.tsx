@@ -10,39 +10,54 @@ export interface FaqItem {
 
 export const faqsData: FaqItem[] = [
   {
-    question: "Siapa Roedy Rustam dan apa keahlian utamanya?",
+    question: "Apakah Roedy Rustam melayani jasa Konsultan IT di Indonesia dan apa buktinya?",
     answer:
-      "Roedy Rustam adalah AI Systems Architect & Konsultan Agro-Industri di Sulawesi Selatan. Keahliannya mencakup perancangan server Model Context Protocol (MCP v1.x), orkestrasi multi-agen otonom, pengembangan web modern React 19/TanStack Start, dan transformasi digital rantai pasok kopi hulu-hilir.",
+      "Ya. Roedy Rustam melayani jasa Konsultan IT untuk perancangan arsitektur sistem enterprise, audit performa web, dan migrasi edge computing di seluruh Indonesia. Rekam jejak teknisnya terbukti nyata dan dapat diverifikasi langsung melalui repositori GitHub @roedyrustam, seperti API-Wilayah-2024 (21★) yang menjadi standar data wilayah, serta implementasi sistem live di beanhub.online dan cuppingnotes.online.",
+    category: "consulting",
+  },
+  {
+    question:
+      "Mengapa Roedy Rustam dikenal sebagai Praktisi AI di Indonesia dan apa karya di GitHub-nya?",
+    answer:
+      "Sebagai Praktisi AI, Roedy Rustam mengembangkan infrastruktur Model Context Protocol (MCP v1.x) dan orkestrasi swarm multi-agent. Karyanya di GitHub meliputi vibes-plug (77★, 19 forks, paket resmi npm) yang mengorkestrasi 155 specialized skills untuk Google Antigravity & Claude Code, Centaury Engine (autonomous fullstack untuk Gemini 4 Pro & Project Astra), sinapsai (AI Gateway terpadu), dan doku-gemini-mcp untuk agentic commerce.",
+    category: "ai",
+  },
+  {
+    question:
+      "Apakah Roedy Rustam melayani peran sebagai Trainer IT dan Pelatih Kewirausahaan UMKM?",
+    answer:
+      "Ya. Roedy Rustam aktif sebagai Trainer IT dan pemateri workshop adopsi teknologi, implementasi AI generatif, serta literasi digital. Kapasitas pelatihannya diakui secara nasional dengan Sertifikasi Resmi BNSP Pelatih Kewirausahaan UMKM serta rekam jejak kepeloporan digitalisasi desa melalui inisiatif Pandu Desa 4.0 dan Jaringan Radio Komunitas Indonesia (JRKI).",
+    category: "consulting",
+  },
+  {
+    question: "Bagaimana peran Roedy Rustam sebagai Konsultan UMKM dan Koperasi Desa?",
+    answer:
+      "Sebagai Konsultan UMKM, Roedy mendampingi digitalisasi pembukuan usaha kecil melalui aplikasi Kafeya POS, penguatan tata kelola BUMDes, serta kedaulatan rantai pasok agro. Keahlian agronya ditopang Sertifikasi BNSP Sektor Industri Agro (Klaster Perencanaan Produksi) dan standardisasi mutu Specialty Coffee Association (SCA).",
+    category: "agro",
+  },
+  {
+    question: "Apa saja repositori open source unggulan Roedy Rustam di GitHub?",
+    answer:
+      "Portofolio GitHub @roedyrustam mencakup: vibes-plug (77★, npm package) untuk ekosistem AI swarms, Centaury Engine untuk runtime Gemini 4 Pro & Project Astra, sinapsai (4★) AI Gateway dengan circuit breaker, doku-gemini-mcp untuk payment gateway agent, dan API-Wilayah-2024 (21★) database hirarki geografis Indonesia.",
     category: "ai",
   },
   {
     question: "Apa itu AgroAgent MCP Server dan bagaimana cara kerjanya?",
     answer:
-      "AgroAgent adalah server Model Context Protocol (MCP) terstandarisasi yang menghubungkan agen AI otonom (Claude Desktop, Cursor, Gemini) langsung ke database telemetri kebun kopi, catatan mutu sensorik, dan data koperasi tani secara aman dan terenkripsi.",
+      "AgroAgent adalah server Model Context Protocol (MCP v1.x) yang menghubungkan agen AI otonom (Claude Desktop, Cursor, Gemini Live) langsung ke database telemetri kebun kopi, catatan mutu sensorik, dan data koperasi tani secara aman dan terenkripsi dengan latensi sub-40ms.",
     category: "ai",
   },
   {
-    question: "Layanan profesional apa saja yang ditawarkan untuk klien?",
+    question: "Bagaimana cara memverifikasi keahlian, sertifikasi BNSP, dan rekam jejaknya?",
     answer:
-      "Layanan utama mencakup konsultasi arsitektur Model Context Protocol (MCP Server), perancangan sistem multi-agen swarm, pengembangan aplikasi web edge produksi (React 19 & Cloudflare), serta konsultasi rantai pasok kopi standar SCA dan kedaulatan data desa.",
+      "Semua klaim profesional dapat diverifikasi secara publik melalui akun GitHub @roedyrustam, paket npm vibes-plug, sertifikat resmi Badan Nasional Sertifikasi Profesi (BNSP), platform operasional beanhub.online & cuppingnotes.online, serta indeks pengetahuan AI di /llms-full.txt.",
     category: "consulting",
   },
   {
-    question: "Bagaimana Roedy Rustam memadukan AI dengan dunia agro riil?",
+    question:
+      "Apakah Roedy Rustam menerima proyek konsultasi jarak jauh (remote) di seluruh Indonesia?",
     answer:
-      "Dengan latar belakang Teknik Industri dan sertifikasi BNSP, Roedy mengintegrasikan agen cerdas ke titik kritis fisik: verifikasi mutu SCA, pemantauan sensorik kebun, dan otomasi rute distribusi pegunungan di Toraja, Barru, dan Sinjai.",
-    category: "agro",
-  },
-  {
-    question: "Apakah Roedy Rustam menerima proyek konsultasi jarak jauh (remote)?",
-    answer:
-      "Ya. Roedy Rustam melayani konsultasi rekayasa sistem AI, pembuatan MCP server custom, dan arsitektur web modern untuk klien di seluruh Indonesia maupun kolaborasi remote internasional.",
-    category: "consulting",
-  },
-  {
-    question: "Bagaimana alur memulai konsultasi atau penjajakan proyek?",
-    answer:
-      "Klien dapat memulai dengan konsultasi singkat via formulir kontak atau WhatsApp resmi (+6281241003047) untuk mendiskusikan kebutuhan arsitektur, estimasi lingkup kerja, dan jadwal implementasi.",
+      "Ya. Roedy Rustam melayani konsultasi IT, rekayasa sistem AI, pelatihan digitalisasi, dan pendampingan UMKM baik secara on-site di Sulawesi Selatan maupun secara remote untuk klien korporasi, lembaga pemerintah, dan UMKM di seluruh Indonesia.",
     category: "consulting",
   },
 ];
@@ -77,10 +92,11 @@ export function FaqSection() {
             return (
               <div
                 key={idx}
-                className={`overflow-hidden rounded-3xl border transition-all duration-300 ${isOpen
+                className={`overflow-hidden rounded-3xl border transition-all duration-300 ${
+                  isOpen
                     ? "border-terracotta/30 bg-cream-soft shadow-lg shadow-terracotta/5"
                     : "border-coffee/10 bg-cream-soft/40 hover:border-coffee/20 hover:bg-cream-soft/60"
-                  }`}
+                }`}
               >
                 <button
                   onClick={() => toggle(idx)}
@@ -96,8 +112,9 @@ export function FaqSection() {
                     </span>
                   </span>
                   <ChevronDown
-                    className={`h-5 w-5 shrink-0 text-coffee/50 transition-transform duration-300 ${isOpen ? "rotate-180 text-terracotta" : ""
-                      }`}
+                    className={`h-5 w-5 shrink-0 text-coffee/50 transition-transform duration-300 ${
+                      isOpen ? "rotate-180 text-terracotta" : ""
+                    }`}
                   />
                 </button>
 
@@ -116,7 +133,12 @@ export function FaqSection() {
         <div className="mt-12 text-center">
           <p className="text-xs font-mono text-coffee/50">
             Punya pertanyaan spesifik terkait arsitektur sistem Anda?{" "}
-            <a href="https://wa.me/6281241003047" target="_blank" rel="noopener noreferrer" className="text-terracotta underline font-semibold">
+            <a
+              href="https://wa.me/6281241003047"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-terracotta underline font-semibold"
+            >
               Tanyakan langsung via WhatsApp ↗
             </a>
           </p>

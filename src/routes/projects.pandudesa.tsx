@@ -30,7 +30,7 @@ export const Route = createFileRoute("/projects/pandudesa")({
             { name: "Beranda", item: "/" },
             { name: "Proyek", item: "/" },
             { name: "Pandu Desa 4.0", item: "/projects/pandudesa" },
-          ])
+          ]),
         ),
       },
     ],
@@ -79,7 +79,9 @@ function PanduDesaPage() {
           </Link>
 
           <div className="mt-10 flex flex-wrap items-center gap-3 font-mono text-xs uppercase tracking-[0.2em] text-amber-400">
-            <span className="rounded-full bg-amber-500/10 border border-amber-500/30 px-3 py-1">Inisiatif</span>
+            <span className="rounded-full bg-amber-500/10 border border-amber-500/30 px-3 py-1">
+              Inisiatif
+            </span>
             <span>2018 — 2020</span>
             <span className="text-stone-600">·</span>
             <span className="text-stone-400">Pandu Desa 4.0</span>
@@ -90,7 +92,9 @@ function PanduDesaPage() {
           </h1>
 
           <p className="mt-8 max-w-2xl text-xl leading-relaxed text-stone-300">
-            Gerakan transformasi digital perdesaan yang menempatkan desa sebagai <em className="text-amber-300 not-italic font-semibold">subjek data,</em> bukan sekadar objek pembangunan.
+            Gerakan transformasi digital perdesaan yang menempatkan desa sebagai{" "}
+            <em className="text-amber-300 not-italic font-semibold">subjek data,</em> bukan sekadar
+            objek pembangunan.
           </p>
         </div>
       </section>
@@ -99,9 +103,9 @@ function PanduDesaPage() {
       <section className="px-6 md:px-10">
         <div className="mx-auto max-w-6xl">
           <div className="relative aspect-[16/8] overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-amber-500/10 via-orange-950/20 to-black grain">
-            <img 
-              src={projectImg} 
-              alt="Pandu Desa 4.0 Visual" 
+            <img
+              src={projectImg}
+              alt="Pandu Desa 4.0 Visual"
               className="absolute inset-0 h-full w-full object-cover mix-blend-luminosity opacity-40"
             />
             <div className="absolute inset-0 grid place-items-center">
@@ -126,10 +130,13 @@ function PanduDesaPage() {
               Tantangan
             </div>
             <h2 className="mt-4 font-display text-3xl text-white md:text-4xl font-bold">
-              Ketimpangan digital bukan hanya soal <span className="italic text-amber-400">sinyal.</span>
+              Ketimpangan digital bukan hanya soal{" "}
+              <span className="italic text-amber-400">sinyal.</span>
             </h2>
             <p className="mt-6 leading-relaxed text-stone-300">
-              Banyak kebijakan desa diambil tanpa basis data yang kuat. Informasi mengenai potensi ekonomi terserak dan tidak terdokumentasi. Pandu Desa hadir untuk menjembatani celah ini dengan literasi dan teknologi yang tepat guna.
+              Banyak kebijakan desa diambil tanpa basis data yang kuat. Informasi mengenai potensi
+              ekonomi terserak dan tidak terdokumentasi. Pandu Desa hadir untuk menjembatani celah
+              ini dengan literasi dan teknologi yang tepat guna.
             </p>
           </div>
           <div className="rounded-2xl border border-white/10 bg-[#0e0c0a] p-8 md:p-10 flex flex-col justify-center">
@@ -137,7 +144,10 @@ function PanduDesaPage() {
               Pendekatan Lapangan
             </div>
             <p className="mt-4 leading-relaxed text-stone-300">
-              Membangun kedaulatan data dimulai dari masyarakat desa sendiri: mendata aset produktif, memetakan rantai pasok komoditas lokal, hingga melatih aparatur memanfaatkan basis data terbuka untuk perencanaan anggaran desa (APBDes) yang akuntabel.
+              Membangun kedaulatan data dimulai dari masyarakat desa sendiri: mendata aset
+              produktif, memetakan rantai pasok komoditas lokal, hingga melatih aparatur
+              memanfaatkan basis data terbuka untuk perencanaan anggaran desa (APBDes) yang
+              akuntabel.
             </p>
           </div>
         </div>
@@ -181,7 +191,9 @@ function PanduDesaPage() {
           <div className="mt-16 grid gap-8 md:grid-cols-3">
             {results.map((r) => (
               <div key={r.label} className="border-t-2 border-amber-500/60 pt-6">
-                <div className="font-display text-6xl text-white font-bold md:text-7xl">{r.metric}</div>
+                <div className="font-display text-6xl text-white font-bold md:text-7xl">
+                  {r.metric}
+                </div>
                 <div className="mt-3 font-display text-xl text-white font-semibold">{r.label}</div>
                 <div className="mt-1 text-sm text-stone-400">{r.note}</div>
               </div>
@@ -193,12 +205,15 @@ function PanduDesaPage() {
       {/* CTA */}
       <section className="border-t border-white/10 bg-[#120f0d] py-24 text-stone-200 md:py-32">
         <div className="mx-auto max-w-5xl px-6 md:px-10">
-          <div className="font-mono text-xs uppercase tracking-[0.2em] text-amber-400 font-semibold">Kolaborasi</div>
+          <div className="font-mono text-xs uppercase tracking-[0.2em] text-amber-400 font-semibold">
+            Kolaborasi
+          </div>
           <h2 className="mt-6 font-display text-[clamp(2rem,5vw,4rem)] leading-[1.05] text-white text-balance font-bold">
             Tertarik membangun narasi pembangunan berbasis data?
           </h2>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-stone-300">
-            Saya terbuka untuk diskusi mengenai pengembangan ekosistem digital desa, pelatihan literasi, atau kolaborasi kebijakan berbasis komunitas.
+            Saya terbuka untuk diskusi mengenai pengembangan ekosistem digital desa, pelatihan
+            literasi, atau kolaborasi kebijakan berbasis komunitas.
           </p>
 
           <div className="mt-10 flex flex-wrap gap-5">

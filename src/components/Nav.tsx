@@ -38,9 +38,9 @@ export function Nav() {
         <Link to="/" className="group flex items-center gap-3">
           <div className="relative">
             <img
-              src="/logo.jpg"
+              src="/roedy-rustam.jpg"
               alt="Roedy Rustam"
-              className="h-10 w-10 rounded-full object-cover border border-white/20 transition-all duration-500 group-hover:scale-105 group-hover:border-amber-400/50 shadow-md"
+              className="h-10 w-10 rounded-full object-cover object-top border border-white/20 transition-all duration-500 group-hover:scale-105 group-hover:border-amber-400/50 shadow-md"
             />
             <div className="absolute inset-0 rounded-full bg-amber-500/20 opacity-0 blur-md transition-opacity duration-500 group-hover:opacity-100" />
           </div>
@@ -57,21 +57,27 @@ export function Nav() {
           <Link
             to="/about"
             className="rounded-full px-5 py-2 font-mono text-[10px] uppercase tracking-[0.2em] text-stone-300 transition-all duration-300 hover:text-white hover:bg-white/5"
-            activeProps={{ className: "bg-white/10 text-white border border-white/10 shadow-sm !text-white" }}
+            activeProps={{
+              className: "bg-white/10 text-white border border-white/10 shadow-sm !text-white",
+            }}
           >
             Tentang
           </Link>
           <Link
             to="/journey"
             className="rounded-full px-5 py-2 font-mono text-[10px] uppercase tracking-[0.2em] text-stone-300 transition-all duration-300 hover:text-white hover:bg-white/5"
-            activeProps={{ className: "bg-white/10 text-white border border-white/10 shadow-sm !text-white" }}
+            activeProps={{
+              className: "bg-white/10 text-white border border-white/10 shadow-sm !text-white",
+            }}
           >
             Perjalanan
           </Link>
           <Link
             to="/experience"
             className="rounded-full px-5 py-2 font-mono text-[10px] uppercase tracking-[0.2em] text-stone-300 transition-all duration-300 hover:text-white hover:bg-white/5"
-            activeProps={{ className: "bg-white/10 text-white border border-white/10 shadow-sm !text-white" }}
+            activeProps={{
+              className: "bg-white/10 text-white border border-white/10 shadow-sm !text-white",
+            }}
           >
             Pengalaman
           </Link>
@@ -85,7 +91,9 @@ export function Nav() {
           <Link
             to="/impact"
             className="rounded-full px-5 py-2 font-mono text-[10px] uppercase tracking-[0.2em] text-stone-300 transition-all duration-300 hover:text-white hover:bg-white/5"
-            activeProps={{ className: "bg-white/10 text-white border border-white/10 shadow-sm !text-white" }}
+            activeProps={{
+              className: "bg-white/10 text-white border border-white/10 shadow-sm !text-white",
+            }}
           >
             Dampak
           </Link>

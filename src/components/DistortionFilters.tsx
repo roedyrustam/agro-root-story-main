@@ -35,14 +35,9 @@ export function DistortionFilters() {
             />
           </feDisplacementMap>
         </filter>
-        
+
         <filter id="distort-subtle">
-          <feTurbulence
-            type="turbulence"
-            baseFrequency="0.05"
-            numOctaves="2"
-            result="turbulence"
-          />
+          <feTurbulence type="turbulence" baseFrequency="0.05" numOctaves="2" result="turbulence" />
           <feDisplacementMap
             in2="turbulence"
             in="SourceGraphic"

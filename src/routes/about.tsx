@@ -6,25 +6,38 @@ import portrait from "@/assets/about-portrait.jpg";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "Tentang — Roedy Rustam · AI Systems & Agentic Developer × Agro-Tech" },
+      {
+        title:
+          "Tentang Roedy Rustam — Konsultan IT, Praktisi AI, Trainer & Konsultan UMKM Indonesia",
+      },
       {
         name: "description",
         content:
-          "Cerita Roedy Rustam: AI Systems Architect & Konsultan Agro-Industri yang menjembatani kebun kopi Sulawesi dengan arsitektur agen otonom, Model Context Protocol (MCP), dan pemberdayaan komunitas.",
+          "Profil lengkap Roedy Rustam: Konsultan IT, Praktisi AI, Trainer IT/UMKM bersertifikasi BNSP, dan Konsultan UMKM Indonesia. Terbukti melalui repositori GitHub (vibes-plug 77★, Centaury Engine, sinapsai, API-Wilayah-2024), platform beanhub.online, dan sertifikasi resmi BNSP.",
       },
-      { property: "og:title", content: "Tentang Roedy Rustam — AI Systems × Agro-Tech Sociopreneur" },
+      {
+        property: "og:title",
+        content:
+          "Tentang Roedy Rustam — Konsultan IT, Praktisi AI, Trainer & Konsultan UMKM Indonesia",
+      },
       {
         property: "og:description",
         content:
-          "AI Systems Architect, Pengembang Server MCP, dan Konsultan Agro-Industri dengan latar Teknik Industri & sertifikasi BNSP.",
+          "Konsultan IT, Praktisi AI, Trainer & Konsultan UMKM Indonesia. Bukti karya GitHub: vibes-plug (77★), Centaury, sinapsai, API-Wilayah-2024, serta Sertifikasi BNSP.",
       },
-      { property: "og:image", content: "/og-about.jpg" },
-      { property: "og:image:width", content: "1200" },
-      { property: "og:image:height", content: "630" },
+      { property: "og:image", content: "/roedy-rustam.jpg" },
+      { property: "og:image:width", content: "800" },
+      { property: "og:image:height", content: "1000" },
       { property: "og:type", content: "profile" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Tentang Roedy Rustam — AI Systems & Agro-Tech" },
-      { name: "twitter:image", content: "/og-about.jpg" },
+      { name: "twitter:image", content: "/roedy-rustam.jpg" },
+      // GEO Meta Tags (Local SEO & AEO)
+      { name: "geo.region", content: "ID-SN" },
+      { name: "geo.placename", content: "Makassar, Sulawesi Selatan, Indonesia" },
+      { name: "geo.position", content: "-5.1477;119.4327" },
+      { name: "ICBM", content: "-5.1477, 119.4327" },
+      { name: "geo.country", content: "ID" },
     ],
   }),
   component: AboutPage,
@@ -56,9 +69,10 @@ const principles = [
 const toolbox = {
   "AI & Agen": [
     "Model Context Protocol (MCP v1.x)",
+    "vibes-plug (77★ Universal Swarm)",
+    "Centaury Engine (Gemini 4 Pro)",
     "Autonomous Multi-Agent Swarms",
-    "Tool Calling & Structured JSON-RPC",
-    "LangGraph & Edge AI Workflows",
+    "sinapsai (AI Gateway & Router)",
   ],
   Lapangan: [
     "Perencanaan produksi agro (BNSP)",
@@ -68,7 +82,7 @@ const toolbox = {
   ],
   Studio: [
     "React 19 & TanStack Start",
-    "TypeScript & Python",
+    "TypeScript 5.8+ & Python",
     "Cloudflare Edge Workers",
     "Type-safe SQL Data Modeling",
   ],
@@ -86,7 +100,10 @@ function AboutPage() {
       <Nav />
 
       {/* Hero */}
-      <section className="relative pt-32 pb-20 md:pt-40 md:pb-28">
+      <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
+        {/* Ambient Neural Backlight */}
+        <div className="absolute top-1/4 right-0 h-96 w-96 rounded-full bg-amber-500/10 blur-[130px] pointer-events-none" />
+
         <div className="content-container">
           <Link
             to="/"
@@ -95,7 +112,7 @@ function AboutPage() {
             ← Kembali
           </Link>
 
-          <div className="mt-12 grid gap-12 lg:grid-cols-12 lg:gap-16">
+          <div className="mt-12 grid gap-12 lg:grid-cols-12 lg:gap-16 items-center">
             <div className="lg:col-span-7">
               <div className="font-mono text-xs uppercase tracking-[0.25em] text-terracotta">
                 Tentang · Profil
@@ -107,26 +124,48 @@ function AboutPage() {
               </h1>
 
               <p className="mt-8 max-w-xl text-lg leading-relaxed text-coffee/75">
-                Saya Roedy. Pekerjaan saya hari ini berada di antara dua
-                dunia yang jarang bertemu: <span className="italic text-terracotta">ladang kopi di Sulawesi Selatan</span> dan baris-baris kode
-                untuk UMKM agro.
+                Saya Roedy Rustam. Pekerjaan saya hari ini berada di antara dua dunia yang jarang
+                bertemu:{" "}
+                <span className="italic text-terracotta font-medium">
+                  ladang kopi di Sulawesi Selatan
+                </span>{" "}
+                dan baris-baris kode arsitektur AI modern untuk UMKM serta komunitas.
               </p>
             </div>
 
             <div className="relative lg:col-span-5">
-              <div className="absolute -inset-4 -rotate-2 rounded-3xl bg-mustard/30" />
-              <img
-                src={portrait}
-                alt="Ilustrasi Roedy Rustam di kebun kopi Sulawesi"
-                width={1024}
-                height={1280}
-                className="relative w-full rounded-2xl"
-              />
-              <div className="absolute -bottom-5 -right-5 max-w-[180px] rotate-[3deg] rounded-2xl border border-white/10 bg-[#14110e]/90 backdrop-blur-xl px-4 py-3 shadow-xl">
-                <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-amber-400 font-semibold">
-                  Berbasis
+              <div className="absolute -inset-4 -rotate-2 rounded-3xl bg-gradient-to-tr from-amber-500/20 via-orange-500/10 to-transparent blur-xl" />
+              <div className="relative overflow-hidden rounded-3xl border border-white/15 bg-[#14110e]/90 p-3 backdrop-blur-2xl shadow-2xl transition-all duration-500 hover:border-amber-500/40">
+                <div className="relative overflow-hidden rounded-2xl aspect-[4/5] bg-stone-950">
+                  <img
+                    src={portrait}
+                    alt="Potret Profesional Roedy Rustam — AI Systems & Agentic Developer"
+                    width={800}
+                    height={1000}
+                    className="h-full w-full object-cover object-top transition-transform duration-700 hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#090807] via-transparent to-transparent opacity-60" />
+
+                  {/* Top-left Verified Badge */}
+                  <div className="absolute top-3 left-3 flex items-center gap-1.5 rounded-full border border-emerald-500/30 bg-emerald-950/80 px-3 py-1 font-mono text-[10px] uppercase tracking-wider text-emerald-300 backdrop-blur-md">
+                    <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                    BNSP & AI Architect
+                  </div>
                 </div>
-                <div className="mt-1 font-display text-sm text-stone-200">Sulawesi Selatan, ID</div>
+
+                <div className="mt-3 flex items-center justify-between px-2 py-1 font-mono text-[10px] uppercase tracking-wider text-stone-400">
+                  <span className="text-amber-400 font-semibold">Roedy Rustam</span>
+                  <span>Makassar · Sulawesi</span>
+                </div>
+              </div>
+
+              <div className="absolute -bottom-4 -right-4 max-w-[200px] rotate-[2deg] rounded-2xl border border-white/10 bg-[#181410]/95 backdrop-blur-xl px-4 py-3 shadow-2xl">
+                <div className="font-mono text-[9px] uppercase tracking-[0.2em] text-amber-400 font-semibold">
+                  GitHub Ecosystem
+                </div>
+                <div className="mt-1 font-display text-xs text-stone-200">
+                  77★ vibes-plug · Centaury
+                </div>
               </div>
             </div>
           </div>
@@ -180,41 +219,128 @@ function AboutPage() {
         <div className="content-container">
           <div className="flex flex-col gap-12 lg:flex-row lg:items-start lg:justify-between">
             <div className="max-w-xl">
-              <div className="font-mono text-xs uppercase tracking-[0.2em] text-terracotta">Sekarang</div>
-              <h2 className="mt-4 font-display text-4xl text-coffee">Apa yang sedang saya <br /><span className="italic text-terracotta">kerjakan & pelajari.</span></h2>
+              <div className="font-mono text-xs uppercase tracking-[0.2em] text-terracotta">
+                Sekarang
+              </div>
+              <h2 className="mt-4 font-display text-4xl text-coffee">
+                Apa yang sedang saya <br />
+                <span className="italic text-terracotta">kerjakan & pelajari.</span>
+              </h2>
               <p className="mt-6 text-base leading-relaxed text-coffee/70">
-                Terinspirasi oleh konsep <em className="text-coffee">/now</em>, berikut adalah fokus utama saya di paruh pertama tahun 2026.
+                Terinspirasi oleh konsep <em className="text-coffee">/now</em>, berikut adalah fokus
+                utama saya di paruh pertama tahun 2026.
               </p>
             </div>
 
             <div className="grid gap-6 sm:grid-cols-2 lg:w-[60%]">
               <div className="p-8 rounded-3xl bg-card border border-coffee/5 shadow-sm group/card hover:border-terracotta/20 transition-colors">
                 <div className="mb-4 text-terracotta">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-cpu"><rect width="16" height="16" x="4" y="4" rx="2"/><rect width="6" height="6" x="9" y="9" rx="1"/><path d="M15 2v2"/><path d="M15 20v2"/><path d="M2 15h2"/><path d="M2 9h2"/><path d="M20 15h2"/><path d="M20 9h2"/><path d="M9 2v2"/><path d="M9 20v2"/></svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="lucide lucide-cpu"
+                  >
+                    <rect width="16" height="16" x="4" y="4" rx="2" />
+                    <rect width="6" height="6" x="9" y="9" rx="1" />
+                    <path d="M15 2v2" />
+                    <path d="M15 20v2" />
+                    <path d="M2 15h2" />
+                    <path d="M2 9h2" />
+                    <path d="M20 15h2" />
+                    <path d="M20 9h2" />
+                    <path d="M9 2v2" />
+                    <path d="M9 20v2" />
+                  </svg>
                 </div>
                 <h3 className="font-display text-xl text-coffee">Model Context Protocol (MCP)</h3>
-                <p className="mt-2 text-sm text-coffee/60">Membangun server MCP terbuka untuk mengintegrasikan agen AI otonom langsung dengan data inventori kopi dan telemetri kebun.</p>
+                <p className="mt-2 text-sm text-coffee/60">
+                  Membangun server MCP terbuka untuk mengintegrasikan agen AI otonom langsung dengan
+                  data inventori kopi dan telemetri kebun.
+                </p>
               </div>
               <div className="p-8 rounded-3xl bg-card border border-coffee/5 shadow-sm group/card hover:border-terracotta/20 transition-colors">
                 <div className="mb-4 text-terracotta">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-network"><rect x="16" y="16" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="9" y="2" width="6" height="6" rx="1"/><path d="m5 16 4-8 4 8"/><path d="M12 10v6"/></svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="lucide lucide-network"
+                  >
+                    <rect x="16" y="16" width="6" height="6" rx="1" />
+                    <rect x="2" y="16" width="6" height="6" rx="1" />
+                    <rect x="9" y="2" width="6" height="6" rx="1" />
+                    <path d="m5 16 4-8 4 8" />
+                    <path d="M12 10v6" />
+                  </svg>
                 </div>
                 <h3 className="font-display text-xl text-coffee">Multi-Agent Swarms</h3>
-                <p className="mt-2 text-sm text-coffee/60">Eksplorasi orkestrasi kolaboratif sub-agen untuk verifikasi mutu, mitigasi risiko cuaca logistik, dan transparansi harga.</p>
+                <p className="mt-2 text-sm text-coffee/60">
+                  Eksplorasi orkestrasi kolaboratif sub-agen untuk verifikasi mutu, mitigasi risiko
+                  cuaca logistik, dan transparansi harga.
+                </p>
               </div>
               <div className="p-8 rounded-3xl bg-card border border-coffee/5 shadow-sm group/card hover:border-terracotta/20 transition-colors">
                 <div className="mb-4 text-terracotta">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-coffee"><path d="M10 2v2"/><path d="M14 2v2"/><path d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h12Z"/><path d="M17 12h2a2 2 0 0 1 0 4h-2"/></svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="lucide lucide-coffee"
+                  >
+                    <path d="M10 2v2" />
+                    <path d="M14 2v2" />
+                    <path d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h12Z" />
+                    <path d="M17 12h2a2 2 0 0 1 0 4h-2" />
+                  </svg>
                 </div>
                 <h3 className="font-display text-xl text-coffee">Digital Sensory & SCA</h3>
-                <p className="mt-2 text-sm text-coffee/60">Mengintegrasikan standar SCA Coffee Value Assessment (CVA) terbaru ke dalam platform CuppingNotes.online.</p>
+                <p className="mt-2 text-sm text-coffee/60">
+                  Mengintegrasikan standar SCA Coffee Value Assessment (CVA) terbaru ke dalam
+                  platform CuppingNotes.online.
+                </p>
               </div>
               <div className="p-8 rounded-3xl bg-card border border-coffee/5 shadow-sm group/card hover:border-terracotta/20 transition-colors">
                 <div className="mb-4 text-terracotta">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-shield-check"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="lucide lucide-shield-check"
+                  >
+                    <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+                    <path d="m9 12 2 2 4-4" />
+                  </svg>
                 </div>
                 <h3 className="font-display text-xl text-coffee">Kedaulatan Data BUMDes</h3>
-                <p className="mt-2 text-sm text-coffee/60">Mengembangkan kedaulatan data dan literasi mandiri untuk desa agar tangguh menghadapi disrupsi ekonomi digital.</p>
+                <p className="mt-2 text-sm text-coffee/60">
+                  Mengembangkan kedaulatan data dan literasi mandiri untuk desa agar tangguh
+                  menghadapi disrupsi ekonomi digital.
+                </p>
               </div>
             </div>
           </div>
@@ -267,8 +393,9 @@ function AboutPage() {
           <blockquote className="mt-8">
             <p className="font-display text-[clamp(1.8rem,4.5vw,3.5rem)] leading-[1.1] text-white text-balance">
               <span className="text-amber-400">"</span>Sederhana itu mahal.{" "}
-              <span className="italic text-stone-300">Setiap fitur yang tidak ada</span> adalah keputusan yang
-              dibuat dengan hati-hati — bukan kelalaian.<span className="text-amber-400">"</span>
+              <span className="italic text-stone-300">Setiap fitur yang tidak ada</span> adalah
+              keputusan yang dibuat dengan hati-hati — bukan kelalaian.
+              <span className="text-amber-400">"</span>
             </p>
           </blockquote>
 
@@ -297,44 +424,79 @@ function AboutPage() {
         <div className="content-container">
           <div className="grid gap-16 lg:grid-cols-2">
             <div>
-              <div className="font-mono text-xs uppercase tracking-[0.2em] text-terracotta">Pendidikan</div>
+              <div className="font-mono text-xs uppercase tracking-[0.2em] text-terracotta">
+                Pendidikan
+              </div>
               <h2 className="mt-4 font-display text-4xl text-coffee">Fondasi Akademik</h2>
               <div className="mt-10 space-y-10">
                 <div className="group relative pl-8 border-l border-coffee/10 transition-colors hover:border-terracotta">
-                  <div className="font-mono text-[10px] uppercase tracking-widest text-coffee/40">2014 — 2018</div>
+                  <div className="font-mono text-[10px] uppercase tracking-widest text-coffee/40">
+                    2014 — 2018
+                  </div>
                   <h3 className="mt-2 font-display text-xl text-coffee">Sarjana Teknik Industri</h3>
                   <p className="mt-2 text-sm text-coffee/60">Universitas Hasanuddin (UNHAS)</p>
                   <p className="mt-4 text-base text-coffee/75">
-                    Fokus pada manajemen rantai pasok dan optimasi sistem produksi industri agro. Skripsi mengenai efisiensi operasional pada pengolahan komoditas lokal.
+                    Fokus pada manajemen rantai pasok dan optimasi sistem produksi industri agro.
+                    Skripsi mengenai efisiensi operasional pada pengolahan komoditas lokal.
                   </p>
                 </div>
                 <div className="group relative pl-8 border-l border-coffee/10 transition-colors hover:border-terracotta">
-                  <div className="font-mono text-[10px] uppercase tracking-widest text-coffee/40">Berlanjut</div>
+                  <div className="font-mono text-[10px] uppercase tracking-widest text-coffee/40">
+                    Berlanjut
+                  </div>
                   <h3 className="mt-2 font-display text-xl text-coffee">Pembelajar Mandiri</h3>
-                  <p className="mt-2 text-sm text-coffee/60">Agro-Entrepreneurship & Digital Systems</p>
+                  <p className="mt-2 text-sm text-coffee/60">
+                    Agro-Entrepreneurship & Digital Systems
+                  </p>
                   <p className="mt-4 text-base text-coffee/75">
-                    Terus memperbarui keahlian melalui praktisi langsung di lapangan dan literatur modern mengenai ekonomi sirkular dan teknologi berbasis web.
+                    Terus memperbarui keahlian melalui praktisi langsung di lapangan dan literatur
+                    modern mengenai ekonomi sirkular dan teknologi berbasis web.
                   </p>
                 </div>
               </div>
             </div>
 
             <div>
-              <div className="font-mono text-xs uppercase tracking-[0.2em] text-terracotta">Sertifikasi</div>
+              <div className="font-mono text-xs uppercase tracking-[0.2em] text-terracotta">
+                Sertifikasi
+              </div>
               <h2 className="mt-4 font-display text-4xl text-coffee">Kredensial Profesional</h2>
               <div className="mt-10 grid gap-4">
                 {[
-                  { title: "Perencanaan Produksi Industri Agro", org: "BNSP (2019)", color: "bg-sage/10 text-sage" },
-                  { title: "Pelatih Kewirausahaan UMKM", org: "BNSP", color: "bg-terracotta/10 text-terracotta" },
-                  { title: "Inkubasi Rewako Export", org: "Bank Indonesia", color: "bg-mustard/10 text-mustard" },
-                  { title: "Trainer Literasi Digital", org: "Pandu Desa 4.0", color: "bg-coffee/10 text-coffee" },
+                  {
+                    title: "Perencanaan Produksi Industri Agro",
+                    org: "BNSP (2019)",
+                    color: "bg-sage/10 text-sage",
+                  },
+                  {
+                    title: "Pelatih Kewirausahaan UMKM",
+                    org: "BNSP",
+                    color: "bg-terracotta/10 text-terracotta",
+                  },
+                  {
+                    title: "Inkubasi Rewako Export",
+                    org: "Bank Indonesia",
+                    color: "bg-mustard/10 text-mustard",
+                  },
+                  {
+                    title: "Trainer Literasi Digital",
+                    org: "Pandu Desa 4.0",
+                    color: "bg-coffee/10 text-coffee",
+                  },
                 ].map((cert) => (
-                  <div key={cert.title} className="flex items-center justify-between rounded-2xl border border-coffee/5 bg-card p-6 transition-all hover:border-terracotta/20 hover:shadow-md">
+                  <div
+                    key={cert.title}
+                    className="flex items-center justify-between rounded-2xl border border-coffee/5 bg-card p-6 transition-all hover:border-terracotta/20 hover:shadow-md"
+                  >
                     <div>
                       <h4 className="font-display text-lg text-coffee">{cert.title}</h4>
-                      <p className="text-xs font-mono uppercase tracking-wider text-coffee/40 mt-1">{cert.org}</p>
+                      <p className="text-xs font-mono uppercase tracking-wider text-coffee/40 mt-1">
+                        {cert.org}
+                      </p>
                     </div>
-                    <span className={`rounded-full px-3 py-1 font-mono text-[9px] font-bold uppercase tracking-widest ${cert.color}`}>
+                    <span
+                      className={`rounded-full px-3 py-1 font-mono text-[9px] font-bold uppercase tracking-widest ${cert.color}`}
+                    >
                       Verified
                     </span>
                   </div>
@@ -390,7 +552,9 @@ function AboutPage() {
           </div>
           <h2 className="mt-6 font-display text-[clamp(2rem,5vw,4rem)] leading-[1.05] text-white text-balance">
             Kalau cerita ini terdengar selaras dengan apa yang sedang kamu kerjakan —{" "}
-            <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-amber-200">mari berkolaborasi.</span>
+            <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-amber-200">
+              mari berkolaborasi.
+            </span>
           </h2>
 
           <div className="mt-10 flex flex-wrap justify-center gap-5">
@@ -416,7 +580,17 @@ function AboutPage() {
   );
 }
 
-function Chapter({ num, title, body, id }: { num: string; title: string; body: string[]; id?: string }) {
+function Chapter({
+  num,
+  title,
+  body,
+  id,
+}: {
+  num: string;
+  title: string;
+  body: string[];
+  id?: string;
+}) {
   return (
     <article id={id} className="grid gap-6 md:grid-cols-12 md:gap-10 scroll-mt-32">
       <div className="md:col-span-3">

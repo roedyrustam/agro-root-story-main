@@ -61,8 +61,8 @@ const locations: Location[] = [
   {
     id: "malino",
     name: "Malino",
-    lat: -5.2530,
-    lng: 119.8540,
+    lat: -5.253,
+    lng: 119.854,
     type: "origin",
     details: "Pusat Edukasi & Promosi Kopi Sulsel",
   },
@@ -70,7 +70,7 @@ const locations: Location[] = [
     id: "sinjai",
     name: "Sinjai",
     lat: -5.1278,
-    lng: 120.2520,
+    lng: 120.252,
     type: "origin",
     details: "Komunitas Adat · Tata Kelola BUMMA",
   },
@@ -105,11 +105,12 @@ const locations: Location[] = [
     lng: 124.8927,
     type: "origin",
     details: "Perbatasan Negara · Ketahanan Pangan Terintegrasi",
-  }
+  },
 ];
 
 export function InteractiveMap() {
   const [activeLoc, setActiveLoc] = useState<Location | null>(null);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [MapComponents, setMapComponents] = useState<any>(null);
 
   useEffect(() => {
@@ -117,20 +118,24 @@ export function InteractiveMap() {
     Promise.all([
       import("react-leaflet"),
       import("leaflet"),
-      import("leaflet/dist/leaflet.css")
+      import("leaflet/dist/leaflet.css"),
     ]).then(([ReactLeaflet, Leaflet]) => {
       setMapComponents({
         MapContainer: ReactLeaflet.MapContainer,
         TileLayer: ReactLeaflet.TileLayer,
         Marker: ReactLeaflet.Marker,
         Polyline: ReactLeaflet.Polyline,
-        L: Leaflet.default || Leaflet
+        L: Leaflet.default || Leaflet,
       });
     });
   }, []);
 
   if (!MapComponents) {
-    return <div className="w-full aspect-[4/3] bg-coffee rounded-3xl animate-pulse flex items-center justify-center text-cream/50 font-mono text-sm">Memuat Peta...</div>;
+    return (
+      <div className="w-full aspect-[4/3] bg-coffee rounded-3xl animate-pulse flex items-center justify-center text-cream/50 font-mono text-sm">
+        Memuat Peta...
+      </div>
+    );
   }
 
   const { MapContainer, TileLayer, Marker, Polyline, L } = MapComponents;
@@ -139,11 +144,11 @@ export function InteractiveMap() {
     const colorClass = type === "hub" ? "bg-terracotta" : "bg-mustard";
     const sizeClass = type === "hub" ? "w-4 h-4" : "w-3 h-3";
     const glow = isActive ? `scale-150 shadow-[0_0_15px_rgba(211,93,71,0.8)]` : "scale-100";
-    
+
     return L.divIcon({
       className: "bg-transparent border-0",
       html: `<div class="relative flex items-center justify-center w-full h-full">
-               ${type === 'hub' ? `<div class="absolute w-10 h-10 rounded-full border border-terracotta/40 animate-ping-slow"></div>` : ''}
+               ${type === "hub" ? `<div class="absolute w-10 h-10 rounded-full border border-terracotta/40 animate-ping-slow"></div>` : ""}
                <div class="rounded-full ${colorClass} ${sizeClass} ${glow} transition-all duration-300 shadow-md"></div>
              </div>`,
       iconSize: [40, 40],
@@ -155,79 +160,108 @@ export function InteractiveMap() {
   // Sulsel origins -> Makassar
   const sulselOrigins = ["barru", "toraja", "enrekang", "malino", "sinjai"];
   const toMakassar = locations
-    .filter(l => sulselOrigins.includes(l.id))
-    .map(origin => [
-      [origin.lat, origin.lng],
-      [-5.1476, 119.4327] // Makassar
-    ] as [number, number][]);
+    .filter((l) => sulselOrigins.includes(l.id))
+    .map(
+      (origin) =>
+        [
+          [origin.lat, origin.lng],
+          [-5.1476, 119.4327], // Makassar
+        ] as [number, number][],
+    );
 
   // Tasikmalaya -> Jakarta
   const toJakarta = locations
-    .filter(l => l.id === "tasikmalaya")
-    .map(origin => [
-      [origin.lat, origin.lng],
-      [-6.2088, 106.8456] // Jakarta
-    ] as [number, number][]);
+    .filter((l) => l.id === "tasikmalaya")
+    .map(
+      (origin) =>
+        [
+          [origin.lat, origin.lng],
+          [-6.2088, 106.8456], // Jakarta
+        ] as [number, number][],
+    );
 
   // Eastern origins -> Makassar (hub)
   const easternOrigins = ["dobo", "supiori", "pegunungan-bintang", "belu"];
   const toEasternHub = locations
-    .filter(l => easternOrigins.includes(l.id))
-    .map(origin => [
-      [origin.lat, origin.lng],
-      [-5.1476, 119.4327] // Connecting Eastern Indonesia to Makassar Hub
-    ] as [number, number][]);
+    .filter((l) => easternOrigins.includes(l.id))
+    .map(
+      (origin) =>
+        [
+          [origin.lat, origin.lng],
+          [-5.1476, 119.4327], // Connecting Eastern Indonesia to Makassar Hub
+        ] as [number, number][],
+    );
 
   const makassarToJakarta: [number, number][] = [
     [-5.1476, 119.4327], // Makassar
-    [-6.2088, 106.8456] // Jakarta
+    [-6.2088, 106.8456], // Jakarta
   ];
 
   return (
     <div className="relative w-full aspect-[4/3] bg-coffee rounded-3xl overflow-hidden group/map border border-white/10 shadow-2xl">
-      
       {/* Map Labels */}
       <div className="absolute top-8 left-8 z-[400] pointer-events-none">
-        <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-mustard drop-shadow-md">Peta Sebaran</div>
+        <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-mustard drop-shadow-md">
+          Peta Sebaran
+        </div>
         <h3 className="mt-2 font-display text-2xl text-cream drop-shadow-lg">Wilayah Dampingan</h3>
       </div>
 
-      <MapContainer 
+      <MapContainer
         center={[-3.5, 122]} // Adjusted center to fit from West Java to Papua
-        zoom={4.5} 
+        zoom={4.5}
         className="w-full h-full z-0"
         zoomControl={false}
         scrollWheelZoom={false}
         dragging={true}
         attributionControl={false}
       >
-        <TileLayer
-          url="https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png"
-        />
+        <TileLayer url="https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png" />
 
         {/* Connections */}
         {toMakassar.map((pos, i) => (
-          <Polyline key={`makassar-${i}`} positions={pos} color="#E6A15C" weight={1.5} dashArray="5, 8" opacity={0.5} />
+          <Polyline
+            key={`makassar-${i}`}
+            positions={pos}
+            color="#E6A15C"
+            weight={1.5}
+            dashArray="5, 8"
+            opacity={0.5}
+          />
         ))}
         {toJakarta.map((pos, i) => (
-          <Polyline key={`jakarta-${i}`} positions={pos} color="#E6A15C" weight={1.5} dashArray="5, 8" opacity={0.5} />
+          <Polyline
+            key={`jakarta-${i}`}
+            positions={pos}
+            color="#E6A15C"
+            weight={1.5}
+            dashArray="5, 8"
+            opacity={0.5}
+          />
         ))}
         {toEasternHub.map((pos, i) => (
-          <Polyline key={`eastern-${i}`} positions={pos} color="#E6A15C" weight={1.5} dashArray="5, 8" opacity={0.3} />
+          <Polyline
+            key={`eastern-${i}`}
+            positions={pos}
+            color="#E6A15C"
+            weight={1.5}
+            dashArray="5, 8"
+            opacity={0.3}
+          />
         ))}
-        <Polyline 
-          positions={makassarToJakarta} 
-          color="#D35D47" 
-          weight={2} 
-          dashArray="6, 10" 
-          opacity={0.8} 
+        <Polyline
+          positions={makassarToJakarta}
+          color="#D35D47"
+          weight={2}
+          dashArray="6, 10"
+          opacity={0.8}
         />
 
         {/* Markers */}
         {locations.map((loc) => (
-          <Marker 
-            key={loc.id} 
-            position={[loc.lat, loc.lng]} 
+          <Marker
+            key={loc.id}
+            position={[loc.lat, loc.lng]}
             icon={createCustomIcon(loc.type, activeLoc?.id === loc.id)}
             eventHandlers={{
               click: () => setActiveLoc(loc),
@@ -238,15 +272,19 @@ export function InteractiveMap() {
       </MapContainer>
 
       {/* Detail Overlay */}
-      <div className={`absolute bottom-8 left-8 right-8 z-[400] transition-all duration-500 pointer-events-none ${
-        activeLoc ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
-      }`}>
+      <div
+        className={`absolute bottom-8 left-8 right-8 z-[400] transition-all duration-500 pointer-events-none ${
+          activeLoc ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
+        }`}
+      >
         <div className="bg-coffee/80 backdrop-blur-md border border-white/10 p-6 rounded-2xl shadow-xl pointer-events-auto max-w-md">
           <div className="flex items-center gap-3">
-            <div className={`h-2 w-2 rounded-full ${activeLoc?.type === 'hub' ? 'bg-terracotta' : 'bg-mustard'}`} />
+            <div
+              className={`h-2 w-2 rounded-full ${activeLoc?.type === "hub" ? "bg-terracotta" : "bg-mustard"}`}
+            />
             <div className="font-display text-xl text-cream">{activeLoc?.name}</div>
             <div className="font-mono text-[10px] uppercase tracking-widest text-mustard ml-auto bg-mustard/10 px-3 py-1 rounded-full border border-mustard/20">
-              {activeLoc?.type === 'hub' ? 'Strategic Hub' : 'Origin Site'}
+              {activeLoc?.type === "hub" ? "Strategic Hub" : "Origin Site"}
             </div>
           </div>
           <p className="mt-3 text-sm text-cream/80 leading-relaxed italic">
@@ -262,21 +300,20 @@ export function InteractiveMap() {
             <div className="absolute inset-0 rounded-full border border-terracotta/40 animate-ping" />
             <div className="h-2 w-2 rounded-full bg-terracotta" />
           </div>
-          <span className="font-mono text-[9px] uppercase tracking-widest text-cream/80">Pusat Ekonomi / Hub</span>
+          <span className="font-mono text-[9px] uppercase tracking-widest text-cream/80">
+            Pusat Ekonomi / Hub
+          </span>
         </div>
         <div className="flex items-center gap-3">
           <div className="h-2 w-2 rounded-full bg-mustard ml-0.5" />
-          <span className="font-mono text-[9px] uppercase tracking-widest text-cream/80">Wilayah Dampingan</span>
+          <span className="font-mono text-[9px] uppercase tracking-widest text-cream/80">
+            Wilayah Dampingan
+          </span>
         </div>
       </div>
-      
+
       {/* Click outside dismisser overlay */}
-      {activeLoc && (
-        <div 
-          className="absolute inset-0 z-[300]" 
-          onClick={() => setActiveLoc(null)}
-        />
-      )}
+      {activeLoc && <div className="absolute inset-0 z-[300]" onClick={() => setActiveLoc(null)} />}
     </div>
   );
 }

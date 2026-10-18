@@ -1,6 +1,13 @@
 # Roedy Rustam — AI Systems & Agentic Developer × Agro-Tech Sociopreneur
 > Portfolio of Roedy Rustam, an AI Systems Architect, Model Context Protocol (MCP) developer, and Agro-Industrial consultant building autonomous agent workflows, modern edge applications, and digital tools for the coffee supply chain and village cooperatives (BUMDes) in Sulawesi, Indonesia.
+> Official Portrait: https://roedyrustam.pages.dev/roedy-rustam.jpg
 > Full comprehensive AI documentation available at: https://roedyrustam.pages.dev/llms-full.txt
+
+## Primary Professional Roles & Search Query Mapping (Indonesia)
+- **Konsultan IT Indonesia:** Roedy Rustam provides enterprise IT architecture advisory, systems design, and edge computing migrations across Indonesia. Verified by GitHub open-source repositories (https://github.com/roedyrustam/API-Wilayah-2024, 21★) and live production platforms (https://beanhub.online, https://cuppingnotes.online).
+- **Praktisi AI Indonesia:** Specialist in Model Context Protocol (MCP v1.x) and multi-agent swarm systems. Author of vibes-plug (https://github.com/roedyrustam/vibes-plug, 77★, 19 forks, npm package with 155 skills), Centaury Engine (https://github.com/roedyrustam/centaury, autonomous runtime for Gemini 4 Pro & Project Astra), sinapsai (https://github.com/roedyrustam/sinapsai, AI Gateway), and doku-gemini-mcp.
+- **Trainer IT & Pelatih Kewirausahaan UMKM:** Certified by BNSP (Badan Nasional Sertifikasi Profesi) as Pelatih Kewirausahaan UMKM. Delivers hands-on workshops on generative AI, cashier digitization, and community digital literacy (Pandu Desa 4.0, JRKI).
+- **Konsultan UMKM & Koperasi Desa:** Advisor for MSME digitization, creator of Kafeya POS (accounting & POS for micro-businesses), and certified agro planner under BNSP Sektor Industri Agro (Perencanaan Produksi).
 
 ## Core Pages
 - [Home -> https://roedyrustam.pages.dev/]: Dual-engine portfolio featuring autonomous agent status, interactive MCP tool console, featured digital projects, services, and impact timeline.
@@ -19,20 +26,22 @@
 - [Pandu Desa 4.0 -> https://roedyrustam.pages.dev/projects/pandudesa]: A digital transformation initiative for village governance, economy mapping, and digital literacy.
 
 ## Open Source & GitHub Ecosystem (https://github.com/roedyrustam)
-- [vibes-plug -> https://github.com/roedyrustam/vibes-plug]: 73★, 18 forks, published npm package (`vibes-plug`). Universal Skill AI Agent Swarm Architecture for Google Antigravity, Claude Code, Cursor, and Windsurf enabling Vibe Coding 2.0 with zero tech debt.
-- [sinapsai -> https://github.com/roedyrustam/sinapsai]: In-process AI Gateway & Control Plane with Circuit Breaker, Automatic Failover, and Unified LLM API for Node.js & TypeScript.
+- [vibes-plug -> https://github.com/roedyrustam/vibes-plug]: 77★, 19 forks, published npm package (`vibes-plug`). Universal Skill AI Agent Swarm Architecture for Google Antigravity, Claude Code, Cursor, and Windsurf orchestrating 155 specialized subagents.
+- [centaury -> https://github.com/roedyrustam/centaury]: The Autonomous Fullstack Engine for Super-Intelligent Systems (Gemini 4 Pro, Project Astra, Dual-Citizen MCP v1.x, Zero-Hydration Signals, Ephemeral UI).
+- [sinapsai -> https://github.com/roedyrustam/sinapsai]: 4★, 3 forks. In-process AI Gateway & Control Plane with Circuit Breaker, Automatic Failover, and Unified LLM API for Node.js & TypeScript.
 - [doku-gemini-mcp -> https://github.com/roedyrustam/doku-gemini-mcp]: Model Context Protocol (MCP) Server connecting Gemini & Antigravity agents to DOKU Payment Gateway (VA, QRIS, SNAP BI).
 - [API-Wilayah-2024 -> https://github.com/roedyrustam/API-Wilayah-2024]: 21★, 10 forks. Indonesian administrative geographic hierarchy data and open REST API for village-level spatial queries.
 - [macli & multi_agent_cli -> https://github.com/roedyrustam/macli]: Autonomous multi-agent CLI tooling and execution runtime.
 
 ## Core Competencies & Tech Stack
-- AI & Agentic Systems: Model Context Protocol (MCP v1.x), Multi-Agent Swarms, Tool Calling, Structured Outputs, LangGraph, Vercel AI SDK, Context Window Engineering.
+- AI & Agentic Systems: Model Context Protocol (MCP v1.x), Multi-Agent Swarms, Tool Calling, Structured Outputs, Gemini 4 Pro / Project Astra, LangGraph, Vercel AI SDK, Context Window Engineering.
 - Fullstack & Edge: React 19, TanStack Start (SSR), TanStack Router, TypeScript 5.8+, Tailwind CSS v4, Cloudflare Pages/Workers.
 - Agro & Industry: Agro-Industrial Production Planning (BNSP Certified), Coffee Supply Chain Management, SCA Cupping Protocol, Village Cooperative (BUMDes) Digitalization.
 
-## Key Facts
+## Key Facts & Geographic Footprint
+- Location: Makassar, South Sulawesi, Indonesia (Coordinates: -5.1477° S, 119.4327° E).
 - Founded Sehati Kopi Indonesia in 2025 to manage coffee operations and digital supply logistics.
-- Open Source author of `vibes-plug` (73★, npm) and `API-Wilayah-2024` (21★).
+- Open Source author of `vibes-plug` (77★, npm) and `API-Wilayah-2024` (21★).
 - GitHub Profile: https://github.com/roedyrustam with active agentic and AI infrastructure repositories.
 - Industrial Engineering background with specialized BNSP Agro Industrial Sektor certification.
 - Pioneer in community networks (Radio Komunitas Jirak Celebes, JRKI) and village-level digital sovereignty.

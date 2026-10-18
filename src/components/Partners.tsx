@@ -16,7 +16,7 @@ export function Partners() {
           <div className="font-mono text-[10px] uppercase tracking-[0.3em] text-stone-500 mb-10">
             Kolaborator & Mitra Strategis
           </div>
-          
+
           <div className="flex flex-wrap justify-center gap-x-16 gap-y-10 opacity-70 transition-all duration-500 hover:opacity-100">
             {partners.map((p, i) => (
               <div key={i} className="group flex flex-col items-center">

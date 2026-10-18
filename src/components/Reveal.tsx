@@ -15,10 +15,10 @@ export function Reveal({ children, width = "100%", delay = 0.2, y = 30 }: Reveal
       initial={{ opacity: 0, y }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
-      transition={{ 
-        duration: 0.8, 
-        delay, 
-        ease: [0.22, 1, 0.36, 1] 
+      transition={{
+        duration: 0.8,
+        delay,
+        ease: [0.22, 1, 0.36, 1],
       }}
     >
       {children}

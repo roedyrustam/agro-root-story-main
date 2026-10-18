@@ -49,7 +49,12 @@ const solutionOptions: SolutionOption[] = [
     category: "Agro & Industry",
     icon: "☕",
     baseDays: 18,
-    recommendedStack: ["Beanhub Architecture", "SCA CVA Protocols", "GIS Mapping", "BNSP Standards"],
+    recommendedStack: [
+      "Beanhub Architecture",
+      "SCA CVA Protocols",
+      "GIS Mapping",
+      "BNSP Standards",
+    ],
     architectureSummary:
       "Sistem pencatatan terpadu dari kebun ke roastery, sertifikasi mutu SCA, pelacakan lot digital, dan laporan kedaulatan ekonomi petani.",
   },
@@ -107,11 +112,14 @@ Mohon info jadwal discovery call yang tersedia. Terima kasih!`;
             <SectionLabel number="05" label="Estimator Interaktif" />
             <h2 className="mt-6 font-display text-[clamp(2rem,5vw,3.8rem)] leading-[1.08] text-white">
               Rancang Kebutuhan Arsitektur <br />
-              <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-amber-200">dan Dapatkan Blueprint Awal.</span>
+              <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-amber-200">
+                dan Dapatkan Blueprint Awal.
+              </span>
             </h2>
           </div>
           <p className="max-w-md text-sm leading-relaxed text-stone-400">
-            Pilih jenis solusi yang Anda butuhkan untuk melihat rekomendasi stack teknologi, estimasi sprint, dan memulai diskusi teknis langsung.
+            Pilih jenis solusi yang Anda butuhkan untuk melihat rekomendasi stack teknologi,
+            estimasi sprint, dan memulai diskusi teknis langsung.
           </p>
         </div>
 
@@ -130,10 +138,11 @@ Mohon info jadwal discovery call yang tersedia. Terima kasih!`;
                     <button
                       key={sol.id}
                       onClick={() => setSelectedSolution(sol)}
-                      className={`flex flex-col items-start rounded-2xl p-5 text-left transition-all duration-300 ${isSelected
+                      className={`flex flex-col items-start rounded-2xl p-5 text-left transition-all duration-300 ${
+                        isSelected
                           ? "border border-amber-500 bg-amber-500/10 shadow-[0_0_20px_rgba(245,158,11,0.15)] scale-[1.01]"
                           : "border border-white/10 bg-[#14110e]/70 hover:bg-[#181410] hover:border-white/20"
-                        }`}
+                      }`}
                     >
                       <div className="flex w-full items-center justify-between">
                         <span className="text-2xl">{sol.icon}</span>
@@ -162,17 +171,19 @@ Mohon info jadwal discovery call yang tersedia. Terima kasih!`;
                     <button
                       key={add.id}
                       onClick={() => toggleAddon(add.id)}
-                      className={`flex items-center justify-between rounded-xl p-4 text-left transition-all duration-300 ${isChecked
+                      className={`flex items-center justify-between rounded-xl p-4 text-left transition-all duration-300 ${
+                        isChecked
                           ? "border border-amber-500/50 bg-amber-500/10 text-white shadow-sm"
                           : "border border-white/10 bg-[#14110e]/70 text-stone-300 hover:bg-[#181410] hover:border-white/20"
-                        }`}
+                      }`}
                     >
                       <span className="text-xs font-medium leading-relaxed pr-3">{add.name}</span>
                       <span
-                        className={`flex h-5 w-5 shrink-0 items-center justify-center rounded-md border ${isChecked
+                        className={`flex h-5 w-5 shrink-0 items-center justify-center rounded-md border ${
+                          isChecked
                             ? "border-amber-400 bg-amber-500 text-stone-950 font-bold"
                             : "border-white/20 bg-white/5"
-                          }`}
+                        }`}
                       >
                         {isChecked && <Check className="h-3 w-3 stroke-[3]" />}
                       </span>
@@ -248,7 +259,10 @@ Mohon info jadwal discovery call yang tersedia. Terima kasih!`;
                     Estimasi Sprint
                   </span>
                   <div className="font-display text-2xl text-white mt-0.5">
-                    ~{Math.ceil(totalDays / 7)} Minggu <span className="text-xs text-stone-400 font-sans">({totalDays} hari kerja)</span>
+                    ~{Math.ceil(totalDays / 7)} Minggu{" "}
+                    <span className="text-xs text-stone-400 font-sans">
+                      ({totalDays} hari kerja)
+                    </span>
                   </div>
                 </div>
                 <Zap className="h-6 w-6 text-amber-400" />

@@ -18,7 +18,7 @@ export function Marquee() {
       {/* Fade edges */}
       <div className="absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-cream-soft to-transparent" />
       <div className="absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-cream-soft to-transparent" />
-      
+
       <div className="flex w-max animate-marquee gap-12">
         {all.map((item, i) => (
           <div key={i} className="flex items-center gap-12 whitespace-nowrap">

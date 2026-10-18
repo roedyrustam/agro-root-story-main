@@ -3,7 +3,16 @@ import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { generateSoftwareAppSchema, generateBreadcrumbSchema } from "@/lib/schema";
 import agroagentImg from "../assets/project-agroagent-mcp.jpg";
-import { Terminal, Cpu, Database, ShieldCheck, CheckCircle2, ArrowLeft, ArrowRight, Github } from "lucide-react";
+import {
+  Terminal,
+  Cpu,
+  Database,
+  ShieldCheck,
+  CheckCircle2,
+  ArrowLeft,
+  ArrowRight,
+  Github,
+} from "lucide-react";
 
 export const Route = createFileRoute("/projects/agroagent-mcp")({
   head: () => ({
@@ -14,7 +23,10 @@ export const Route = createFileRoute("/projects/agroagent-mcp")({
         content:
           "AgroAgent MCP Server: Implementasi standar Model Context Protocol (MCP v1.x) untuk menghubungkan agen AI otonom dengan telemetri kebun kopi dan rantai pasok agro di Sulawesi.",
       },
-      { property: "og:title", content: "AgroAgent MCP Server — Model Context Protocol for Agro Data" },
+      {
+        property: "og:title",
+        content: "AgroAgent MCP Server — Model Context Protocol for Agro Data",
+      },
       {
         property: "og:description",
         content:
@@ -32,7 +44,7 @@ export const Route = createFileRoute("/projects/agroagent-mcp")({
             description:
               "Model Context Protocol (MCP v1.x) server connecting autonomous AI agents to agricultural telemetry, coffee cupping, and supply chain ERP data.",
             url: "https://roedyrustam.pages.dev/projects/agroagent-mcp",
-          })
+          }),
         ),
       },
       {
@@ -42,7 +54,7 @@ export const Route = createFileRoute("/projects/agroagent-mcp")({
             { name: "Home", item: "/" },
             { name: "Projects", item: "/#projects" },
             { name: "AgroAgent MCP", item: "/projects/agroagent-mcp" },
-          ])
+          ]),
         ),
       },
     ],
@@ -81,11 +93,15 @@ function AgroAgentMcpPage() {
 
           <h1 className="font-display text-[clamp(2.5rem,6vw,4.8rem)] leading-[1.08] text-white max-w-4xl font-bold">
             AgroAgent MCP Server: <br />
-            <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-amber-200">Menghubungkan Agen AI dengan Data Kebun Riil.</span>
+            <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-amber-200">
+              Menghubungkan Agen AI dengan Data Kebun Riil.
+            </span>
           </h1>
 
           <p className="mt-8 text-xl leading-relaxed text-stone-300 max-w-3xl">
-            Implementasi server berstandar open <strong>Model Context Protocol (MCP)</strong> yang memungkinkan asisten AI masa depan melakukan *tool discovery*, membaca telemetri panen kopi, dan memvalidasi lot biji secara terenkripsi langsung dari edge server di Sulawesi.
+            Implementasi server berstandar open <strong>Model Context Protocol (MCP)</strong> yang
+            memungkinkan asisten AI masa depan melakukan *tool discovery*, membaca telemetri panen
+            kopi, dan memvalidasi lot biji secara terenkripsi langsung dari edge server di Sulawesi.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
@@ -130,10 +146,15 @@ function AgroAgentMcpPage() {
                 Mengapa Ekosistem Pertanian Membutuhkan MCP Server?
               </h2>
               <p className="text-base leading-relaxed text-stone-300">
-                Model Bahasa Besar (LLM) umumnya terisolasi dari database riil di perkebunan rakyat. Petani, konsultan desa, dan roaster membutuhkan asisten AI yang tidak sekadar berhalusinasi, melainkan memiliki akses langsung ke data telemetri, kelembaban biji kopi (*moisture*), elevasi GPS, dan histori transaksi koperasi.
+                Model Bahasa Besar (LLM) umumnya terisolasi dari database riil di perkebunan rakyat.
+                Petani, konsultan desa, dan roaster membutuhkan asisten AI yang tidak sekadar
+                berhalusinasi, melainkan memiliki akses langsung ke data telemetri, kelembaban biji
+                kopi (*moisture*), elevasi GPS, dan histori transaksi koperasi.
               </p>
               <p className="text-base leading-relaxed text-stone-300">
-                Dengan mengadopsi spesifikasi **Model Context Protocol (MCP v1.x)**, AgroAgent menyediakan lapisan interoperabilitas standar yang kompatibel dengan Claude Desktop, Cursor AI, maupun sub-agent swarms otonom.
+                Dengan mengadopsi spesifikasi **Model Context Protocol (MCP v1.x)**, AgroAgent
+                menyediakan lapisan interoperabilitas standar yang kompatibel dengan Claude Desktop,
+                Cursor AI, maupun sub-agent swarms otonom.
               </p>
 
               <div className="rounded-2xl border border-white/10 bg-[#14110e] p-6 space-y-3">
@@ -142,16 +163,20 @@ function AgroAgentMcpPage() {
                 </h3>
                 <ul className="space-y-2 text-sm text-stone-300">
                   <li className="flex items-center gap-2">
-                    <CheckCircle2 className="h-4 w-4 text-emerald-400" /> JSON-RPC 2.0 Transport (Stdio & SSE/HTTP)
+                    <CheckCircle2 className="h-4 w-4 text-emerald-400" /> JSON-RPC 2.0 Transport
+                    (Stdio & SSE/HTTP)
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle2 className="h-4 w-4 text-emerald-400" /> Dynamic Tool Registration & Strict Type-Safety
+                    <CheckCircle2 className="h-4 w-4 text-emerald-400" /> Dynamic Tool Registration
+                    & Strict Type-Safety
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle2 className="h-4 w-4 text-sage" /> Read-Only Resource Endpoints (`agro://batches/`)
+                    <CheckCircle2 className="h-4 w-4 text-sage" /> Read-Only Resource Endpoints
+                    (`agro://batches/`)
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle2 className="h-4 w-4 text-sage" /> Prompts Templates untuk Analisis Mutu Panen
+                    <CheckCircle2 className="h-4 w-4 text-sage" /> Prompts Templates untuk Analisis
+                    Mutu Panen
                   </li>
                 </ul>
               </div>
@@ -162,7 +187,9 @@ function AgroAgentMcpPage() {
                 <div className="flex items-center justify-between border-b border-cream/10 pb-4 mb-6">
                   <div className="flex items-center gap-2">
                     <Terminal className="h-4 w-4 text-mustard" />
-                    <span className="font-mono text-xs text-cream/80">agroagent-mcp-schema.json</span>
+                    <span className="font-mono text-xs text-cream/80">
+                      agroagent-mcp-schema.json
+                    </span>
                   </div>
                   <span className="font-mono text-[10px] text-sage bg-sage/10 px-2.5 py-1 rounded-full border border-sage/20">
                     Active Specification
@@ -173,7 +200,7 @@ function AgroAgentMcpPage() {
                   <div>
                     <div className="text-mustard mb-2">// Definisi Tool Schema Terdaftar</div>
                     <pre className="max-h-72 overflow-x-auto rounded-xl bg-black/40 p-4 leading-relaxed text-cream/90">
-{`{
+                      {`{
   "name": "get_coffee_lot_telemetry",
   "description": "Mengambil parameter fisika & sensorik lot kopi berdasarkan ID batch.",
   "parameters": {
@@ -197,7 +224,7 @@ function AgroAgentMcpPage() {
                   <div>
                     <div className="text-sage mb-2">// Contoh Output Eksekusi ke Context AI</div>
                     <pre className="max-h-64 overflow-x-auto rounded-xl bg-black/40 p-4 leading-relaxed text-sage/90">
-{`{
+                      {`{
   "lot_id": "BRU-TYP-2026-08A",
   "origin": "Dusun Bulo-Bulo, Barru",
   "elevation": "1250 masl",
@@ -252,7 +279,10 @@ function AgroAgentMcpPage() {
                 desc: "Data sensitif harga dasar dan identitas petani dilindungi enkripsi berbasis izin, mencegah eksploitasi oleh perantara.",
               },
             ].map((f, i) => (
-              <div key={i} className="rounded-3xl border border-white/10 bg-[#14110e]/90 p-8 shadow-xl backdrop-blur-xl">
+              <div
+                key={i}
+                className="rounded-3xl border border-white/10 bg-[#14110e]/90 p-8 shadow-xl backdrop-blur-xl"
+              >
                 <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/5 border border-white/5 mb-6">
                   {f.icon}
                 </div>

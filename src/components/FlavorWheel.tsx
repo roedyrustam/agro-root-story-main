@@ -77,13 +77,10 @@ export function FlavorWheel() {
                     : "border-border bg-card text-coffee/60 hover:border-terracotta/30 hover:bg-cream-soft"
                 }`}
               >
-                <div
-                  className="h-3 w-3 rounded-full"
-                  style={{ backgroundColor: node.color }}
-                />
+                <div className="h-3 w-3 rounded-full" style={{ backgroundColor: node.color }} />
                 <span className="font-mono text-xs uppercase tracking-widest">{node.name}</span>
               </button>
-              
+
               {isActive && node.children && (
                 <div className="ml-6 mt-2 border-l border-border pl-6 animate-in slide-in-from-left-2 duration-300">
                   {renderNodes(node.children, depth + 1)}
@@ -106,16 +103,18 @@ export function FlavorWheel() {
             <div className="absolute inset-0 rounded-full border border-border opacity-20" />
             <div className="absolute inset-4 rounded-full border border-border opacity-40" />
             <div className="absolute inset-8 rounded-full border border-border opacity-60" />
-            
+
             {/* Active Highlight */}
-            <div 
+            <div
               className="absolute inset-0 rounded-full bg-terracotta/5 transition-transform duration-1000"
               style={{ transform: `rotate(${activePath.length * 45}deg)` }}
             />
 
             {/* Core Label */}
             <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
-              <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-coffee/40">Active Profiling</span>
+              <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-coffee/40">
+                Active Profiling
+              </span>
               <div className="mt-2 font-display text-2xl text-terracotta italic">
                 {activePath[activePath.length - 1]}
               </div>
@@ -129,13 +128,13 @@ export function FlavorWheel() {
                 style={{
                   transform: `rotate(${i * 45}deg) translateY(-${120 + Math.random() * 40}px)`,
                   opacity: activePath.length > 0 ? 0.3 : 0,
-                  transition: `transform 2s infinite linear, opacity 0.5s`
+                  transition: `transform 2s infinite linear, opacity 0.5s`,
                 }}
               />
             ))}
           </div>
         </div>
-        
+
         {/* Background Decorative */}
         <div className="absolute -bottom-10 -right-10 h-64 w-64 rounded-full bg-mustard/5 blur-3xl" />
         <div className="absolute -top-10 -left-10 h-64 w-64 rounded-full bg-terracotta/5 blur-3xl" />
@@ -147,10 +146,11 @@ export function FlavorWheel() {
             Sensoris <span className="italic">Terukur.</span>
           </h3>
           <p className="mt-4 text-coffee/70">
-            CuppingNotes menyederhanakan kompleksitas profil rasa kopi. Pengguna cukup memilih kategori utama, lalu mendalami deskriptor yang lebih spesifik sesuai standar SCA.
+            CuppingNotes menyederhanakan kompleksitas profil rasa kopi. Pengguna cukup memilih
+            kategori utama, lalu mendalami deskriptor yang lebih spesifik sesuai standar SCA.
           </p>
         </div>
-        
+
         <div className="max-h-[400px] overflow-y-auto pr-4 scrollbar-hide">
           {renderNodes(flavorData.children || [])}
         </div>

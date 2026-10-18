@@ -1,10 +1,22 @@
-import { useRouterState, ScrollRestoration, Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
+import {
+  useRouterState,
+  ScrollRestoration,
+  Outlet,
+  Link,
+  createRootRoute,
+  HeadContent,
+  Scripts,
+} from "@tanstack/react-router";
 import { useEffect } from "react";
 import { Toaster } from "sonner";
 import { CustomCursor } from "@/components/CustomCursor";
 import { DistortionFilters } from "@/components/DistortionFilters";
 import Lenis from "lenis";
-import { generatePersonSchema, generateWebSiteSchema } from "@/lib/schema";
+import {
+  generatePersonSchema,
+  generateWebSiteSchema,
+  generateProfilePageSchema,
+} from "@/lib/schema";
 
 import appCss from "../styles.css?url";
 
@@ -45,50 +57,64 @@ export const Route = createRootRoute({
         name: "google-site-verification",
         content: "pBTvdE97aC22PQnmJv_ZDD3c2B9O2IXJlLeQNYp4c_E",
       },
-      { title: "Roedy Rustam — AI Systems & Agentic Developer × Agro-Tech Sociopreneur" },
+      { title: "Roedy Rustam — Konsultan IT, Praktisi AI, Trainer & Konsultan UMKM Indonesia" },
       {
         name: "description",
         content:
-          "Portfolio & blueprint Roedy Rustam — AI Systems & Agentic Developer serta Konsultan Agro-Industri. Arsitektur Model Context Protocol (MCP), orkestrasi multi-agen, dan transformasi rantai pasok kopi hulu-hilir Sulawesi.",
+          "Portfolio & blueprint Roedy Rustam: Konsultan IT, Praktisi AI, Trainer IT/UMKM bersertifikasi BNSP, dan Konsultan UMKM Indonesia. Kreator open-source GitHub (vibes-plug 77★, Centaury Engine, sinapsai, API-Wilayah-2024), arsitektur MCP Server, dan transformasi agro-kopi Sulawesi.",
       },
-      { name: "keywords", content: "Roedy Rustam, AI Systems, Agentic Developer, Model Context Protocol, MCP Server, Swarm AI, Kopi Sulawesi, Agro Digital, Barru, Toraja, Sinjai, beanhub, Kafeya POS, Teknik Industri, Makassar" },
+      {
+        name: "keywords",
+        content:
+          "Konsultan IT Indonesia, Praktisi AI Indonesia, Trainer IT, Trainer UMKM, Konsultan UMKM, Pelatih Kewirausahaan BNSP, Roedy Rustam, vibes-plug, Centaury, Gemini 4 Pro, Model Context Protocol, MCP Server, Swarm AI, Kopi Sulawesi, Agro Digital, Barru, Toraja, Sinjai, beanhub, Kafeya POS, Teknik Industri, Makassar",
+      },
       { name: "author", content: "Roedy Rustam" },
       { name: "theme-color", content: "#090807" },
       // Open Graph
-      { property: "og:title", content: "Roedy Rustam — AI Systems & Agentic Developer × Agro-Tech Sociopreneur" },
+      {
+        property: "og:title",
+        content: "Roedy Rustam — Konsultan IT, Praktisi AI, Trainer & Konsultan UMKM Indonesia",
+      },
       {
         property: "og:description",
         content:
-          "Portfolio & blueprint Roedy Rustam — AI Systems & Agentic Developer serta Konsultan Agro-Industri Sulawesi Selatan. Arsitektur MCP, agen otonom, dan aplikasi edge modern.",
+          "Profil resmi Roedy Rustam: Konsultan IT, Praktisi AI, Trainer IT & Konsultan UMKM Indonesia. Dibuktikan dengan karya open-source GitHub (vibes-plug 77★, Centaury Engine), sertifikasi BNSP, dan platform agro-digital.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://roedyrustam.pages.dev" },
       { property: "og:locale", content: "id_ID" },
       { property: "og:site_name", content: "Roedy Rustam Portfolio" },
-      { property: "og:image", content: "/og-image.jpg" },
-      { property: "og:image:width", content: "1200" },
-      { property: "og:image:height", content: "630" },
+      { property: "og:image", content: "/roedy-rustam.jpg" },
+      { property: "og:image:width", content: "800" },
+      { property: "og:image:height", content: "1000" },
       {
         property: "og:image:alt",
-        content: "Roedy Rustam — AI Systems & Agentic Developer × Agro-Tech Sociopreneur",
+        content: "Roedy Rustam — Konsultan IT, Praktisi AI, Trainer & Konsultan UMKM Indonesia",
       },
       // Twitter Card
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Roedy Rustam — AI Systems & Agentic Developer × Agro-Tech Sociopreneur" },
+      {
+        name: "twitter:title",
+        content: "Roedy Rustam — Konsultan IT, Praktisi AI, Trainer & Konsultan UMKM Indonesia",
+      },
       {
         name: "twitter:description",
         content:
-          "Portfolio & blueprint Roedy Rustam — AI Systems & Agentic Developer serta Konsultan Agro-Industri Sulawesi Selatan.",
+          "Konsultan IT, Praktisi AI, Trainer & Konsultan UMKM Indonesia. Terbukti via GitHub vibes-plug (77★), Centaury, sinapsai, API-Wilayah-2024, dan Sertifikasi BNSP.",
       },
-      { name: "twitter:image", content: "/og-image.jpg" },
+      { name: "twitter:image", content: "/roedy-rustam.jpg" },
       // Additional SEO
-      { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" },
+      {
+        name: "robots",
+        content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      },
       { name: "googlebot", content: "index, follow" },
-      // GEO Meta Tags (Local SEO)
+      // GEO Meta Tags (Local SEO & AEO)
       { name: "geo.region", content: "ID-SN" },
-      { name: "geo.placename", content: "Makassar, Sulawesi Selatan" },
+      { name: "geo.placename", content: "Makassar, Sulawesi Selatan, Indonesia" },
       { name: "geo.position", content: "-5.147665;119.432732" },
       { name: "ICBM", content: "-5.147665, 119.432732" },
+      { name: "geo.country", content: "ID" },
     ],
     links: [
       {
@@ -103,12 +129,12 @@ export const Route = createRootRoute({
       {
         rel: "icon",
         type: "image/jpeg",
-        href: "/logo.jpg",
+        href: "/roedy-rustam.jpg",
       },
       {
         rel: "apple-touch-icon",
         sizes: "180x180",
-        href: "/logo.jpg",
+        href: "/roedy-rustam.jpg",
       },
       {
         rel: "manifest",
@@ -119,6 +145,10 @@ export const Route = createRootRoute({
       {
         type: "application/ld+json",
         children: JSON.stringify(generatePersonSchema()),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(generateProfilePageSchema()),
       },
       {
         type: "application/ld+json",
@@ -181,8 +211,8 @@ function RootComponent() {
     const lenis = new Lenis({
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      orientation: 'vertical',
-      gestureOrientation: 'vertical',
+      orientation: "vertical",
+      gestureOrientation: "vertical",
       smoothWheel: true,
       wheelMultiplier: 1,
       touchMultiplier: 2,
@@ -231,7 +261,7 @@ function RootComponent() {
         {
           threshold: 0, // Trigger as soon as 1px is visible
           rootMargin: "0px 0px -50px 0px",
-        }
+        },
       );
 
       const revealElements = document.querySelectorAll(".reveal");
@@ -239,11 +269,10 @@ function RootComponent() {
       return revealObserver;
     };
 
+    let observer: IntersectionObserver | null = null;
     // Initial setup with a small delay to ensure React has finished rendering
     const timeoutId = setTimeout(() => {
-      const observer = setupRevealObserver();
-      // Store observer in a variable to disconnect it later
-      (window as any)._revealObserver = observer;
+      observer = setupRevealObserver();
     }, 100);
 
     window.addEventListener("scroll", handleScroll);
@@ -253,8 +282,8 @@ function RootComponent() {
       clearTimeout(timeoutId);
       window.removeEventListener("scroll", handleScroll);
       lenis.destroy();
-      if ((window as any)._revealObserver) {
-        (window as any)._revealObserver.disconnect();
+      if (observer) {
+        observer.disconnect();
       }
     };
   }, [location.pathname]); // Re-run on navigation
@@ -265,15 +294,15 @@ function RootComponent() {
       <Toaster position="top-center" richColors />
       <DistortionFilters />
       <CustomCursor />
-      
+
       {/* Route Loading Progress */}
-      <div 
-        className={`fixed left-0 top-0 z-[110] h-[3px] bg-mustard transition-all duration-500 ease-in-out ${isPending ? 'opacity-100' : 'opacity-0'}`}
-        style={{ width: isPending ? '70%' : '100%' }}
+      <div
+        className={`fixed left-0 top-0 z-[110] h-[3px] bg-mustard transition-all duration-500 ease-in-out ${isPending ? "opacity-100" : "opacity-0"}`}
+        style={{ width: isPending ? "70%" : "100%" }}
       />
 
-      <div 
-        key={location.pathname} 
+      <div
+        key={location.pathname}
         className="animate-in fade-in slide-in-from-bottom-2 duration-1000 ease-[cubic-bezier(0.22,1,0.36,1)]"
       >
         <Outlet />
@@ -281,4 +310,3 @@ function RootComponent() {
     </>
   );
 }
-
