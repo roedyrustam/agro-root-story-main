@@ -244,7 +244,10 @@ export function Projects() {
     activeCategory === "all" ? projects : projects.filter((p) => p.category === activeCategory);
 
   return (
-    <section id="projects" className="border-t border-white/10 bg-[#090807] py-24 md:py-32">
+    <section
+      id="projects"
+      className="scroll-mt-28 md:scroll-mt-36 border-t border-white/10 bg-[#090807] py-24 md:py-32"
+    >
       <div className="content-container">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div>

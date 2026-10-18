@@ -133,14 +133,14 @@ export function RoedyAgentWidget() {
   return (
     <>
       {/* Floating Trigger Button */}
-      <div className="fixed bottom-6 right-6 z-40">
+      <div className="fixed bottom-6 right-6 z-50">
         {!isOpen && (
           <button
             onClick={() => setIsOpen(true)}
-            className="group relative flex items-center gap-3 rounded-full border border-amber-500/40 bg-[#14110e]/90 p-2.5 sm:px-4 sm:py-3 shadow-2xl backdrop-blur-xl transition-all duration-300 hover:scale-105 hover:border-amber-400 hover:shadow-amber-500/20"
+            className="group relative flex items-center gap-3 rounded-full border border-amber-500/50 bg-[#14110e]/95 px-4 py-3 shadow-[0_10px_35px_rgba(245,158,11,0.25)] backdrop-blur-2xl transition-all duration-300 hover:scale-105 hover:border-amber-400 cursor-pointer"
             aria-label="Buka Chat Roedy-Agent AI"
           >
-            <div className="relative flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-to-tr from-amber-600 to-orange-500 text-stone-950 font-bold shadow-md">
+            <div className="relative flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-to-tr from-amber-500 to-orange-500 text-stone-950 font-bold shadow-md">
               <Bot className="h-5 w-5 text-stone-950" />
               <span className="absolute -top-0.5 -right-0.5 flex h-3 w-3">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
@@ -148,11 +148,11 @@ export function RoedyAgentWidget() {
               </span>
             </div>
 
-            <div className="hidden sm:flex flex-col text-left pr-1">
-              <span className="text-[11px] font-mono uppercase tracking-wider text-amber-300 font-semibold flex items-center gap-1.5">
+            <div className="flex flex-col text-left pr-1.5">
+              <span className="text-[11px] font-mono uppercase tracking-wider text-amber-300 font-bold flex items-center gap-1.5">
                 Roedy-Agent AI <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
               </span>
-              <span className="text-[11px] text-stone-400">Tanya seputar portofolio & AI</span>
+              <span className="text-[10px] text-stone-300 font-sans">Tanya keahlian & AI ↗</span>
             </div>
           </button>
         )}

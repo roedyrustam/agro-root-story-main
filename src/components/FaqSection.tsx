@@ -70,7 +70,10 @@ export function FaqSection() {
   };
 
   return (
-    <section id="faq" className="border-t border-border bg-background py-24 md:py-32">
+    <section
+      id="faq"
+      className="scroll-mt-28 md:scroll-mt-36 border-t border-border bg-background py-24 md:py-32"
+    >
       <div className="content-container">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div>
