@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { Timeline } from "@/components/Timeline";
+import { generateBreadcrumbSchema } from "@/lib/schema";
 
 export const Route = createFileRoute("/journey")({
   head: () => ({
@@ -19,6 +20,17 @@ export const Route = createFileRoute("/journey")({
       { property: "og:image:height", content: "630" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:image", content: "/og-journey.jpg" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(
+          generateBreadcrumbSchema([
+            { name: "Beranda", item: "/" },
+            { name: "Perjalanan", item: "/journey" },
+          ]),
+        ),
+      },
     ],
   }),
   component: JourneyPage,

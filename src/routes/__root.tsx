@@ -16,6 +16,7 @@ import {
   generatePersonSchema,
   generateWebSiteSchema,
   generateProfilePageSchema,
+  generateUnifiedKnowledgeGraph,
 } from "@/lib/schema";
 
 import appCss from "../styles.css?url";
@@ -115,6 +116,11 @@ export const Route = createRootRoute({
       { name: "geo.position", content: "-5.147665;119.432732" },
       { name: "ICBM", content: "-5.147665, 119.432732" },
       { name: "geo.country", content: "ID" },
+      // LLMO (Large Language Model Optimization) & AI Search Directives
+      { name: "llms-txt", content: "https://roedyrustam.pages.dev/llms.txt" },
+      { name: "ai-content-declaration", content: "complete-verified-portfolio" },
+      { name: "dc.creator", content: "Roedy Rustam" },
+      { name: "citation_author", content: "Roedy Rustam" },
     ],
     links: [
       {
@@ -140,19 +146,24 @@ export const Route = createRootRoute({
         rel: "manifest",
         href: "/site.webmanifest",
       },
+      // LLMO Alternate Markdown Links for AI Agents & Search Engines
+      {
+        rel: "alternate",
+        type: "text/markdown",
+        href: "/llms.txt",
+        title: "LLM Knowledge Graph",
+      },
+      {
+        rel: "alternate",
+        type: "text/markdown",
+        href: "/llms-full.txt",
+        title: "Full LLM Knowledge Graph",
+      },
     ],
     scripts: [
       {
         type: "application/ld+json",
-        children: JSON.stringify(generatePersonSchema()),
-      },
-      {
-        type: "application/ld+json",
-        children: JSON.stringify(generateProfilePageSchema()),
-      },
-      {
-        type: "application/ld+json",
-        children: JSON.stringify(generateWebSiteSchema()),
+        children: JSON.stringify(generateUnifiedKnowledgeGraph()),
       },
     ],
   }),

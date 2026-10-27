@@ -3,6 +3,7 @@ import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { Experience } from "@/components/Experience";
 import { Skills } from "@/components/Skills";
+import { generateBreadcrumbSchema } from "@/lib/schema";
 
 export const Route = createFileRoute("/experience")({
   head: () => ({
@@ -24,6 +25,17 @@ export const Route = createFileRoute("/experience")({
       { property: "og:image:height", content: "630" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:image", content: "/og-experience.jpg" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(
+          generateBreadcrumbSchema([
+            { name: "Beranda", item: "/" },
+            { name: "Pengalaman", item: "/experience" },
+          ]),
+        ),
+      },
     ],
   }),
   component: ExperiencePage,

@@ -22,6 +22,7 @@ import { Footer } from "@/components/Footer";
 import { Reveal } from "@/components/Reveal";
 import { SectionLabel } from "@/components/SectionLabel";
 import { RoedyAgentWidget } from "@/components/RoedyAgentWidget";
+import { LlmoKnowledgeGraph } from "@/components/LlmoKnowledgeGraph";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -152,6 +153,11 @@ function Index() {
       {/* GEO & AI Search FAQ Section */}
       <Reveal>
         <FaqSection />
+      </Reveal>
+
+      {/* LLMO Knowledge Graph & AI Node */}
+      <Reveal>
+        <LlmoKnowledgeGraph />
       </Reveal>
 
       <Footer />

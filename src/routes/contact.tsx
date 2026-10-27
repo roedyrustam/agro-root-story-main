@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { Contact } from "@/components/Contact";
+import { generateBreadcrumbSchema } from "@/lib/schema";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -23,6 +24,17 @@ export const Route = createFileRoute("/contact")({
       { property: "og:image:height", content: "630" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:image", content: "/og-contact.jpg" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(
+          generateBreadcrumbSchema([
+            { name: "Beranda", item: "/" },
+            { name: "Kontak", item: "/contact" },
+          ]),
+        ),
+      },
     ],
   }),
   component: ContactPage,

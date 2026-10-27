@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import portrait from "@/assets/about-portrait.jpg";
+import { generatePersonSchema, generateBreadcrumbSchema } from "@/lib/schema";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -38,6 +39,21 @@ export const Route = createFileRoute("/about")({
       { name: "geo.position", content: "-5.1477;119.4327" },
       { name: "ICBM", content: "-5.1477, 119.4327" },
       { name: "geo.country", content: "ID" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(generatePersonSchema()),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(
+          generateBreadcrumbSchema([
+            { name: "Beranda", item: "/" },
+            { name: "Tentang", item: "/about" },
+          ]),
+        ),
+      },
     ],
   }),
   component: AboutPage,

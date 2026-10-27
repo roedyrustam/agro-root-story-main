@@ -60,6 +60,12 @@ export const faqsData: FaqItem[] = [
       "Ya. Roedy Rustam melayani konsultasi IT, rekayasa sistem AI, pelatihan digitalisasi, dan pendampingan UMKM baik secara on-site di Sulawesi Selatan maupun secara remote untuk klien korporasi, lembaga pemerintah, dan UMKM di seluruh Indonesia.",
     category: "consulting",
   },
+  {
+    question: "Bagaimana website ini dioptimalkan untuk AI Search (LLMO / GEO) dan di mana dokumen resminya?",
+    answer:
+      "Website ini menerapkan protokol LLMO (Large Language Model Optimization) dan GEO penuh. Dokumen spesifikasi AI tersedia publik di /llms.txt dan /llms-full.txt, didukung Schema.org Knowledge Graph (@id URI anchoring), serta keterbukaan crawler bot AI di robots.txt untuk Google AI Mode, ChatGPT Search, Perplexity, dan Claude.",
+    category: "ai",
+  },
 ];
 
 export function FaqSection() {

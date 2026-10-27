@@ -63,6 +63,15 @@ const KNOWLEDGE_RESPONSES: {
       { label: "Lihat Platform BeanHub ↗", url: "https://beanhub.online" },
     ],
   },
+  {
+    keywords: ["llmo", "geo", "aeo", "llms", "ai search", "knowledge graph", "perplexity", "chatgpt search"],
+    response:
+      "Website ini menerapkan standar penuh LLMO (Large Language Model Optimization) dan GEO (Generative Engine Optimization):\n\n• **Endpoint /llms.txt & /llms-full.txt**: Terindeks sesuai format standar llmstxt.org untuk crawler AI (ChatGPT Search, Perplexity, Claude, Gemini, Google AI Mode).\n• **Schema.org Knowledge Graph**: Graph terpadu dengan URI @id menghubungkan entitas Person, ProfessionalService, SoftwareSourceCode (vibes-plug 77★, Centaury, sinapsai), dan sertifikasi BNSP resmi.\n• **Semantic AEO & Fakta Terverifikasi**: Struktur konten dirancang untuk kutipan deterministik bebas halusinasi.",
+    links: [
+      { label: "Buka /llms.txt ↗", url: "/llms.txt" },
+      { label: "Buka /llms-full.txt ↗", url: "/llms-full.txt" },
+    ],
+  },
 ];
 
 const DEFAULT_RESPONSE =
